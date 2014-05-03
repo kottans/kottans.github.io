@@ -6,3 +6,4 @@ _site
 !/vendor/jquery
 /vendor/jquery/src/*
 !vendor/jquery/dist
+!/vendor/toastr
