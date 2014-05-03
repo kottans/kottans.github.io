@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box; }
+
+.container {
+  overflow: hidden; }
+
+.unit {
+  float: left;
+  padding: 20px; }
+  @media screen and (max-width: 860px) {
+    .unit {
+      width: 100% !important;
+      float: none; } }
+
+.one-third {
+  width: 33%; }
+
+.two-thirds {
+  width: 66%; }
+
+.half {
+  width: 50%; }
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-weight: bold; }
+
+section {
+  min-height: 650px; }
+  @media screen and (max-width: 860px) {
+    section {
+      width: 100%;
+      float: none; } }
+
+#intro {
+  position: relative;
+  color: #3b4347; }
+  #intro .container {
+    position: absolute; }
+  #intro a {
+    margin: 5%;
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    color: #3b4347; }
+  #intro a:hover {
+    text-decoration: underline; }
+  #intro .nav-section {
+    text-align: center;
+    overflow: hidden;
+    border-top: 1px solid #3b4347;
+    position: relative;
+    display: table;
+    width: 100%;
+    letter-spacing: 0.3em; }
+    #intro .nav-section nav {
+      display: table-cell;
+      float: none;
+      padding-top: 0;
+      text-align: center;
+      vertical-align: middle;
+      width: 25%; }
+      #intro .nav-section nav ul {
+        list-style: none; }
+        #intro .nav-section nav ul li {
+          display: inline-block;
+          font-size: 150%; }
+
+.wordmark {
+  display: table-cell;
+  float: none;
+  text-align: left;
+  vertical-align: middle;
+  width: 15%; }
+  .wordmark a {
+    font-size: 200%; }
+
+.suppl-content {
+  display: table-cell;
+  padding-top: 23px;
+  padding-bottom: 21px;
+  clear: none;
+  float: none;
+  text-align: right;
+  vertical-align: middle;
+  width: 15%; }
+  .suppl-content a img {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    vertical-align: middle; }
+
+.logo {
+  margin: auto;
+  display: block;
+  max-width: 100%; }
+
+#about {
+  display: block;
+  background: #222222;
+  color: #fff; }
+  #about .container {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%; }
+  #about header {
+    margin-bottom: 3em;
+    text-align: center; }
+  #about .content > h3 {
+    text-align: center; }
+
+#team {
+  display: block;
+  padding-bottom: 10em;
+  min-height: 1000px; }
+  #team .container {
+    overflow: hidden;
+    padding-left: 5%;
+    padding-right: 5%; }
+  #team header {
+    margin-bottom: 3em;
+    text-align: center; }
+  #team .content {
+    overflow: hidden; }
+  #team .content > h3 {
+    text-align: center; }
+  #team .kottan {
+    text-align: center; }
+    #team .kottan .bio {
+      width: 400px;
+      margin: auto; }
+
+#contact {
+  display: block;
+  padding: 1em;
+  background: #222222;
+  color: #fff; }
+  #contact .container {
+    overflow: hidden;
+    padding-left: 5%;
+    padding-right: 5%; }
+  #contact .contact-info {
+    border-top: 1px solid #596267; }
+  #contact .container {
+    padding: 0 35px;
+    margin: 10% 10% 0 10%; }
+    #contact .container h2 {
+      color: white; }
+    #contact .container a {
+      color: #a4a4a4;
+      text-decoration: none; }
+    #contact .container a:hover {
+      text-decoration: underline; }
+    #contact .container .header {
+      color: #d25a3f;
+      text-transform: uppercase; }
+
+footer {
+  background-color: #3b4347;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #fff;
+  text-align: center;
+  font-size: 0.9em;
+  width: 100%; }
+
+.social-links {
+  display: table-cell;
+  vertical-align: middle;
+  width: 20%; }
+  .social-links a {
+    color: white; }
+    .social-links a:visited {
+      color: #ddd; }
+
+.legal {
+  display: table-cell;
+  text-align: right;
+  width: 20%; }
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); }
+
+.circle img {
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+#new_participant {
+  background: transparent;
+  min-height: 500px; }
+  @media screen and (max-width: 860px) {
+    #new_participant {
+      min-height: 0; } }
+  #new_participant h4 {
+    margin: 10px 0 5px; }
+
+#participant_name {
+  outline-color: #fff; }
+
+.language {
+  float: right;
+}
+
+.javascript-description, .ruby-description, .java-description {
+  display: none; }
+  @media screen and (max-width: 860px) {
+    .javascript-description, .ruby-description, .java-description {
+      display: block; } }
+
+
+#new_participant.js-hover ~ .javascript-description {
+  display: block; }
+
+#new_participant.ruby-hover ~ .ruby-description {
+  display: block; }
+
+#new_participant.java-hover ~ .java-description {
+  display: block; }

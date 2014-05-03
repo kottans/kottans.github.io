@@ -1,0 +1,8 @@
+_site
+# Next 2 lines didn't work for me =(
+# vendor/**/*
+# !vendor/jquery/dist/
+/vendor/*
+!/vendor/jquery
+/vendor/jquery/src/*
+!vendor/jquery/dist
