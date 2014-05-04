@@ -256,3 +256,7 @@ footer {
 
 #new_participant.java-hover ~ .java-description {
   display: block; }
+
+#new_participant .language-list label {
+  white-space: nowrap;
+}
