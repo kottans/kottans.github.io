@@ -7,3 +7,4 @@ _site
 /vendor/jquery/src/*
 !vendor/jquery/dist
 !/vendor/toastr
+.idea

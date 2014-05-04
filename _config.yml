@@ -2,24 +2,24 @@ markdown: kramdown
 coaches:
   - img_url: public/images/coaches/serg.jpg
     name: Sergey Gopkalo
-    bio: Totally 10 years in IT, 5 years experience as software development, about 3 years Ruby developer
+    bio: Totally 10 years in IT, 5 years experience as software developer, about 3 years as Ruby developer
 
   - img_url: public/images/coaches/den.jpg
     name: Denis Yagofarov
-    bio: Totally 7 years in IT, 4 years experience as systems and network administrator, about 2 years Ruby developer
+    bio: Totally 7 years in IT, 4 years experience as system and network administrator, about 2 years as Ruby developer
 
   - img_url: public/images/coaches/lena.jpg
     name: Elena Morgun
-    bio: Cat that loves Ruby and Rails!
+    bio: Cat that loves Ruby and Rails
 
   - img_url: public/images/coaches/misha.jpg
     name: Mikhail Bortnyk
-    bio: Ruby on Rails developer, in passion with BDD and elegant solutions
+    bio: Ruby on Rails developer that has a passion for BDD and elegant solutions
 
   - img_url: public/images/coaches/john.jpg
     name: Oleksandr Lapshyn
-    bio: Front-end Developer at eBay Inc. pasionate about open-source and human interaction
+    bio: Front-end developer at eBay Inc. that passionates about open-source and human interaction
 
   - img_url: public/images/coaches/such.jpg
     name: Artem Suchov
-    bio: deeply curious, love to learn, insightful about people and their psychological makeup, deft at communication, excel at networking, deeply tech-savvy and relish growing others through education and leadership
+    bio: Deeply curious, loves to learn, insightful about people and their psychological make-up, deft in communication, excel at networking, deeply tech-savvy and enjoys growing others through education and leadership
