@@ -20,6 +20,6 @@ Organization reserves right to send you message using contact information provid
 Rejection
 =========
 
-Kottans are community driven team and built by ordinary people, who would like to use their privilege to stop communicating with certain persons behaving aggressively,abusing or way out strangely.
+Kottans are community driven team and built by ordinary people, who would like to use their privilege to stop communicating with certain persons behaving aggressively, abusing or way out strangely.
 
 
