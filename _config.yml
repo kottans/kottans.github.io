@@ -23,3 +23,7 @@ coaches:
   - img_url: public/images/coaches/such.jpg
     name: Artem Suchov
     bio: Deeply curious, loves to learn, insightful about people and their psychological make-up, deft in communication, excel at networking, deeply tech-savvy and enjoys growing others through education and leadership
+
+  - img_url: public/images/coaches/julia.jpg
+    name: Julia Budnik
+    bio: 7 badass years in IT. Dictator in css/html/life domains.
