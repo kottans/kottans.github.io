@@ -2,11 +2,11 @@ markdown: kramdown
 coaches:
   - img_url: public/images/coaches/serg.jpg
     name: Sergey Gopkalo
-    bio: Totally 10 years in IT, 5 years experience as software developer, about 3 years as Ruby developer
+    bio: Total of 10 years experience in IT, 5 years experience as software developer, about 3 years as Ruby developer
 
   - img_url: public/images/coaches/den.jpg
     name: Denis Yagofarov
-    bio: Totally 7 years in IT, 4 years experience as system and network administrator, about 2 years as Ruby developer
+    bio: 7 year-long journey into IT, 4 years experience as system and network administrator, about 2 years as Ruby developer
 
   - img_url: public/images/coaches/lena.jpg
     name: Elena Morgun
