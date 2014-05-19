@@ -20,6 +20,17 @@
 
 .half {
   width: 50%; }
+.half input[type="text"], .half input[type="email"] {
+  width: 210px;
+  border-none;
+  border-radius: 5px;
+  box-shadow: 0 0 4px white;
+
+}
+.half input[type="submit"] {
+  margin-left: 75px;
+  font-size: 1em;
+}
 
 body {
   display: block;
