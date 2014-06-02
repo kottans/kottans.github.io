@@ -33,6 +33,9 @@ a.js {
 a.ruby {
   border: 1px solid #a30c01;
 }
+a.java {
+  border: 1px solid #fff;
+}
 
 a:hover {
   border: 50px solid #000;
