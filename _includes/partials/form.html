@@ -1,41 +1,29 @@
-<form accept-charset="UTF-8" action="/participants" class="half unit" id="new_participant" method="post">
-    <div>
-        <label for="participant_name">Name:</label><br>
-        <input id="participant_name" required name="name" type="text">
-      </div>
-
-      <div>
-        <label for="participant_email">E-mail:</label><br>
-        <input id="participant_email" required name="email" type="email">
-      </div>
-
-      <div class="field">
-        <label for="participant_skype">Skype:</label><br>
-        <input id="participant_skype" name="skype" type="text">
-      </div>
-
-      <div class="language-list">
-        <h4>Courses:</h4>
-        <label>
-          <input id="participant_courses" name="courses" type="checkbox" value="js">
-          JS
+<form accept-charset="UTF-8" action="/participants" id="new_participant" method="post" class="half unit">
+    <p>
+        <label for="participant_name">Name:</label>
+        <input id="participant_name" required name="name" type="text"/>
+    </p>
+    <p>
+        <label for="participant_email">E-mail:</label>
+        <input id="participant_email" required name="email" type="email"/>
+    </p>
+    <p>
+        <label for="participant_skype">Skype:</label>
+        <input id="participant_skype" name="skype" type="text"/>
+    </p>
+    <p class="difficult_choices">
+        <label>Courses:</label>
+        <label><input id="participant_courses" name="courses" type="checkbox" value="js"/> JS</label>
+        <label><input id="participant_courses" name="courses" type="checkbox" value="ruby"/> Ruby</label>
+        <label><input id="participant_courses" name="courses" type="checkbox" value="java"/> Java</label>
+    </p>
+    <p>
+        <label for="participant_are_terms_accepted" class="agreement">
+            <input required title='You must agree with terms and conditions' id="participant_are_terms_accepted" name="are_terms_accepted" type="checkbox" value="1"/>
+            I agree with <a href="toc.html">terms and conditions</a>.
         </label>
-        <label>
-          <input id="participant_courses" name="courses" type="checkbox" value="ruby">
-                Ruby
-        </label>
-        <label>
-          <input id="participant_courses" name="courses" type="checkbox" value="java">&nbsp;Java
-        </label>
-      </div>
-
-      <div>
-        <br>
-        <input required title='You must agree with terms and conditions' id="participant_are_terms_accepted" name="are_terms_accepted" type="checkbox" value="1">
-        <label for="participant_are_terms_accepted">I agree with <a href="toc.html">terms and conditions</a>.</label>
-      </div>
-
-      <div class="actions">
-        <input name="commit" type="submit" value="Register">
-      </div>
-  </form>
+    </p>    
+    <p>
+        <button name="commit" type="submit">Register</button>
+    </p>
+</form>

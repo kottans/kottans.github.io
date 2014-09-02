@@ -5,34 +5,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Kottans</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Kottans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="public/styles/home.css">
   <link rel="stylesheet" href="vendor/toastr/toastr.css">
 </head>
 <body>
-<!--[if lte IE 7]>
-<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+  <!--[if lte IE 7]>
+  <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-<section id="intro">
-
-  <div class="container">
-
-  </div>
-
-  <div class="panel-wrapper">
-    <div class="primary-pane">
-      <img src="public/images/logo.png" alt="" class="logo">
-    </div>
-  </div>
-
+  <section id="intro">
+    <div class="logo">Kottans</div>
+  
     <div class="nav-section">
-      <div class="wordmark">
-        <a href="#intro">Kottans</a>
+      <h1><a href="#intro">Kottans</a></h1>
+  
+      <div class="suppl-content">
+        <a href="https://github.com/kottans" class="github-link" target="_blank">Github</a>
       </div>
-
+      
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -41,46 +35,38 @@
           <li><a href="slides.html">Slides</a></li>
         </ul>
       </nav>
+    </div>
+  </section>
 
-      <div class="suppl-content">
-        <a href="https://github.com/kottans" class="github-link" target="_blank">
-          <img src="public/images/octocat.png" alt="">
-          <span class="text">Github</span>
-        </a>
-      </div>
-
-   </div>
-
-</section>
-
-<section id="about">
-  <div class="container">
-    {% include about.html %}
-  </div>
-</section>
-
-<section id="team">
-  <div class="container">
-    {% include coaches.html %}
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    {% include contact.html %}
-  </div>
-</section>
-
-<footer>
-  <nav class="social-links">
-    <a href="https://www.facebook.com/kottans" class="facebook" target="_blank">Facebook</a>
-    <a href="https://twitter.com/Kottans_org" class="twitter" target="_blank">Twitter</a>
-    <a href="https://github.com/Kottans" class="vimeo" target="_blank">Github</a>
-  </nav>
-  <div class="legal">
-    <p> Copyright © 2014 Kottans. All rights reserved.</p>
-  </div>
-</footer>
+  <section id="about">
+    <div class="container">
+      {% include about.html %}
+    </div>
+  </section>
+  
+  <section id="team">
+    <div class="container">
+      {% include coaches.html %}
+    </div>
+  </section>
+  
+  <section id="contact">
+    <div class="container">
+      {% include contact.html %}
+    </div>
+  </section>
+  
+  <footer>
+    <ul class="social-links">
+      <li><a href="https://www.facebook.com/kottans" class="facebook" target="_blank">Facebook</a></li>
+      <li><a href="https://twitter.com/Kottans_org" class="twitter" target="_blank">Twitter</a></li>
+      <li><a href="https://github.com/Kottans" class="vimeo" target="_blank">Github</a></li>
+    </ul>
+    <div class="legal">
+      <p> Copyright &copy; 2014 Kottans. All rights reserved.</p>
+    </div>
+  </footer>
+  
   <script src='vendor/jquery/dist/jquery.min.js'></script>
   <script src='vendor/toastr/toastr.min.js'></script>
   <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
