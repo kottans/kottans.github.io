@@ -21,6 +21,16 @@ section {
   width: 49%;
 }
 
+@media only screen and (min-width: 900px) {
+  .nav-section.is-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 70px;
+    width: 100%;
+  }
+}
+
 #intro {
   color: #3b4347;
 }
@@ -37,6 +47,7 @@ section {
 
 #intro .nav-section {
   padding: 20px;
+  background: #fff;
   border-top: 1px solid #3b4347;
   letter-spacing: 0.3em;
 }
@@ -92,15 +103,12 @@ section {
   color: #fff;
 }
   
-#about h2,
-#team h2 {
+h2 {
   margin-bottom: 3em;
 }
 
-#about h2,
-#team h2,
-#about h3,
-#team h3 {
+h2,
+h3 {
   text-align: center;
 }
 
@@ -189,6 +197,81 @@ section {
   background: #fff;
   border: none;
   font: bold 16px "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+#slides {
+  
+  border-bottom: 1px solid #3b4347;
+}
+
+#slides ul {
+  text-align: center;
+}
+
+#slides li {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  list-style: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#slides a {
+  display: block;
+  height: inherit;
+  text-indent: -90000%;
+}
+
+#slides li.js {
+  background: #f8dc3d url(../images/slide-thumbnails/js.jpg) no-repeat center;
+  background-size: 100% auto;
+  border: 1px solid #f8dc3d;
+}
+
+#slides li.ruby {
+  background: #a30c01 url(../images/slide-thumbnails/ruby.jpg) no-repeat center;
+  background-size: 100% auto;
+  border: 1px solid #a30c01;
+}
+
+#slides li.java {
+  background: #fff url(../images/slide-thumbnails/java.jpg) no-repeat center;
+  background-size: 100% auto;
+  border: 1px solid #fff;
+}
+
+#slides li:hover {
+  background-size: 70% auto;
+  border-width: 30px;
+  border-radius: 50%;
+}
+
+#slides li.disabled {
+  pointer-events: none;
+}
+
+#slides .disabled {
+  position: relative;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+}
+
+#slides .disabled:after {
+  content: 'Coming up soon…';
+  text-align: center;
+  font-size: 20px;
+  line-height: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.6);
 }
 
 footer {
