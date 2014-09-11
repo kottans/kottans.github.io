@@ -28,6 +28,10 @@ section {
     top: 0;
     height: 70px;
     width: 100%;
+    box-shadow: 0 2px 10px 2px rgba(0,0,0,0.4);
+  }
+  .nav_trigger {
+    display: none;
   }
 }
 
@@ -60,7 +64,7 @@ section {
 
 .suppl-content {
   float: right;
-  padding-top: 5px;
+  /*padding-top: 5px;*/
   width: 15%;
   text-align: right;
 }
@@ -74,7 +78,7 @@ section {
 
 #intro .nav-section nav {
   margin: 0 17%;
-  padding-top: 5px;
+  padding-top: 4px;
   text-align: center;
 }
 
@@ -110,6 +114,10 @@ h2 {
 h2,
 h3 {
   text-align: center;
+}
+
+#contact h2 {
+  text-align: left;
 }
 
 #team li {
@@ -322,3 +330,87 @@ footer {
 #new_participant.java-hover ~ .java-description {
   display: block;
 }
+
+
+@media (max-width: 900px) {
+  section {
+    min-height: 0;
+  }
+  #intro .nav-section {
+    letter-spacing: 0.2em;
+  }  
+  .logo {
+    min-height: 300px;
+  }
+  .nav-section h1 {
+    padding-top: 6px;
+    font-size: 140%;
+  }
+  #intro .nav-section nav {
+    padding-top: 7px;
+  }
+  #intro .nav-section nav ul li {
+    font-size: 130%;
+  }
+  .suppl-content a {
+    padding-left: 40px;
+  }
+  #slides li {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  * {
+    /*border: 1px red dashed;*/
+  }
+  .container {
+    padding: 40px 5%;
+  }
+  .logo {
+    min-height: 70px;
+    background-size: auto 50px;
+  }
+  .nav-section h1,
+  .nav-section .suppl-content {
+    float: none;
+    width: auto;
+    text-align: center;
+  }
+  #team img {
+    width: 100px;
+    height: 100px;
+  }
+  #contact .one-third,
+  #contact .two-thirds {
+    display: block;
+    margin-bottom: 20px;
+    width: auto;
+  }
+  .half {
+    width: auto;
+  }
+  #contact form button {
+    margin-left: 0;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  #team li {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
