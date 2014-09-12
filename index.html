@@ -5,86 +5,107 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Kottans</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Kottans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="public/styles/home.css">
   <link rel="stylesheet" href="vendor/toastr/toastr.css">
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="public/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="public/images/favicons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="public/images/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="public/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="public/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="public/images/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 </head>
 <body>
-<!--[if lte IE 7]>
-<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
-<section id="intro">
-
-  <div class="container">
-
-  </div>
-
-  <div class="panel-wrapper">
-    <div class="primary-pane">
-      <img src="public/images/logo.png" alt="" class="logo">
-    </div>
-  </div>
+  <!--[if lte IE 7]>
+  <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+ 
+  <section id="intro">
+    <div class="logo">Kottans</div>
+  
 
     <div class="nav-section">
-      <div class="wordmark">
-        <a href="#intro">Kottans</a>
+      <h1><a href="#intro">Kottans</a></h1>
+  
+      <div class="suppl-content">
+        <a href="https://github.com/kottans" class="github-link" target="_blank">Github</a>
       </div>
-
+      
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
+          <li><a href="#slides">Slides</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="slides.html">Slides</a></li>
         </ul>
       </nav>
+    </div>
+  </section>
 
-      <div class="suppl-content">
-        <a href="https://github.com/kottans" class="github-link" target="_blank">
-          <img src="public/images/octocat.png" alt="">
-          <span class="text">Github</span>
-        </a>
-      </div>
-
-   </div>
-
-</section>
-
-<section id="about">
-  <div class="container">
-    {% include about.html %}
-  </div>
-</section>
-
-<section id="team">
-  <div class="container">
-    {% include coaches.html %}
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    {% include contact.html %}
-  </div>
-</section>
-
-<footer>
-  <nav class="social-links">
-    <a href="https://www.facebook.com/kottans" class="facebook" target="_blank">Facebook</a>
-    <a href="https://twitter.com/Kottans_org" class="twitter" target="_blank">Twitter</a>
-    <a href="https://github.com/Kottans" class="vimeo" target="_blank">Github</a>
-  </nav>
-  <div class="legal">
-    <p> Copyright © 2014 Kottans. All rights reserved.</p>
-  </div>
-</footer>
+  <section id="about">
+    <div class="container">
+      {% include about.html %}
+    </div>
+  </section>
+  
+  <section id="slides">
+    <div class="container">
+      {% include slides.html %}
+    </div>
+  </section>
+  
+  <section id="team">
+    <div class="container">
+      {% include coaches.html %}
+    </div>
+  </section>
+  
+  <section id="contact">
+    <div class="container">
+      {% include contact.html %}
+    </div>
+  </section>
+  
+  <footer>
+    <ul class="social-links">
+      <li><a href="https://www.facebook.com/kottans" class="facebook" target="_blank">Facebook</a></li>
+      <li><a href="https://twitter.com/Kottans_org" class="twitter" target="_blank">Twitter</a></li>
+      <li><a href="https://github.com/Kottans" class="vimeo" target="_blank">Github</a></li>
+    </ul>
+    <div class="legal">
+      <p> Copyright &copy; 2014 Kottans. All rights reserved.</p>
+    </div>
+  </footer>
+  
   <script src='vendor/jquery/dist/jquery.min.js'></script>
   <script src='vendor/toastr/toastr.min.js'></script>
   <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
   <script src='public/scripts/hover-classes.js?v=1.0'></script>
   <script src='public/scripts/submit.js?v=1.0'></script>
+  <script type="text/javascript">
+    var secondaryNav = $('.nav-section'),
+    secondaryNavTopPosition = secondaryNav.offset().top;
+ 
+    $(window).on('scroll', function(){    
+        if($(window).scrollTop() > secondaryNavTopPosition ) {
+            secondaryNav.addClass('is-fixed');            
+        } else {
+            secondaryNav.removeClass('is-fixed');        
+        }
+    });
+  </script>
 </body>
 </html>
