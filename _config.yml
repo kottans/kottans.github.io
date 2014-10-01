@@ -1,33 +1,37 @@
 markdown: kramdown
 coaches:
-  - img_url: public/images/coaches/serg.jpg
+  - img_url: serg.jpg
     name: Sergey Gopkalo
     bio: Total of 10 years experience in IT, 5 years experience as software developer, about 3 years as Ruby developer
 
-  - img_url: public/images/coaches/den.jpg
+  - img_url: den.jpg
     name: Denis Yagofarov
     bio: 7 year-long journey into IT, 4 years experience as system and network administrator, about 2 years as Ruby developer
 
-  - img_url: public/images/coaches/lena.jpg
+  - img_url: lena.jpg
     name: Elena Morgun
     bio: Cat that loves Ruby and Rails
 
-  - img_url: public/images/coaches/misha.jpg
+  - img_url: misha.jpg
     name: Mikhail Bortnyk
     bio: Ruby on Rails developer that has a passion for BDD and elegant solutions
 
-  - img_url: public/images/coaches/john.jpg
+  - img_url: john.jpg
     name: Oleksandr Lapshyn
     bio: Front-end developer at eBay Inc. that passionates about open-source and human interaction
 
-  - img_url: public/images/coaches/such.jpg
+  - img_url: such.jpg
     name: Artem Suchov
     bio: Deeply curious, loves to learn, insightful about people and their psychological make-up, deft in communication, excel at networking, deeply tech-savvy and enjoys growing others through education and leadership
 
-  - img_url: public/images/coaches/julia.jpg
+  - img_url: julia.jpg
     name: Julia Budnik
     bio: 7 badass years in IT. Dictator in css/html/life domains
+  
+  - img_url: lulya.jpg
+    name: Julia Savinkova
+    bio: Sometimes people think she's too sweet to be a programmer & hardcore geek. .NET/JavaScript Developer, TDD adept
 
-  - img_url: public/images/coaches/placeholder.jpg
+  - img_url: placeholder.jpg
     name: You
     bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
