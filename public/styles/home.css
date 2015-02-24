@@ -172,6 +172,27 @@ h3 {
   width: 65%;
 }
 
+#contact form:invalid button {
+  cursor: no-drop;
+}
+#contact form:invalid button .overlay {
+  display: block;
+}
+#contact form button {
+  position: relative;
+}
+#contact form button .overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  display: none;
+}
+
 #contact form p {
   margin-bottom: 10px;
 }
@@ -201,6 +222,7 @@ h3 {
   padding: 8px 45px;
   background: #fff;
   border: none;
+  cursor: pointer;
   font: bold 1em "Courier New", Courier, monospace;
 }
 
@@ -262,7 +284,7 @@ h3 {
   -webkit-filter: grayscale(100%);
 }
 
-#slides .disabled:after {
+#slides .disabled::after {
   content: 'Coming up soon…';
   position: absolute;
   top: 0;
