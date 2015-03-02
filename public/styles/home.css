@@ -182,15 +182,14 @@ h3 {
   position: relative;
 }
 #contact form button .overlay {
-  position: absolute;
   display: none;
+  position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  background-color: black;
-  color: white;
-  display: none;
+  left: 0;
+  background: #000;
+  color: #fff;
 }
 
 #contact form p {
