@@ -1,5 +1,22 @@
-<li>
-  <p><img src="public/images/coaches/{{ coach.img_url }}" alt="{{ coach.name }}"></p>
-  <p>{{ coach.name }}</p>
-  <p>{{ coach.bio }}…</p>
-</li>
+
+<li><img src="public/images/coaches/{{ coach.img_url }}">
+	<div class="coach-info">
+		{% if coach.is_guest %}
+			<div class="guest-wrapper">
+			<div class="guest">guest
+		{% else %}
+			<div class="regular-wrapper">
+			<div class="regular">
+		{% endif %}
+		</div>
+		</div>
+		<p class="name"> {{ coach.name }}</p>
+		<p> {{ coach.bio }}</p>
+		<div class="hidden">
+			<p>language: {{ coach.lang }}</p>
+			<p class="bio">{{ coach.bio }}</p>
+		</div>
+		
+ 
+		</div>
+</li> 

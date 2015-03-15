@@ -117,19 +117,166 @@ h3 {
 
 #team .container {
   padding-top: 80px;
+  
+  /*border-radius: 3px;*/
+ /* height: 400px;*/
+
 }
-#team li {
+
+#team .current-year {
   display: inline-block;
+  width:100%;
+  border-bottom: solid #84878E 1px;
   margin-bottom: 40px;
-  padding: 0 5%;
-  width: 49%;
+}
+
+#team .years {
+  list-style: none;
+}
+
+#team .years-nav{
+  width:100%;
+  display: table;
+  table-layout: fixed;
   text-align: center;
-  vertical-align: top;
+
+}
+
+#team .years-nav .table-years {
+  display: table-row;
+  padding: 0;
+  margin: 0;
+}
+
+#team .years-nav  a {
+  display: table-cell;
+  padding: 0 5px;
+  margin: 0;
+  color:#a4a4a4;
+  font-size: 1.5em;
+  width: 100px;
+}
+
+#team .bio{
+  font-weight: 200;
+
+}
+
+#team .years-nav a.active{
+  color: #380200;
+}
+
+#team .years-nav a:hover{
+  color:#468700;
+}
+
+#team .all-coaches{
+  display: inline-block;
+}
+
+#team .all-coaches~.target:target{
+  display: none;
+}
+
+#team .target {
+
+  display: none;
+}
+
+#team .target:target { 
+  width: 100%;
+  display: inline-block;
+}
+
+#team ul{
+  width:100%;
+}
+
+
+#team li {
+
+  display: inline-block;
+  /*margin-bottom: 50px;*/
+  padding: 0 5%;
+  text-align: center;
+  vertical-align: top; 
+  margin: 0 auto 50px;
+}
+
+/*#team li:nth-child(3n) {
+  padding-right:0;
+
+}
+*/
+#team .coach-info {
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  padding:10px;
+  border: solid #DDDDDE 1px;
+  border-radius: 3px;
+  background-color: #DDDDDE;
+  max-width: 200px;
 }
 
 #team li p {
-  margin-bottom: 10px;
   font-size: 1.1em;
+}
+
+#team .name{
+  text-align: center;
+
+}
+
+#team .hidden{
+  display: none;
+
+}
+
+#team .coach-info:hover .hidden {
+  display:inline-block; 
+
+}
+
+#team .coach-info p:nth-of-type(1){
+    margin-top: 5px;
+}
+
+#team .coach-info:hover {
+  margin-bottom: -45px; 
+
+}
+
+#team .guest-wrapper {
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  position: absolute;
+  top: -2px;
+  right: -1px;
+}
+
+#team .active-year{
+  color:#478800;
+}
+
+.guest{
+  
+  color: #333;
+  text-align: center;
+  font-size: 0.9em;
+  -webkit-transform: rotate(35deg);
+  -moz-transform:    rotate(35deg);
+  -ms-transform:     rotate(35deg);
+  -o-transform:      rotate(35deg);
+  position: relative;
+  padding: 5px 0px 5px 0px; 
+  right: 0px;
+  top: 2px;
+  width: 80px;
+  background-color: #77DE08;
+
 }
 
 #team img {
@@ -140,7 +287,11 @@ h3 {
   -moz-border-radius: 150px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); }
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); 
+  margin-bottom: 10px;
+}
+
+
 
 #contact .contact-info {
   border-top: 1px solid #596267;
@@ -172,26 +323,6 @@ h3 {
   width: 65%;
 }
 
-#contact form:invalid button {
-  cursor: no-drop;
-}
-#contact form:invalid button .overlay {
-  display: block;
-}
-#contact form button {
-  position: relative;
-}
-#contact form button .overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #000;
-  color: #fff;
-}
-
 #contact form p {
   margin-bottom: 10px;
 }
@@ -221,7 +352,6 @@ h3 {
   padding: 8px 45px;
   background: #fff;
   border: none;
-  cursor: pointer;
   font: bold 1em "Courier New", Courier, monospace;
 }
 
@@ -283,7 +413,7 @@ h3 {
   -webkit-filter: grayscale(100%);
 }
 
-#slides .disabled::after {
+#slides .disabled:after {
   content: 'Coming up soon…';
   position: absolute;
   top: 0;
@@ -348,6 +478,7 @@ footer p {
     height: 70px;
     width: 100%;
     box-shadow: 0 2px 10px 2px rgba(0,0,0,0.4);
+    z-index: 150;
   }
 }
 @media (max-width: 900px) {

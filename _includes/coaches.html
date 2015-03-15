@@ -1,7 +1,7 @@
-<h2>Coaches:</h2>
+<!-- <h2>Coaches:</h2> -->
 
-<ul>
-  {% for coach in site.coaches %}
-    {% include partials/coach.html %}
-  {% endfor %}
-</ul>
+  <ul id="{{year.year}}">
+    {% for coach in year.coaches %}
+      {% include partials/coach.html %}
+    {% endfor %}
+  </ul>

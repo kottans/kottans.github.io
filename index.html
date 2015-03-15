@@ -60,6 +60,15 @@
     </div>
   </section>
   
+  <section>
+    <div class="container">
+      <div class="sponsor">
+      CONGIAK
+    </div>
+
+
+  </section>
+
   <section id="slides">
     <div class="container">
       {% include slides.html %}
@@ -68,8 +77,28 @@
   
   <section id="team">
     <div class="container">
-      {% include coaches.html %}
-    </div>
+
+      {% for year in site.years %}
+        <div id="{{year.year}}" class="target">
+          {% if forloop.index == 1 %}
+            <div class="current-year">
+          {% else %}
+            <div class="year">
+          {% endif %}
+        {% include coaches.html %}
+          </div>
+        </div>
+      {% endfor %} 
+
+      <nav class="years-nav">
+        <dir class="table-years">
+        {% for year in site.years %}
+          <a href="#{{year.year}}">{{year.year}}</a>
+        {% endfor %}
+        </dir>  
+      </nav>
+
+    </div>  
   </section>
   
   <section id="contact">

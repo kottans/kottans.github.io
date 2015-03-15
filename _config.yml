@@ -1,41 +1,176 @@
 markdown: kramdown
-coaches:
-  - img_url: serg.jpg
-    name: Sergey Gopkalo
-    bio: Total of 10 years experience in IT, 5 years experience as software developer, about 3 years as Ruby developer
+years:
+  - year: 2015
+    coaches:
+    - img_url: placeholder.jpg
+      name: Eugene Safronov
+      lang: js
 
-  - img_url: den.jpg
-    name: Denis Yagofarov
-    bio: 7 year-long journey into IT, 4 years experience as system and network administrator, about 2 years as Ruby developer
+    - img_url: serg.jpg
+      name: Sergey Gopkalo
+      lang: ruby
 
-  - img_url: lena.jpg
-    name: Elena Morgun
-    bio: Cat that loves Ruby and Rails
+    - img_url: lena.jpg
+      name: Elena Morgun
+      lang: ruby
 
-  - img_url: misha.jpg
-    name: Mikhail Bortnyk
-    bio: Ruby on Rails developer that has a passion for BDD and elegant solutions
+    - img_url: john.jpg
+      name: Oleksandr Lapshyn
+      lang: js
 
-  - img_url: john.jpg
-    name: Oleksandr Lapshyn
-    bio: Front-end developer that passionates about open-source and human interaction
+    - img_url: such.jpg
+      name: Artem Suchov
+      # bio: Deeply curious, loves to learn, insightful about people and their psychological make-up, deft in communication, excel at networking, deeply tech-savvy and enjoys growing others through education and leadership
+      lang: ruby
 
-  - img_url: such.jpg
-    name: Artem Suchov
-    bio: Deeply curious, loves to learn, insightful about people and their psychological make-up, deft in communication, excel at networking, deeply tech-savvy and enjoys growing others through education and leadership
+    - img_url: julia.jpg
+      name: Julia Budnik
+      # bio: 7 badass years in IT. Dictator in css/html/life domains
+      lang: ruby, js
 
-  - img_url: julia.jpg
-    name: Julia Budnik
-    bio: 7 badass years in IT. Dictator in css/html/life domains
+    - img_url: placeholder.jpg
+      name: Denis Sergienko
+      # bio: 
+      lang: ruby, js
 
-  - img_url: lulya.jpg
-    name: Julia Savinkova
-    bio: Sometimes people think she's too sweet to be a programmer & hardcore geek. .NET/JavaScript Developer, TDD adept
+    - img_url: placeholder.jpg
+      name: Igor Kroosh
+      # bio: 
+      lang: ruby, js
 
-  - img_url: dmitry.jpg
-    name: Dmitry Tselinko
-    bio: Kick-ass javascript knowledge helps Dmitry with his daily job & night shifts with Kottans (ocassionaly)
+    - name: Ingvar Stepanyan
+      img_url: placeholder.jpg
+      lang: js
+      is_guest: true 
 
-  - img_url: placeholder.jpg
-    name: You
-    bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
+
+    - img_url: placeholder.jpg
+      name: You
+      bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
+
+  - year: 2014
+    coaches:
+    - img_url: serg.jpg
+      name: Sergey Gopkalo
+      lang: ruby
+
+    - img_url: den.jpg
+      name: Denis Yagofarov
+      # bio: 7 year-long journey into IT, 4 years experience as system and network administrator, about 2 years as Ruby developer
+      lang: ruby
+
+    - img_url: lena.jpg
+      name: Elena Morgun
+     # bio: Cat that loves Ruby and Rails
+      lang: ruby, js
+
+    - img_url: misha.jpg
+      name: Mikhail Bortnyk
+      lang: ruby, js
+
+    - img_url: john.jpg
+      name: Oleksandr Lapshyn
+      # bio: Front-end developer that passionates about open-source and human interaction
+      lang: ruby, js
+
+    - img_url: placeholder.jpg
+      name: Oleksandr Rozumenko
+      lang: ruby
+
+    - img_url: such.jpg
+      name: Artem Suchov
+      # bio: Deeply curious, loves to learn, insightful about people and their psychological make-up, deft in communication, excel at networking, deeply tech-savvy and enjoys growing others through education and leadership
+      lang: ruby
+
+    - img_url: julia.jpg
+      name: Julia Budnik
+      # bio: 7 badass years in IT. Dictator in css/html/life domains
+      lang: ruby, js
+
+    - img_url: lulya.jpg
+      name: Julia Savinkova
+      # bio: Sometimes people think she's too sweet to be a programmer & hardcore geek. .NET/JavaScript Developer, TDD adept
+      lang: 
+
+    - name: Alexander Beletsky
+      img_url: placeholder.jpg
+      lang: js
+      is_guest: true 
+
+    - name: Eldar Djafarov
+      img_url: placeholder.jpg
+      lang: js
+
+    - name: Artyom Trityak
+      img_url: placeholder.jpg
+      lang: js
+      is_guest: true
+
+    - name: Artyom Trityak
+      img_url: placeholder.jpg
+      lang: js
+      is_guest: true
+
+    - name: Andriy Lystochkin
+      img_url: placeholder.jpg
+      lang: js
+
+    - name: Artyom Trityak
+      img_url: placeholder.jpg
+      lang: js
+      is_guest: true 
+
+    - name: Valentyn Shybanov
+      img_url: placeholder.jpg
+      lang: js
+      is_guest: true 
+
+    - name: Dmytro Yarmak
+      img_url: placeholder.jpg
+      lang: js
+
+    - name: Eugene Koshevoy
+      img_url: placeholder.jpg
+      lang: js
+      is_guest: true 
+
+    - name: Dmitry Tselinko
+      img_url: placeholder.jpg
+      lang: js
+
+    - name: Dmitriy Filipenko
+      img_url: placeholder.jpg
+      lang: js
+
+    - img_url: placeholder.jpg
+      name: You
+      bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
+
+  - year: 2013
+    coaches:
+    - img_url: den.jpg
+      name: Denis Yagofarov
+      # bio: 7 year-long journey into IT, 4 years experience as system and network administrator, about 2 years as Ruby developer
+      lang: ruby
+
+    - img_url: misha.jpg
+      name: Mikhail Bortnyk
+      lang: ruby
+
+    - img_url: placeholder.jpg
+      name: You
+      bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
+
+  - year: 2012
+    coaches:
+    - img_url: misha.jpg
+      name: Mikhail Bortnyk
+      lang: ruby
+
+    - img_url: alex.jpg
+      name: Alexandr Shilo
+      lang: ruby
+
+    - img_url: placeholder.jpg
+      name: You
+      bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
