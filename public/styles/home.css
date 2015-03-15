@@ -155,11 +155,14 @@ h3 {
   color:#a4a4a4;
   font-size: 1.5em;
   width: 100px;
+  text-decoration: none;
 }
+
+
 
 #team .bio{
   font-weight: 200;
-
+  width: 200px;
 }
 
 #team .years-nav a.active{
@@ -168,6 +171,7 @@ h3 {
 
 #team .years-nav a:hover{
   color:#468700;
+  text-decoration: underline;
 }
 
 #team .all-coaches{
@@ -229,25 +233,33 @@ h3 {
   border: solid #DDDDDE 1px;
   border-radius: 3px;
   background-color: #DDDDDE;
-  max-width: 200px;
+  min-width: 200px;
 }
 
-/*#team .language{
-  display: block;
-}*/
+#team .language{
+  text-align: center;
+}
 
 #team .coach-social-btn {
-text-align: center;
-color:transparent;
+  text-align: center;
+  color:transparent;
+  min-width: 200px;
 }
+
 #team .coach-social-btn img {
    width: 35px;
    height: 35px;
-   margin-right: 5px;
+ 
    box-shadow: none;
 }
+
+#team .coach-social-btn img:nth-child(odd) {
+  margin-right: 25px;
+}
+
 #team .coach-social-btn a {
 text-decoration: none;
+
 }
 
 #team li p {
@@ -255,28 +267,26 @@ text-decoration: none;
   margin-bottom: 5px;
 }
 
-#team .name{
+#team .name {
   text-align: center;
-
 }
 
-#team .hidden{
+#team .hidden {
   display: none;
-
 }
 
 #team .coach-info:hover .hidden {
   display:inline-block; 
+  z-index: 20;
+}
+
+#team li .coach-info:hover {
+ position: absolute; 
 
 }
 
-#team .coach-info p:nth-of-type(1){
-    margin-top: 5px;
-}
-
-#team .coach-info:hover {
-  margin-bottom: -45px; 
-
+#team li:last-of-type .coach-info:hover {
+ position: relative; 
 }
 
 #team .guest-wrapper {
@@ -324,8 +334,8 @@ text-decoration: none;
 
 
 #supporters {
-  height: 200px;
-  margin-top: 50px;
+  height: 300px;
+  margin-top: 100px;
   min-height: 50px;
  }
 
@@ -334,6 +344,9 @@ text-decoration: none;
   margin: 0 auto;
 }
 
+#supporters h2{
+  margin-bottom: 30px;
+}
 
 
 #contact .contact-info {
@@ -492,9 +505,7 @@ footer p {
   color: #fff;
 }
 
-/*.language {
-  float: right;
-*/}
+
 #contact .container {
   padding: 180px 5% 80px 15%;
 }
@@ -579,6 +590,7 @@ footer p {
     width: 100px;
     height: 100px;
   }
+
   #contact .one-third,
   #contact .two-thirds {
     display: block;

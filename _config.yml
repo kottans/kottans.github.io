@@ -4,8 +4,8 @@ years:
     coaches:
     - img_url: placeholder.jpg
       name: Eugene Safronov
-      bio:
       lang: js
+      bio: nice guy
 
     - img_url: serg.jpg
       name: Sergey Gopkalo
@@ -102,7 +102,7 @@ years:
     - img_url: lulya.jpg
       name: Julia Savinkova
       bio: Sometimes people think she's too sweet to be a programmer & hardcore geek. .NET/JavaScript Developer, TDD adept
-      lang: 
+      lang: js
 
     - name: Alexander Beletsky
       img_url: placeholder.jpg
