@@ -179,7 +179,6 @@ h3 {
 }
 
 #team .target {
-
   display: none;
 }
 
@@ -208,20 +207,52 @@ h3 {
 
 }
 */
+
+#team li:last-of-type .hidden{
+  display: inline-block;
+}
+
+#team li:last-of-type .language{
+  display: none;
+}
+
+#team li:last-of-type .coach-info:hover{
+  margin-bottom: 10px;
+}
+
 #team .coach-info {
   position: relative;
-  text-align: center;
+  text-align: left;
   margin-bottom: 10px;
   font-size: 1.1em;
-  padding:10px;
+  padding:10px 10px 5px;
   border: solid #DDDDDE 1px;
   border-radius: 3px;
   background-color: #DDDDDE;
   max-width: 200px;
 }
 
+/*#team .language{
+  display: block;
+}*/
+
+#team .coach-social-btn {
+text-align: center;
+color:transparent;
+}
+#team .coach-social-btn img {
+   width: 35px;
+   height: 35px;
+   margin-right: 5px;
+   box-shadow: none;
+}
+#team .coach-social-btn a {
+text-decoration: none;
+}
+
 #team li p {
   font-size: 1.1em;
+  margin-bottom: 5px;
 }
 
 #team .name{
@@ -261,7 +292,7 @@ h3 {
   color:#478800;
 }
 
-.guest{
+#team .guest{
   
   color: #333;
   text-align: center;
@@ -289,6 +320,18 @@ h3 {
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); 
   margin-bottom: 10px;
+}
+
+
+#supporters {
+  height: 200px;
+  margin-top: 50px;
+  min-height: 50px;
+ }
+
+#supporters > * {
+  text-align: center;
+  margin: 0 auto;
 }
 
 
@@ -449,9 +492,9 @@ footer p {
   color: #fff;
 }
 
-.language {
+/*.language {
   float: right;
-}
+*/}
 #contact .container {
   padding: 180px 5% 80px 15%;
 }

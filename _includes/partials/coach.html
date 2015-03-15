@@ -11,10 +11,19 @@
 		</div>
 		</div>
 		<p class="name"> {{ coach.name }}</p>
-		<p> {{ coach.bio }}</p>
+		
 		<div class="hidden">
-			<p>language: {{ coach.lang }}</p>
-			<p class="bio">{{ coach.bio }}</p>
+			<p class="language">language:{{ coach.lang }}</p>
+			<p>{{ coach.bio }}</p>
+			<p class="coach-social-btn">
+				<a href="{{ coach.github }}" target="_blank">
+					<img src="public/images/octocat.png">
+				</a>
+				<a href="{{ coach.twitter }}" target="_blank">
+					<img src="public/images/twitterlogo.png">
+				</a>
+			</p>
+			<!-- <p class="bio">{{ coach.bio }}</p> -->
 		</div>
 		
  
