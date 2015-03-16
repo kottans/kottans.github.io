@@ -151,27 +151,20 @@ h3 {
 #team .years-nav  a {
   display: table-cell;
   padding: 0 5px;
-  margin: 0;
+  margin: 0 auto;
   color:#a4a4a4;
   font-size: 1.5em;
-  width: 100px;
-  text-decoration: none;
-}
-
-
-
-#team .bio{
-  font-weight: 200;
-  width: 200px;
+ /* text-decoration: none;*/
 }
 
 #team .years-nav a.active{
   color: #380200;
+  width: auto;
 }
 
 #team .years-nav a:hover{
   color:#468700;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 #team .all-coaches{
@@ -211,6 +204,18 @@ h3 {
 
 }
 */
+#team img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); 
+  margin-bottom: 10px;
+}
+
 
 #team li:last-of-type .hidden{
   display: inline-block;
@@ -236,9 +241,47 @@ h3 {
   min-width: 200px;
 }
 
+#team li p {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+#team .name {
+  text-align: center;
+
+}
+
+
+#team .hidden {
+  display: none;
+   min-width: 200px; 
+}
+
+#team .coach-info:hover .hidden {
+  display:inline-block; 
+  z-index: 20;
+  min-width: 200px;  
+}
+
+#team li .coach-info:hover {
+ position: absolute;
+
+}
+
+#team li:last-of-type .coach-info:hover {
+ position: relative;
+
+}
+
 #team .language{
   text-align: center;
 }
+
+#team .bio{
+  font-weight: 200;
+  width: 200px;
+}
+
 
 #team .coach-social-btn {
   text-align: center;
@@ -258,35 +301,7 @@ h3 {
 }
 
 #team .coach-social-btn a {
-text-decoration: none;
-
-}
-
-#team li p {
-  font-size: 1.1em;
-  margin-bottom: 5px;
-}
-
-#team .name {
-  text-align: center;
-}
-
-#team .hidden {
-  display: none;
-}
-
-#team .coach-info:hover .hidden {
-  display:inline-block; 
-  z-index: 20;
-}
-
-#team li .coach-info:hover {
- position: absolute; 
-
-}
-
-#team li:last-of-type .coach-info:hover {
- position: relative; 
+  text-decoration: none;
 }
 
 #team .guest-wrapper {
@@ -296,10 +311,6 @@ text-decoration: none;
   position: absolute;
   top: -2px;
   right: -1px;
-}
-
-#team .active-year{
-  color:#478800;
 }
 
 #team .guest{
@@ -320,34 +331,31 @@ text-decoration: none;
 
 }
 
-#team img {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); 
-  margin-bottom: 10px;
+
+#team .active-year{
+  color:#478800;
 }
 
 
 #supporters {
-  height: 300px;
-  margin-top: 100px;
-  min-height: 50px;
+
+   min-height: 100px;
  }
 
-#supporters > * {
+#supporters.container > * {
   text-align: center;
   margin: 0 auto;
+   margin-bottom: 50px;
 }
 
 #supporters h2{
-  margin-bottom: 30px;
+  margin-bottom: 2em;
 }
 
+
+#supporters .container{
+  padding-top: 100px;
+}
 
 #contact .contact-info {
   border-top: 1px solid #596267;
@@ -563,6 +571,17 @@ footer p {
   #new_participant.java-hover ~ .java-description {
     display: none;
   }
+
+  #team .years-nav  a{
+    font-size: 1.3em;
+  }
+
+  #supporters img{
+    max-width: 100%;
+   height: auto;
+   width: auto;
+  }
+
 }
 @media screen and (max-width: 860px) {
   .javascript-description,
@@ -573,7 +592,9 @@ footer p {
 }
 @media only screen and (max-width: 767px) {
   .container,
-  #contact .container {
+  #contact .container,
+  #supporters .container
+ {
     padding: 40px 5%;
   }
   .logo {
@@ -607,7 +628,10 @@ footer p {
     width: 100%;
     box-sizing: border-box;
   }
+
 }
+
+
 @media (max-width: 660px) {
   h2 {
     margin-bottom: 1em;

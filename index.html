@@ -83,7 +83,7 @@
       {% endfor %} 
 
       <nav class="years-nav">
-        <dir class="table-years">
+        <div class="table-years">
         {% for year in site.years %}
           <a href="#{{year.year}}">{{year.year}}</a>
         {% endfor %}
@@ -101,12 +101,14 @@
   
 
 <section id="supporters">
+  <div class="container">
     <h2>Grateful for support from</h2>
     <div class="cogniance">
           <a href="http://cogniance.com" target="_blank">
             <img src="public/images/cogniance.png" alt="Cogniance">
           </a>
     </div>
+  </div>
   </section>
 
   <footer>
