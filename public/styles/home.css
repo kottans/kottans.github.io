@@ -157,6 +157,7 @@ h3 {
  /* text-decoration: none;*/
 }
 
+
 #team .years-nav a.active{
   color: #380200;
   width: auto;
@@ -199,11 +200,11 @@ h3 {
   margin: 0 auto 50px;
 }
 
-/*#team li:nth-child(3n) {
+#team li:nth-child(3n) {
   padding-right:0;
 
 }
-*/
+
 #team img {
   width: 200px;
   height: 200px;
