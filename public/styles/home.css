@@ -146,31 +146,22 @@ h3 {
 
 #team .years-nav  a {
   display: table-cell;
-  padding: 0 5px;
+  padding: 20px 5px;
   margin: 0 auto;
   color:#a4a4a4;
   font-size: 1.5em;
- /* text-decoration: none;*/
 }
 
 
 #team .years-nav a.active {
-  color: #380200;
+  background-color: #ddd;
+  color: black;
   width: auto;
 }
 
 #team .years-nav a:hover {
   color:#468700;
-  /*text-decoration: underline;*/
 }
-
-/*#team .all-coaches {
-  display: inline-block;
-}
-
-#team .all-coaches~.target: target {
-  display: none;
-}*/
 
 #team .year {
   display: none;
@@ -228,6 +219,11 @@ h3 {
   text-align: center;
 }
 
+#team .years-nav a,
+#team .coach-info {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 #team .hidden {
   display: none;
 }
@@ -236,17 +232,21 @@ h3 {
 #team .coach-info:hover .hidden {
   position: relative;
   display: inline-block;
-  min-width: 200px;
+  min-width: 100%;
   z-index: 20;
 }
 
+#team li.placeholder {
+  margin-bottom: 150px;
+}
+
+#team li.placeholder .coach-info,
 #team li .coach-info:hover  {
   position: absolute;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   z-index: 50;
-
 }
 
 #team .language {
