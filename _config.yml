@@ -116,17 +116,7 @@ years:
       img_url: placeholder.jpg
       lang: js
 
-    - name: Artyom Trityak
-      img_url: placeholder.jpg
-      lang: js
-      is_guest: true
-
-    - name: Artyom Trityak
-      img_url: placeholder.jpg
-      lang: js
-      is_guest: true
-
-    - name: Andriy Lystochkin
+    - name: Andrew Listochkin
       img_url: placeholder.jpg
       lang: js
 
@@ -158,12 +148,6 @@ years:
       img_url: placeholder.jpg
       lang: js
 
-    - img_url: placeholder.jpg
-      name: You
-      bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
-      github: https://github.com/join
-      twitter: https://twitter.com/signup
-
   - year: 2013
     coaches:
     - img_url: den.jpg
@@ -176,12 +160,6 @@ years:
       lang: ruby
       bio: Ruby on Rails developer that has a passion for BDD and elegant solutions…
 
-    - img_url: placeholder.jpg
-      name: You
-      bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
-      github: https://github.com/join
-      twitter: https://twitter.com/signup
-
   - year: 2012
     coaches:
     - img_url: misha.jpg
@@ -192,9 +170,3 @@ years:
     - img_url: alex.jpg
       name: Alexandr Shilo
       lang: ruby
-
-    - img_url: placeholder.jpg
-      name: You
-      bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
-      github: https://github.com/join
-      twitter: https://twitter.com/signup
