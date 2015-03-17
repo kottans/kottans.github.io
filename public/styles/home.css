@@ -119,19 +119,19 @@ h3 {
   padding-top: 80px;
 }
 
-#team .current-year {
+/*#team .current-year {
   display: inline-block;
-  width:100%;
+  width: 100%;
   border-bottom: solid #84878E 1px;
   margin-bottom: 40px;
 }
-
+*/
 #team .years {
   list-style: none;
 }
 
-#team .years-nav{
-  width:100%;
+#team .years-nav {
+  width: 100%;
   display: table;
   table-layout: fixed;
   text-align: center;
@@ -154,35 +154,35 @@ h3 {
 }
 
 
-#team .years-nav a.active{
+#team .years-nav a.active {
   color: #380200;
   width: auto;
 }
 
-#team .years-nav a:hover{
+#team .years-nav a:hover {
   color:#468700;
   /*text-decoration: underline;*/
 }
 
-/*#team .all-coaches{
+/*#team .all-coaches {
   display: inline-block;
 }
 
-#team .all-coaches~.target:target{
+#team .all-coaches~.target: target {
   display: none;
 }*/
 
-#team .target {
+#team .year {
   display: none;
 }
 
-#team .target:target { 
+#team .year.current {
   width: 100%;
   display: inline-block;
 }
 
-#team ul{
-  width:100%;
+#team ul {
+  width: 100%;
 }
 
 
@@ -192,12 +192,12 @@ h3 {
   /*margin-bottom: 50px;*/
   padding: 0 5%;
   text-align: center;
-  vertical-align: top; 
+  vertical-align: top;
   margin: 0 auto 50px;
 }
 /*
 #team li:nth-child(3n) {
-  padding-right:0;
+  padding-right: 0;
 
 }*/
 
@@ -209,21 +209,21 @@ h3 {
   -moz-border-radius: 150px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); 
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   margin-bottom: 10px;
 }
 
 
-#team li:last-of-type .hidden{
+#team li:last-of-type .hidden {
   display: inline-block;
    text-align: center;
 }
 
-#team li:last-of-type .language{
+#team li:last-of-type .language {
   display: none;
 }
 
-#team li:last-of-type .coach-info:hover{
+#team li:last-of-type .coach-info:hover {
   margin-bottom: 10px;
 }
 
@@ -232,7 +232,7 @@ h3 {
   text-align: left;
   margin: 0 auto 10px;
   font-size: 1.1em;
-  padding:10px 5px 10px 10px;
+  padding: 10px 5px 10px 10px;
   border: solid #DDDDDE 1px;
   border-radius: 3px;
   background-color: #DDDDDE;
@@ -255,9 +255,9 @@ h3 {
 
 #team .coach-info:hover .hidden {
   position: relative;
-  display:inline-block;
+  display: inline-block;
   /*text-align: center;*/
-  min-width: 200px; 
+  min-width: 200px;
   z-index: 20;
 }
 
@@ -265,20 +265,20 @@ h3 {
   position: absolute;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); 
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   z-index: 50;
 
 }
-                   
+
 #team li:last-of-type .coach-info:hover {
   position: relative;
 }
 
-#team .language{
+#team .language {
   text-align: center;
 }
 
-#team .bio{
+#team .bio {
   font-weight: 200;
   width: 95%;
   text-align: left;
@@ -287,7 +287,7 @@ h3 {
 
 
 #team .coach-social-btn {
-  color:transparent;
+  color: transparent;
   width: 100%;
   text-align: center;
 /*  min-width: 200px;*/
@@ -317,8 +317,8 @@ h3 {
   right: -1px;
 }
 
-#team .guest{
-  
+#team .guest {
+
   color: #333;
   text-align: center;
   font-size: 0.9em;
@@ -327,14 +327,14 @@ h3 {
   -ms-transform:     rotate(35deg);
   -o-transform:      rotate(35deg);
   position: relative;
-  padding: 5px 0px 5px 0px; 
+  padding: 5px 0px 5px 0px;
   right: 0px;
   top: 2px;
   width: 80px;
   background-color: #77DE08;
 }
 
-#team .active-year{
+#team .active-year {
   color:#478800;
 }
 
@@ -348,18 +348,18 @@ h3 {
   margin-bottom: 50px;
 }
 
-#supporters h2{
+#supporters h2 {
   margin-bottom: 2em;
 }
 
 
-#supporters .container{
+#supporters .container {
   padding-top: 100px;
 }
 
-#supporters ul{
+#supporters ul {
   list-style: none;
-  width:auto;
+  width: auto;
   text-align: center;
 }
 
@@ -425,7 +425,7 @@ h3 {
   font: bold 1em "Courier New", Courier, monospace;
 }
 
-#slides {  
+#slides {
   border-bottom: 1px solid #3b4347;
 }
 
@@ -483,7 +483,7 @@ h3 {
   -webkit-filter: grayscale(100%);
 }
 
-#slides .disabled:after {
+#slides .disabled: after {
   content: 'Coming up soon…';
   position: absolute;
   top: 0;
@@ -555,7 +555,7 @@ footer p {
   }
   #intro .nav-section {
     letter-spacing: 0.2em;
-  }  
+  }
   .logo {
     min-height: 300px;
   }
@@ -578,23 +578,23 @@ footer p {
     display: none;
   }
 
-  #team .years-nav  a{
+  #team .years-nav  a {
     font-size: 1.3em;
   }
 
-  #supporters img{
+  #supporters img {
     max-width: 100%;
     height: auto;
     width: auto;
   }
 
   #team .coach-info {
-    width:90%;
+    width: 90%;
   }
 
-    #team .hidden:hover .coach-info{
-      width: 90%;
-    }
+  #team .hidden:hover .coach-info {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 860px) {
   .javascript-description,
