@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="public/styles/home.css">
-  <link rel="stylesheet" href="vendor/toastr/toastr.css">    
+  <link rel="stylesheet" href="vendor/toastr/toastr.css">
   <link rel="apple-touch-icon" sizes="57x57" href="public/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="114x114" href="public/images/favicons/apple-touch-icon-114x114.png">
   <link rel="apple-touch-icon" sizes="72x72" href="public/images/favicons/apple-touch-icon-72x72.png">
@@ -31,18 +31,18 @@
   <!--[if lte IE 7]>
   <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
- 
+
   <section id="intro">
     <div class="logo">Kottans</div>
-  
+
 
     <div class="nav-section">
       <h1><a href="#intro">Kottans</a></h1>
-  
+
       <div class="suppl-content">
         <a href="https://github.com/kottans" class="github-link" target="_blank">Github</a>
       </div>
-      
+
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -66,7 +66,7 @@
       {% include slides.html %}
     </div>
   </section>
-  
+
   <section id="team">
     <div class="container">
     <h2>Coaches:</h2>
@@ -80,25 +80,25 @@
         {% include coaches.html %}
           </div>
         </div>
-      {% endfor %} 
+      {% endfor %}
 
       <nav class="years-nav">
         <div class="table-years">
         {% for year in site.years %}
           <a href="#{{year.year}}">{{year.year}}</a>
         {% endfor %}
-        </dir>  
+        </dir>
       </nav>
 
-    </div>  
+    </div>
   </section>
-  
+
   <section id="contact">
     <div class="container">
       {% include contact.html %}
     </div>
   </section>
-  
+
 
 <section id="supporters">
   <div class="container">
