@@ -1,27 +1,32 @@
-
-<li><img src="public/images/coaches/{{ coach.img_url }}">
+{% if coach.placeholder %}
+<li class='placeholder'>
+{% else %}
+<li>
+{% endif %}
+	<img src="public/images/coaches/{{ coach.img_url }}">
 	<div class="coach-info">
 		{% if coach.is_guest %}
 			<div class="guest-wrapper">
-			<div class="guest">guest
-		{% else %}
-			<div class="regular-wrapper">
-			<div class="regular">
+				<div class="guest">guest</div>
+			</div>
 		{% endif %}
-		</div>
-		</div>
 		<p class="name"> {{ coach.name }}</p>
-		
 		<div class="hidden">
-			<p class="language">language:{{ coach.lang }}</p>
+			{% if coach.lang %}
+				<p class="language">language:{{ coach.lang }}</p>
+			{% endif %}
 			<p class="bio">{{ coach.bio }}</p>
 			<p class="coach-social-btn">
-				<a href="{{ coach.github }}" target="_blank">
-					<img src="public/images/octocat.png">
-				</a>
-				<a href="{{ coach.twitter }}" target="_blank">
-					<img src="public/images/twitterlogo.png">
-				</a>
+				{% if coach.github %}
+					<a href="{{ coach.github }}" target="_blank">
+						<img src="public/images/octocat.png">
+					</a>
+				{% endif %}
+				{% if coach.twitter %}
+					<a href="{{ coach.twitter }}" target="_blank">
+						<img src="public/images/twitterlogo.png">
+					</a>
+				{% endif %}
 			</p>
 			<!-- <p class="bio">{{ coach.bio }}</p> -->
 		</div>

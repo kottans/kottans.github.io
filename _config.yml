@@ -1,4 +1,12 @@
 markdown: kramdown
+placeholder:
+  - img_url: placeholder.jpg
+    name: You
+    placeholder: true
+    bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
+    # github: https://github.com/join
+    # twitter: https://twitter.com/signup
+
 years:
   - year: 2015
     coaches:
@@ -50,11 +58,6 @@ years:
       is_guest: true 
 
 
-    - img_url: placeholder.jpg
-      name: You
-      bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
-      github: https://github.com/join
-      twitter: https://twitter.com/signup
 
 
   - year: 2014

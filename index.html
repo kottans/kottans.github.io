@@ -70,26 +70,26 @@
   <section id="team">
     <div class="container">
     <h2>Coaches:</h2>
-      {% for year in site.years %}
-        <div id="{{year.year}}" class="target">
-          {% if forloop.index == 1 %}
-            <div class="current-year">
-          {% else %}
-            <div class="year">
-          {% endif %}
-        {% include coaches.html %}
-          </div>
-        </div>
-      {% endfor %}
-
       <nav class="years-nav">
         <div class="table-years">
         {% for year in site.years %}
-          <a href="#{{year.year}}">{{year.year}}</a>
+          {% if forloop.index == 1 %}
+            <a class="active" href="#{{year.year}}">{{year.year}}</a>
+          {% else %}
+            <a href="#{{year.year}}">{{year.year}}</a>
+          {% endif %}
         {% endfor %}
         </dir>
       </nav>
-
+      {% for year in site.years %}
+        {% if forloop.index == 1 %}
+          <div id="{{year.year}}" class="year current">
+        {% else %}
+          <div id="{{year.year}}" class="year">
+        {% endif %}
+        {% include coaches.html %}
+          </div> <!-- .year -->
+      {% endfor %}
     </div>
   </section>
 
@@ -123,12 +123,13 @@
       <p> Copyright &copy; 2014 Kottans. All rights reserved.</p>
     </div>
   </footer>
-  
+
   <script src='vendor/jquery/dist/jquery.min.js'></script>
   <script src='vendor/toastr/toastr.min.js'></script>
   <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
   <script src='public/scripts/hover-classes.js?v=1.0'></script>
   <script src='public/scripts/submit.js?v=1.0'></script>
   <script src='public/scripts/fixed_header.js'></script>
+  <script src='public/scripts/year-switcher.js'></script>
 </body>
 </html>

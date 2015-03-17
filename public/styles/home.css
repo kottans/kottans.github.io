@@ -135,7 +135,7 @@ h3 {
   display: table;
   table-layout: fixed;
   text-align: center;
-
+  margin-bottom: 20px;
 }
 
 #team .years-nav .table-years {
@@ -187,19 +187,13 @@ h3 {
 
 
 #team li {
-
   display: inline-block;
-  /*margin-bottom: 50px;*/
+  margin-bottom: 50px;
   padding: 0 5%;
   text-align: center;
   vertical-align: top;
-  margin: 0 auto 50px;
+  margin: 0 auto 90px;
 }
-/*
-#team li:nth-child(3n) {
-  padding-right: 0;
-
-}*/
 
 #team img {
   width: 200px;
@@ -210,20 +204,6 @@ h3 {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  margin-bottom: 10px;
-}
-
-
-#team li:last-of-type .hidden {
-  display: inline-block;
-   text-align: center;
-}
-
-#team li:last-of-type .language {
-  display: none;
-}
-
-#team li:last-of-type .coach-info:hover {
   margin-bottom: 10px;
 }
 
@@ -250,13 +230,12 @@ h3 {
 
 #team .hidden {
   display: none;
-/*  min-width: 200px; */
 }
 
+#team .placeholder .coach-info .hidden,
 #team .coach-info:hover .hidden {
   position: relative;
   display: inline-block;
-  /*text-align: center;*/
   min-width: 200px;
   z-index: 20;
 }
@@ -268,10 +247,6 @@ h3 {
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   z-index: 50;
 
-}
-
-#team li:last-of-type .coach-info:hover {
-  position: relative;
 }
 
 #team .language {
@@ -290,19 +265,13 @@ h3 {
   color: transparent;
   width: 100%;
   text-align: center;
-/*  min-width: 200px;*/
 }
 
 #team .coach-social-btn img {
    width: 35px;
    height: 35px;
    box-shadow: none;
-  /* margin-left: 40px;*/
 }
-/*
-#team .coach-social-btn img:nth-child(odd) {
-  margin-right: 25px;
-}*/
 
 #team .coach-social-btn a {
   text-decoration: none;
@@ -318,7 +287,6 @@ h3 {
 }
 
 #team .guest {
-
   color: #333;
   text-align: center;
   font-size: 0.9em;
@@ -588,12 +556,21 @@ footer p {
     width: auto;
   }
 
+  #team .coach-info:hover .hidden,
   #team .coach-info {
-    width: 90%;
+    width: 100%;
   }
 
-  #team .hidden:hover .coach-info {
-    width: 90%;
+  #team .coach-info .hidden {
+    margin: 10px auto;
+    position: relative;
+    display: inline-block;
+    min-width: 100%;
+  }
+
+  #team ul li,
+  #team ul li .coach-info {
+    position: relative!important;
   }
 }
 @media screen and (max-width: 860px) {
