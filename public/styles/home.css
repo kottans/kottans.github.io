@@ -185,10 +185,8 @@ h3 {
   vertical-align: top;
   margin: 0 auto 90px;
 }
-
-#team img {
-  width: 200px;
-  height: 200px;
+#team .img-wrapper,
+#team li > img {
   border-radius: 100px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
@@ -196,6 +194,18 @@ h3 {
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   margin-bottom: 10px;
+}
+#team .img-wrapper,
+#team li > img {
+  width: 200px;
+  height: 200px;
+}
+#team .img-wrapper {
+  overflow: hidden;
+}
+#team .img-wrapper img {
+  width: 200px;
+  height: auto;
 }
 
 #team .coach-info {

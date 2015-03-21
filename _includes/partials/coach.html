@@ -3,7 +3,14 @@
 {% else %}
 <li>
 {% endif %}
-	<img src="public/images/coaches/{{ coach.img_url }}">
+	{% if coach.full_img_url %}
+		<div class="img-wrapper imgLiquidFill imgLiquid">
+			<img src="{{ coach.full_img_url }}">
+		</div>
+	{% else %}
+		<img src="public/images/coaches/{{ coach.img_url || 'placeholder.jpg' }}">
+	{% endif %}
+	
 	<div class="coach-info">
 		{% if coach.is_guest %}
 			<div class="guest-wrapper">
@@ -18,12 +25,12 @@
 			<p class="bio">{{ coach.bio }}</p>
 			<p class="coach-social-btn">
 				{% if coach.github %}
-					<a href="{{ coach.github }}" target="_blank">
+					<a href="https://github.com/{{ coach.github }}" target="_blank">
 						<img src="public/images/octocat.png">
 					</a>
 				{% endif %}
 				{% if coach.twitter %}
-					<a href="{{ coach.twitter }}" target="_blank">
+					<a href="https://twitter.com/{{ coach.twitter }}" target="_blank">
 						<img src="public/images/twitterlogo.png">
 					</a>
 				{% endif %}
