@@ -102,6 +102,12 @@ years:
       is_guest: true
       github: RReverser
       twitter: RReverser
+    - name: Max Klymyshyn
+      full_img_url: https://pbs.twimg.com/profile_images/486799006811447296/VxwgQ4s0.png
+      lang: js
+      is_guest: true
+      github: joymax
+      twitter: maxmaxmaxmax
     - name: Victor Sych
       full_img_url: https://avatars2.githubusercontent.com/u/2924275?v=3&s=400
       lang: js
