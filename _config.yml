@@ -102,6 +102,12 @@ years:
       is_guest: true
       github: RReverser
       twitter: RReverser
+    - name: Victor Sych
+      full_img_url: https://avatars2.githubusercontent.com/u/2924275?v=3&s=400
+      lang: js
+      is_guest: true
+      github: vsych
+      twitter: VictorSych
 
   - year: 2014
     coaches:
