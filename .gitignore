@@ -7,4 +7,5 @@ _site
 /vendor/jquery/src/*
 !vendor/jquery/dist
 !/vendor/toastr
+!/vendor/imgLiquid-min.js
 .idea

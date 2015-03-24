@@ -1,7 +1,10 @@
-<h2>Coaches:</h2>
+<!-- <h2>Coaches:</h2> -->
 
-<ul>
-  {% for coach in site.coaches %}
-    {% include partials/coach.html %}
-  {% endfor %}
-</ul>
+  <ul>
+    {% for coach in year.coaches %}
+      {% include partials/coach.html %}
+    {% endfor %}
+    {% for coach in site.placeholder %}
+      {% include partials/coach.html %}
+    {% endfor %}
+  </ul>

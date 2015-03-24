@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="public/styles/home.css">
-  <link rel="stylesheet" href="vendor/toastr/toastr.css">    
+  <link rel="stylesheet" href="vendor/toastr/toastr.css">
   <link rel="apple-touch-icon" sizes="57x57" href="public/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="114x114" href="public/images/favicons/apple-touch-icon-114x114.png">
   <link rel="apple-touch-icon" sizes="72x72" href="public/images/favicons/apple-touch-icon-72x72.png">
@@ -31,18 +31,18 @@
   <!--[if lte IE 7]>
   <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
- 
+
   <section id="intro">
     <div class="logo">Kottans</div>
-  
+
 
     <div class="nav-section">
       <h1><a href="#intro">Kottans</a></h1>
-  
+
       <div class="suppl-content">
         <a href="https://github.com/kottans" class="github-link" target="_blank">Github</a>
       </div>
-      
+
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -59,25 +59,60 @@
       {% include about.html %}
     </div>
   </section>
-  
+
+
   <section id="slides">
     <div class="container">
       {% include slides.html %}
     </div>
   </section>
-  
+
   <section id="team">
     <div class="container">
-      {% include coaches.html %}
+    <h2>Coaches:</h2>
+      <nav class="years-nav">
+        <div class="table-years">
+        {% for year in site.years %}
+          {% if forloop.index == 1 %}
+            <a class="active" href="#{{year.year}}">{{year.year}}</a>
+          {% else %}
+            <a href="#{{year.year}}">{{year.year}}</a>
+          {% endif %}
+        {% endfor %}
+        </dir>
+      </nav>
+      {% for year in site.years %}
+        {% if forloop.index == 1 %}
+          <div id="{{year.year}}" class="year current">
+        {% else %}
+          <div id="{{year.year}}" class="year">
+        {% endif %}
+        {% include coaches.html %}
+          </div> <!-- .year -->
+      {% endfor %}
     </div>
   </section>
-  
+
   <section id="contact">
     <div class="container">
       {% include contact.html %}
     </div>
   </section>
-  
+
+
+<section id="supporters">
+  <div class="container">
+    <h2>Grateful for support from</h2>
+    <ul>
+      <li>
+          <a href="http://cogniance.com" target="_blank">
+            <img src="public/images/cogniance.png" alt="Cogniance">
+          </a>
+      </li>
+    </ul>
+  </div>
+  </section>
+
   <footer>
     <ul class="social-links">
       <li><a href="https://www.facebook.com/kottans" class="facebook" target="_blank">Facebook</a></li>
@@ -88,12 +123,15 @@
       <p> Copyright &copy; 2014 Kottans. All rights reserved.</p>
     </div>
   </footer>
-  
+
   <script src='vendor/jquery/dist/jquery.min.js'></script>
   <script src='vendor/toastr/toastr.min.js'></script>
+  <script src='vendor/imgLiquid/js/imgLiquid-min.js'></script>
   <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
   <script src='public/scripts/hover-classes.js?v=1.0'></script>
   <script src='public/scripts/submit.js?v=1.0'></script>
   <script src='public/scripts/fixed_header.js'></script>
+  <script src='public/scripts/year-switcher.js'></script>
+  <script src='public/scripts/images.js'></script>
 </body>
 </html>

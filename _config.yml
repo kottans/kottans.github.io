@@ -1,41 +1,200 @@
 markdown: kramdown
-coaches:
-  - img_url: serg.jpg
-    name: Sergey Gopkalo
-    bio: Total of 10 years experience in IT, 5 years experience as software developer, about 3 years as Ruby developer
-
-  - img_url: den.jpg
-    name: Denis Yagofarov
-    bio: 7 year-long journey into IT, 4 years experience as system and network administrator, about 2 years as Ruby developer
-
-  - img_url: lena.jpg
-    name: Elena Morgun
-    bio: Cat that loves Ruby and Rails
-
-  - img_url: misha.jpg
-    name: Mikhail Bortnyk
-    bio: Ruby on Rails developer that has a passion for BDD and elegant solutions
-
-  - img_url: john.jpg
-    name: Oleksandr Lapshyn
-    bio: Front-end developer that passionates about open-source and human interaction
-
-  - img_url: such.jpg
-    name: Artem Suchov
-    bio: Deeply curious, loves to learn, insightful about people and their psychological make-up, deft in communication, excel at networking, deeply tech-savvy and enjoys growing others through education and leadership
-
-  - img_url: julia.jpg
-    name: Julia Budnik
-    bio: 7 badass years in IT. Dictator in css/html/life domains
-
-  - img_url: lulya.jpg
-    name: Julia Savinkova
-    bio: Sometimes people think she's too sweet to be a programmer & hardcore geek. .NET/JavaScript Developer, TDD adept
-
-  - img_url: dmitry.jpg
-    name: Dmitry Tselinko
-    bio: Kick-ass javascript knowledge helps Dmitry with his daily job & night shifts with Kottans (ocassionaly)
-
+placeholder:
   - img_url: placeholder.jpg
     name: You
+    placeholder: true
     bio: If you think we're doing a right thing and want to contribute, be sure to drop us a line at kottans.org@gmail.com
+    # github: https://github.com/join
+    # twitter: https://twitter.com/signup
+regulars:
+  coach: &sergey
+    img_url: serg.jpg
+    name: Sergey Gopkalo
+    lang: ruby
+    # bio: Total of 10 years experience in IT, 5 years experience as software developer, about 3 years as Ruby developer…
+    # github: TOADD
+    # twitter: TOADD
+  coach: &rubycat
+    img_url: lena.jpg
+    name: Elena Morgun
+    lang: ruby
+    # bio: Cat that loves Ruby and Rails…
+    github: darthrevan
+    twitter: rubykatze
+  coach: &johny
+    img_url: john.jpg
+    name: Oleksandr Lapshyn
+    lang: js
+    # bio: Front-end developer that passionates about open-source and human interaction…
+    github: sudodoki
+    twitter: sudodoki
+  coach: &artem
+    img_url: such.jpg
+    name: Artem Suchov
+    lang: ruby
+    # bio: Deeply curious, loves to learn, insightful about people and their psychological make-up, deft in communication, excel at networking, deeply tech-savvy and enjoys growing others through education and leadership
+    github: suchov
+    twitter: ArtemSuchov
+  coach: &julia
+    img_url: julia.jpg
+    name: Julia Budnik
+    lang: ruby, js
+    # bio: 7 badass years in IT. Dictator in css/html/life domains
+    github: mayosh
+    twitter: Jubudni
+  coach: &den
+    img_url: den.jpg
+    name: Denis Yagofarov
+    lang: ruby
+    # bio: 7 year-long journey into IT, 4 years experience as system and network administrator, about 2 years as Ruby developer
+    github: denyago
+    twitter: denyago
+  coach: &bortnyk
+    img_url: misha.jpg
+    name: Mikhail Bortnyk
+    lang: ruby, js
+    #bio: Ruby on Rails developer that has a passion for BDD and elegant solutions…
+    github: vessi
+    twitter: mikhailbortnyk
+  coach: &lulia
+    img_url: lulya.jpg
+    name: Julia Savinkova
+    # bio: Sometimes people think she's too sweet to be a programmer & hardcore geek. .NET/JavaScript Developer, TDD adept
+    lang: js
+    github: programulya
+    twitter: programulya
+  coach: &listochkin
+    name: Andrey Listochkin
+    full_img_url: https://pbs.twimg.com/profile_images/2956586427/ef43564dc4d7de83ea7a0688a12599db.jpeg
+    lang: js
+    github: listochkin
+    twitter: listochkin
+years:
+  - year: 2015
+    coaches:
+    - img_url: placeholder.jpg
+      name: Eugene Safronov
+      full_img_url: https://pbs.twimg.com/profile_images/2566448984/9q4civlcn3xyda9vpc48.jpeg
+      lang: js
+      # bio: Nice guy
+      github: sejoker
+      twitter: sejoker
+    - *sergey
+    - *rubycat
+    - *bortnyk
+    - *johny
+    - *artem
+    - *julia
+    - img_url: placeholder.jpg
+      name: Denis Sergienko
+      lang: ruby, js
+      # bio:
+      github: ololyay
+      twitter: ololyay
+    - name: Igor Kroosh
+      full_img_url: https://pbs.twimg.com/profile_images/461954738762682368/_Rf9eX4S.jpeg
+      lang: ruby, js
+      # bio:
+      github: tilast
+      twitter: ikroosh
+    - name: Ingvar Stepanyan
+      full_img_url: https://pbs.twimg.com/profile_images/517329577580826624/u42jHnsA.jpeg
+      lang: js
+      is_guest: true
+      github: RReverser
+      twitter: RReverser
+    - name: Max Klymyshyn
+      full_img_url: https://pbs.twimg.com/profile_images/486799006811447296/VxwgQ4s0.png
+      lang: js
+      is_guest: true
+      github: joymax
+      twitter: maxmaxmaxmax
+    - name: Victor Sych
+      full_img_url: https://avatars2.githubusercontent.com/u/2924275?v=3&s=400
+      lang: js
+      is_guest: true
+      github: vsych
+      twitter: VictorSych
+    - name: Viktor Zozulyak
+      lang: js
+      is_guest: true
+      github: zuzusik
+    - *listochkin
+
+  - year: 2014
+    coaches:
+    - *sergey
+    - *den
+    - <<: *rubycat
+      lang: ruby, js
+    - <<: *bortnyk
+      lang: ruby, js
+    - <<: *johny
+      lang: ruby, js
+    - full_img_url: https://avatars3.githubusercontent.com/u/307982?v=3&s=400
+      name: Oleksandr Rozumenko
+      lang: ruby
+      github: brain-geek
+      # twitter: TOADD
+    - *artem
+    - *julia
+    - *lulia
+    - name: Alexander Beletsky
+      full_img_url: https://pbs.twimg.com/profile_images/2390350566/a9gljlryvmnbx8y3tq2f.jpeg
+      lang: js
+      is_guest: true
+      github: alexbeletsky
+      twitter: alexbeletsky
+    - name: Eldar Djafarov
+      full_img_url: https://pbs.twimg.com/profile_images/971019265/25-08-08_1708.jpg
+      img_url: placeholder.jpg
+      lang: js
+      github: edjafarov
+      twitter: edjafarov
+    - *listochkin
+    - name: Artyom Trityak
+      full_img_url: https://avatars2.githubusercontent.com/u/957406?v=3&s=400
+      lang: js
+      is_guest: true
+      github: ArtyomTrityak
+      twitter: ArtyomTrityak
+    - name: Valentyn Shybanov
+      full_img_url: https://avatars1.githubusercontent.com/u/459897?v=3&s=400
+      lang: js
+      is_guest: true
+      github: olostan
+      twitter: olostan
+    - name: Dmytro Yarmak
+      full_img_url: https://avatars1.githubusercontent.com/u/1378201?v=3&s=400
+      lang: js
+      github: dmytroyarmak
+      twitter: dmytroyarmak
+    - name: Eugene Koshevoy
+      img_url: placeholder.jpg
+      lang: js
+      is_guest: true
+      # github: TODOADD
+      # twitter: TODOADD
+    - name: Dmitry Tselinko
+      img_url: dmitry.jpg
+      lang: js
+      # bio: Kick-ass javascript knowledge helps Dmitry with his daily job & night shifts with Kottans (ocassionaly)…
+      github: dmitryt
+      # twitter: TODOADD
+    - name: Dmitriy Filipenko
+      full_img_url: https://avatars3.githubusercontent.com/u/1822520?v=3&s=400
+      lang: js
+      github: dmfilipenko
+      twitter: dmfilipenko
+
+  - year: 2013
+    coaches:
+    - *den
+    - *bortnyk
+
+  - year: 2012
+    coaches:
+    - *bortnyk
+    - img_url: alex.jpg
+      name: Alexandr Shilo
+      lang: ruby
