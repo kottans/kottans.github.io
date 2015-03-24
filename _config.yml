@@ -118,6 +118,7 @@ years:
       lang: js
       is_guest: true
       github: zuzusik
+    - *listochkin
 
   - year: 2014
     coaches:
