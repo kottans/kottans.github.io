@@ -114,6 +114,10 @@ years:
       is_guest: true
       github: vsych
       twitter: VictorSych
+    - name: Viktor Zozulyak
+      lang: js
+      is_guest: true
+      github: zuzusik
 
   - year: 2014
     coaches:
