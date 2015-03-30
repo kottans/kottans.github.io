@@ -85,7 +85,7 @@ years:
     - *johny
     - *artem
     - *julia
-    - img_url: placeholder.jpg
+    - full_img_url: http://aejis.eu/img/supermen/ds.jpg
       name: Denis Sergienko
       lang: ruby, js
       # bio:
