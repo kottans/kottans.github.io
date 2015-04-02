@@ -201,6 +201,7 @@ h3 {
   height: 200px;
 }
 #team .img-wrapper {
+  display: inline-block;
   overflow: hidden;
 }
 #team .img-wrapper img {
