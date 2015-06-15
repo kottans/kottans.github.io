@@ -528,11 +528,13 @@ footer p {
 }
 #contact .unit .javascript-description,
 #contact .unit .ruby-description,
+#contact .unit .csharp-description,
 #contact .unit .java-description {
   display: none;
 }
 #new_participant.js-hover ~ .javascript-description,
 #new_participant.ruby-hover ~ .ruby-description,
+#new_participant.csharp-hover ~ .csharp-description,
 #new_participant.java-hover ~ .java-description {
   display: block;
 }
@@ -577,6 +579,7 @@ footer p {
   }
   #new_participant.js-hover ~ .javascript-description,
   #new_participant.ruby-hover ~ .ruby-description,
+  #new_participant.csharp-hover ~ .csharp-description,
   #new_participant.java-hover ~ .java-description {
     display: none;
   }
@@ -611,6 +614,7 @@ footer p {
 @media screen and (max-width: 860px) {
   .javascript-description,
   .ruby-description,
+  .csharp-description,
   .java-description {
     display: block;
   }

@@ -7,10 +7,10 @@ $(function(){
         name = $this.children('input').val(),
         container = $this.closest('form');
       container
-        .removeClass('js-hover ruby-hover java-hover')
+        .removeClass('js-hover ruby-hover java-hover csharp-hover')
         .addClass(name + '-hover');
     })
     .on('mouseleave', function () {
-      $(this).closest('form').removeClass('js-hover ruby-hover java-hover');
+      $(this).closest('form').removeClass('js-hover ruby-hover java-hover csharp-hover');
     });
 });
