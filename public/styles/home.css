@@ -468,6 +468,13 @@ h3 {
   border: 1px solid #fff;
 }
 
+#slides li.csharp {
+  background: #fff url(../images/slide-thumbnails/csharp.png) no-repeat center;
+  background-size: 100% auto;
+  border: 1px solid #fff;
+}
+
+
 #slides li:hover {
   background-size: 70% auto;
   border-width: 30px;
