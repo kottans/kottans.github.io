@@ -9,17 +9,10 @@
     submitButt.prop("disabled", !checkboxes.is(":checked"));
   });
 
-  submitButt.Click(function (e){
-    if (!checkboxes.is(":checked")) {
-      // show error message
-      // toastr.error("Select course you want to participate.");
-    }
-  });
-
   function addNewParticipant(participantObj) {
     toastr.info('Submitting your form…');
     submitButt.prop("disabled", true);
-    
+
     var coursesDB = new Firebase('https://sudodoki.firebaseio.com/kottans');
     coursesDB.push(participantObj, function onComplete(err){
       if (err) { 
