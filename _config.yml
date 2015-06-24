@@ -79,6 +79,19 @@ years:
       # bio: Nice guy
       github: sejoker
       twitter: sejoker
+    - full_img_url: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/134/1db/19bee7c.jpg
+      name: Valentine Radchuk  
+      lang: C#
+      github: zzaknafeyn
+      twitter: zzaknafeyn
+    - full_img_url: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/016/03f/257db29.jpg
+      name: Alexey Aza
+      lang: C#
+      github: https://github.com/jalaz
+    - full_img_url: https://avatars3.githubusercontent.com/u/7375145?v=3&s=460
+      name: Dmytro Hnatiuk
+      lang: C#
+      github: https://github.com/hnatiukdm
     - *sergey
     - *rubycat
     - *bortnyk
