@@ -474,6 +474,11 @@ h3 {
   border: 1px solid #fff;
 }
 
+#slides li.erlang {
+  background: #fff url(../images/slide-thumbnails/joe_notebook.svg) no-repeat center;
+  background-size: 100% auto;
+  border: 1px solid #fff;
+}
 
 #slides li:hover {
   background-size: 70% auto;
