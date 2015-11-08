@@ -70,20 +70,12 @@ regulars:
     github: listochkin
     twitter: listochkin
 years:
-  - year: 2015
+  - year: 2015-2016
     coaches:
-    - img_url: placeholder.jpg
-      name: Eugene Safronov
-      full_img_url: https://pbs.twimg.com/profile_images/2566448984/9q4civlcn3xyda9vpc48.jpeg
-      lang: js
-      # bio: Nice guy
-      github: sejoker
-      twitter: sejoker
-    - full_img_url: https://pbs.twimg.com/profile_images/637086673281527808/-ee20k4R_400x400.jpg
-      name: Andrey Savchenko
-      lang: Ruby
-      github: ptico
-      twitter: ptico
+    - <<: *bortnyk
+      lang: erlang
+    - <<: *lulia
+      lang: C#
     - full_img_url: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/134/1db/19bee7c.jpg
       name: Valentine Radchuk  
       lang: C#
@@ -99,6 +91,21 @@ years:
       lang: C#
       github: hnatiukdm
       twitter: dhnatiuk
+
+  - year: 2014-2015
+    coaches:
+    - img_url: placeholder.jpg
+      name: Eugene Safronov
+      full_img_url: https://pbs.twimg.com/profile_images/2566448984/9q4civlcn3xyda9vpc48.jpeg
+      lang: js
+      # bio: Nice guy
+      github: sejoker
+      twitter: sejoker
+    - full_img_url: https://pbs.twimg.com/profile_images/637086673281527808/-ee20k4R_400x400.jpg
+      name: Andrey Savchenko
+      lang: Ruby
+      github: ptico
+      twitter: ptico
     - *sergey
     - *rubycat
     - *bortnyk
@@ -142,7 +149,7 @@ years:
       github: zuzusik
     - *listochkin
 
-  - year: 2014
+  - year: 2013-2014
     coaches:
     - *sergey
     - *den
@@ -208,12 +215,12 @@ years:
       github: dmfilipenko
       twitter: dmfilipenko
 
-  - year: 2013
+  - year: 2012-2013
     coaches:
     - *den
     - *bortnyk
 
-  - year: 2012
+  - year: 2011-2012
     coaches:
     - *bortnyk
     - img_url: alex.jpg
