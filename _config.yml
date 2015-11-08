@@ -65,7 +65,7 @@ regulars:
     twitter: programulya
   coach: &listochkin
     name: Andrey Listochkin
-    full_img_url: https://pbs.twimg.com/profile_images/2956586427/ef43564dc4d7de83ea7a0688a12599db.jpeg
+    img_url: listochkin.jpg
     lang: js
     github: listochkin
     twitter: listochkin
