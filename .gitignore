@@ -9,3 +9,4 @@ _site
 !/vendor/toastr
 !/vendor/imgLiquid-min.js
 .idea
+.jekyll-metadata
