@@ -78,6 +78,7 @@ section {
 
 #intro .nav-section nav ul li {
   display: inline-block;
+  margin: 0 1%;
   font-size: 2.4em;
 }
 
@@ -577,7 +578,7 @@ footer p {
     min-height: 300px;
   }
   .nav-section h1 {
-    padding-top: 6px;
+    padding-top: 3px;
   }
   #intro .nav-section nav {
     padding-top: 7px;
