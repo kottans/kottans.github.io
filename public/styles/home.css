@@ -55,15 +55,13 @@ section {
 .suppl-content {
   float: right;
   width: 15%;
-  font-size: 1.6em;
+  font-size: 3.1em;
   text-align: right;
 }
 
 .suppl-content a {
   display: inline-block;
-  padding: 10px 0 0 50px;
   min-height: 35px;
-  background: url(../images/octocat.png) no-repeat;
 }
 
 #intro .nav-section nav {
@@ -583,9 +581,6 @@ footer p {
   #intro .nav-section nav {
     padding-top: 7px;
   }
-  .suppl-content a {
-    padding-left: 40px;
-  }
   #slides li {
     width: 100px;
     height: 100px;
@@ -697,7 +692,6 @@ footer p {
     display: block;
   }
   .github-link span {
-    width: 35px;
     text-indent: -90000%;
   }
   .container {
