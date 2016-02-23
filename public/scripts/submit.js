@@ -15,7 +15,7 @@
 
     var coursesDB = new Firebase('https://sudodoki.firebaseio.com/kottans');
     coursesDB.push(participantObj, function onComplete(err){
-      if (err) { 
+      if (err) {
         submitButt.prop("disabled", false);
         return toastr.error('Sorry, an error occurred');
       }
@@ -27,6 +27,7 @@
     e.preventDefault();
     // transforming form to object, each field -> key in object
     var paramObj = {};
+    paramObj.registrationTime = (new Date).getTime();
     $.each($(this).serializeArray(), function(_, kv) {
       if (paramObj.hasOwnProperty(kv.name)) {
         paramObj[kv.name] = $.makeArray(paramObj[kv.name]);
