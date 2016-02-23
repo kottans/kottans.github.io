@@ -406,7 +406,7 @@ h3 {
   width: auto;
 }
 
-#contact form p input:not([type="checkbox"]) {
+#contact form p input:not([type="checkbox"]):not([type="radio"]) {
   padding: 0 10px;
   width: 194px;
   height: 30px;
