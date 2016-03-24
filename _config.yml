@@ -160,10 +160,10 @@ years:
     - <<: *johny
       lang: ruby, js
     - full_img_url: https://avatars3.githubusercontent.com/u/307982?v=3&s=400
-      name: Oleksandr Rozumenko
+      name: Alex Rozumii
       lang: ruby
       github: brain-geek
-      # twitter: TOADD
+      twitter: brain_geek
     - *artem
     - *julia
     - *lulia
