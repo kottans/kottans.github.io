@@ -12,10 +12,4 @@ $(function () {
     $year = $('#' + idSelected)
     $year.addClass('current').siblings().removeClass('current')
   });
-
-  // Dynamic year in footer
-  var currentDate = new Date;
-  $('#current-year').text(
-      currentDate.getFullYear()
-  );
 });
