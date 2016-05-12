@@ -91,6 +91,7 @@ years:
       lang: C#
       github: hnatiukdm
       twitter: dhnatiuk
+    - *artem
 
   - year: 2014-2015
     coaches:
@@ -219,10 +220,12 @@ years:
     coaches:
     - *den
     - *bortnyk
+    - *artem
 
   - year: 2011-2012
     coaches:
     - *bortnyk
+    - *artem
     - img_url: alex.jpg
       name: Alexandr Shilo
       lang: ruby
