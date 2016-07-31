@@ -72,12 +72,13 @@ regulars:
 years:
   - year: 2015-2016
     coaches:
+
     - <<: *bortnyk
       lang: erlang
     - <<: *lulia
       lang: C#
     - full_img_url: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/134/1db/19bee7c.jpg
-      name: Valentine Radchuk  
+      name: Valentine Radchuk
       lang: C#
       github: zaknafeyn
       twitter: zzaknafeyn
@@ -92,6 +93,33 @@ years:
       github: hnatiukdm
       twitter: dhnatiuk
     - *artem
+    # JS 2016 March-July Kyiv
+    - name: Aleksey Shvayka
+      lang: js
+      github: shvaikalesh
+    - name: Nikolay Kozhukharenko
+      lang: js
+      github: mkozhukharenko
+    - name: Ivan Stestenko
+      lang: js
+      github: firec0der
+    - * johny
+    - name: Illia Seheda
+      lang: js
+      github: ALF-er
+      is_guest: true
+    - name: Artem Bey
+      lang: js
+      github: defly
+      is_guest: true
+    - *listochkin
+    - name: Julia Savinkova
+      lang: js
+      github: programulya
+    - name: Taras Hupalo
+      lang: js
+      github: cwayfinder
+      is_guest: true
 
   - year: 2014-2015
     coaches:
