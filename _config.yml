@@ -103,7 +103,7 @@ years:
     - name: Ivan Stestenko
       lang: js
       github: firec0der
-    - * johny
+    - *johny
     - name: Illia Seheda
       lang: js
       github: ALF-er
