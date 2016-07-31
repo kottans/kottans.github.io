@@ -76,7 +76,7 @@ years:
     - <<: *bortnyk
       lang: erlang
     - <<: *lulia
-      lang: C#
+      lang: C#, js
     - full_img_url: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/134/1db/19bee7c.jpg
       name: Valentine Radchuk
       lang: C#
@@ -113,9 +113,6 @@ years:
       github: defly
       is_guest: true
     - *listochkin
-    - name: Julia Savinkova
-      lang: js
-      github: programulya
     - name: Taras Hupalo
       lang: js
       github: cwayfinder
