@@ -30,8 +30,8 @@ regulars:
     twitter: sudodoki
   coach: &artem
     img_url: such.jpg
-    name: Artem Suchov
-    lang: ruby
+    name: Artem Sychov
+    lang: ruby, js, python
     # bio: Deeply curious, loves to learn, insightful about people and their psychological make-up, deft in communication, excel at networking, deeply tech-savvy and enjoys growing others through education and leadership
     github: suchov
     twitter: ArtemSuchov
