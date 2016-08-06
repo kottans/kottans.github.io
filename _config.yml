@@ -117,6 +117,10 @@ years:
       lang: js
       github: cwayfinder
       is_guest: true
+    # JS 2016 March-July Kharkiv
+    - name: Illya Klymov
+      lang: js
+      github: xanf
 
   - year: 2014-2015
     coaches:
