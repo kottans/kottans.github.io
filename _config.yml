@@ -100,7 +100,8 @@ years:
     - name: Nikolay Kozhukharenko
       lang: js
       github: mkozhukharenko
-    - name: Ivan Stestenko
+    - full_img_url: https://dl.dropboxusercontent.com/s/yt6tpuxmgt7bp54/11492412.jpeg
+      name: Ivan Stetsenko
       lang: js
       github: firec0der
     - *johny
