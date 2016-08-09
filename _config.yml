@@ -93,7 +93,8 @@ years:
       github: hnatiukdm
       twitter: dhnatiuk
     - *artem
-    # JS 2016 March-July Kyiv
+    # JS 2016 March-July
+    # Kyiv
     - name: Aleksey Shvayka
       lang: js
       github: shvaikalesh
@@ -118,12 +119,12 @@ years:
       lang: js
       github: cwayfinder
       is_guest: true
-    # JS 2016 March-July Kharkiv
+    # Kharkiv
     - full_img_url: https://pp.vk.me/c626517/v626517438/5e37/5tQ3gY3KSvw.jpg
       name: Illya Klymov
       lang: js
       github: xanf
-    # JS 2016 March - July Lviv
+    # Lviv
     - name: Ivan Lavriv
       lang: js
       twitter: ilavriv
