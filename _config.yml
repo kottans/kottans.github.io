@@ -93,7 +93,8 @@ years:
       github: hnatiukdm
       twitter: dhnatiuk
     - *artem
-    # JS 2016 March-July Kyiv
+    # JS 2016 March-July
+    # Kyiv
     - name: Aleksey Shvayka
       lang: js
       github: shvaikalesh
@@ -118,11 +119,26 @@ years:
       lang: js
       github: cwayfinder
       is_guest: true
-    # JS 2016 March-July Kharkiv
+    # Kharkiv
     - full_img_url: https://pp.vk.me/c626517/v626517438/5e37/5tQ3gY3KSvw.jpg
       name: Illya Klymov
       lang: js
       github: xanf
+    # Lviv
+    - name: Ivan Lavriv
+      lang: js
+      twitter: ilavriv
+      github: lavriv92
+      full_img_url: https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/13524357_1141337539262841_8174019877116492080_n.jpg?oh=a146ccebf4bad5f6e544e8e5caac1a7a&oe=581F19AB
+    - name: Serg Bataev
+      lang: js
+      twitter: servika
+      full_img_url: https://pbs.twimg.com/profile_images/506726680845492224/7rkCi3eK.jpeg
+    - name: Denis Stoyanov
+      lang: js
+      twitter: xgrommx
+      github: xgrommx
+      is_guest: true
 
   - year: 2014-2015
     coaches:
