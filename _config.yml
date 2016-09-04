@@ -73,6 +73,7 @@ years:
   - year: 2015-2016
     coaches:
 
+    # .NET 2015-2016 November-March
     - <<: *bortnyk
       lang: erlang
     - <<: *lulia
@@ -92,6 +93,18 @@ years:
       lang: C#
       github: hnatiukdm
       twitter: dhnatiuk
+    - full_img_url: http://i.imgur.com/M8eFqNY.jpg
+      name: Dan Kashkovsky
+      lang: C#
+      github: Mr-Zoidberg
+      twitter: danniekash
+      is_guest: true
+    # .NET 2016 March-July
+    - full_img_url: http://i.imgur.com/rY9hMRc.jpg
+      name: Timur Mudzhyri
+      lang: C#
+      github: intrueder
+      twitter: intrueder
     - *artem
     # JS 2016 March-July
     # Kyiv

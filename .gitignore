@@ -10,3 +10,4 @@ _site
 !/vendor/imgLiquid-min.js
 .idea
 .jekyll-metadata
+.DS_Store
