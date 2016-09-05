@@ -99,6 +99,12 @@ years:
       github: Mr-Zoidberg
       twitter: danniekash
       is_guest: true
+    - full_img_url: http://i.imgur.com/qxFREI6.jpg
+      name: Serhiy Kalinets
+      lang: C#
+      github: skalinets
+      twitter: skalinets
+      is_guest: true
     # .NET 2016 March-July
     - full_img_url: http://i.imgur.com/rY9hMRc.jpg
       name: Timur Mudzhyri
