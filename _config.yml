@@ -105,6 +105,11 @@ years:
       lang: C#
       github: intrueder
       twitter: intrueder
+    - full_img_url: http://i.imgur.com/Sxy9of8.png
+      name: Roman Vovk
+      lang: C#
+      github: kakarotto67
+      twitter: roman_vovk1
     - *artem
     # JS 2016 March-July
     # Kyiv
