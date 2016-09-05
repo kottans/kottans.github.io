@@ -98,18 +98,21 @@ years:
     - name: Aleksey Shvayka
       lang: js
       github: shvaikalesh
+      full_img_url: https://avatars3.githubusercontent.com/u/5098878?v=3&s=460
     - name: Nikolay Kozhukharenko
       lang: js
       github: mkozhukharenko
-    - full_img_url: https://dl.dropboxusercontent.com/s/yt6tpuxmgt7bp54/11492412.jpeg
-      name: Ivan Stetsenko
+      full_img_url: https://avatars3.githubusercontent.com/u/9365923?v=3&s=460
+    - name: Ivan Stetsenko
       lang: js
       github: firec0der
+      full_img_url: https://dl.dropboxusercontent.com/s/yt6tpuxmgt7bp54/11492412.jpeg
     - *johny
     - name: Illia Seheda
       lang: js
       github: ALF-er
       is_guest: true
+      full_img_url: https://avatars3.githubusercontent.com/u/892346?v=3&s=460
     - name: Artem Bey
       lang: js
       github: defly
