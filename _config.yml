@@ -139,7 +139,8 @@ years:
       github: defly
       is_guest: true
     - *listochkin
-    - name: Taras Hupalo
+    - full_img_url: taras.jpg
+      name: Taras Hupalo
       lang: js
       github: cwayfinder
       is_guest: true
