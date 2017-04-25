@@ -164,6 +164,27 @@ years:
       twitter: xgrommx
       github: xgrommx
       is_guest: true
+    # Ruby 2016 fall 2016
+    # Lviv
+    - name: Bohdan Varshchuk
+      lang: ruby
+      twitter: g3d
+      github: g3d
+      full_img_url: https://avatars0.githubusercontent.com/u/859210?v=3&s=460
+    - name: Volodya Sveredyuk
+      lang: ruby
+      twitter: sveredyuk
+      github: sveredyuk
+      full_img_url: https://avatars0.githubusercontent.com/u/5221643?v=3&s=400
+    - name: Denys Medynskyi
+      lang: ruby
+      twitter: denysmedynskyi
+      github: denysmedynskyi
+      full_img_url: https://avatars0.githubusercontent.com/u/5591973?v=3&s=460
+    - name: Yuriy Kushnir
+      lang: ruby
+      github: kushniryb
+      full_img_url: https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAiNAAAAJDA2YTYxNjMyLWMwYTYtNDdkZS04YjBmLTQyNGExYzQyMjBjNw.jpg
 
   - year: 2014-2015
     coaches:
