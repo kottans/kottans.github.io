@@ -6,12 +6,12 @@ placeholder:
     # github: https://github.com/join
     # twitter: https://twitter.com/signup
 regulars:
-  coach: &ololyay
+  coach: &zxftr45
     img_url: den_2.jpg
     name: Denis Sergienko
     lang: ruby, js
-    github: ololyay
-    twitter: ololyay
+    github: zxftr45
+    twitter: zxftr45
   coach: &ilavriv
     name: Ivan Lavriv
     img_url: ilavriv.jpg
@@ -214,7 +214,7 @@ years:
     - *johny
     - *artem
     - *julia
-    - *ololyay
+    - *zxftr45
     - name: Igor Kroosh
       full_img_url: https://pbs.twimg.com/profile_images/461954738762682368/_Rf9eX4S.jpeg
       lang: ruby, js
