@@ -21,9 +21,6 @@ section {
   padding: 180px 15% 80px;
 }
 
-.half {
-  width: 49%;
-}
 
 #intro {
   color: #3b4347;
@@ -118,17 +115,6 @@ h3 {
 
 #team .container {
   padding-top: 80px;
-}
-
-/*#team .current-year {
-  display: inline-block;
-  width: 100%;
-  border-bottom: solid #84878E 1px;
-  margin-bottom: 40px;
-}
-*/
-#team .years {
-  list-style: none;
 }
 
 #team .years-nav {
@@ -314,19 +300,9 @@ h3 {
   background-color: #77DE08;
 }
 
-#team .active-year {
-  color:#478800;
-}
-
 #supporters {
    min-height: 100px;
  }
-
-#supporters.container > * {
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
 
 #supporters h2 {
   margin-bottom: 2em;
@@ -600,10 +576,6 @@ footer small {
   #intro .nav-section nav ul li a {
     display: block;
   }
-  .github-link span {
-    width: 35px;
-    text-indent: -90000%;
-  }
   .container {
     padding: 20px 5%;
   }
@@ -624,22 +596,14 @@ footer small {
   #contact .unit {
     display: block;
   }
-  #contact form label:not(.agreement) {
-    display: block;
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
-  #contact form p input:not([type="checkbox"]) {
-    width: 100%;
-  }
-  #contact form .difficult_choices label:not(:first-child) {
-    display: inline-block;
-  }
-  #contact form p.difficult_choices {
-    margin-bottom: 20px;
-  }
-  #contact form button {
-    width: 100%;
-  }
+}
+
+.writeup-link {
+  font-size: 1.6em;
+}
+#ournews h2 {
+  margin-bottom: 1em;
+}
+#ournews ul {
+  margin-left: 2em
 }
