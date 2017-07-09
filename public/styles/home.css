@@ -21,9 +21,6 @@ section {
   padding: 180px 15% 80px;
 }
 
-.half {
-  width: 49%;
-}
 
 #intro {
   color: #3b4347;
@@ -118,17 +115,6 @@ h3 {
 
 #team .container {
   padding-top: 80px;
-}
-
-/*#team .current-year {
-  display: inline-block;
-  width: 100%;
-  border-bottom: solid #84878E 1px;
-  margin-bottom: 40px;
-}
-*/
-#team .years {
-  list-style: none;
 }
 
 #team .years-nav {
@@ -280,9 +266,9 @@ h3 {
 }
 
 #team .coach-social-btn img {
-   width: 35px;
-   height: 35px;
-   box-shadow: none;
+  width: 35px;
+  height: 35px;
+  box-shadow: none;
 }
 
 #team .coach-social-btn a {
@@ -314,18 +300,8 @@ h3 {
   background-color: #77DE08;
 }
 
-#team .active-year {
-  color:#478800;
-}
-
 #supporters {
-   min-height: 100px;
- }
-
-#supporters.container > * {
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 50px;
+ min-height: 100px;
 }
 
 #supporters h2 {
@@ -343,12 +319,8 @@ h3 {
   text-align: center;
 }
 
-#contact .contact-info {
-  border-top: 1px solid #596267;
-}
-
 #contact .container a {
-  color: #a4a4a4;
+  color: #1da1f2;
   text-decoration: none;
 }
 
@@ -360,70 +332,17 @@ h3 {
   margin-bottom: 20px;
 }
 
-#contact .unit {
+.unit {
   display: inline-block;
   vertical-align: top;
 }
 
-#contact .one-third {
+.one-third {
   width: 33%;
 }
 
-#contact .two-thirds {
+.two-thirds {
   width: 65%;
-}
-
-#contact form:invalid button {
-  cursor: no-drop;
-}
-#contact form:invalid button .overlay {
-  display: block;
-}
-#contact form button {
-  position: relative;
-}
-#contact form button .overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #000;
-  color: #fff;
-}
-
-#contact form p {
-  margin-bottom: 10px;
-}
-
-#contact form label:not(.agreement) {
-  display: inline-block;
-  width: 95px;
-}
-
-#contact form .difficult_choices label:not(:first-child) {
-  width: auto;
-}
-
-#contact form p input:not([type="checkbox"]):not([type="radio"]) {
-  padding: 0 10px;
-  width: 194px;
-  height: 30px;
-  border: none;
-}
-
-#contact form input[type="checkbox"] {
-  vertical-align: middle;
-}
-
-#contact form button {
-  display: inline-block;
-  padding: 8px 45px;
-  background: #fff;
-  border: none;
-  cursor: pointer;
-  font: bold 1em "Courier New", Courier, monospace;
 }
 
 #slides {
@@ -532,30 +451,10 @@ footer small {
   color: #fff;
 }
 
-#contact .language {
-  float: right;
-}
-
 #contact .container {
   padding: 180px 5% 80px 15%;
 }
-#contact .unit .javascript-description,
-#contact .unit .ruby-description,
-#contact .unit .csharp-description,
-#contact .unit .java-description {
-  display: none;
-}
-#new_participant.js-hover ~ .javascript-description,
-#new_participant.ruby-hover ~ .ruby-description,
-#new_participant.csharp-hover ~ .csharp-description,
-#new_participant.java-hover ~ .java-description {
-  display: block;
-}
-@media only screen and (min-width: 1191px) {
-  #contact form button {
-    margin-left: 106px;
-  }
-}
+
 @media only screen and (min-width: 900px) {
   .nav-section.is-fixed {
     position: fixed;
@@ -590,12 +489,6 @@ footer small {
     width: 100px;
     height: 100px;
   }
-  #new_participant.js-hover ~ .javascript-description,
-  #new_participant.ruby-hover ~ .ruby-description,
-  #new_participant.csharp-hover ~ .csharp-description,
-  #new_participant.java-hover ~ .java-description {
-    display: none;
-  }
 
   #team .years-nav  a {
     font-size: 1.3em;
@@ -624,19 +517,12 @@ footer small {
     position: relative!important;
   }
 }
-@media screen and (max-width: 860px) {
-  .javascript-description,
-  .ruby-description,
-  .csharp-description,
-  .java-description {
-    display: block;
-  }
-}
+
 @media only screen and (max-width: 767px) {
   .container,
   #contact .container,
   #supporters .container
- {
+  {
     padding: 40px 5%;
   }
   .logo {
@@ -659,12 +545,6 @@ footer small {
     display: block;
     margin-bottom: 20px;
     width: auto;
-  }
-  .half {
-    width: auto;
-  }
-  #contact form button {
-    margin-left: 0;
   }
   #team li {
     width: 100%;
@@ -696,10 +576,6 @@ footer small {
   #intro .nav-section nav ul li a {
     display: block;
   }
-  .github-link span {
-    width: 35px;
-    text-indent: -90000%;
-  }
   .container {
     padding: 20px 5%;
   }
@@ -720,22 +596,14 @@ footer small {
   #contact .unit {
     display: block;
   }
-  #contact form label:not(.agreement) {
-    display: block;
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
-  #contact form p input:not([type="checkbox"]) {
-    width: 100%;
-  }
-  #contact form .difficult_choices label:not(:first-child) {
-    display: inline-block;
-  }
-  #contact form p.difficult_choices {
-    margin-bottom: 20px;
-  }
-  #contact form button {
-    width: 100%;
-  }
+}
+
+.writeup-link {
+  font-size: 1.6em;
+}
+#ournews h2 {
+  margin-bottom: 1em;
+}
+#ournews ul {
+  margin-left: 2em
 }

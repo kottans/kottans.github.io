@@ -49,6 +49,7 @@
           <li><a href="#slides">Slides</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#ournews">Our News</a></li>
         </ul>
       </nav>
     </div>
@@ -72,7 +73,7 @@
     <h2>Coaches:</h2>
       <nav class="years-nav">
         <div class="table-years">
-        {% for year in site.years %}
+        {% for year in site.data.coaches.years %}
           {% if forloop.index == 1 %}
             <a class="active" href="#{{year.year}}">{{year.year}}</a>
           {% else %}
@@ -81,7 +82,7 @@
         {% endfor %}
         </dir>
       </nav>
-      {% for year in site.years %}
+      {% for year in site.data.coaches.years %}
         {% if forloop.index == 1 %}
           <div id="{{year.year}}" class="year current">
         {% else %}
@@ -98,7 +99,11 @@
       {% include contact.html %}
     </div>
   </section>
-
+  <section id="ournews">
+    <div class="container">
+      {% include news.html %}
+    </div>
+  </section>
 
 <section id="supporters">
   <div class="container">
@@ -125,11 +130,7 @@
   </footer>
 
   <script src='vendor/jquery/dist/jquery.min.js'></script>
-  <script src='vendor/toastr/toastr.min.js'></script>
   <script src='vendor/imgLiquid/js/imgLiquid-min.js'></script>
-  <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
-  <script src='public/scripts/hover-classes.js?v=1.0'></script>
-  <script src='public/scripts/submit.js?v=1.0'></script>
   <script src='public/scripts/fixed_header.js'></script>
   <script src='public/scripts/year-switcher.js'></script>
   <script src='public/scripts/images.js'></script>
