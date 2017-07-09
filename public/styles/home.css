@@ -266,9 +266,9 @@ h3 {
 }
 
 #team .coach-social-btn img {
-   width: 35px;
-   height: 35px;
-   box-shadow: none;
+  width: 35px;
+  height: 35px;
+  box-shadow: none;
 }
 
 #team .coach-social-btn a {
@@ -301,8 +301,8 @@ h3 {
 }
 
 #supporters {
-   min-height: 100px;
- }
+ min-height: 100px;
+}
 
 #supporters h2 {
   margin-bottom: 2em;
@@ -522,7 +522,7 @@ footer small {
   .container,
   #contact .container,
   #supporters .container
- {
+  {
     padding: 40px 5%;
   }
   .logo {
