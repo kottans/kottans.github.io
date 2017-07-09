@@ -1,33 +1,18 @@
 <div class="unit one-third">
-  
   <h2>Get Started</h2>
-  <p>Wanna apply for our courses? Fill out the form.</p>
-  
-<!-- sample of how to provide additional info: -->
-<!--   <div class="contact-info">
-    <div class="header"><p>Closes course will be in 3 days</p></div>
-    <p>Be sure to hurry.</p>
-  </div> -->
+  <p>Wanna apply for our courses? Fill out the registration form, if there's an active one.</p>
+  <p>You can also drop us a line at <u>kottans.org at gmail.com</u> or join our public chat in <a href="https://gitter.im/kottans/kottans.github.io">Gitter</a>.</p>
+  <p>If you want to run a course in your city, see <a href="https://github.com/kottans/kottans-course-bootstrap">course bootstrap info</a> and maybe check open issues in <a href="https://github.com/kottans/kottans-ongoing-projects/issues">ongoing projects</a>.</p>
 </div>
 <div class="unit two-thirds">
   <h2>Registration for courses</h2>
-
-  {% include partials/form.html %}
-
-  <div class="half unit language javascript-description">
-    {% include languages/js.html %}
-  </div>
-
-  <div class="half unit language ruby-description">
-    {% include languages/ruby.html %}
-  </div>
-
-  <div class="half unit language java-description">
-    {% include languages/java.html %}
-  </div>
-
-  <div class="half unit language csharp-description">
-    {% include languages/csharp.html %}
-  </div>
-
+  <ul>
+    {% capture difference %} {{ site.data.registrations | size | minus:1 }} {% endcapture %}
+    {% if difference contains '-' %}
+      <li><p>Seems that there are no open registrations right now.</p></li>
+    {% endif %}
+    {% for registration in site.data.registrations %}
+      <li><p><a target="_blank" href="{{registration.url}}">Registration for {{registration.course}} is now open</a> {{registration.extra_text}}</p></li>
+    {% endfor %}
+  </ul>
 </div>
