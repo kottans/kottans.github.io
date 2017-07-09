@@ -72,7 +72,7 @@
     <h2>Coaches:</h2>
       <nav class="years-nav">
         <div class="table-years">
-        {% for year in site.years %}
+        {% for year in site.data.coaches.years %}
           {% if forloop.index == 1 %}
             <a class="active" href="#{{year.year}}">{{year.year}}</a>
           {% else %}
@@ -81,7 +81,7 @@
         {% endfor %}
         </dir>
       </nav>
-      {% for year in site.years %}
+      {% for year in site.data.coaches.years %}
         {% if forloop.index == 1 %}
           <div id="{{year.year}}" class="year current">
         {% else %}
