@@ -15,7 +15,7 @@ regulars:
   coach: &zxftr45
     img_url: den_2.jpg
     name: Denis Sergienko
-    lang: ruby, js
+    lang: ruby
     github: zxftr45
     twitter: zxftr45
   coach: &ilavriv
@@ -222,8 +222,9 @@ years:
     - *johny
     - *artem
     - *julia
-    - *zxftr45
-    - <<: *kroosh*
+    - <<: *zxftr45
+      lang: ruby, js
+    - <<: *kroosh
       lang: ruby, js
     - name: Ingvar Stepanyan
       full_img_url: https://pbs.twimg.com/profile_images/692873581496152064/rYPVgOqN_400x400.jpg
