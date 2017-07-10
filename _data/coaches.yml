@@ -6,6 +6,12 @@ placeholder:
     # github: https://github.com/join
     # twitter: https://twitter.com/signup
 regulars:
+  coach: &kroosh
+    name: Igor Kroosh
+    full_img_url: https://pbs.twimg.com/profile_images/461954738762682368/_Rf9eX4S.jpeg
+    lang: ruby
+    github: tilast
+    twitter: ikroosh
   coach: &zxftr45
     img_url: den_2.jpg
     name: Denis Sergienko
@@ -79,7 +85,9 @@ years:
   - year: 2016-2017
     # TODO: add Lviv here
     coaches:
-
+      - *kroosh
+      - *rubycat
+      - *zxftr45
   - year: 2015-2016
     coaches:
 
@@ -215,12 +223,8 @@ years:
     - *artem
     - *julia
     - *zxftr45
-    - name: Igor Kroosh
-      full_img_url: https://pbs.twimg.com/profile_images/461954738762682368/_Rf9eX4S.jpeg
+    - <<: *kroosh*
       lang: ruby, js
-      # bio:
-      github: tilast
-      twitter: ikroosh
     - name: Ingvar Stepanyan
       full_img_url: https://pbs.twimg.com/profile_images/692873581496152064/rYPVgOqN_400x400.jpg
       lang: js
