@@ -82,6 +82,18 @@ regulars:
     github: listochkin
     twitter: listochkin
 years:
+  - year: 2017-2018
+    coaches:
+      - *artem
+      - *shvayka
+      - full_img_url: https://media.licdn.com/media/p/5/005/067/060/2bcec39.jpg
+        name: Anton Nemtsev
+        lang: js, html, css
+        github: SilentImp
+        twitter: SilentImp
+        is_guest: true
+
+
   - year: 2016-2017
     # TODO: add Lviv here
     coaches:
