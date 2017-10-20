@@ -1,4 +1,4 @@
-# Just comment out inactive registrations - but don't delete those
-- course: "JS"
+Just comment out inactive registrations - but don't delete those
+# - course: "JS"
   # extra_text: "can put something here"
-  url: "https://docs.google.com/forms/d/1iuswGqM7jygO8Fh_Yd-4VhkQCPxcnZJijkUQIigX3T8/viewform?edit_requested=true"
+  # url: "https://docs.google.com/forms/d/1iuswGqM7jygO8Fh_Yd-4VhkQCPxcnZJijkUQIigX3T8/viewform?edit_requested=true"
