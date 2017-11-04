@@ -91,6 +91,11 @@ years:
         lang: js, html, css
         github: SilentImp
         twitter: SilentImp
+      - full_img_url: https://pbs.twimg.com/profile_images/832587216258007041/GmbLAVR6.jpg
+        name: Artem Yavorsky
+        lang: js
+        github: yavorsky
+        twitter: yavorsky_
 
 
   - year: 2016-2017
