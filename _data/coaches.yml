@@ -86,6 +86,7 @@ years:
     coaches:
       - *artem
       - *shvayka
+      - *listochkin
       - full_img_url: https://media.licdn.com/media/p/5/005/067/060/2bcec39.jpg
         name: Anton Nemtsev
         lang: js, html, css
