@@ -84,6 +84,7 @@ regulars:
 years:
   - year: 2017-2018
     coaches:
+      - *johny
       - *artem
       - *shvayka
       - *listochkin
@@ -92,11 +93,46 @@ years:
         lang: js, html, css
         github: SilentImp
         twitter: SilentImp
-      - full_img_url: https://pbs.twimg.com/profile_images/832587216258007041/GmbLAVR6.jpg
+      - full_img_url: https://pbs.twimg.com/profile_images/762656563819675648/22TRjn_P_400x400.jpg
+        name: Artem Denysov
+        lang: js
+        github: denar90
+        twitter: denar90_
+      - full_img_url: https://pbs.twimg.com/profile_images/935997293941219329/7o37rvVB_400x400.jpg
         name: Artem Yavorsky
         lang: js
         github: yavorsky
         twitter: yavorsky_
+      - full_img_url: https://pbs.twimg.com/profile_images/908763932747288576/ySuitABV_400x400.jpg
+        name: Roman Liutikov
+        lang: js
+        github: roman01la
+        twitter: roman01la
+      - full_img_url: https://avatars3.githubusercontent.com/u/122360?s=400&v=4
+        name: Yuri Tkachenko
+        lang: js
+        github: tyv
+        twitter: yuritkachenko
+      - full_img_url: https://avatars0.githubusercontent.com/u/2953267?s=400&v=4
+        name: Ivan Akulov
+        lang: js
+        github: iamakulov
+        twitter: iamakulov
+      - full_img_url: https://pbs.twimg.com/profile_images/629447032973955073/kBUz4N5e_400x400.jpg
+        name: Kateryna Porshnieva
+        lang: js
+        github: krambertech
+        twitter: krambertech
+      - full_img_url: https://avatars3.githubusercontent.com/u/1478743?s=400&v=4
+        name: Volodymyr Stelmakh
+        lang: js
+        github: stelmakh
+        twitter: vstelmakh
+      - full_img_url: https://avatars0.githubusercontent.com/u/9000614?s=400&v=4
+        name: Stas Gavrylov
+        lang: js
+        github: stasgavrylov
+        twitter: stasgavrylov
 
 
   - year: 2016-2017
