@@ -345,88 +345,6 @@ h3 {
   width: 65%;
 }
 
-#slides {
-  border-bottom: 1px solid #3b4347;
-}
-
-#slides ul {
-  text-align: center;
-}
-
-#slides li {
-  overflow: hidden;
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  list-style: none;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  vertical-align: top;
-}
-
-#slides a {
-  display: block;
-  height: inherit;
-  text-indent: -90000%;
-}
-
-#slides li.js {
-  background: #f8dc3d url(../images/slide-thumbnails/js.jpg) no-repeat center;
-  background-size: 100% auto;
-  border: 1px solid #f8dc3d;
-}
-
-#slides li.ruby {
-  background: #a30c01 url(../images/slide-thumbnails/ruby.jpg) no-repeat center;
-  background-size: 100% auto;
-  border: 1px solid #a30c01;
-}
-
-#slides li.java {
-  background: #fff url(../images/slide-thumbnails/java.jpg) no-repeat center;
-  background-size: 100% auto;
-  border: 1px solid #fff;
-}
-
-#slides li.csharp {
-  background: #fff url(../images/slide-thumbnails/csharp.png) no-repeat center;
-  background-size: 100% auto;
-  border: 1px solid #fff;
-}
-
-#slides li.erlang {
-  background: #fff url(../images/slide-thumbnails/joe_notebook.svg) no-repeat center;
-  background-size: 100% auto;
-  border: 1px solid #fff;
-}
-
-#slides li:hover {
-  background-size: 70% auto;
-  border-width: 30px;
-  border-radius: 50%;
-}
-
-#slides li.disabled {
-  pointer-events: none;
-}
-
-#slides .disabled {
-  position: relative;
-  -webkit-filter: grayscale(100%);
-}
-
-#slides .disabled::after {
-  content: 'Coming up soon…';
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(128, 128, 128, 0.6);
-  color: #fff;
-  font-size: 2em;
-  line-height: 10em;
-  text-align: center;
-}
-
 footer {
   padding: 40px 15%;
   background: #3b4347;
@@ -484,10 +402,6 @@ footer small {
   }
   .suppl-content a {
     padding-left: 40px;
-  }
-  #slides li {
-    width: 100px;
-    height: 100px;
   }
 
   #team .years-nav  a {
