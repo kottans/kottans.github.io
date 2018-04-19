@@ -12,7 +12,7 @@
        <li><p>Seems that there are no open registrations right now.</p></li>
      {% endif %}
      {% for registration in site.data.registrations %}
-       <li><p><a target="_blank" href="{{registration.url}}">Registration for "{{registration.course}}" course is now open</a> {{registration.extra_text}}</p></li>
+       <li><p><a target="_blank" href="{{registration.url}}">Registration for "{{registration.course}}" course is now open</a><br> {{registration.extra_text}}</p></li>
      {% endfor %}
    </ul>
  </div>
