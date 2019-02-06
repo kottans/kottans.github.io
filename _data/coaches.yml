@@ -82,6 +82,14 @@ regulars:
     github: listochkin
     twitter: listochkin
 years:
+  - year: 2018-2019
+    coaches:
+      - *artem
+      - full_img_url: https://avatars0.githubusercontent.com/u/2997359?s=400&v=4
+        name: Ivan Tytarenko
+        lang: js
+        github: zonzujiro
+        twitter: zonzujiro
   - year: 2017-2018
     coaches:
       - *johny
