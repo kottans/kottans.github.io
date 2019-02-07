@@ -34,6 +34,11 @@
             <img src="public/images/twitterlogo.png">
           </a>
         {% endif %}
+        {% if coach.telegram %}
+          <a href="https://telegram.me/{{ coach.telegram }}" target="_blank">
+            <img src="public/images/telegram-logo.png" alt="telegram">
+          </a>
+        {% endif %}
       </p>
     </div>
   </div>
