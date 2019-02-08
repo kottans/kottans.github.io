@@ -90,6 +90,11 @@ years:
         lang: js
         github: zonzujiro
         twitter: zonzujiro
+      - img_url: oleksiy-rudenko.jpg
+        name: Oleksiy Rudenko
+        lang: js
+        github: OleksiyRudenko
+        telegram: OleksiyRudenko
   - year: 2017-2018
     coaches:
       - *johny
