@@ -95,6 +95,11 @@ years:
         lang: js
         github: OleksiyRudenko
         telegram: OleksiyRudenko
+      - img_url: yevhenorlov.jpg
+        name: Yevhen Orlov
+        lang: js
+        github: yevhenorlov
+        twitter: yevhenorlov
   - year: 2017-2018
     coaches:
       - *johny
