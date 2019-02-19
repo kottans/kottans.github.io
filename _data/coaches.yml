@@ -100,6 +100,10 @@ years:
         lang: js
         github: yevhenorlov
         twitter: yevhenorlov
+      - full_img_url: https://avatars0.githubusercontent.com/u/17703790?s=400&v=4
+        name: Anastasiya Mashoshyna
+        lang: js
+        github: amashoshyna
   - year: 2017-2018
     coaches:
       - *johny
