@@ -104,6 +104,11 @@ years:
         name: Anastasiya Mashoshyna
         lang: js
         github: amashoshyna
+      - full_img_url: https://avatars3.githubusercontent.com/u/16196199?s=460&v=4
+        name: Alexandr Ostrovny
+        lang: html/css
+        github: A-Ostrovnyy
+        twitter: Alex_Ostrovny
   - year: 2017-2018
     coaches:
       - *johny
