@@ -327,7 +327,7 @@ years:
     - <<: *kroosh
       lang: ruby, js
     - name: Ingvar Stepanyan
-      full_img_url: https://pbs.twimg.com/profile_images/692873581496152064/rYPVgOqN_400x400.jpg
+      full_img_url: https://avatars3.githubusercontent.com/u/557590?s=400&v=4
       lang: js
       is_guest: true
       github: RReverser
