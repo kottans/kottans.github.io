@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+:root {
+  --glitch-speed: 70ms; /*Duration of 1 glitch frame*/
+}
 
 body {
   font: bold 62.5% "Courier New", Courier, monospace;
@@ -20,7 +23,6 @@ section {
 .container {
   padding: 180px 15% 80px;
 }
-
 
 #intro {
   color: #3b4347;
@@ -80,6 +82,7 @@ section {
 }
 
 .logo {
+  display: block;
   margin: 0 auto;
   max-width: 431px;
   width: 32%;
@@ -87,6 +90,51 @@ section {
   background: url(../images/logo.png) no-repeat center;
   background-size: 100% auto;
   text-indent: -90000%;
+  position: relative;
+}
+
+.glitched-logos-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: calc(var(--glitch-speed) * 70) infinite glitch-loop;
+  filter: contrast(110%);
+}
+
+.glitched-logo {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: calc(var(--glitch-speed) * 6) infinite glitch-frames;
+}
+
+.glitched-logo-1 {
+  background-image: url(../images/glitches/1.jpg);
+  animation-delay: calc(var(--glitch-speed) * 0);
+}
+.glitched-logo-2 {
+  background-image: url(../images/glitches/2.jpg);
+  animation-delay: calc(var(--glitch-speed) * 1);
+}
+.glitched-logo-3 {
+  background-image: url(../images/glitches/3.jpg);
+  animation-delay: calc(var(--glitch-speed) * 2);
+}
+.glitched-logo-4 {
+  background-image: url(../images/glitches/4.jpg);
+  animation-delay: calc(var(--glitch-speed) * 3);
+}
+.glitched-logo-5 {
+  background-image: url(../images/glitches/5.jpg);
+  animation-delay: calc(var(--glitch-speed) * 4);
+}
+.glitched-logo-6 {
+  background-image: url(../images/glitches/6.jpg);
+  animation-delay: calc(var(--glitch-speed) * 5);
 }
 
 #about,
@@ -131,14 +179,13 @@ h3 {
   margin: 0;
 }
 
-#team .years-nav  a {
+#team .years-nav a {
   display: table-cell;
   padding: 20px 5px;
   margin: 0 auto;
-  color:#a4a4a4;
+  color: #a4a4a4;
   font-size: 1.5em;
 }
-
 
 #team .years-nav a.active {
   background-color: #ddd;
@@ -147,7 +194,7 @@ h3 {
 }
 
 #team .years-nav a:hover {
-  color:#468700;
+  color: #468700;
 }
 
 #team .year {
@@ -202,9 +249,9 @@ h3 {
   margin: 0 auto 10px;
   font-size: 1.1em;
   padding: 10px 5px 10px 10px;
-  border: solid #DDDDDE 1px;
+  border: solid #ddddde 1px;
   border-radius: 3px;
-  background-color: #DDDDDE;
+  background-color: #ddddde;
   width: 200px;
 }
 
@@ -239,7 +286,7 @@ h3 {
 }
 
 #team li.placeholder .coach-info,
-#team li .coach-info:hover  {
+#team li .coach-info:hover {
   position: absolute;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -257,7 +304,6 @@ h3 {
   text-align: left;
   padding-right: 3px;
 }
-
 
 #team .coach-social-btn {
   color: transparent;
@@ -289,25 +335,24 @@ h3 {
   text-align: center;
   font-size: 0.9em;
   -webkit-transform: rotate(35deg);
-  -moz-transform:    rotate(35deg);
-  -ms-transform:     rotate(35deg);
-  -o-transform:      rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
   position: relative;
   padding: 5px 0px 5px 0px;
   right: 0px;
   top: 2px;
   width: 80px;
-  background-color: #77DE08;
+  background-color: #77de08;
 }
 
 #supporters {
- min-height: 100px;
+  min-height: 100px;
 }
 
 #supporters h2 {
   margin-bottom: 2em;
 }
-
 
 #supporters .container {
   padding-top: 100px;
@@ -395,7 +440,8 @@ h3 {
 }
 
 #slides li.erlang {
-  background: #fff url(../images/slide-thumbnails/joe_notebook.svg) no-repeat center;
+  background: #fff url(../images/slide-thumbnails/joe_notebook.svg) no-repeat
+    center;
   background-size: 100% auto;
   border: 1px solid #fff;
 }
@@ -416,7 +462,7 @@ h3 {
 }
 
 #slides .disabled::after {
-  content: 'Coming up soon…';
+  content: "Coming up soon…";
   position: absolute;
   top: 0;
   left: 0;
@@ -462,7 +508,7 @@ footer small {
     top: 0;
     height: 70px;
     width: 100%;
-    box-shadow: 0 2px 10px 2px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.4);
     z-index: 150;
   }
 }
@@ -490,7 +536,7 @@ footer small {
     height: 100px;
   }
 
-  #team .years-nav  a {
+  #team .years-nav a {
     font-size: 1.3em;
   }
 
@@ -514,21 +560,22 @@ footer small {
 
   #team ul li,
   #team ul li .coach-info {
-    position: relative!important;
+    position: relative !important;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .container,
   #contact .container,
-  #supporters .container
-  {
+  #supporters .container {
     padding: 40px 5%;
   }
-  .logo {
+  .logo,
+  .glitched-logo {
     min-height: 70px;
     background-size: auto 50px;
   }
+
   .nav-section h1,
   .nav-section .suppl-content {
     float: none;
@@ -550,9 +597,7 @@ footer small {
     width: 100%;
     box-sizing: border-box;
   }
-
 }
-
 
 @media (max-width: 660px) {
   h2 {
@@ -605,5 +650,28 @@ footer small {
   margin-bottom: 1em;
 }
 #ournews ul {
-  margin-left: 2em
+  margin-left: 2em;
+}
+
+/* Keyframes for Logo Glitch Animations */
+@keyframes glitch-loop {
+  0%,
+  30% {
+    visibility: visible;
+  }
+  31%,
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes glitch-frames {
+  0%,
+  17% {
+    opacity: 0.99;
+  }
+  18%,
+  100% {
+    opacity: 0.01;
+  }
 }
