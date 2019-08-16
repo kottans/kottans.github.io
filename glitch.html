@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="glitch.css">
+</head>
+
+<body>
+  <div class='container'>
+    <img src='./vendor/kottans-symbol.svg'>
+    <h1 class='glitch' data-text='Kottans'>Kottans</h1>
+    <span class='counter glitch' data-text=''></span>
+  </div>
+  <script>
+    const container = document.querySelector(".counter")
+
+    const timerId = setInterval(() => {
+      const counter = 1567285200000 - new Date().getTime();
+
+      container.innerHTML = counter;
+      container.setAttribute('data-text', counter)
+    }, 100);
+  </script>
+</body>
+
+</html>
