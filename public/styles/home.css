@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+:root {
+  --glitch-speed: 70ms; /*Duration of 1 glitch frame*/
+}
 
 body {
   font: bold 62.5% "Courier New", Courier, monospace;
@@ -20,7 +23,6 @@ section {
 .container {
   padding: 180px 15% 80px;
 }
-
 
 #intro {
   color: #3b4347;
@@ -80,6 +82,7 @@ section {
 }
 
 .logo {
+  display: block;
   margin: 0 auto;
   max-width: 431px;
   width: 32%;
@@ -87,6 +90,105 @@ section {
   background: url(../images/logo.png) no-repeat center;
   background-size: 100% auto;
   text-indent: -90000%;
+  position: relative;
+}
+
+.logo-counter-mode {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-indent: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.logo-counter-mode > h2 {
+  text-transform: none;
+  font-size: 60px;
+  color: black;
+  font-weight: 900;
+  position: relative;
+  margin-bottom: 0;
+}
+.logo-counter-mode > h2:before,
+.logo-counter-mode > h2:after {
+  color: black;
+  content: attr(glitch-string);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+  top: 0;
+}
+
+.logo-counter-mode > h2:before {
+  left: 5px;
+  text-shadow: -4px 0 rgb(255, 115, 0);
+  animation-name: glitch-animation-1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+  filter: blur(1px);
+}
+
+.logo-counter-mode > h2:after {
+  left: -5px;
+  text-shadow: -4px 0 rgb(0, 195, 255);
+  animation-name: glitch-animation-2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+  filter: blur(1px);
+}
+
+.glitched-logos-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: calc(var(--glitch-speed) * 70) infinite glitch-loop;
+  filter: contrast(110%);
+}
+
+.glitched-logo {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: calc(var(--glitch-speed) * 6) infinite glitch-frames;
+}
+
+.glitched-logo-1 {
+  background-image: url(../images/glitches/1.jpg);
+  animation-delay: calc(var(--glitch-speed) * 0);
+}
+.glitched-logo-2 {
+  background-image: url(../images/glitches/2.jpg);
+  animation-delay: calc(var(--glitch-speed) * 1);
+}
+.glitched-logo-3 {
+  background-image: url(../images/glitches/3.jpg);
+  animation-delay: calc(var(--glitch-speed) * 2);
+}
+.glitched-logo-4 {
+  background-image: url(../images/glitches/4.jpg);
+  animation-delay: calc(var(--glitch-speed) * 3);
+}
+.glitched-logo-5 {
+  background-image: url(../images/glitches/5.jpg);
+  animation-delay: calc(var(--glitch-speed) * 4);
+}
+.glitched-logo-6 {
+  background-image: url(../images/glitches/6.jpg);
+  animation-delay: calc(var(--glitch-speed) * 5);
 }
 
 #about,
@@ -131,14 +233,13 @@ h3 {
   margin: 0;
 }
 
-#team .years-nav  a {
+#team .years-nav a {
   display: table-cell;
   padding: 20px 5px;
   margin: 0 auto;
-  color:#a4a4a4;
+  color: #a4a4a4;
   font-size: 1.5em;
 }
-
 
 #team .years-nav a.active {
   background-color: #ddd;
@@ -147,7 +248,7 @@ h3 {
 }
 
 #team .years-nav a:hover {
-  color:#468700;
+  color: #468700;
 }
 
 #team .year {
@@ -202,9 +303,9 @@ h3 {
   margin: 0 auto 10px;
   font-size: 1.1em;
   padding: 10px 5px 10px 10px;
-  border: solid #DDDDDE 1px;
+  border: solid #ddddde 1px;
   border-radius: 3px;
-  background-color: #DDDDDE;
+  background-color: #ddddde;
   width: 200px;
 }
 
@@ -239,7 +340,7 @@ h3 {
 }
 
 #team li.placeholder .coach-info,
-#team li .coach-info:hover  {
+#team li .coach-info:hover {
   position: absolute;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -257,7 +358,6 @@ h3 {
   text-align: left;
   padding-right: 3px;
 }
-
 
 #team .coach-social-btn {
   color: transparent;
@@ -289,25 +389,24 @@ h3 {
   text-align: center;
   font-size: 0.9em;
   -webkit-transform: rotate(35deg);
-  -moz-transform:    rotate(35deg);
-  -ms-transform:     rotate(35deg);
-  -o-transform:      rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
   position: relative;
   padding: 5px 0px 5px 0px;
   right: 0px;
   top: 2px;
   width: 80px;
-  background-color: #77DE08;
+  background-color: #77de08;
 }
 
 #supporters {
- min-height: 100px;
+  min-height: 100px;
 }
 
 #supporters h2 {
   margin-bottom: 2em;
 }
-
 
 #supporters .container {
   padding-top: 100px;
@@ -395,7 +494,8 @@ h3 {
 }
 
 #slides li.erlang {
-  background: #fff url(../images/slide-thumbnails/joe_notebook.svg) no-repeat center;
+  background: #fff url(../images/slide-thumbnails/joe_notebook.svg) no-repeat
+    center;
   background-size: 100% auto;
   border: 1px solid #fff;
 }
@@ -416,7 +516,7 @@ h3 {
 }
 
 #slides .disabled::after {
-  content: 'Coming up soon…';
+  content: "Coming up soon…";
   position: absolute;
   top: 0;
   left: 0;
@@ -462,7 +562,7 @@ footer small {
     top: 0;
     height: 70px;
     width: 100%;
-    box-shadow: 0 2px 10px 2px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.4);
     z-index: 150;
   }
 }
@@ -490,7 +590,7 @@ footer small {
     height: 100px;
   }
 
-  #team .years-nav  a {
+  #team .years-nav a {
     font-size: 1.3em;
   }
 
@@ -514,21 +614,22 @@ footer small {
 
   #team ul li,
   #team ul li .coach-info {
-    position: relative!important;
+    position: relative !important;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .container,
   #contact .container,
-  #supporters .container
-  {
+  #supporters .container {
     padding: 40px 5%;
   }
-  .logo {
+  .logo,
+  .glitched-logo {
     min-height: 70px;
     background-size: auto 50px;
   }
+
   .nav-section h1,
   .nav-section .suppl-content {
     float: none;
@@ -550,9 +651,7 @@ footer small {
     width: 100%;
     box-sizing: border-box;
   }
-
 }
-
 
 @media (max-width: 660px) {
   h2 {
@@ -605,5 +704,160 @@ footer small {
   margin-bottom: 1em;
 }
 #ournews ul {
-  margin-left: 2em
+  margin-left: 2em;
+}
+
+/* Keyframes for Logo Glitch Animations */
+@keyframes glitch-loop {
+  0%,
+  30% {
+    visibility: visible;
+  }
+  31%,
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes glitch-frames {
+  0%,
+  17% {
+    opacity: 0.99;
+  }
+  18%,
+  100% {
+    opacity: 0.01;
+  }
+}
+
+@keyframes glitch-animation-1 {
+  0% {
+    clip: rect(119px, 350px, 128px, 30px);
+  }
+  5% {
+    clip: rect(38px, 350px, 120px, 30px);
+  }
+  10% {
+    clip: rect(132px, 350px, 29px, 30px);
+  }
+  15% {
+    clip: rect(63px, 350px, 137px, 30px);
+  }
+  20% {
+    clip: rect(112px, 350px, 4px, 30px);
+  }
+  25% {
+    clip: rect(42px, 350px, 72px, 30px);
+  }
+  30% {
+    clip: rect(84px, 350px, 3px, 30px);
+  }
+  35% {
+    clip: rect(52px, 350px, 64px, 30px);
+  }
+  40% {
+    clip: rect(145px, 350px, 102px, 30px);
+  }
+  45% {
+    clip: rect(27px, 350px, 48px, 30px);
+  }
+  50% {
+    clip: rect(95px, 350px, 18px, 30px);
+  }
+  55% {
+    clip: rect(137px, 350px, 111px, 30px);
+  }
+  60% {
+    clip: rect(30px, 350px, 83px, 30px);
+  }
+  65% {
+    clip: rect(104px, 350px, 67px, 30px);
+  }
+  70% {
+    clip: rect(27px, 350px, 130px, 30px);
+  }
+  75% {
+    clip: rect(52px, 350px, 63px, 30px);
+  }
+  80% {
+    clip: rect(34px, 350px, 119px, 30px);
+  }
+  85% {
+    clip: rect(105px, 350px, 18px, 30px);
+  }
+  90% {
+    clip: rect(78px, 350px, 118px, 30px);
+  }
+  95% {
+    clip: rect(148px, 350px, 88px, 30px);
+  }
+  100% {
+    clip: rect(4px, 350px, 112px, 30px);
+  }
+}
+
+@keyframes glitch-animation-2 {
+  0% {
+    clip: rect(52px, 350px, 52px, 30px);
+  }
+  5% {
+    clip: rect(141px, 350px, 51px, 30px);
+  }
+  10% {
+    clip: rect(59px, 350px, 72px, 30px);
+  }
+  15% {
+    clip: rect(144px, 350px, 99px, 30px);
+  }
+  20% {
+    clip: rect(43px, 350px, 40px, 30px);
+  }
+  25% {
+    clip: rect(67px, 350px, 12px, 30px);
+  }
+  30% {
+    clip: rect(48px, 350px, 34px, 30px);
+  }
+  35% {
+    clip: rect(82px, 350px, 148px, 30px);
+  }
+  40% {
+    clip: rect(58px, 350px, 49px, 30px);
+  }
+  45% {
+    clip: rect(79px, 350px, 82px, 30px);
+  }
+  50% {
+    clip: rect(149px, 350px, 26px, 30px);
+  }
+  55% {
+    clip: rect(105px, 350px, 27px, 30px);
+  }
+  60% {
+    clip: rect(85px, 350px, 76px, 30px);
+  }
+  65% {
+    clip: rect(101px, 350px, 149px, 30px);
+  }
+  70% {
+    clip: rect(28px, 350px, 95px, 30px);
+  }
+  75% {
+    clip: rect(63px, 350px, 66px, 30px);
+  }
+  80% {
+    clip: rect(146px, 350px, 142px, 30px);
+  }
+  85% {
+    clip: rect(85px, 350px, 126px, 30px);
+  }
+  90% {
+    clip: rect(134px, 350px, 68px, 30px);
+  }
+  95% {
+    clip: rect(33px, 350px, 128px, 30px);
+  }
+  100% {
+    clip: rect(111px, 350px, 73px, 30px);
+  }
 }
