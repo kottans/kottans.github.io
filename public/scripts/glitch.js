@@ -1,7 +1,7 @@
-const headerLogoEl = document.getElementById("header-logo");
+const headerLogoEl = document.getElementById('header-logo');
 
 headerLogoEl.addEventListener(
-  "click",
+  'click',
   event => {
     event.preventDefault();
     setUpGlitchCounter(headerLogoEl);
@@ -11,9 +11,9 @@ headerLogoEl.addEventListener(
 
 function setUpGlitchCounter(logoElement) {
   createCounterTemplate(logoElement);
-  const counterEl = document.getElementById("glitch-counter");
+  const counterEl = document.getElementById('glitch-counter');
 
-  const secretDate = new Date(2019, 9, 1);
+  const secretDate = new Date(2019, 10, 10);
   const currentDate = new Date();
   getDatesDifference(currentDate, secretDate, counterEl);
 
@@ -22,8 +22,8 @@ function setUpGlitchCounter(logoElement) {
 
 function createCounterTemplate(logoElement) {
   const template = `<h2 id="glitch-counter">XX:XX</h2>`;
-  logoElement.classList.add("logo-counter-mode");
-  logoElement.innerHTML = "";
+  logoElement.classList.add('logo-counter-mode');
+  logoElement.innerHTML = '';
   logoElement.innerHTML = template;
 }
 
@@ -49,7 +49,7 @@ function getDatesDifference(currentDate, secretDate, counterEl) {
     days: days,
     hours: hours,
     minutes: minutes,
-    seconds: seconds
+    seconds: seconds,
   };
 
   createCounterString(datesDifferenceObject, counterEl);
@@ -62,9 +62,9 @@ function createCounterString(datesDifferenceObject, counterEl) {
   const secPart = Math.abs(o.seconds) < 10 ? `0${o.seconds}` : `${o.seconds}`;
 
   const hoursDots = o.hours && `:`;
-  let daysWord = "";
+  let daysWord = '';
   if (o.days) {
-    o.days > 1 ? (daysWord = " DAYS + ") : (daysWord = " DAY + ");
+    o.days > 1 ? (daysWord = ' DAYS + ') : (daysWord = ' DAY + ');
   }
 
   const datesDifferenceString = `${o.days}${daysWord}${hoursPart}${hoursDots}${minPart}:${secPart}`;
@@ -73,5 +73,5 @@ function createCounterString(datesDifferenceObject, counterEl) {
 
 function updateCounter(datesDifferenceString, counterEl) {
   counterEl.innerHTML = datesDifferenceString;
-  counterEl.setAttribute("glitch-string", datesDifferenceString);
+  counterEl.setAttribute('glitch-string', datesDifferenceString);
 }
