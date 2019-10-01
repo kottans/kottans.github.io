@@ -28,7 +28,7 @@ function createCounterTemplate(logoElement) {
 }
 
 function setCounterUpdater(counterEl) {
-  const secretDate = new Date(2019, 9, 1);
+  const secretDate = new Date(2019, 10, 10);
   setInterval(() => {
     const currentDate = new Date();
     getDatesDifference(currentDate, secretDate, counterEl);
