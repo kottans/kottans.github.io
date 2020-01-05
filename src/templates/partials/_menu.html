@@ -1,0 +1,46 @@
+{% set
+  list = [
+    {
+      id: "hero",
+      text: "Hello, World!"
+    },
+    {
+      id: "about",
+      text: "About Kottans"
+    },
+    {
+      id: "courses",
+      text: "Courses"
+    },
+    {
+      id: "faq",
+      text: "F.A.Q."
+    },
+    {
+      id: "platform",
+      text: "Create your own event"
+    },
+    {
+      id: "core",
+      text: "Kottans core"
+    },
+    {
+      id: "reviews",
+      text: "Reviews from graduates"
+    },
+    {
+      id: "partners",
+      text: "Our friends & partners"
+    }
+  ]
+%}
+
+<nav class="menu">
+  <ul class="menu__list js-menu__list" aria-role="list">
+      {% for data in list %}
+      <li class="menu__item" data-item-parent="{{data.id}}">
+        <a href="#{{data.id}}" class="menu__link">{{data.text}}</a>
+      </li>
+      {% endfor %}
+  </ul>
+</nav>

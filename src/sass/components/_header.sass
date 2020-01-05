@@ -1,0 +1,98 @@
+.header
+	width: 100%
+
+	+r(767)
+		position: fixed
+		top: 0
+		z-index: 10
+		background-color: $white
+		box-shadow: 0 5px 20px 0 $dark-200
+
+	.container
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		padding: 25px 15px
+
+.header__contact, .header__logo, .header__socials
+	flex: 1 0
+
+.header__contact
+	position: relative
+
+	+r(767)
+		display: none
+
+	a
+		position: relative
+		z-index: 1
+		display: block
+		max-width: 107px
+		width: 100%
+		height: 24px
+		text-align: center
+		text-transform: uppercase
+		text-decoration: none
+		color: $dark
+		background-color: $white
+		font-family: Avenir, sans-serif
+		font-size: 12px
+		font-weight: 600
+		line-height: 24px
+		border: 1px solid $dark
+		transform: translate(0, 0)
+		transition: transform 0.3s ease-in-out
+
+		&:hover
+			color: $white
+			background-color: $dark
+			transform: translate(-4px, 4px)
+			transition: transform 0.3s ease-in-out
+
+		&:focus
+			color: $white
+			background-color: $dark
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		display: block
+		max-width: 107px
+		width: 100%
+		height: 24px
+		background-color: transparent
+		border: 2px solid $dark
+		transform: translate(0, 0)
+		transition: transform 0.3s ease-in-out
+
+.header__logo
+	width: 100px
+	height: 50px
+	align-self: baseline
+
+	+r(767)
+		position: sticky
+		top: 0
+
+	a
+		display: block
+		margin: 0 auto
+		width: 69px
+		height: 59px
+
+		+r(767)
+			margin-left: 0
+
+	.logoStroke
+		stroke: $logoDark
+
+	.logoRect
+		fill: $logoDark
+
+.header__socials
+	+r(767)
+		display: none

@@ -1,0 +1,101 @@
+{% set
+courses = [{
+  shortcut: 'FE',
+  className: 'frontend--course',
+  header: 'Front-End for Juniors',
+  technologies: ['JavaScript', 'ReactJS', 'HTML/CSS'],
+  skills: ['Pre-intermediate English', 'JavaScript basics', 'basic HTML, CSS'],
+  link: 'https://github.com/kottans/frontend'
+}, {
+  shortcut: 'NodeJS',
+  className: 'nodejs--course',
+  header: 'NodeJS for Juniors',
+  technologies: ['JavaScript', 'ReactJS', 'HTML/CSS'],
+  skills: ['Pre-intermediate English', 'JavaScript basics'],
+  link: 'https://github.com/kottans/backend'
+}]  
+%}
+
+<section class="section section--courses" id="courses">
+  <div class="container">
+    <aside class="section__sidebar">
+      <div class="sidebar--content">
+        <h2>
+          <a class="anchor" href="#courses">
+            <p>Our</p>
+            <p>Courses</p>
+          </a>
+        </h2>
+        {% include "partials/_menu.html" %}
+      </div>
+    </aside>
+    <div class="section__content">
+      <div class="courses">
+        <div class="courses__sliderWrapper">
+          <div class="courses__slider" id="slideshow">
+            <div class="control">
+              <button id="previous"></button>
+              <button id="next"></button>
+            </div>
+            <div class="sliderWrapper">
+              <ul id="slides">
+                {% for slide in courses %}
+                <li class="course__slide {{slide.className}}" alt="Courses">
+                  <div class="courses__sliderLabel">
+                    <span>
+                      {{slide.shortcut}}
+                    </span>
+                  </div>
+                    <section class="slide__content">
+                      <section class="slide__title">
+                        <h3 class="course__description--title">Course</h3>
+                        <a href="{{slide.link}}" class="course--link">
+                          <h2 class="course--title">{{slide.header}}</h2>
+                        </a>
+                      </section>
+                  
+                      <section class="course__description__container">
+                        <div class="course__description">
+                          <h3 class="course__description--title">Technology</h3>
+                          <ul class="course__description--list">
+                            {% for technology in slide.technologies %}
+                              <li class="course__description--item">{{technology}}</li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+
+                        <div class="course__description">
+                          <h3 class="course__description--title">Skills</h3>
+                          <ul class="course__description--list">
+                            {% for skill in slide.skills %}
+                              <li class="course__description--item">{{skill}}</li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      </section>
+                    </section>
+                    <section class="course__picture">
+                      <img src="img/course_hand.png" alt="course hand" />
+                    </section>
+                  </li>
+                {% endfor %}
+              </ul>
+              <div class="menu-slider">
+                <div class="title">Courses</div>
+                <ul class="nav slider__menu">
+                  {% for slide in courses %}
+                  <li class="slider__menu--item" data-slider-id="{{loop.index}}"><span>{{slide.header}}</span></li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- <div class="header__contact">
+            <a href="mailto:kottans.org@gmail.com" class="header__contactLink">Join the course</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

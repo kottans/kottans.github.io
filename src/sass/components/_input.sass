@@ -1,0 +1,154 @@
+.inputConf
+	background-image: url(../img/input-bg.jpg)
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	min-height: 300px
+	margin-bottom: 120px
+	color: $white
+
+	.container
+		padding: 0 8% 90px
+		display: flex
+		justify-content: flex-end
+		flex-flow: row wrap
+
+		+r(1600)
+			padding: 0 1% 90px
+
+		+r(767)
+			padding: 20px
+
+.inputConf__imageWrapper
+	width: 64.5%
+	transform: translateY(-50px)
+	flex: 1 0 100%
+
+	+r(767)
+		order: 2
+		width: 100%
+		width: 80%
+		transform: translateY(0)
+		margin-bottom: 40px
+
+.inputConf__image
+	display: block
+	width: 100%
+	height: auto
+
+.inputConf__buttonWrapper
+	+r(767)
+		margin-bottom: 25px
+
+.inputConf__socialWrapper
+	flex: 0 1
+	margin-right: auto
+
+	+r(767)
+		flex: 1 1
+		order: 4
+		width: 100%
+		display: flex
+		justify-content: space-between
+		flex-flow: row nowrap
+		margin-right: 0
+
+.inputConf__socialText
+	font-size: 16px
+	margin-bottom: 20px
+
+	+r(767)
+		margin-right: auto
+
+.inputConf__socialList
+	white-space: nowrap
+
+.inputConf__socialItem
+	display: inline-block
+	vertical-align: baseline
+	height: 16px
+	width: 20px
+	margin: 3px 15px 3px 3px;
+
+	&:first-child
+		width: 8px
+
+	.iconColor
+		fill: $white
+
+.inputConf__socialLink
+	cursor: pointer
+
+.inputConf__textWrapper
+	max-width: 33%
+	width: 100%
+
+	+r(1130)
+		max-width: 40%
+
+	+r(767)
+		order: 1
+		max-width: 100%
+		text-align: center
+		margin-bottom: 15px
+
+.inputConf__text
+	+r(767)
+		display: inline-block
+		text-align: left
+
+	p
+		font-size: 24px
+		font-weight: 500
+
+		+r(767)
+			font-size: 20px
+
+.inputConf__dataWrapper
+	max-width: 33%
+	width: 100%
+
+	+r(1130)
+		max-width: 40%
+
+	+r(767)
+		order: 3
+		max-width: 100%
+
+.inputConf__dataTime
+	font-size: 24px
+	font-weight: 700
+
+	+r(767)
+		font-size: 20px
+
+.inputConf__dataPlace
+	font-size: 16px
+	font-weight: 400
+	margin-bottom: 20px
+
+	> p
+		font-weight: 700
+		font-size: 24px
+
+	> address
+		font-style: normal
+
+.inputConf__button
+	display: block
+	width: 200px
+	height: 44px
+	background: url(../img/border.svg)
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: center center
+	border: 0
+	color: $orange
+	font-size: 12px
+	font-weight: 600
+	line-height: 44px
+	text-align: center
+
+	+r(767)
+		width: 100%
+		margin: 0 auto

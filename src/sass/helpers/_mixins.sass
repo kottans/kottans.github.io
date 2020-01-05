@@ -1,0 +1,313 @@
+// width
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+=rmin($width)
+  @media only screen and (min-width: $width+ "px")
+    @content
+
+// height
+=rh($height)
+  @media only screen and (max-height: $height + "px")
+    @content
+
+=rhmin($height)
+  @media only screen and (min-height: $height + "px")
+    @content
+
+
+@mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: px)
+  #{$property}: #{$max-size}#{$unit}
+  #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})))
+  @media (max-width: #{$min-width}#{$unit})
+    #{$property}: #{$min-size}#{$unit}
+  @media (min-width: #{$max-width}#{$unit})
+    #{$property}: #{$max-size}#{$unit}
+
+=fs($sizeValue: 16)
+  font-size: $sizeValue + px
+  font-size: $sizeValue / 10 + rem
+
+=text-overflow
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+=hover
+  .no-touch &:hover
+    @content
+
+%pseudo
+  position: relative
+  &:before,&:after
+    content: ' '
+    position: absolute
+    top: 0
+    left: 0
+=pseudo
+  @extend %pseudo
+
+=coverdiv
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+=cover
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 50% 50%
+
+=bg-size($width: 100%, $height: 100%)
+  background-size: $width $height
+
+// retina, also available as +hdpi
+=retina
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+    @content
+
+// vertical-align at center
+=vcenter
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+//simple gradient
+=g($color1, $color2)
+  background-image: linear-gradient($color1, $color2)
+
+=gh($color1, $color2)
+  background-image: linear-gradient(left, $color1, $color2)
+
+// font-family
+=font($alias, $name)
+  @font-face
+    font-family: $alias
+    src: url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".woff") format("woff")
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+// to use:
+//+font(black, cytiapro-black-webfont)
+
+// font-family
+=addFont($alias, $name, $weight)
+  @font-face
+    font-family: $alias
+    src: url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".woff") format("woff")
+    font-weight: $weight
+    font-style: normal
+    font-display: swap
+// to use:
+//+font(black, cytiapro-black-webfont)
+
+// ROTATE
+=rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0)
+  transform: rotate($deg + deg)
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand')
+
+// TRANSITION
+
+=tr($what)
+  transition: $what
+
+=hide-text
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+
+=hidetext
+  +hide-text
+
+
+// IMPORTANT!!!! REQUIRES SPACES BETWEEN ELEMENTS, NO SUCH STUFF: </li><li>
+=justify
+  text-align: justify
+  line-height: 0
+  font-size: 0
+  text-justify: newspaper
+  text-align-last: justify
+  &:after
+    content: ""
+    display: inline-block
+    width: 100%
+    height: 0px
+    visibility: hidden
+    overflow: hidden
+=vertical
+  text-align: center
+  font-size: 0
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    width: 0
+    height: 100%
+
+=clr
+  &:after
+    content: " "
+    display: table
+    clear: both
+
+
+=placeholder-color($color)
+  &::placeholder
+    color: $color
+
+=placeholder
+  &::placeholder
+    @content
+
+=gray
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale")
+  // Firefox 10+
+  filter: gray
+  // IE6-9
+  -webkit-filter: grayscale(100%)
+  // Chrome 19+ & Safari 6+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"
+
+=gray-half
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0.5'/></filter></svg>#grayscale")
+  // Firefox 10+
+  filter: gray alpha(opacity = 50)
+  // IE6-9
+  -webkit-filter: grayscale(50%)
+  // Chrome 19+ & Safari 6+
+
+=gray-zero
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale")
+  -webkit-filter: grayscale(0%)
+
+=unselectable
+  user-select: none
+
+=nosel
+  +unselectable
+
+=prevent-text
+  word-break: break-all
+  word-break: break-word
+  hyphens: auto
+
+=font-smoothing($val: antialiased)
+  font-smoothing: $val
+
+=selection
+  & ::selection
+    @content
+=sel
+  +selection
+
+=gpu
+  transform: translate3d(0, 0, 0)
+
+=scrollbar
+  &::-webkit-scrollbar
+    @content
+
+=scrollbar-track
+  &::-webkit-scrollbar-track
+    @content
+
+=scrollbar-thumb
+  &::-webkit-scrollbar-thumb
+    @content
+
+=scrollbar-track-piece
+  &::-webkit-scrollbar-track-piece
+    @content
+
+//triangle
+=arr($width, $height, $bg, $direction)
+  width: 0px
+  height: 0px
+  border-style: solid
+  @if $direction == t
+    border-width: 0 $width / 2 + px $height + px $width / 2 + px
+    border-color: transparent transparent $bg transparent
+  @if $direction == r
+    border-width: $height / 2 + px 0 $height / 2 + px $width + px
+    border-color: transparent transparent transparent $bg
+  @if $direction == b
+    border-width: $height + px $width / 2 + px 0 $width / 2 + px
+    border-color: $bg transparent transparent transparent
+  @if $direction == l
+    border-width: $height / 2 + px $width + px $height / 2 + px 0
+    border-color: transparent $bg transparent transparent
+  @if $direction == tl
+    border-width: $height + px $width + px 0 0
+    border-color: $bg transparent transparent transparent
+  @if $direction == tr
+    border-width: 0 $width + px $height + px 0
+    border-color: transparent $bg transparent transparent
+  @if $direction == br
+    border-width: 0 0 $height + px $width + px
+    border-color: transparent transparent $bg transparent
+  @if $direction == bl
+    border-width: $width + px 0 0 $height + px
+    border-color: transparent transparent transparent $bg
+// example
+// +arr(500,50, #000, l)
+// +arr(500,50, #000, bl)
+
+=rotate($var)
+  transform: rotate($var+deg)
+
+=blur($var)
+  filter: blur($var)
+
+=better-blur($radius)
+  filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='#{$radius}' result='b'/%3E%3CfeMorphology operator='dilate' radius='#{$radius}'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E %3C/svg%3E#a")
+
+=scale($var)
+  transform: scale($var)
+
+=counter($var, $sep)
+  counter-reset: list + $var
+  > li
+    &:before
+      content: counter(list + $var) $sep
+      counter-increment: list + $var
+
+=f($name, $font-size: null, $letter-spacing: null)
+  $font-family: null
+  @if $name == "l"
+    $font-family: "light"
+  font-family: $font-family
+  font-weight: normal
+  @if $font-size != null
+    font-size: $font-size + px
+  @if $letter-spacing != null
+    letter-spacing: ($letter-spacing / 1000) + em
+
+
+=font-face($font-family,$alias, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+    @font-face
+        font-family: $font-family
+        font-weight: $weight
+        font-style: $style
+        src: url("#{$file-path}.eot")
+        src: local("#{$font-family} #{$alias}"), local('#{$font-family}-#{$alias}'),
+        url("#{$file-path}.eot?#iefix") format('embedded-opentype'),
+        url("#{$file-path}.woff") format('woff2'),
+        url("#{$file-path}.woff") format('woff'),
+        url("#{$file-path}.ttf") format('truetype')
+
+
+=center($axis)
+  @if $axis == both
+    +vcenter
+  @else if $axis == h
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+  @else if $axis == v
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)

@@ -1,0 +1,62 @@
+{% set
+  questions = [
+    {
+      question: 'When next course starts?',
+      answer: "We don't know :) Our courses don’t have a fixed schedule. Whenever we decide to launch one, we will make an announcement on our twitter account and telegram channel Radio Kottans. But don't get upset if no courses are currently running, because all programs are available on GitHub and you can complete tasks with other students. We call this format P2P education."
+    },
+    {
+      question: 'How to join a course?',
+      answer: "Wait for the course announcement and follow the guides. In general, we do not require any formal registration. You can just dive into the curriculum by starting to complete tasks. Yes, it is that simple."
+    },
+    {
+      question: 'What does a course look like?',
+      answer: 'Usually, we separate our course in two parts - online and offline. To get to the offline part, one should complete the online part. The online part is a list of tasks - video-lectures, code tasks, etc. The offline part - set of meetings, workshops, etc. We try to record all our lectures and keep them available to students who missed a lecture and to everyone interested. You can take a look at our lectures in our YouTube channel.'
+    },
+    {
+      question: 'Will you have courses in other cities (except Kyiv)?',
+      answer: 'For a Kottans course to be held we rely on volunteers. You can be the person to start a Kottans course in your city. Few dedicated mentos and a location are minimal requirements.'
+    },
+    {
+      question: 'Will you have courses in Java/C#/PHP/other technology?',
+      answer: 'Same as with other cities: we are happy to support initiative from people willing to start a course. This is not as hard as it sounds.'
+    },
+    {
+      question: 'Why are your courses free? Do I need to pay anything later?',
+      answer: "We enjoy sharing our knowledge and experience and we do it for free just for fun. We see this as our contribution to Ukrainian developers community. We are not recruiters. The courses do not have any hidden penalty."
+    },
+    {
+      question: 'Will I get a job after successfully finishing your course?',
+      answer: 'We are not affiliated to any company and we cannot guarantee employment for our students. Neither are our courses tailored to successfully passing the job interview: we teach what we think is important. Yet from our experience people who work hard have no problem finding a job. We always gladly give recommendations for our alumni.'
+    },
+    {
+      question: 'I am a complete beginner doing my first steps in programming. Can I join?',
+      answer: 'Yes, we welcome all people regardless of programming experience or prior knowledge. Join our chats and feel free to ask any questions about the material you are learning.'
+    }
+  ]
+%}
+<section class="section section--faq" id="faq">
+    <div class="container">
+      <aside class="section__sidebar">
+        <div class="sidebar--content">
+          <h2>
+            <p>
+              <span><a class="anchor" href="#faq">F.A.Q.</a></span>
+            </p>
+          </h2>
+          {% include "partials/_menu.html" %}
+        </div>
+      </aside>
+      <section class="section__content">
+        <div class="faq">
+          <section class="faq__items">
+            {% for item in questions %}
+            <div class="faq__item">
+              <h4 class="faq__header">{{item.question}}</h4>
+              <p class="faq__content">{{item.answer}}</p>
+            </div>
+            {% endfor %}
+          </section>
+        </div>
+      </section>
+    </div>
+  </section>
