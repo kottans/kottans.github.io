@@ -1,0 +1,874 @@
+{% set
+list2018 = [
+{
+  img: 'yevhenorlov.jpg',
+  name: 'Yevhen Orlov',
+  github: 'yevhenorlov',
+  twitter:'yevhenorlov',
+  language: 'JS'
+},
+{
+  img: 'kochetov.jpg',
+  name: 'Alexandr Kochetov',
+  github: 'alexk0ch',
+  language: 'JS'
+},
+{
+  img: 'svyatoslav.jpeg',
+  name: 'Svyatoslav Shmatko',
+  github: 'sdoomz',
+  language: 'JS'
+},
+{
+  img: 'roman_liutikov.jpg',
+  name: 'Roman Liutikov',
+  github: 'roman01la',
+  twitter: 'roman01la',
+  language: 'JS, Clojure'
+},
+{
+  img: 'igor.jpeg',
+  name: 'Igor Kurkov',
+  github: 'IgorKurkov',
+  twitter:'igor_kurkov',
+  language: 'JS'
+},
+{
+  img: 'alexander.jpeg',
+  name: 'Alexandr Ostrovny',
+  github: 'A-Ostrovnyy',
+  twitter: 'Alex_Ostrovny',
+  language: 'HTML/CSS'
+}
+]
+%}
+{% set
+list2017 = [
+{
+img: 'john.jpg',
+name: 'Oleksandr Lapshyn',
+github: 'sudodoki',
+twitter: 'sudodoki',
+language: 'JS'
+},
+{
+img: 'aleksey-shvayka.jpg',
+name: 'Aleksey Shvayka',
+github: 'shvaikalesh',
+language: 'JS'
+},
+{
+img: 'listochkin.jpg',
+name: 'Andrey Listochkin',
+github: 'listochkin',
+twitter:'listochkin',
+language: 'JS'
+},
+{
+img: 'antonNemtsev.jpg',
+name: 'Anton Nemtsev',
+github: 'SilentImp',
+twitter:'SilentImp',
+language: 'js, html, css'
+},
+{
+img: 'artem.jpeg',
+name: 'Artem Denysov',
+github: 'denar90_',
+twitter:'denar90',
+language: 'JS'
+},
+{
+img: 'yavorskyi.jpeg',
+name: 'Artem Yavorsky',
+github: 'yavorsky',
+twitter:'yavorsky_',
+language: 'JS'
+},
+{
+img: 'roman.jpeg',
+name: 'Roman Liutikov',
+github: 'roman01la',
+twitter:'roman01la',
+language: 'JS'
+},
+{
+img: 'tkachenko.jpeg',
+name: 'Yuri Tkachenko',
+github: 'tyv',
+twitter:'yuritkachenko',
+language: 'JS'
+},
+{
+img: 'akulov.jpeg',
+name: 'Ivan Akulov',
+github: 'iamakulov',
+twitter:'iamakulov',
+language: 'JS'
+},
+{
+img: 'kate.jpg',
+name: 'Kateryna Porshnieva',
+github: 'krambertech',
+twitter:'krambertech',
+language: 'JS'
+},
+{
+img: 'stas.jpeg',
+name: 'Stas Gavrylov',
+github: 'stasgavrylov',
+twitter:'stasgavrylov',
+language: 'JS'
+},
+{
+img: 'vodymyr.jpeg',
+name: 'Volodymyr Stelmakh',
+github: 'stelmakh',
+twitter:'vstelmakh',
+language: 'JS'
+},
+{
+img: 'lempiy.jpeg',
+name: 'Anton Lempiy',
+github: 'lempiy',
+language: 'JS'
+},
+{
+img: 'viktor.jpeg',
+name: 'Viktor Yakubiv',
+github: 'viktor-yakubiv',
+language: 'JS'
+}
+]
+%}
+{% set
+list2016 = [
+{
+img: 'ihor.jpeg',
+name: 'Igor Kroosh',
+github: 'tilast',
+twitter:'ikroosh',
+language: 'ruby'
+},
+{
+img: 'lena.jpg',
+name: 'Elena Morgun',
+github: 'darthrevan',
+twitter:'rubykatze',
+language: 'ruby'
+},
+{
+img: 'den_2.jpg',
+name: 'Denis Sergienko',
+github: 'zxftr45',
+twitter:'zxftr45',
+language: 'ruby'
+},
+{
+img: 'lulya.jpg',
+name: 'Julia Savinkova',
+github: 'programulya',
+twitter:'programulya',
+language: 'JS'
+}
+]
+%}
+{% set
+list2015 = [
+{
+img: 'misha.jpg',
+name: 'Mikhail Bortnyk',
+github: 'vessi',
+twitter:'mikhailbortnyk',
+language: 'erlang'
+},
+{
+img: 'lulya.jpg',
+name: 'Julia Savinkova',
+github: 'programulya',
+twitter:'programulya',
+language: 'C#, js'
+},
+{
+img: 'den_2.jpg',
+name: 'Denis Sergienko',
+github: 'zxftr45',
+twitter:'zxftr45',
+language: 'ruby'
+},
+{
+img: 'valentine.jpeg',
+name: 'Valentine Radchuk',
+github: 'zaknafeyn',
+twitter:'zzaknafeyn',
+language: 'C#'
+},
+{
+img: 'aleksey.jpeg',
+name: 'Alexey Aza',
+github: 'jalaz',
+twitter: 'jalazVS',
+language: 'C#'
+},
+{
+img: 'dmytro.jpeg',
+name: 'Dmytro Hnatiuk',
+github: 'hnatiukdm',
+twitter: 'dhnatiuk',
+language: 'C#'
+},
+{
+img: 'denys.jpg',
+name: 'Dan Kashkovsky',
+github: '',
+twitter: 'danniekash',
+language: 'C#'
+},
+{
+img: 'timur.jpg',
+name: 'Timur Mudzhyri',
+github: 'intrueder',
+twitter: 'intrueder',
+language: 'C#'
+},
+{
+img: 'vovk.png',
+name: 'Roman Vovk',
+github: 'kakarotto67',
+twitter: 'roman_vovk1',
+language: 'C#'
+},
+{
+img: 'aleksey-shvayka.jpg',
+name: 'Aleksey Shvayka',
+github: 'shvaikalesh',
+language: 'JS'
+},
+{
+img: 'nikolay.jpeg',
+name: 'Nikolay Kozhukharenko',
+github: 'mkozhukharenko',
+language: 'JS'
+},
+{
+img: 'stets.jpeg',
+name: 'Ivan Stetsenko',
+github: 'firec0der',
+language: 'JS'
+},
+{
+img: 'john.jpg',
+name: 'Oleksandr Lapshyn',
+github: 'sudodoki',
+twitter: 'sudodoki',
+language: 'JS'
+},
+{
+img: 'illya.jpg',
+name: 'Illia Seheda',
+github: 'ALF-er',
+twitter: 'alf_er',
+language: 'JS'
+},
+{
+img: 'artem_2.jpeg',
+name: 'Artem Bey',
+github: 'defly',
+language: 'JS'
+},
+{
+img: 'listochkin.jpg',
+name: 'Andrey Listochkin',
+github: 'listochkin',
+twitter:'listochkin',
+language: 'JS'
+},
+{
+img: 'taras.jpeg',
+name: 'Taras Hupalo',
+github: 'cwayfinder',
+language: 'JS'
+},
+{
+img: 'illya.jpeg',
+name: 'Illya Klymov',
+github: 'xanf',
+language: 'JS'
+}
+,
+{
+img: 'lavrin.jpeg',
+name: 'Ivan Lavriv',
+github: 'lavriv92',
+twitter: 'ilavriv',
+language: 'JS'
+},
+{
+img: 'sergiy.jpeg',
+name: 'Serg Bataev',
+twitter: 'servika',
+language: 'JS'
+},
+{
+img: 'stoyanov.jpg',
+name: 'Denis Stoyanov',
+github: 'xgrommx',
+twitter: 'xgrommx',
+language: 'JS'
+},
+{
+img: 'bohdan.jpg',
+name: 'Bohdan Varshchuk',
+github: 'g3d',
+twitter: 'g3d',
+language: 'JS'
+},
+{
+img: 'med.jpeg',
+name: 'Denys Medynskyi',
+language: 'ruby'
+},
+{
+img: 'volodya.png',
+name: 'Volodya Sveredyuk',
+github: 'sveredyuk',
+twitter: 'sveredyuk',
+language: 'ruby'
+},
+{
+img: 'placeholder.jpg',
+name: 'Yuriy Kushnir',
+github: 'kushniryb',
+language: 'ruby'
+}
+]
+%}
+{% set
+list2014 = [
+{
+img: 'eugene.jpg',
+name: 'Eugene Safronov',
+github: 'sejoker',
+twitter: 'sejoker',
+language: 'JS'
+},
+{
+img: 'andrii.jpg',
+name: 'Andrey Savchenko',
+github: 'ptico',
+twitter: 'ptico',
+language: 'ruby'
+},
+{
+img: 'serg.jpg',
+name: 'Sergey Gopkalo',
+language: 'ruby'
+},
+{
+img: 'lena.jpg',
+name: 'Elena Morgun',
+github: 'darthrevan',
+twitter:'rubykatze',
+language: 'ruby'
+},
+{
+img: 'misha.jpg',
+name: 'Mikhail Bortnyk',
+github: 'vessi',
+twitter:'mikhailbortnyk',
+language: 'ruby, js'
+},
+{
+img: 'john.jpg',
+name: 'Oleksandr Lapshyn',
+github: 'sudodoki',
+twitter: 'sudodoki',
+language: 'JS'
+},
+{
+img: 'julia.jpg',
+name: 'Julia Budnik',
+github: 'mayosh',
+twitter: 'Jubudni',
+language: 'ruby, js'
+},
+{
+img: 'den_2.jpg',
+name: 'Denis Sergienko',
+github: 'zxftr45',
+twitter:'zxftr45',
+language: 'ruby, js'
+},
+{
+img: 'ihor.jpeg',
+name: 'Igor Kroosh',
+github: 'tilast',
+twitter:'ikroosh',
+language: 'ruby'
+},
+{
+img: 'ingvar.jpeg',
+name: 'Ingvar Stepanyan',
+github: 'RReverser',
+twitter: 'RReverser',
+language: 'JS'
+},
+{
+img: 'max.jpeg',
+name: 'Max Klymyshyn',
+github: 'joymax',
+twitter: 'maxmaxmaxmax',
+language: 'JS'
+},
+{
+img: 'vsych.jpeg',
+name: 'Victor Sych',
+github: 'vsych',
+twitter: 'VictorSych',
+language: 'JS'
+},
+{
+img: 'zuzusik.jpg',
+name: 'Viktor Zozuliak',
+github: 'zuzusik',
+language: 'JS'
+},
+{
+img: 'listochkin.jpg',
+name: 'Andrey Listochkin',
+github: 'listochkin',
+twitter:'listochkin',
+language: 'JS'
+}
+]
+%}
+{% set
+list2013 = [
+{
+img: 'serg.jpg',
+name: 'Sergey Gopkalo',
+language: 'ruby'
+},
+{
+img: 'den.jpg',
+name: 'Denis Yagofarov',
+github: 'denyago',
+twitter: 'denyago',
+language: 'ruby'
+},
+{
+img: 'lena.jpg',
+name: 'Elena Morgun',
+github: 'darthrevan',
+twitter:'rubykatze',
+language: 'ruby'
+},
+{
+img: 'misha.jpg',
+name: 'Mikhail Bortnyk',
+github: 'vessi',
+twitter:'mikhailbortnyk',
+language: 'ruby, js'
+},
+{
+img: 'john.jpg',
+name: 'Oleksandr Lapshyn',
+github: 'sudodoki',
+twitter: 'sudodoki',
+language: 'JS'
+},
+{
+img: 'rozumii.jpeg',
+name: 'Oleksandr Rozumii',
+github: 'brain-geek',
+twitter: 'brain-geek',
+language: 'ruby'
+},
+{
+img: 'julia.jpg',
+name: 'Julia Budnik',
+github: 'mayosh',
+twitter: 'Jubudni',
+language: 'ruby, js'
+},
+{
+img: 'lulya.jpg',
+name: 'Julia Savinkova',
+github: 'programulya',
+twitter:'programulya',
+language: 'JS'
+},
+{
+img: 'bel.jpeg',
+name: 'Alexander Beletsky',
+github: 'alexbeletsky',
+twitter: 'alexbeletsky',
+language: 'JS'
+},
+{
+img: 'eldar.png',
+name: 'Eldar Djafarov',
+github: 'edjafarov',
+twitter: 'edjafarov',
+language: 'JS'
+},
+{
+img: 'listochkin.jpg',
+name: 'Andrey Listochkin',
+github: 'listochkin',
+twitter:'listochkin',
+language: 'JS'
+},
+{
+img: 'artyom.jpeg',
+name: 'Artem Trytiak',
+github: 'ArtyomTrityak',
+twitter: 'ArtyomTrityak',
+language: 'JS'
+},
+{
+img: 'valen.jpeg',
+name: 'Valentyn Shybanov',
+github: 'olostan',
+twitter: 'olostan',
+language: 'JS'
+},
+{
+img: 'yarmak.png',
+name: 'Dmytro Yarmak',
+github: 'dmytroyarmak',
+twitter: 'dmytroyarmak',
+language: 'JS'
+},
+{
+img: 'placeholder.jpg',
+name: 'Eugene Koshevoy',
+language: 'JS'
+},
+{
+img: 'dmitry.jpg',
+name: 'Dmitry Tselinko',
+github: 'dmitryt',
+language: 'JS'
+},
+{
+img: 'flip.png',
+name: 'Dmitriy Filipenko',
+github: 'dmfilipenko',
+twitter: 'dmfilipenko',
+language: 'JS'
+}
+]
+%}
+{% set
+list2012 = [
+{
+img: 'den.jpg',
+name: 'Denis Yagofarov',
+github: 'denyago',
+twitter: 'denyago',
+language: 'ruby'
+},
+{
+img: 'misha.jpg',
+name: 'Mikhail Bortnyk',
+github: 'vessi',
+twitter:'mikhailbortnyk',
+language: 'ruby, js'
+}
+]
+%}
+{% set
+list2011 = [
+{
+img: 'misha.jpg',
+name: 'Mikhail Bortnyk',
+github: 'vessi',
+twitter:'mikhailbortnyk',
+language: 'ruby, js'
+},
+{
+img: 'alex.jpg',
+name: 'Alexandr Shilo',
+language: 'ruby'
+}
+]
+%}
+<section class="section--mentor" id="mentor">
+  <div class="section__content">
+    <div class="mentor__heading">
+      <h3>Mentors:</h3>
+    </div>
+    <div class="mentor">
+      <div class="mentor__wrapper">
+        <nav id="mentor__nav" class="mentor__nav">
+          <div id="mentor___nav-contents" class="mentor__nav-contents">
+            <p class="mentor__nav-link" aria-selected="true" data-tab="mentor__2018">2018-2019</p>
+            <p class="mentor__nav-link" data-tab="mentor__2017">2017-2018</p>
+            <p class="mentor__nav-link" data-tab="mentor__2016">2016-2017</p>
+            <p class="mentor__nav-link" data-tab="mentor__2015">2015-2016</p>
+            <p class="mentor__nav-link" data-tab="mentor__2014">2014-2015</p>
+            <p class="mentor__nav-link" data-tab="mentor__2013">2013-2014</p>
+            <p class="mentor__nav-link" data-tab="mentor__2012">2013-2013</p>
+            <p class="mentor__nav-link" data-tab="mentor__2011">2011-2012</p>
+            <p id="mentor__indicator-pn" class="mentor__nav-indicator"></p>
+          </div>
+        </nav>
+      </div>
+      <button id="mentor__btnLeft-pn" class="mentor__btn mentor__btn_Left" type="button"></button>
+      <button id="mentor__btnRight-pn" class="mentor__btn mentor__btn_Right" type="button"></button>
+      <div id="mentor__2018" class="b-tab active">
+        <div class="mentor__container">
+          {% for data in list2018 %}
+          <div class="mentor__row">
+            <div class="mentor__avatar-container">
+              <div class="mentor__photo">
+                <img class="mentor__img" src="img/mentors/{{data.img}}"/>
+              </div>
+            </div>
+            <div class="mentor__details-container">
+              <div class="mentor__content">
+                <div class="mentor__name">
+                  <h4>{{data.name}}</h4>
+                </div>
+                <p class="mentor__language">
+                  <span class="mentor__language-bold">Language :</span> {{data.language}}
+                </p>
+              </div>
+              <div class="mentor__memberSocials">
+                <a href="https://github.com/{{data.github}}" class="mentor__memberLink">
+                  {{github|safe}}
+                </a>
+                <a href="https://twitter.com/{{data.twitter}}" class="mentor__memberLink">
+                  {{twitter|safe}}
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div id="mentor__2017" class="b-tab">
+        <div class="mentor__container">
+          {% for data in list2017 %}
+          <div class="mentor__row">
+            <div class="mentor__avatar-container">
+              <div class="mentor__photo">
+                <img class="mentor__img" src="img/mentors/{{data.img}}"/>
+              </div>
+            </div>
+            <div class="mentor__details-container">
+              <div class="mentor__content">
+                <div class="mentor__name">
+                  <h4>{{data.name}}</h4>
+                </div>
+                <p>
+                  Language : {{data.language}}
+                </p>
+              </div>
+              <div class="mentor__memberSocials">
+                <a href="https://github.com/{{data.github}}" class="mentor__memberLink">
+                  {{github|safe}}
+                </a>
+                <a href="https://twitter.com/{{data.twitter}}" class="mentor__memberLink">
+                  {{twitter|safe}}
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div id="mentor__2016" class="b-tab">
+        <div class="mentor__container">
+          {% for data in list2016 %}
+          <div class="mentor__row">
+            <div class="mentor__avatar-container">
+              <div class="mentor__photo">
+                <img class="mentor__img" src="img/mentors/{{data.img}}"/>
+              </div>
+            </div>
+            <div class="mentor__details-container">
+              <div class="mentor__content">
+                <div class="mentor__name">
+                  <h4>{{data.name}}</h4>
+                </div>
+                <p>
+                  Language : {{data.language}}
+                </p>
+              </div>
+              <div class="mentor__memberSocials">
+                <a href="https://github.com/{{data.github}}" class="mentor__memberLink">
+                  {{github|safe}}
+                </a>
+                <a href="https://twitter.com/{{data.twitter}}" class="mentor__memberLink">
+                  {{twitter|safe}}
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div id="mentor__2015" class="b-tab">
+        <div class="mentor__container">
+          {% for data in list2015 %}
+          <div class="mentor__row">
+            <div class="mentor__avatar-container">
+              <div class="mentor__photo">
+                <img class="mentor__img" src="img/mentors/{{data.img}}"/>
+              </div>
+            </div>
+            <div class="mentor__details-container">
+              <div class="mentor__content">
+                <div class="mentor__name">
+                  <h4>{{data.name}}</h4>
+                </div>
+                <p>
+                  Language : {{data.language}}
+                </p>
+              </div>
+              <div class="mentor__memberSocials">
+                <a href="https://github.com/{{data.github}}" class="mentor__memberLink">
+                  {{github|safe}}
+                </a>
+                <a href="https://twitter.com/{{data.twitter}}" class="mentor__memberLink">
+                  {{twitter|safe}}
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div id="mentor__2014" class="b-tab">
+        <div class="mentor__container">
+          {% for data in list2014 %}
+          <div class="mentor__row">
+            <div class="mentor__avatar-container">
+              <div class="mentor__photo">
+                <img class="mentor__img" src="img/mentors/{{data.img}}"/>
+              </div>
+            </div>
+            <div class="mentor__details-container">
+              <div class="mentor__content">
+                <div class="mentor__name">
+                  <h4>{{data.name}}</h4>
+                </div>
+                <p>
+                  Language : {{data.language}}
+                </p>
+              </div>
+              <div class="mentor__memberSocials">
+                <a href="https://github.com/{{data.github}}" class="mentor__memberLink">
+                  {{github|safe}}
+                </a>
+                <a href="https://twitter.com/{{data.twitter}}" class="mentor__memberLink">
+                  {{twitter|safe}}
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div id="mentor__2013" class="b-tab">
+        <div class="mentor__container">
+          {% for data in list2013 %}
+          <div class="mentor__row">
+            <div class="mentor__avatar-container">
+              <div class="mentor__photo">
+                <img class="mentor__img" src="img/mentors/{{data.img}}"/>
+              </div>
+            </div>
+            <div class="mentor__details-container">
+              <div class="mentor__content">
+                <div class="mentor__name">
+                  <h4>{{data.name}}</h4>
+                </div>
+                <p>
+                  Language : {{data.language}}
+                </p>
+              </div>
+              <div class="mentor__memberSocials">
+                <a href="https://github.com/{{data.github}}" class="mentor__memberLink">
+                  {{github|safe}}
+                </a>
+                <a href="https://twitter.com/{{data.twitter}}" class="mentor__memberLink">
+                  {{twitter|safe}}
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div id="mentor__2012" class="b-tab">
+        <div class="mentor__container">
+          {% for data in list2012 %}
+          <div class="mentor__row">
+            <div class="mentor__avatar-container">
+              <div class="mentor__photo">
+                <img class="mentor__img" src="img/mentors/{{data.img}}"/>
+              </div>
+            </div>
+            <div class="mentor__details-container">
+              <div class="mentor__content">
+                <div class="mentor__name">
+                  <h4>{{data.name}}</h4>
+                </div>
+                <p>
+                  Language : {{data.language}}
+                </p>
+              </div>
+              <div class="mentor__memberSocials">
+                <a href="https://github.com/{{data.github}}" class="mentor__memberLink">
+                  {{github|safe}}
+                </a>
+                <a href="https://twitter.com/{{data.twitter}}" class="mentor__memberLink">
+                  {{twitter|safe}}
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div id="mentor__2011" class="b-tab">
+        <div class="mentor__container">
+          {% for data in list2011 %}
+          <div class="mentor__row">
+            <div class="mentor__avatar-container">
+              <div class="mentor__photo">
+                <img class="mentor__img" src="img/mentors/{{data.img}}"/>
+              </div>
+            </div>
+            <div class="mentor__details-container">
+              <div class="mentor__content">
+                <div class="mentor__name">
+                  <h4>{{data.name}}</h4>
+                </div>
+                <p>
+                  Language : {{data.language}}
+                </p>
+              </div>
+              <div class="mentor__memberSocials">
+                <a href="https://github.com/{{data.github}}" class="mentor__memberLink">
+                  {{github|safe}}
+                </a>
+                <a href="https://twitter.com/{{data.twitter}}" class="mentor__memberLink">
+                  {{twitter|safe}}
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+

@@ -1,0 +1,51 @@
+.footer
+	background-color: $dark
+
+	a
+		color: white
+
+	.container
+		padding: 25px 115px
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+		align-items: center
+
+		+r(850)
+			padding: 25px 65px
+
+		+r(767)
+			flex-flow: column nowrap
+
+.footer__logo, .footer__copyright, .footer__socials
+	flex: 1 0
+	margin: 0 5px
+
+.footer__logo
+	+r(992)
+		flex-shrink: 1
+
+	+r(767)
+		margin-bottom: 50px
+
+	svg
+		width: 70px
+
+	.logoStroke
+		stroke: $white
+
+	.logoRect
+		fill: $white
+
+.footer__copyright
+	+r(767)
+		margin-bottom: 50px
+
+	span
+		white-space: nowrap
+		color: $white
+		font-size: 11px
+
+.footer__socials
+	.iconColor
+		fill: $white

@@ -1,0 +1,120 @@
+{% set
+communities = [
+{
+  alt: 'Input logo',
+  logo: 'img/communities/input.svg',
+  src: 'https://inputconf.org/',
+  description: 'Conference with a bunch of short reports from people working in IT for people who just want to try'
+}, {
+  alt: 'ReactKyiv logo',
+  logo: 'img/communities/react_kyiv.jpg',
+  src: 'https://www.facebook.com/ReactKyiv/',
+  description: 'Largest React event in Ukraine'
+}, {
+  alt: 'ClojureDay logo',
+  logo: 'img/communities/clojure_day.svg',
+  src: 'https://clojureday.in.ua/',
+  description: 'Free community driven event for everyone interested in Clojure and functional programming'
+}]
+%}
+
+<section class="section section--platform" id="platform">
+    <div class="container">
+      <aside class="section__sidebar">
+        <div class="sidebar--content">
+          <h2>
+            <a class="anchor" href="#platform">
+              <p>Create</p>
+              <p>your own</p>
+              <p>events</p>
+            </a>
+          </h2>
+          {% include "partials/_menu.html" %}
+        </div>
+      </aside>
+      <div class="section__content">
+        <div class="platform">
+          <div class="platform__numbersWrapper">
+            <div class="platform__headingWrapper">
+                <h3 class="platform__heading">
+                  Community driven knowledge sharing platform
+                </h3>
+                <ul class="platform__numbersList">
+                  <li class="platform__numbersItem">
+                    <span class="platform__numbersQuantity">
+                      4k+
+                    </span>
+                    <span class="platform__numbersText">
+                      Members
+                    </span>
+                  </li>
+                  <li class="platform__numbersItem">
+                    <span class="platform__numbersQuantity">
+                      20+
+                    </span>
+                    <span class="platform__numbersText">
+                      Courses
+                    </span>
+                  </li>
+                  <li class="platform__numbersItem">
+                    <span class="platform__numbersQuantity">
+                      7
+                    </span>
+                    <span class="platform__numbersText">
+                      Years
+                    </span>
+                  </li>
+                  <li class="platform__numbersItem">
+                    <span class="platform__numbersQuantity">
+                      2
+                    </span>
+                    <span class="platform__numbersText">
+                      Meetups
+                    </span>
+                  </li>
+                  <li class="platform__numbersItem">
+                    <span class="platform__numbersQuantity">
+                      1
+                    </span>
+                    <span class="platform__numbersText">
+                      Conference
+                    </span>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <section class="platform__description">
+            <div class="platform__text__wrapper">
+              <div class="grey__rectangle"></div>
+              <section class="platform__text">
+                <p class="platform__text--item">
+                  <strong>Because we are not</strong> affiliated to any company, we are absolutely neutral platform for any events and we can help you with organization of one.
+                </p>
+                <p class="platform__text--item">
+                  We have a lot of experience in conducting of courses, meetups and conferences as well.
+                </p>
+                <p class="platform__text--item">
+                  If you want to create your own community or your event, but don't know how to do it or don't want to do it alone - we can help you!
+                </p>
+                <p class="platform__text--item">
+                  Starting from consultation and ending with help in looking for the place, team, partners or sponsorship. Also, because we have a large community, we can be media-partner for your event.
+                </p>
+                <p class="platform__text--item">
+                  Our help is completely volontier and we have only one pre-request - your event must be free or at least non-profit.
+                </p>
+              </section>
+            </div>
+            <div class="communities__logos">
+              {% for community in communities %}
+              <a href="{{community.src}}" class="communities__logos--item">
+                <img class="community__logo" src="{{community.logo}}" alt="{{community.alt}}"/>
+                <span class="community__description">{{community.description}}</span>
+              </a>
+              {% endfor %}
+            </div>
+
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,35 @@
+.section
+	&.section--partners
+		min-height: 0
+		background-color: $grey-100
+		margin: 0
+		padding: 75px 0
+
+		+r(767)
+			margin-bottom: 50px
+
+		.section__sidebar
+			span:last-child
+				+r(767)
+					display: block
+
+.partners__list
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+
+.partners__item
+	flex: 1 1
+	max-width: 280px
+	margin: 15px 30px
+
+	+r(1400)
+		flex-basis: 50%
+
+	+r(1100)
+		flex-basis: auto
+		width: 100%
+
+.partners__image
+	width: 180px

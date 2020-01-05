@@ -1,0 +1,22 @@
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__contact">
+      <a href="mailto:kottans.org@gmail.com" class="header__contactLink">contact us</a>
+    </div>
+    <div class="header__logo">
+      <a href="/">
+        {{logo|safe}}
+      </a>
+    </div>
+    <div class="header__socials">
+      {% include "partials/_socials.html" %}
+    </div>
+    <div class="hamburgerWrapper">
+      <button class="hamburger" id="hamburger">
+        <span class="hamburger__item"></span>
+        <span class="hamburger__item"></span>
+        <span class="hamburger__item"></span>
+      </button>
+    </div>
+  </div>
+</header>

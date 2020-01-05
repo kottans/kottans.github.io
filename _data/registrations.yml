@@ -1,7 +1,0 @@
-# Just comment out inactive registrations - but don't delete those
-# - course: "JS"
-  # extra_text: "can put something here"
-  # url: "https://docs.google.com/forms/d/1iuswGqM7jygO8Fh_Yd-4VhkQCPxcnZJijkUQIigX3T8/viewform?edit_requested=true"
-- course: "Front End"
-  extra_text: "Just jump in and start with the test task"
-  url: "https://github.com/Kottans/frontend"

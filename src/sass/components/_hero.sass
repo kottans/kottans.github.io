@@ -1,0 +1,105 @@
+.hero
+	.section__sidebar
+		position: absolute
+
+		+r(767)
+			position: fixed
+			top: 100px
+			z-index: -1
+
+		.menu__list
+			margin-top: 250px;
+
+			+r(767)
+				margin-top: 0
+
+	.container
+		position: relative
+		height: 100vh
+		padding: 150px 20px
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 69 59' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.2123 57C22.2123 57 25.048 52.8678 25.048 48.4136C25.048 43.9594 22.2123 39.2906 22.2123 39.2906' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M13.2329 45.0342L14.6507 39.2906' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M17.0137 45.0342L18.4315 39.2906' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M9.45209 57C9.45209 57 6.61647 52.8678 6.61647 48.4136C6.61647 43.9594 9.45209 39.2906 9.45209 39.2906' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M59.548 57C59.548 57 62.3836 52.8678 62.3836 48.4136C62.3836 43.9594 59.548 39.2906 59.548 39.2906' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M50.5685 45.0342L51.9864 39.2906' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M54.3494 45.0342L55.7672 39.2906' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M46.7877 57C46.7877 57 43.9521 52.8678 43.9521 48.4136C43.9521 43.9594 46.7877 39.2906 46.7877 39.2906' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='26.9384' y='56.0427' width='15.1233' height='1.95726' fill='%23979797'/%3E%3Cpath d='M58.1301 28.2821H69' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M58.1301 24.453H69' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M0 28.2821H10.8699' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M0 24.453H10.8699' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M50.5685 34.5043C50.5685 34.5043 53.4041 30.3721 53.4041 25.9179C53.4041 21.4637 50.5685 16.7949 50.5685 16.7949' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M17.4863 34.5043C17.4863 34.5043 14.6507 30.3721 14.6507 25.9179C14.6507 21.4637 17.4863 16.7949 17.4863 16.7949' stroke='%23979797' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M38.2808 28.7607L42.0616 20.1453L45.8425 28.7607' stroke='%23979797' stroke-width='2' stroke-linejoin='bevel'/%3E%3Cpath d='M22.2123 28.7607L25.9932 20.1453L29.774 28.7607' stroke='%23979797' stroke-width='2' stroke-linejoin='bevel'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M34.5 34C35.3284 34 36 33.3284 36 32.5C36 31.6716 35.3284 31 34.5 31C33.6716 31 33 31.6716 33 32.5C33 33.3284 33.6716 34 34.5 34Z' fill='%23979797'/%3E%3Cpath d='M19.8493 12.0085L25.0479 1L30.2466 12.0085' stroke='%23979797' stroke-width='2' stroke-linejoin='bevel'/%3E%3Cpath d='M38.7534 12.0085L43.952 1L49.1507 12.0085' stroke='%23979797' stroke-width='2' stroke-linejoin='bevel'/%3E%3Crect x='30' y='11' width='9' height='2' fill='%23979797'/%3E%3C/svg%3E%0A")
+		background-repeat: no-repeat
+		background-position: 95% center
+		background-size: 90vh
+
+		+r(767)
+			background-image: none
+
+	.section__sidebar--isActive
+		+r(767)
+			z-index: 10
+
+		.menu__list
+			transform: translateX(0)
+
+.hero__slogan
+	font-size: 20px
+	line-height: 1.6
+	font-weight: 500
+	line-height: 1
+	margin-left: 25%
+
+	+r(767)
+		margin-left: 0
+
+	& > span
+		display: inline
+		font-weight: 700
+
+	& > p:first-child
+		display: block
+		font-weight: 700
+		font-size: 84px
+		line-height: 1
+		letter-spacing: -1.5px
+
+		+r(767)
+			font-size: 64px
+
+			> span
+				display: block
+
+	& > p
+		display: inline-block
+
+		+r(767)
+			font-size: 18px
+			display: block
+
+.hero__promo
+	position: absolute
+	top: 55%
+	left: 27%
+	height: 30px
+	width: 227px
+	-ms-transform: skew(-20deg)
+	transform: skew(-20deg)
+	-webkit-transform: skew(-20deg)
+
+	+r(767)
+		position: static
+		margin-top: 40px
+
+.hero__promoText
+	span
+		padding: 5px 5px
+		color: $white
+		font-weight: 300
+		background-color: $dark
+
+.hero__promoTop
+	margin-left: -10px
+
+.hero__promoBottom
+	position: absolute
+	top: 40px
+	left: 8px
+	.hero__promoText > span
+		color: $dark
+		background-color: $yellow-200
+		font-weight: 500
+		width: 220px
+		margin-top: 8px
+
+.hero__rebase
+	display: block

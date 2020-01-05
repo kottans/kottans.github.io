@@ -1,0 +1,54 @@
+{% set
+  list = [
+    {
+      img: 'star.svg',
+      name: 'Star',
+      link: 'https://star.global/'
+    },
+    {
+      img: 'rails_reactor.svg',
+      name: 'Rails Reactor',
+      link: 'https://railsreactor.com/'
+    },
+    {
+      img: 'levi9.png',
+      name: 'Levi9',
+      link: 'https://www.levi9.com/'
+    },
+    {
+      img: 'wix.svg',
+      name: 'WIX',
+      link: 'https://www.wix.com/'
+    }
+  ]
+%}
+<section class="section section--partners" id="partners">
+  <div class="container">
+    <aside class="section__sidebar">
+      <h2>
+        <a class="anchor" href="#partners">
+          <span>Our</span>
+          <span>friends</span>
+          <span>& partners</span>
+        </a>
+      </h2>
+    </aside>
+    <div class="section__content">
+      <div class="partners">
+        <div class="partners__list">
+          {% for data in list %}
+          <a href="{{data.link}}" class="partners__item">
+            {% if data.img %}
+              <img src="img/partners/{{data.img}}" alt="{{data.name}}" class="partners__image">
+            {% endif %}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+

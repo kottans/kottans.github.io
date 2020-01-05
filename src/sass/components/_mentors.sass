@@ -1,0 +1,226 @@
+.section--mentor
+	justify-content: flex-start
+	align-items: flex-start
+	flex-flow: row wrap
+	min-height: 0
+
+	.section__sidebar
+		+r(767)
+			margin-bottom: 30px
+
+.mentor
+	display: flex
+	justify-content: flex-start
+	flex-flow: row wrap
+	align-items: flex-start
+
+
+.mentor__heading
+	+r(1100)
+		margin-bottom: 32px
+
+	h3
+		position: relative
+		font-weight: 500
+		font-size: 20px
+		margin-bottom: 35px
+
+		&::after
+			content: ''
+			position: absolute
+			left: 15%
+			bottom: 10px
+			width: 595px
+			height: 2px
+			background-color: $black
+
+			+r(767)
+				left: 100px
+				bottom: 50%
+				transform: translateY(50%)
+				width: calc(100vw - 150px)
+
+.mentor__wrapper
+	padding: 0 11px
+	box-sizing: border-box
+	overflow-y: hidden
+
+.mentor__nav
+	overflow-x: auto
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+	white-space: nowrap
+	font-size: 0
+	&::-webkit-scrollbar
+		display: none
+
+.js .mentor__nav
+	-ms-overflow-style: -ms-autohiding-scrollbar
+
+	&::-webkit-scrollbar
+		display: none
+
+.mentor__nav-contents
+	float: left
+	transition: transform 0.2s ease-in-out
+	position: relative
+
+.mentor__nav_Contents-no-transition
+	transition: none
+
+.mentor__nav-link
+	width: 91px
+	height: 28px
+	line-height: 28px
+	color: $white
+	font-size: 12px
+	display: inline-block
+	margin-right: 20px
+	background: #3D3D3D
+	text-align: center
+
+	&:hover
+		cursor: pointer
+
+.mentor__btn
+	appearance: none
+	background: transparent
+	padding: 0
+	border: 0
+	position: absolute
+	bottom: 0
+	opacity: 0
+	transition: opacity 0.3s
+
+	&:focus
+		outline: 0
+
+	&:hover
+		cursor: pointer
+
+.mentor__btn_Left
+	left: 0
+
+[data-overflowing="both"] ~ .mentor__btn_Left, [data-overflowing="left"] ~ .mentor__btn_Left
+	opacity: 1
+
+.mentor__btn_Right
+	right: 0
+
+[data-overflowing="both"] ~ .mentor__btn_Right, [data-overflowing="right"] ~ .mentor__btn_Right
+	opacity: 1
+
+
+.mentor__nav-indicator
+	position: absolute
+	bottom: 0
+	left: 0
+	height: 4px
+	width: 100px
+	background-color: transparent
+	transform-origin: 0 0
+	transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out
+
+.b-tab
+	display: none
+	overflow: hidden
+	height: 330px
+
+	&.active
+		display: block
+		margin-top: 30px
+		padding-left: 20px
+
+
+.mentor__container
+	display: grid
+	width: 700px
+	grid-gap: 15px
+	grid-template-rows: 150px 150px
+	grid-auto-flow: column
+	grid-auto-columns: 280px
+	overflow-y: auto
+	padding-bottom: 30px
+
+.mentor__name
+	h4
+		position: relative
+		font-weight: 300
+		font-size: 18px
+		margin-bottom: 15px
+
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: -5px
+			width: 150px
+			height: 2px
+			background-color: gray
+
+.mentor__row
+	display: flex
+	flex-wrap: wrap
+
+.mentor__details-container
+	flex: 2
+	padding-top: 10px
+
+.mentor__language
+	font-size: 14px
+
+.mentor__language-bold
+	font-weight: 700
+
+.mentor__avatar-container
+	flex-basis: 125px
+	padding-top: 10px
+	padding-left: 10px
+
+.mentor__memberSocials
+
+	a
+		display: inline-table
+		width: 32px
+		height: 32px
+		padding: 6px
+		text-decoration: none
+		margin-bottom: 15px
+
+		&:last-child
+			margin-bottom: 0
+
+.mentor__img
+	border-radius: 50%
+	width: 100px
+	height: 100px
+	cursor: pointer
+	animation: none
+	object-fit: cover
+
+	&:hover
+		box-shadow: 0 0 0 rgba(207,252,24, 1)
+		animation: pulse 2s infinite
+
+@-webkit-keyframes pulse
+	0%
+		-webkit-box-shadow: 0 0 0 0 rgba(207,252,24, 1)
+
+	70%
+		-webkit-box-shadow: 0 0 0 10px rgba(207,252,24, 0)
+
+	100%
+		-webkit-box-shadow: 0 0 0 0 rgba(207,252,24, 0)
+
+@keyframes pulse
+	0%
+		-moz-box-shadow: 0 0 0 0 rgba(207,252,24, 1)
+		box-shadow: 0 0 0 0 rgba(207,252,24, 0.8)
+
+	70%
+		-moz-box-shadow: 0 0 0 10px rgba(207,252,24, 0)
+		box-shadow: 0 0 0 10px rgba(207,252,24, 0)
+
+	100%
+		-moz-box-shadow: 0 0 0 0 rgba(207,252,24, 0)
+		box-shadow: 0 0 0 0 rgba(207,252,24, 0)
