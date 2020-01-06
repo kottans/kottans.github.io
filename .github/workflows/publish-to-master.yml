@@ -15,6 +15,8 @@ jobs:
       run: |
         npm install
         npm run-script build
+        cp .CNAME ./build/CNAME
+        
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
