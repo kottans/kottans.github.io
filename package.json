@@ -1,6 +1,6 @@
 {
-  "name": "kottans",
-  "version": "0.1.1",
+  "name": "kottans_website",
+  "version": "1.0.0",
   "scripts": {
     "ghpages": "git subtree push --prefix build origin gh-pages",
     "build": "gulp build --production",
