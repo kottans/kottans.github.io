@@ -31,7 +31,6 @@ const handleMobileMenuClick = () => {
   const firstSection = document.querySelector('.section__sidebar');
 
   firstMenu.addEventListener('click', ev => {
-    console.log(ev.target) //eslint-disable-line
     if (
       ev.target.closest('.menu__item') &&
       firstSection.classList.contains(CLASSNAMES.ACTIVE_SIDEBAR)
