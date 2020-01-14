@@ -15,6 +15,22 @@
 		align-items: center
 		padding: 25px 15px
 
+.mobile__menu__container
+	position: absolute
+	left: 100%
+
+	& > .menu
+		top: 100px;
+		display: none
+		transform: translateX(100%)
+		position: fixed
+
+		&.mobile__menu--visible
+			transform: translateX(0)
+
+		+r(767)
+			display: inherit
+
 .header__contact, .header__logo, .header__socials
 	flex: 1 0
 

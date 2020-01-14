@@ -36,7 +36,7 @@
 %}
 
 <nav class="menu">
-  <ul class="menu__list js-menu__list" aria-role="list">
+  <ul class="menu__list" aria-role="list">
       {% for data in list %}
       <li class="menu__item" data-item-parent="{{data.id}}">
         <a href="#{{data.id}}" class="menu__link">{{data.text}}</a>

@@ -27,6 +27,7 @@ nbproject
 .idea
 .tool-versions
 yarn.lock
+.vscode
 
 # Folders to ignore
 .sass-cache
