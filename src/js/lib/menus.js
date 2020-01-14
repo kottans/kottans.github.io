@@ -1,49 +1,91 @@
 const CLASSNAMES = {
-  ACTIVE_SIDEBAR: 'section__sidebar--isActive'
+  ACTIVE_SIDEBAR: 'section__sidebar--isActive',
+  VISIBLE_MOBILE_MENU: 'mobile__menu--visible',
+  MOBILE_MENU_CONTAINER: 'mobile__menu__container',
+  ACTIVE_HAMBURGER_BUTTON: 'hamburger--isActive',
+  MENU: 'menu',
+  MENU_ITEM: 'menu__item',
+  ACTIVE_MENU_ITEM: 'menu__item--isActive'
+};
+
+const SECTIONS = {
+  HERO: 'hero'
+};
+
+const hamburgerButton = document.querySelector('#hamburger');
+
+const markAsActive = parentId => {
+  const activeItems = document.querySelectorAll(
+    `.${CLASSNAMES.ACTIVE_MENU_ITEM}`
+  );
+
+  activeItems.forEach(menuItem =>
+    menuItem.classList.remove(CLASSNAMES.ACTIVE_MENU_ITEM)
+  );
+
+  const shouldBeActive = document.querySelectorAll(
+    `[data-item-parent='${parentId}']`
+  );
+
+  shouldBeActive.forEach(menuItem => {
+    menuItem.classList.add(CLASSNAMES.ACTIVE_MENU_ITEM);
+  });
 };
 
 const handleMenuItemSelection = () => {
-  const menus = document.querySelectorAll('.menu__list');
+  document.addEventListener('click', ({ target }) => {
+    const menuItem = target.closest(`.${CLASSNAMES.MENU_ITEM}`);
 
-  menus.forEach(menu => {
-    const parentSection = menu.closest('section');
+    if (!menuItem) {
+      return;
+    }
 
-    const activeItem = parentSection.querySelector(
-      `[data-item-parent='${parentSection.id}']`
-    );
-
-    activeItem.classList.add('menu__item--isActive');
+    markAsActive(menuItem.dataset.itemParent);
   });
 };
 
-const handleMobileMenuVisibility = () => {
-  const hamburgerButton = document.querySelector('#hamburger');
-  const menuWrapper = document.querySelector('.js-section__sidebar');
+const markActiveOnStart = () => {
+  const { hash } = window.location;
+
+  if (!hash) {
+    markAsActive(SECTIONS.HERO);
+  } else {
+    const parentSection = hash.slice(1);
+    markAsActive(parentSection);
+  }
+};
+
+const handleHamburgerClick = () => {
+  const menuWrapper = document.querySelector(`.${CLASSNAMES.MENU}`);
 
   hamburgerButton.addEventListener('click', () => {
-    hamburgerButton.classList.toggle('hamburger--isActive');
-    menuWrapper.classList.toggle(CLASSNAMES.ACTIVE_SIDEBAR);
+    hamburgerButton.classList.toggle(CLASSNAMES.ACTIVE_HAMBURGER_BUTTON);
+    menuWrapper.classList.toggle(CLASSNAMES.VISIBLE_MOBILE_MENU);
   });
 };
 
-const handleMobileMenuClick = () => {
-  const firstMenu = document.querySelector('.menu__list');
-  const firstSection = document.querySelector('.section__sidebar');
+const handleMobileMenuItemClick = () => {
+  const mobileMenu = document.querySelector(
+    `.${CLASSNAMES.MOBILE_MENU_CONTAINER}`
+  );
+  const menu = mobileMenu.querySelector(`.${CLASSNAMES.MENU}`);
 
-  firstMenu.addEventListener('click', ev => {
+  mobileMenu.addEventListener('click', ev => {
     if (
-      ev.target.closest('.menu__item') &&
-      firstSection.classList.contains(CLASSNAMES.ACTIVE_SIDEBAR)
+      ev.target.closest(`.${CLASSNAMES.MENU_ITEM}`) &&
+      menu.classList.contains(CLASSNAMES.VISIBLE_MOBILE_MENU)
     ) {
-      firstSection.classList.remove(CLASSNAMES.ACTIVE_SIDEBAR);
+      menu.classList.remove(CLASSNAMES.VISIBLE_MOBILE_MENU);
+      hamburgerButton.classList.remove(CLASSNAMES.ACTIVE_HAMBURGER_BUTTON);
     }
   });
 };
 
 const initMenu = () => {
+  markActiveOnStart();
   handleMenuItemSelection();
-  handleMobileMenuVisibility();
-  handleMobileMenuClick();
+  handleHamburgerClick();
+  handleMobileMenuItemClick();
 };
 
 module.exports = initMenu;
