@@ -5,14 +5,28 @@ courses = [{
   header: 'Front-End for Juniors',
   technologies: ['JavaScript', 'ReactJS', 'HTML/CSS'],
   skills: ['Pre-intermediate English', 'JavaScript basics', 'basic HTML, CSS'],
-  link: 'https://github.com/kottans/frontend'
+  link: 'https://github.com/kottans/frontend',
+  chats: [{
+    link: 'https://t.me/joinchat/DmX0JAl-mh5W0jrWli8Ycw',
+    title: 'FE Questionarium'
+  }, {
+    link:  'https://t.me/joinchat/DmX0JBHVkEhV1us2HdMmpA',
+    title: 'FE Students'
+  }]
 }, {
   shortcut: 'NodeJS',
   className: 'nodejs--course',
   header: 'NodeJS for Juniors',
   technologies: ['JavaScript', 'ReactJS', 'HTML/CSS'],
   skills: ['Pre-intermediate English', 'JavaScript basics'],
-  link: 'https://github.com/kottans/backend'
+  link: 'https://github.com/kottans/backend',
+  chats: [{
+    link: 'https://t.me/joinchat/DqrdixM_mjurcmQkkQ11Og',
+    title: 'BE Questionarium'
+  }, {
+    link:  'https://t.me/joinchat/Dqrdixe1c2K9bXUFBzNWtg',
+    title: 'BE Students'
+  }]
 }]  
 %}
 
@@ -72,6 +86,18 @@ courses = [{
                             {% endfor %}
                           </ul>
                         </div>
+                      </section>
+                      <section class="course__description__chats">
+                        <h3 class="course__description--title">Telegram chats</h3>
+                        <ul>
+                          {% for chat in slide.chats %}
+                          <li class="course__chat__item">
+                            <a href="{{chat.link}}" target="_blank" rel="noopener noreferrer nofollow" class="socials__link">
+                              {{telegram|safe}} {{chat.title}}
+                            </a>
+                          </li>
+                          {% endfor %}
+                        </ul>
                       </section>
                     </section>
                     <section class="course__picture">
