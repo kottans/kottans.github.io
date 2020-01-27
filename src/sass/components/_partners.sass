@@ -33,3 +33,11 @@
 
 .partners__image
 	width: 180px
+	-ms-filter: grayscale(1)
+	-webkit-filter: grayscale(1)
+	filter: grayscale(1)
+	transition: filter 0.3s ease-in-out
+
+	@media not all and (hover: none)
+		&:hover
+			filter: grayscale(0)
