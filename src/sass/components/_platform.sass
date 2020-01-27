@@ -7,25 +7,25 @@
 	flex: 1
 
 .communities__logos--item
+	position: relative
 	width: 280px
 	height: 300px
-	border: 1px solid $dark-200
-	opacity: 0.7
-	filter: grayscale(1)
+	padding: 20px 10px
 	display: flex
 	justify-content: center
 	align-content: center
 	flex-direction: column
 	text-decoration: none
-	transition: all 0.3s ease-in-out;
+	border: 1px solid $dark-200
+	opacity: 0.7
+	filter: grayscale(1)
+	transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out
 
 	+r(767)
 		width: 140px
 		height: 150px
 		margin: 20px
 		border-color: $dark
-		filter: grayscale(0)
-		opacity: 1
 
 	@media not all and (hover: none)
 		&:hover
@@ -33,24 +33,31 @@
 			filter: grayscale(0)
 			opacity: 1
 
+			.community__logo
+				transform: translate3D(0, -50px, 0)
+
 			.community__description
-				display: inline
-				text-decoration: none
-				color: $dark
-				text-align: center
-				margin: 20px
 				opacity: 1
-				position: relative
+				transform: translate3D(0, 50px, 0)
 
 	.community__logo
+		max-width: 160px
+		width: 100%
 		height: auto
-		max-width: 100%
-		width: 160px
 		align-self: center
+		transform: translate3D(0, 0, 0)
+		transition: transform 0.3s ease-in-out
 
 	.community__description
-		opacity: 0
 		position: absolute
+		text-decoration: none
+		color: $dark
+		text-align: center
+		margin: 20px
+		display: block
+		opacity: 0
+		transform: translate3D(0, -60%, 0)
+		transition: opacity 0.3s 0.1s ease-out, transform 0.35s ease-in-out
 
 .platform
 	width: 100%

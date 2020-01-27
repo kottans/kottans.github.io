@@ -102,6 +102,12 @@
 			border-bottom: 2px solid $dark
 			border-left: 2px solid $dark
 
+		&:active
+			&::before
+				+rmin(768)
+					border-color: $white;
+
+
 #previous
 	float: left
 
