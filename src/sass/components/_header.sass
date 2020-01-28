@@ -99,6 +99,16 @@
 		margin: 0 auto
 		width: 69px
 		height: 59px
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out
+
+  &:hover
+   transform: scale(1.1)
+
+  &:active
+   transform: scale(1)
+
+  &:focus
+   opacity: 0.3
 
 		+r(767)
 			margin-left: 0
