@@ -89,30 +89,38 @@
 
 			&::before
 				left: 44%
-				transform: translate(-50%, -50%) rotate(-135deg)
+				transform: translate3D(-50%, -50%, 0) rotate(-135deg)
 
 		&::before
 			content: ''
 			position: absolute
 			top: 50%
 			left: 58%
-			transform: translate(-50%, -50%) rotate(45deg)
+			transform: translate3D(-50%, -50%, 0) rotate(45deg)
 			width: 15px
 			height: 15px
 			border-bottom: 2px solid $dark
 			border-left: 2px solid $dark
+			transition: transform 0.3s ease-in-out
 
 		&:active
 			&::before
 				+rmin(768)
 					border-color: $white;
 
-
 #previous
 	float: left
 
+	&:hover
+		&::before
+			transform: translate3D(-90%, -50%, 0) rotate(45deg)
+
 #next
 	float: right
+
+	&:hover
+		&::before
+			transform: translate3D(-10%, -50%, 0) rotate(-135deg)
 
 .menu-slider
 	font-weight: 100

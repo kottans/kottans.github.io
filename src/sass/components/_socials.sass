@@ -9,18 +9,33 @@
 	align-items: center
 
 .socials__item
+ display: flex
+ justify-content: center
+ align-items: center
 	margin-left: 25px
 	width: 22px
 	height: 22px
-	overflow: hidden
 
 	&:first-child
 		margin-left: 0
 
-	&.telegram__item
-		svg
-			margin-top: -3px
+.socials__link
+ display: flex
+ justify-content: center
+ align-items: center
+ width: inherit
+ height: inherit
+ transform: scale(1)
+ transition: transform 0.3s ease-in-out
 
-	&.youtube__icon, &.twitter__icon
-		svg
-			margin-top: 3px
+ &:hover
+  transform: translate3D(-5px, 5px, 0)
+
+ &:focus
+  filter: invert(100%)
+
+ &:active
+  filter: invert(100%)
+
+ svg
+  width: inherit
