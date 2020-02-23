@@ -50,11 +50,11 @@ courses = [{
           <ul class="slider__list">
             {% for slide in courses %}
             <li class="slider__item js-slider__item {{slide.sliderClassName}}">
-              <section class="course {{slide.className}}">
+              <div class="course {{slide.className}}">
                 <div class="course__label">
                   {{slide.shortcut}}
                 </div>
-                <section class="course__content">
+                <div class="course__content">
                   <h3 class="course__title">
                     Course
                     <a href="{{slide.link}}" class="course__titleLink">
@@ -95,11 +95,11 @@ courses = [{
                       {% endfor %}
                     </ul>
                   </section>
-                </section>
+                </div>
                 <div class="course__bg">
                   <img src="img/course_hand.png" alt="course hand" />
                 </div>
-              </section>
+              </div>
             </li>
             {% endfor %}
           </ul>

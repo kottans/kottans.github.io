@@ -36,28 +36,28 @@
 %}
 
 <div class="section section--faq" id="faq">
-    <div class="container">
-      <aside class="section__sidebar">
-        <div class="sidebar--content">
-          <h2>
-            <span>
-              <a class="anchor" href="#faq">F.A.Q.</a>
-            </span>
-          </h2>
-          {% include "partials/_menu.html" %}
-        </div>
-      </aside>
-      <section class="section__content">
-        <div class="faq">
-          <section class="faq__items">
-            {% for item in questions %}
-            <div class="faq__item">
-              <h4 class="faq__header">{{item.question}}</h4>
-              <p class="faq__content">{{item.answer}}</p>
-            </div>
-            {% endfor %}
-          </section>
-        </div>
-      </section>
+  <div class="container">
+    <aside class="section__sidebar">
+      <div class="sidebar--content">
+        <h2>
+          <span>
+            <a class="anchor" href="#faq">F.A.Q.</a>
+          </span>
+        </h2>
+        {% include "partials/_menu.html" %}
+      </div>
+    </aside>
+    <div class="section__content">
+      <div class="faq">
+        <section class="faq__items">
+          {% for item in questions %}
+          <div class="faq__item">
+            <h4 class="faq__header">{{item.question}}</h4>
+            <p class="faq__content">{{item.answer}}</p>
+          </div>
+          {% endfor %}
+        </section>
+      </div>
     </div>
   </div>
+</div>
