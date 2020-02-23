@@ -1,274 +1,247 @@
 // Courses section
 .section--courses
-	// margin-bottom: 150px
-
 	+r(767)
 		margin-bottom: 50px
 
-.courses
-	.header__contact
-		+r(767)
-			display: block
-
-		&::before
-			max-width: 165px
-			height: 44px
-
-			+r(767)
-				max-width: 100%
-
-		a
-			max-width: 165px
-			height: 44px
-			line-height: 44px
-			margin-top: 10px
-
-			+r(767)
-				max-width: 100%
-
-.courses__sliderLabel
-	width: 70px
-	height: 70px
-	padding: 10px
-	display: flex
-	justify-content: flex-end
-	align-items: flex-end
-	margin-left: 80px
-	color: $white
-	font-size: 14px
-	font-weight: 600
-	line-height: 1.15
-	background-color: $dark
-	position: absolute
-	top: -10px
-
-	+r(767)
-		margin-left: 0
-
-.courses__sliderWrapper
-	margin-bottom: 30px
-
-.courses__slider
-	img
-		display: block
-		width: 100%
-		height: inherit
-		object-fit: cover
-
-.sliderWrapper
+// Slider
+.slider
 	position: relative
+
+.slider__inner
 	overflow: hidden
-
-#slideshow
-	line-height: 1
 	position: relative
 
-.control
-	width: 100%
-	height: calc(90% - 36px)
+.slider__item
+	display: none
+
+	&.slider__item--active
+		display: flex
+		flex-flow: row nowrap
+
+.slider__button
 	position: absolute
-	top: 36px
-	margin: 0
-	display: block
+	z-index: 4
+	top: 50%
+	transform: translate3D(0, -50%, 0)
+	width: 40px
+	height: 40px
 
-	+r(767)
-		display: block
-
-	> button
+	&::before
+		content: ''
 		position: absolute
-		z-index: 4
 		top: 50%
-		transform: translateY(-50%)
+		width: 15px
+		height: 15px
+		border-bottom: 2px solid $dark
+		border-left: 2px solid $dark
+		transition: transform 0.3s ease-in-out
+
+	&:hover
+		transform: translate3d(0, -50%, 0)
+
+	&:active
+		&::before
+			+rmin(768)
+				border-color: $white
+
+	&--previous
 		left: -10px
-		width: 40px
-		height: 40px
-
-		&:last-child
-			left: auto
-			right: -10px
-
-			&::before
-				left: 44%
-				transform: translate3D(-50%, -50%, 0) rotate(-135deg)
+		float: left
 
 		&::before
-			content: ''
-			position: absolute
-			top: 50%
 			left: 58%
 			transform: translate3D(-50%, -50%, 0) rotate(45deg)
-			width: 15px
-			height: 15px
-			border-bottom: 2px solid $dark
-			border-left: 2px solid $dark
-			transition: transform 0.3s ease-in-out
 
-		&:active
+		&:hover
 			&::before
-				+rmin(768)
-					border-color: $white;
+				transform: translate3D(-90%, -50%, 0) rotate(45deg)
 
-#previous
-	float: left
+	&--next
+		right: -10px
+		float: right
 
-	&:hover
 		&::before
-			transform: translate3D(-90%, -50%, 0) rotate(45deg)
+			left: 44%
+			transform: translate3D(-50%, -50%, 0) rotate(-135deg)
 
-#next
-	float: right
+		&:hover
+			&::before
+				transform: translate3D(-10%, -50%, 0) rotate(-135deg)
 
-	&:hover
-		&::before
-			transform: translate3D(-10%, -50%, 0) rotate(-135deg)
-
-.menu-slider
-	font-weight: 100
-	background: #efefef
+.menuSlider
+	position: absolute
+	z-index: 2
+	top: 0
+	right: -250px
 	width: 300px
 	height: 100%
 	padding-left: 50px
-	position: absolute
-	z-index: 2
+	font-weight: 100
+	color: #222
+	background: #efefef
 	-webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2)
 	box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2)
-	top: 0
-	right: -250px
-	transition: all 0.3s
-	-webkit-transition: all 0.3s
-	color: #222
 	transition: transform 0.3s ease-in
 
 	&:hover, &:focus
 		transform: translate3d(-250px, 0, 0)
 
-	.title
-		top: 50%
-		position: absolute
-		-webkit-transform: translateY(-50%)
-		-ms-transform: translateY(-50%)
-		transform: translateY(-50%)
-		transform: rotate(270deg)
-		left: -5px
-		top: 33px
-		font-weight: 800
-		font-size: 15px
-
-	.nav
-		position: absolute
-		top: 50%
-		-webkit-transform: translateY(-50%)
-		-ms-transform: translateY(-50%)
-		transform: translateY(-50%)
-		font-weight: 100
-
-		li
-			padding-bottom: 30px
-			list-style-type: none
-
-			&:hover
-				cursor: pointer
-
-		span
-			position: relative
-			display: block
-			padding: 4px 0
-			font-family: Lato, sans-serif
-			color: black
-			text-decoration: none
-			text-transform: uppercase
-			transition: 0.5s
-
-			&::after
-				position: absolute
-				content: ""
-				top: 100%
-				left: 0
-				width: 100%
-				height: 3px
-				background: #3498db
-				transform: scaleX(0)
-				transform-origin: right
-				transition: transform 0.5s
-
-			&:hover
-				color: #95a5a6
-
-				&::after
-					transform: scaleX(1)
-					transform-origin: left
-
-.courses__slider
-	.course__slide
-		height: 510px
-		font-family: Avenir, sans-serif
-		padding-left: 80px
+	+r(767)
 		display: none
 
-		.course__chat__item
-			display: flex
-			margin-bottom: 10px
+.menuSlider__title
+	top: 50%
+	position: absolute
+	-webkit-transform: translateY(-50%)
+	-ms-transform: translateY(-50%)
+	transform: translateY(-50%)
+	transform: rotate(270deg)
+	left: -5px
+	top: 33px
+	font-weight: 800
+	font-size: 15px
 
-			.socials__link
-				color: $black
-				text-decoration: none
+.menuSlider__list
+	position: relative
+	top: 50%
+	transform: translate3d(0, -50%, 0)
+	font-weight: 100
 
-				> svg
-					width: 22px
-					height: 22px
-					margin-top: -8px
-					margin-right: 10px
+.menuSlider__item
+	width: max-content
+	margin: 20px 0
 
-		&.slideActive
-			display: flex
+.menuSlider__link
+	position: relative
+	display: block
+	padding: 4px 0
+	font-family: Lato, sans-serif
+	color: black
+	text-decoration: none
+	text-transform: uppercase
+	transition: 0.5s
 
-		.slide__content
-			padding-top: 90px
+	&::after
+		position: absolute
+		content: ""
+		top: 100%
+		left: 0
+		width: 100%
+		height: 3px
+		background: #3498db
+		transform: scaleX(0)
+		transform-origin: right
+		transition: transform 0.5s
 
-		.slide__title
-			max-width: 300px
-			margin-bottom: 35px
-			line-height: 36px
+	&:hover
+		color: #95a5a6
 
-		+r(767)
-			padding-left: 50px
+		&::after
+			transform: scaleX(1)
+			transform-origin: left
 
-			.slide__title
-				max-width: 200px;
+// Course
+.course
+	width: 100%
+	height: 510px
+	padding-left: 80px
+	font-family: Avenir, sans-serif
+	display: flex
+	flex-flow: row nowrap
 
-		&.frontend--course
-			background-color: #FDCE36
+	+r(767)
+		height: auto
+		padding: 15px 15px 15px 40px
 
-		&.nodejs--course
-			background-color: #FF715B
+	&--frontend
+		background-color: #FDCE36
 
-		.course__picture
-			width: 460px
+	&--nodejs
+		background-color: #FF715B
 
-		.course--title
-			font-size: 32px
-			font-weight: 600
+.course__label
+	position: absolute
+	top: 0
+	left: 160px
+	width: 70px
+	height: 70px
+	padding: 10px
+	color: $white
+	text-align: right
+	font-size: 14px
+	font-weight: 600
+	line-height: 90px
+	background-color: $dark
 
-		.course--link
-			color: $dark
+	+r(767)
+		margin-left: 0
 
-		.course__description__container
-			display: flex
+.course__content
+	max-width: 370px
+	width: 100%
+	padding-top: 100px
 
-		.course__description
-			margin: 30px 60px
-			margin-left: 0
+.course__title
+	font-size: 11px
+	text-transform: uppercase
+	color: #9B4031
+	font-weight: 500
+	margin-bottom: 15px
 
-		.course__description--title
-			font-size: 11px
-			text-transform: uppercase
-			color: #9B4031
-			font-weight: 500
-			margin-bottom: 15px
+	&--chats
+		margin-bottom: 0
 
-		.course__description--item
-			font-size: 16px
-			line-height: 18px
-			margin-bottom: 10px
-			max-width: 170px
+.course__titleLink
+	display: block
+	margin-top: 23px
+	font-size: 32px
+	font-weight: 600
+	color: $dark
+	text-transform: none
 
+	&:hover
+		text-decoration: none
+
+.course__descriptionWrapper
+	display: flex
+	flex-flow: row nowrap
+	justify-content: start
+	margin-top: 60px
+	margin-bottom: 25px
+
+.course__description
+	flex: 1 0
+
+	&:last-of-type
+		+r(400)
+			display: none
+
+.course__descriptionItem
+	font-size: 16px
+	line-height: 18px
+	margin-bottom: 10px
+
+.course__chatsItem
+	display: flex
+
+	.socials__chatsLink
+		color: $black
+		text-decoration: none
+
+		> svg
+			width: 22px
+			height: 22px
+			transform: translate3d(-10px, 5px, 0)
+
+.course__bg
+	width: 460px
+	display: flex
+	justify-content: center
+	align-items: center
+
+	+r(767)
+		display: none
+
+	> img
+		width: 100%
+		object-fit: cover
