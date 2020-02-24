@@ -47,25 +47,26 @@
 		display: inline
 		font-weight: 700
 
-	& > p:first-child
-		display: block
-		font-weight: 700
-		font-size: 84px
-		line-height: 1
-		letter-spacing: -1.5px
-
-		+r(767)
-			font-size: 64px
-
-			> span
-				display: block
-
-	& > p
-		display: inline-block
-
 		+r(767)
 			font-size: 18px
+			display: inline-block
+
+		&:first-of-type
 			display: block
+			font-weight: 700
+			font-size: 84px
+			line-height: 1
+			letter-spacing: -1.5px
+
+			+r(767)
+				font-size: 64px
+				display: block
+
+		&:nth-child(2)
+			font-weight: 500
+
+			+r(767)
+				display: block
 
 .hero__promoWrapper
 	position: absolute

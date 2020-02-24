@@ -1,20 +1,18 @@
 function initVerticalSlider() {
   let slide = 0;
 
-  const slides = document.querySelectorAll('#slides > li');
-  const menuSlider = document.querySelector('.slider__menu');
+  const slides = document.querySelectorAll('.js-slider__item');
+  const menuSlider = document.querySelector('.js-menuSlider__list');
   const numSlides = slides.length;
-
-  slides[0].classList.add('slideActive');
 
   const setCurrentSlide = () => {
     const itemToShow = Math.abs(slide % numSlides);
 
     slides.forEach(el => {
-      el.classList.remove('slideActive');
+      el.classList.remove('slider__item--active');
     });
 
-    slides[itemToShow].classList.add('slideActive');
+    slides[itemToShow].classList.add('slider__item--active');
   };
 
   const next = () => {
@@ -27,16 +25,17 @@ function initVerticalSlider() {
     setCurrentSlide();
   };
 
-  menuSlider.addEventListener('click', ({ target }) => {
-    const sliderItem = target.closest('.slider__menu--item');
+  menuSlider.addEventListener('click', ( e ) => {
+    e.preventDefault();
+    const sliderItem = e.target.closest('.js-menuSlider__item');
     slide = Number(sliderItem.dataset.sliderId) - 1;
     setCurrentSlide();
   });
 
   // setInterval(next, 10000);
 
-  document.querySelector('#next').addEventListener('click', next);
-  document.querySelector('#previous').addEventListener('click', prev);
+  document.getElementById('slider__next').addEventListener('click', next);
+  document.getElementById('slider__previous').addEventListener('click', prev);
 }
 
 module.exports = initVerticalSlider;
