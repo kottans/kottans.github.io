@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11997933-9"></script>
@@ -131,7 +131,7 @@
           </div>
           <div class="mobile__menu__container">
             <nav class="menu">
-              <ul class="menu__list" aria-role="list">
+              <ul class="menu__list">
                 <li class="menu__item" data-item-parent="hero">
                   <a href="#hero" class="menu__link">Hello, World!</a>
                 </li>
@@ -162,11 +162,11 @@
         </div>
       </header>
       <main class="mainWrapper">
-        <section class="hero content-wrapper" id="hero">
+        <div class="hero content-wrapper" id="hero">
           <div class="container">
             <aside class="section__sidebar js-section__sidebar">
               <nav class="menu">
-                <ul class="menu__list" aria-role="list">
+                <ul class="menu__list">
                   <li class="menu__item" data-item-parent="hero">
                     <a href="#hero" class="menu__link">Hello, World!</a>
                   </li>
@@ -195,11 +195,8 @@
               </nav>
             </aside>
             <h2 class="hero__slogan">
-              <p>
-                <span> Hello, </span>
-                <span> World! </span>
-              </p>
-              <p>Meet Kottans. IT community</p>
+              <span> Hello, World! </span>
+              <span>Meet Kottans. IT community</span>
               <span class="hero__target" id="hero__target"></span>
             </h2>
             <div class="hero__promoWrapper">
@@ -217,19 +214,19 @@
               </div>
             </div>
           </div>
-        </section>
-        <section class="section section--about" id="about">
+        </div>
+        <div class="section section--about" id="about">
           <div class="container">
             <aside class="section__sidebar">
               <div class="sidebar--content">
                 <h2>
                   <a class="anchor" href="#about">
-                    <p>About</p>
-                    <p>Kottans</p>
+                    <span>About</span>
+                    <span>Kottans</span>
                   </a>
                 </h2>
                 <nav class="menu">
-                  <ul class="menu__list" aria-role="list">
+                  <ul class="menu__list">
                     <li class="menu__item" data-item-parent="hero">
                       <a href="#hero" class="menu__link">Hello, World!</a>
                     </li>
@@ -281,19 +278,19 @@
               </div>
             </div>
           </div>
-        </section>
-        <section class="section section--courses" id="courses">
+        </div>
+        <div class="section section--courses" id="courses">
           <div class="container">
             <aside class="section__sidebar">
               <div class="sidebar--content">
                 <h2>
                   <a class="anchor" href="#courses">
-                    <p>Our</p>
-                    <p>Courses</p>
+                    <span>Our</span>
+                    <span>Courses</span>
                   </a>
                 </h2>
                 <nav class="menu">
-                  <ul class="menu__list" aria-role="list">
+                  <ul class="menu__list">
                     <li class="menu__item" data-item-parent="hero">
                       <a href="#hero" class="menu__link">Hello, World!</a>
                     </li>
@@ -323,141 +320,130 @@
               </div>
             </aside>
             <div class="section__content">
-              <div class="courses">
-                <div class="courses__sliderWrapper">
-                  <div class="courses__slider" id="slideshow">
-                    <div class="control">
-                      <button id="previous"></button>
-                      <button id="next"></button>
-                    </div>
-                    <div class="sliderWrapper">
-                      <ul id="slides">
-                        <li class="course__slide frontend--course" alt="Courses">
-                          <div class="courses__sliderLabel">
-                            <span> FE </span>
-                          </div>
-                          <section class="slide__content">
-                            <section class="slide__title">
-                              <h3 class="course__description--title">Course</h3>
-                              <a href="https://github.com/kottans/frontend" class="course--link">
-                                <h2 class="course--title">Front-End for Juniors</h2>
-                              </a>
-                            </section>
-                            <section class="course__description__container">
-                              <div class="course__description">
-                                <h3 class="course__description--title">Technology</h3>
-                                <ul class="course__description--list">
-                                  <li class="course__description--item">JavaScript</li>
-                                  <li class="course__description--item">ReactJS</li>
-                                  <li class="course__description--item">HTML/CSS</li>
-                                </ul>
-                              </div>
-                              <div class="course__description">
-                                <h3 class="course__description--title">Skills</h3>
-                                <ul class="course__description--list">
-                                  <li class="course__description--item">Pre-intermediate English</li>
-                                  <li class="course__description--item">JavaScript basics</li>
-                                  <li class="course__description--item">basic HTML, CSS</li>
-                                </ul>
-                              </div>
-                            </section>
-                            <section class="course__description__chats">
-                              <h3 class="course__description--title">Telegram chats</h3>
-                              <ul>
-                                <li class="course__chat__item">
-                                  <a href="https://t.me/joinchat/DmX0JAl-mh5W0jrWli8Ycw" target="_blank" rel="noopener noreferrer nofollow" class="socials__link">
-                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15">
-                                      <path d="M14.66,14.69c-.68.1-1.54-.33-2.61-1.29a23,23,0,0,1-3.81-2.64c-.72-.7-.57-1.48.45-2.35l4.2-3.95c.29-.35.29-.52,0-.52s-1.53.8-3.72,2.39Q6.47,8.15,5.43,8.7c-1,.55-3.35-.28-4.1-.56s-2.44-.89-.24-1.81l15-6.25q1.62-.37,1.62,1.11c0,1.49-1.66,11.15-1.84,12S15.67,14.53,14.66,14.69Z" class="iconColor" /></svg> FE Questionarium </a>
-                                </li>
-                                <li class="course__chat__item">
-                                  <a href="https://t.me/joinchat/DmX0JBHVkEhV1us2HdMmpA" target="_blank" rel="noopener noreferrer nofollow" class="socials__link">
-                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15">
-                                      <path d="M14.66,14.69c-.68.1-1.54-.33-2.61-1.29a23,23,0,0,1-3.81-2.64c-.72-.7-.57-1.48.45-2.35l4.2-3.95c.29-.35.29-.52,0-.52s-1.53.8-3.72,2.39Q6.47,8.15,5.43,8.7c-1,.55-3.35-.28-4.1-.56s-2.44-.89-.24-1.81l15-6.25q1.62-.37,1.62,1.11c0,1.49-1.66,11.15-1.84,12S15.67,14.53,14.66,14.69Z" class="iconColor" /></svg> FE Students </a>
-                                </li>
+              <div class="slider" id="coursesSlider">
+                <div class="slider__inner">
+                  <ul class="slider__list">
+                    <li class="slider__item js-slider__item slider__item--active">
+                      <div class="course course--frontend">
+                        <div class="course__label"> FE </div>
+                        <div class="course__content">
+                          <h3 class="course__title"> Course <a href="https://github.com/kottans/frontend" class="course__titleLink"> Front-End for Juniors </a>
+                          </h3>
+                          <div class="course__descriptionWrapper">
+                            <div class="course__description">
+                              <h4 class="course__title"> Technology </h4>
+                              <ul class="course__descriptionList">
+                                <li class="course__descriptionItem">JavaScript</li>
+                                <li class="course__descriptionItem">ReactJS</li>
+                                <li class="course__descriptionItem">HTML/CSS</li>
                               </ul>
-                            </section>
-                          </section>
-                          <section class="course__picture">
-                            <img src="img/course_hand.png" alt="course hand" />
-                          </section>
-                        </li>
-                        <li class="course__slide nodejs--course" alt="Courses">
-                          <div class="courses__sliderLabel">
-                            <span> NodeJS </span>
-                          </div>
-                          <section class="slide__content">
-                            <section class="slide__title">
-                              <h3 class="course__description--title">Course</h3>
-                              <a href="https://github.com/kottans/backend" class="course--link">
-                                <h2 class="course--title">NodeJS for Juniors</h2>
-                              </a>
-                            </section>
-                            <section class="course__description__container">
-                              <div class="course__description">
-                                <h3 class="course__description--title">Technology</h3>
-                                <ul class="course__description--list">
-                                  <li class="course__description--item">JavaScript</li>
-                                  <li class="course__description--item">ReactJS</li>
-                                  <li class="course__description--item">HTML/CSS</li>
-                                </ul>
-                              </div>
-                              <div class="course__description">
-                                <h3 class="course__description--title">Skills</h3>
-                                <ul class="course__description--list">
-                                  <li class="course__description--item">Pre-intermediate English</li>
-                                  <li class="course__description--item">JavaScript basics</li>
-                                </ul>
-                              </div>
-                            </section>
-                            <section class="course__description__chats">
-                              <h3 class="course__description--title">Telegram chats</h3>
-                              <ul>
-                                <li class="course__chat__item">
-                                  <a href="https://t.me/joinchat/DqrdixM_mjurcmQkkQ11Og" target="_blank" rel="noopener noreferrer nofollow" class="socials__link">
-                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15">
-                                      <path d="M14.66,14.69c-.68.1-1.54-.33-2.61-1.29a23,23,0,0,1-3.81-2.64c-.72-.7-.57-1.48.45-2.35l4.2-3.95c.29-.35.29-.52,0-.52s-1.53.8-3.72,2.39Q6.47,8.15,5.43,8.7c-1,.55-3.35-.28-4.1-.56s-2.44-.89-.24-1.81l15-6.25q1.62-.37,1.62,1.11c0,1.49-1.66,11.15-1.84,12S15.67,14.53,14.66,14.69Z" class="iconColor" /></svg> BE Questionarium </a>
-                                </li>
-                                <li class="course__chat__item">
-                                  <a href="https://t.me/joinchat/Dqrdixe1c2K9bXUFBzNWtg" target="_blank" rel="noopener noreferrer nofollow" class="socials__link">
-                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15">
-                                      <path d="M14.66,14.69c-.68.1-1.54-.33-2.61-1.29a23,23,0,0,1-3.81-2.64c-.72-.7-.57-1.48.45-2.35l4.2-3.95c.29-.35.29-.52,0-.52s-1.53.8-3.72,2.39Q6.47,8.15,5.43,8.7c-1,.55-3.35-.28-4.1-.56s-2.44-.89-.24-1.81l15-6.25q1.62-.37,1.62,1.11c0,1.49-1.66,11.15-1.84,12S15.67,14.53,14.66,14.69Z" class="iconColor" /></svg> BE Students </a>
-                                </li>
+                            </div>
+                            <div class="course__description">
+                              <h4 class="course__title"> Skills </h4>
+                              <ul class="course__descriptionList">
+                                <li class="course__descriptionItem">Pre-intermediate English</li>
+                                <li class="course__descriptionItem">JavaScript basics</li>
+                                <li class="course__descriptionItem">basic HTML, CSS</li>
                               </ul>
-                            </section>
+                            </div>
+                          </div>
+                          <section class="course__chats">
+                            <h4 class="course__title course__title--chats">Telegram chats</h4>
+                            <ul>
+                              <li class="course__chatsItem">
+                                <a href="https://t.me/joinchat/DmX0JAl-mh5W0jrWli8Ycw" target="_blank" rel="noopener noreferrer nofollow" class="socials__chatsLink">
+                                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15">
+                                    <path d="M14.66,14.69c-.68.1-1.54-.33-2.61-1.29a23,23,0,0,1-3.81-2.64c-.72-.7-.57-1.48.45-2.35l4.2-3.95c.29-.35.29-.52,0-.52s-1.53.8-3.72,2.39Q6.47,8.15,5.43,8.7c-1,.55-3.35-.28-4.1-.56s-2.44-.89-.24-1.81l15-6.25q1.62-.37,1.62,1.11c0,1.49-1.66,11.15-1.84,12S15.67,14.53,14.66,14.69Z" class="iconColor" /></svg> FE Questionarium </a>
+                              </li>
+                              <li class="course__chatsItem">
+                                <a href="https://t.me/joinchat/DmX0JBHVkEhV1us2HdMmpA" target="_blank" rel="noopener noreferrer nofollow" class="socials__chatsLink">
+                                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15">
+                                    <path d="M14.66,14.69c-.68.1-1.54-.33-2.61-1.29a23,23,0,0,1-3.81-2.64c-.72-.7-.57-1.48.45-2.35l4.2-3.95c.29-.35.29-.52,0-.52s-1.53.8-3.72,2.39Q6.47,8.15,5.43,8.7c-1,.55-3.35-.28-4.1-.56s-2.44-.89-.24-1.81l15-6.25q1.62-.37,1.62,1.11c0,1.49-1.66,11.15-1.84,12S15.67,14.53,14.66,14.69Z" class="iconColor" /></svg> FE Students </a>
+                              </li>
+                            </ul>
                           </section>
-                          <section class="course__picture">
-                            <img src="img/course_hand.png" alt="course hand" />
-                          </section>
-                        </li>
-                      </ul>
-                      <div class="menu-slider">
-                        <div class="title">Courses</div>
-                        <ul class="nav slider__menu">
-                          <li class="slider__menu--item" data-slider-id="1"><span>Front-End for Juniors</span></li>
-                          <li class="slider__menu--item" data-slider-id="2"><span>NodeJS for Juniors</span></li>
-                        </ul>
+                        </div>
+                        <div class="course__bg">
+                          <img src="img/course_hand.png" alt="course hand" />
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <!-- <div class="header__contact">
-            <a href="mailto:kottans.org@gmail.com" class="header__contactLink">Join the course</a>
-          </div> -->
+                    </li>
+                    <li class="slider__item js-slider__item ">
+                      <div class="course course--nodejs">
+                        <div class="course__label"> NodeJS </div>
+                        <div class="course__content">
+                          <h3 class="course__title"> Course <a href="https://github.com/kottans/backend" class="course__titleLink"> NodeJS for Juniors </a>
+                          </h3>
+                          <div class="course__descriptionWrapper">
+                            <div class="course__description">
+                              <h4 class="course__title"> Technology </h4>
+                              <ul class="course__descriptionList">
+                                <li class="course__descriptionItem">JavaScript</li>
+                                <li class="course__descriptionItem">ReactJS</li>
+                                <li class="course__descriptionItem">HTML/CSS</li>
+                              </ul>
+                            </div>
+                            <div class="course__description">
+                              <h4 class="course__title"> Skills </h4>
+                              <ul class="course__descriptionList">
+                                <li class="course__descriptionItem">Pre-intermediate English</li>
+                                <li class="course__descriptionItem">JavaScript basics</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <section class="course__chats">
+                            <h4 class="course__title course__title--chats">Telegram chats</h4>
+                            <ul>
+                              <li class="course__chatsItem">
+                                <a href="https://t.me/joinchat/DqrdixM_mjurcmQkkQ11Og" target="_blank" rel="noopener noreferrer nofollow" class="socials__chatsLink">
+                                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15">
+                                    <path d="M14.66,14.69c-.68.1-1.54-.33-2.61-1.29a23,23,0,0,1-3.81-2.64c-.72-.7-.57-1.48.45-2.35l4.2-3.95c.29-.35.29-.52,0-.52s-1.53.8-3.72,2.39Q6.47,8.15,5.43,8.7c-1,.55-3.35-.28-4.1-.56s-2.44-.89-.24-1.81l15-6.25q1.62-.37,1.62,1.11c0,1.49-1.66,11.15-1.84,12S15.67,14.53,14.66,14.69Z" class="iconColor" /></svg> BE Questionarium </a>
+                              </li>
+                              <li class="course__chatsItem">
+                                <a href="https://t.me/joinchat/Dqrdixe1c2K9bXUFBzNWtg" target="_blank" rel="noopener noreferrer nofollow" class="socials__chatsLink">
+                                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15">
+                                    <path d="M14.66,14.69c-.68.1-1.54-.33-2.61-1.29a23,23,0,0,1-3.81-2.64c-.72-.7-.57-1.48.45-2.35l4.2-3.95c.29-.35.29-.52,0-.52s-1.53.8-3.72,2.39Q6.47,8.15,5.43,8.7c-1,.55-3.35-.28-4.1-.56s-2.44-.89-.24-1.81l15-6.25q1.62-.37,1.62,1.11c0,1.49-1.66,11.15-1.84,12S15.67,14.53,14.66,14.69Z" class="iconColor" /></svg> BE Students </a>
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+                        <div class="course__bg">
+                          <img src="img/course_hand.png" alt="course hand" />
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <nav class="menuSlider">
+                    <h4 class="menuSlider__title">Courses</h4>
+                    <ul class="menuSlider__list js-menuSlider__list">
+                      <li class="menuSlider__item js-menuSlider__item" data-slider-id="1">
+                        <a href="#" class="menuSlider__link">Front-End for Juniors</a>
+                      </li>
+                      <li class="menuSlider__item js-menuSlider__item" data-slider-id="2">
+                        <a href="#" class="menuSlider__link">NodeJS for Juniors</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="slider__controls">
+                  <button class="slider__button slider__button--previous" id="slider__previous"></button>
+                  <button class="slider__button slider__button--next" id="slider__next"></button>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <section class="section section--faq" id="faq">
+        </div>
+        <div class="section section--faq" id="faq">
           <div class="container">
             <aside class="section__sidebar">
               <div class="sidebar--content">
                 <h2>
-                  <p>
-                    <span><a class="anchor" href="#faq">F.A.Q.</a></span>
-                  </p>
+                  <span>
+                    <a class="anchor" href="#faq">F.A.Q.</a>
+                  </span>
                 </h2>
                 <nav class="menu">
-                  <ul class="menu__list" aria-role="list">
+                  <ul class="menu__list">
                     <li class="menu__item" data-item-parent="hero">
                       <a href="#hero" class="menu__link">Hello, World!</a>
                     </li>
@@ -486,7 +472,7 @@
                 </nav>
               </div>
             </aside>
-            <section class="section__content">
+            <div class="section__content">
               <div class="faq">
                 <section class="faq__items">
                   <div class="faq__item">
@@ -523,22 +509,22 @@
                   </div>
                 </section>
               </div>
-            </section>
+            </div>
           </div>
-        </section>
-        <section class="section section--platform" id="platform">
+        </div>
+        <div class="section section--platform" id="platform">
           <div class="container">
             <aside class="section__sidebar">
               <div class="sidebar--content">
                 <h2>
                   <a class="anchor" href="#platform">
-                    <p>Create</p>
-                    <p>your own</p>
-                    <p>events</p>
+                    <span>Create</span>
+                    <span>your own</span>
+                    <span>events</span>
                   </a>
                 </h2>
                 <nav class="menu">
-                  <ul class="menu__list" aria-role="list">
+                  <ul class="menu__list">
                     <li class="menu__item" data-item-parent="hero">
                       <a href="#hero" class="menu__link">Hello, World!</a>
                     </li>
@@ -596,17 +582,17 @@
                     </ul>
                   </div>
                 </div>
-                <section class="platform__description">
+                <div class="platform__description">
                   <div class="platform__text__wrapper">
                     <div class="grey__rectangle"></div>
-                    <section class="platform__text">
+                    <div class="platform__text">
                       <p class="platform__text--item">
                         <strong>Because we are not</strong> affiliated to any company, we are absolutely neutral platform for any events and we can help you with organization of one. </p>
                       <p class="platform__text--item"> We have a lot of experience in conducting of courses, meetups and conferences as well. </p>
                       <p class="platform__text--item"> If you want to create your own community or your event, but don't know how to do it or don't want to do it alone - we can help you! </p>
                       <p class="platform__text--item"> Starting from consultation and ending with help in looking for the place, team, partners or sponsorship. Also, because we have a large community, we can be media-partner for your event. </p>
                       <p class="platform__text--item"> Our help is completely volontier and we have only one pre-request - your event must be free or at least non-profit. </p>
-                    </section>
+                    </div>
                   </div>
                   <div class="communities__logos">
                     <a href="https://inputconf.org/" class="communities__logos--item">
@@ -622,23 +608,23 @@
                       <span class="community__description">Free community driven event for everyone interested in Clojure and functional programming</span>
                     </a>
                   </div>
-                </section>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-        <section class="section section--core" id="core">
+        </div>
+        <div class="section section--core" id="core">
           <div class="container">
             <aside class="section__sidebar">
               <div class="sidebar--content">
                 <h2>
                   <a class="anchor" href="#core">
-                    <p>Kottans</p>
-                    <p>core</p>
+                    <span>Kottans</span>
+                    <span>core</span>
                   </a>
                 </h2>
                 <nav class="menu">
-                  <ul class="menu__list" aria-role="list">
+                  <ul class="menu__list">
                     <li class="menu__item" data-item-parent="hero">
                       <a href="#hero" class="menu__link">Hello, World!</a>
                     </li>
@@ -812,8 +798,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <section class="section--mentor" id="mentor">
+              </div> // TODO: Use one template for all mentors <div class="section--mentor" id="mentor">
                 <div class="section__content">
                   <div class="mentor__heading">
                     <h3>Mentors:</h3>
@@ -841,7 +826,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/yevhenorlov.jpg" />
+                              <img class="mentor__img" src="img/mentors/yevhenorlov.jpg" alt="Yevhen Orlov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -867,7 +852,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/kochetov.jpg" />
+                              <img class="mentor__img" src="img/mentors/kochetov.jpg" alt="Alexandr Kochetov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -893,7 +878,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/svyatoslav.jpeg" />
+                              <img class="mentor__img" src="img/mentors/svyatoslav.jpeg" alt="Svyatoslav Shmatko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -919,7 +904,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/roman_liutikov.jpg" />
+                              <img class="mentor__img" src="img/mentors/roman_liutikov.jpg" alt="Roman Liutikov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -945,7 +930,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/igor.jpeg" />
+                              <img class="mentor__img" src="img/mentors/igor.jpeg" alt="Igor Kurkov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -971,7 +956,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/alexander.jpeg" />
+                              <img class="mentor__img" src="img/mentors/alexander.jpeg" alt="Alexandr Ostrovny" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1001,7 +986,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/john.jpg" />
+                              <img class="mentor__img" src="img/mentors/john.jpg" alt="Oleksandr Lapshyn" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1026,7 +1011,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/aleksey-shvayka.jpg" />
+                              <img class="mentor__img" src="img/mentors/aleksey-shvayka.jpg" alt="Aleksey Shvayka" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1051,7 +1036,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/listochkin.jpg" />
+                              <img class="mentor__img" src="img/mentors/listochkin.jpg" alt="Andrey Listochkin" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1076,7 +1061,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/antonNemtsev.jpg" />
+                              <img class="mentor__img" src="img/mentors/antonNemtsev.jpg" alt="Anton Nemtsev" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1101,7 +1086,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/artem.jpeg" />
+                              <img class="mentor__img" src="img/mentors/artem.jpeg" alt="Artem Denysov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1126,7 +1111,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/yavorskyi.jpeg" />
+                              <img class="mentor__img" src="img/mentors/yavorskyi.jpeg" alt="Artem Yavorsky" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1151,7 +1136,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/roman.jpeg" />
+                              <img class="mentor__img" src="img/mentors/roman.jpeg" alt="Roman Liutikov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1176,7 +1161,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/tkachenko.jpeg" />
+                              <img class="mentor__img" src="img/mentors/tkachenko.jpeg" alt="Yuri Tkachenko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1201,7 +1186,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/akulov.jpeg" />
+                              <img class="mentor__img" src="img/mentors/akulov.jpeg" alt="Ivan Akulov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1226,7 +1211,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/kate.jpg" />
+                              <img class="mentor__img" src="img/mentors/kate.jpg" alt="Kateryna Porshnieva" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1251,7 +1236,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/stas.jpeg" />
+                              <img class="mentor__img" src="img/mentors/stas.jpeg" alt="Stas Gavrylov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1276,7 +1261,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/vodymyr.jpeg" />
+                              <img class="mentor__img" src="img/mentors/vodymyr.jpeg" alt="Volodymyr Stelmakh" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1301,7 +1286,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/lempiy.jpeg" />
+                              <img class="mentor__img" src="img/mentors/lempiy.jpeg" alt="Anton Lempiy" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1326,7 +1311,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/viktor.jpeg" />
+                              <img class="mentor__img" src="img/mentors/viktor.jpeg" alt="Viktor Yakubiv" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1355,7 +1340,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/ihor.jpeg" />
+                              <img class="mentor__img" src="img/mentors/ihor.jpeg" alt="Igor Kroosh" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1380,7 +1365,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/lena.jpg" />
+                              <img class="mentor__img" src="img/mentors/lena.jpg" alt="Elena Morgun" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1405,7 +1390,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/den_2.jpg" />
+                              <img class="mentor__img" src="img/mentors/den_2.jpg" alt="Denis Sergienko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1430,7 +1415,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/lulya.jpg" />
+                              <img class="mentor__img" src="img/mentors/lulya.jpg" alt="Julia Savinkova" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1459,7 +1444,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/misha.jpg" />
+                              <img class="mentor__img" src="img/mentors/misha.jpg" alt="Mikhail Bortnyk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1484,7 +1469,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/lulya.jpg" />
+                              <img class="mentor__img" src="img/mentors/lulya.jpg" alt="Julia Savinkova" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1509,7 +1494,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/den_2.jpg" />
+                              <img class="mentor__img" src="img/mentors/den_2.jpg" alt="Denis Sergienko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1534,7 +1519,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/valentine.jpeg" />
+                              <img class="mentor__img" src="img/mentors/valentine.jpeg" alt="Valentine Radchuk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1559,7 +1544,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/aleksey.jpeg" />
+                              <img class="mentor__img" src="img/mentors/aleksey.jpeg" alt="Alexey Aza" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1584,7 +1569,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/dmytro.jpeg" />
+                              <img class="mentor__img" src="img/mentors/dmytro.jpeg" alt="Dmytro Hnatiuk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1609,7 +1594,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/denys.jpg" />
+                              <img class="mentor__img" src="img/mentors/denys.jpg" alt="Dan Kashkovsky" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1634,7 +1619,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/timur.jpg" />
+                              <img class="mentor__img" src="img/mentors/timur.jpg" alt="Timur Mudzhyri" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1659,7 +1644,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/vovk.png" />
+                              <img class="mentor__img" src="img/mentors/vovk.png" alt="Roman Vovk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1684,7 +1669,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/aleksey-shvayka.jpg" />
+                              <img class="mentor__img" src="img/mentors/aleksey-shvayka.jpg" alt="Aleksey Shvayka" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1709,7 +1694,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/nikolay.jpeg" />
+                              <img class="mentor__img" src="img/mentors/nikolay.jpeg" alt="Nikolay Kozhukharenko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1734,7 +1719,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/stets.jpeg" />
+                              <img class="mentor__img" src="img/mentors/stets.jpeg" alt="Ivan Stetsenko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1759,7 +1744,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/john.jpg" />
+                              <img class="mentor__img" src="img/mentors/john.jpg" alt="Oleksandr Lapshyn" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1784,7 +1769,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/illya.jpg" />
+                              <img class="mentor__img" src="img/mentors/illya.jpg" alt="Illia Seheda" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1809,7 +1794,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/artem_2.jpeg" />
+                              <img class="mentor__img" src="img/mentors/artem_2.jpeg" alt="Artem Bey" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1834,7 +1819,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/listochkin.jpg" />
+                              <img class="mentor__img" src="img/mentors/listochkin.jpg" alt="Andrey Listochkin" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1859,7 +1844,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/taras.jpeg" />
+                              <img class="mentor__img" src="img/mentors/taras.jpeg" alt="Taras Hupalo" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1884,7 +1869,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/illya.jpeg" />
+                              <img class="mentor__img" src="img/mentors/illya.jpeg" alt="Illya Klymov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1909,7 +1894,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/lavrin.jpeg" />
+                              <img class="mentor__img" src="img/mentors/lavrin.jpeg" alt="Ivan Lavriv" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1934,7 +1919,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/sergiy.jpeg" />
+                              <img class="mentor__img" src="img/mentors/sergiy.jpeg" alt="Serg Bataev" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1959,7 +1944,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/stoyanov.jpg" />
+                              <img class="mentor__img" src="img/mentors/stoyanov.jpg" alt="Denis Stoyanov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -1984,7 +1969,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/bohdan.jpg" />
+                              <img class="mentor__img" src="img/mentors/bohdan.jpg" alt="Bohdan Varshchuk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2009,7 +1994,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/med.jpeg" />
+                              <img class="mentor__img" src="img/mentors/med.jpeg" alt="Denys Medynskyi" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2034,7 +2019,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/volodya.png" />
+                              <img class="mentor__img" src="img/mentors/volodya.png" alt="Volodya Sveredyuk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2059,7 +2044,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/placeholder.jpg" />
+                              <img class="mentor__img" src="img/mentors/placeholder.jpg" alt="Yuriy Kushnir" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2088,7 +2073,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/eugene.jpg" />
+                              <img class="mentor__img" src="img/mentors/eugene.jpg" alt="Eugene Safronov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2113,7 +2098,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/andrii.jpg" />
+                              <img class="mentor__img" src="img/mentors/andrii.jpg" alt="Andrey Savchenko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2138,7 +2123,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/serg.jpg" />
+                              <img class="mentor__img" src="img/mentors/serg.jpg" alt="Sergey Gopkalo" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2163,7 +2148,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/lena.jpg" />
+                              <img class="mentor__img" src="img/mentors/lena.jpg" alt="Elena Morgun" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2188,7 +2173,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/misha.jpg" />
+                              <img class="mentor__img" src="img/mentors/misha.jpg" alt="Mikhail Bortnyk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2213,7 +2198,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/john.jpg" />
+                              <img class="mentor__img" src="img/mentors/john.jpg" alt="Oleksandr Lapshyn" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2238,7 +2223,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/julia.jpg" />
+                              <img class="mentor__img" src="img/mentors/julia.jpg" alt="Julia Budnik" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2263,7 +2248,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/den_2.jpg" />
+                              <img class="mentor__img" src="img/mentors/den_2.jpg" alt="Denis Sergienko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2288,7 +2273,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/ihor.jpeg" />
+                              <img class="mentor__img" src="img/mentors/ihor.jpeg" alt="Igor Kroosh" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2313,7 +2298,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/ingvar.jpeg" />
+                              <img class="mentor__img" src="img/mentors/ingvar.jpeg" alt="Ingvar Stepanyan" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2338,7 +2323,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/max.jpeg" />
+                              <img class="mentor__img" src="img/mentors/max.jpeg" alt="Max Klymyshyn" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2363,7 +2348,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/vsych.jpeg" />
+                              <img class="mentor__img" src="img/mentors/vsych.jpeg" alt="Victor Sych" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2388,7 +2373,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/zuzusik.jpg" />
+                              <img class="mentor__img" src="img/mentors/zuzusik.jpg" alt="Viktor Zozuliak" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2413,7 +2398,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/listochkin.jpg" />
+                              <img class="mentor__img" src="img/mentors/listochkin.jpg" alt="Andrey Listochkin" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2442,7 +2427,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/serg.jpg" />
+                              <img class="mentor__img" src="img/mentors/serg.jpg" alt="Sergey Gopkalo" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2467,7 +2452,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/den.jpg" />
+                              <img class="mentor__img" src="img/mentors/den.jpg" alt="Denis Yagofarov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2492,7 +2477,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/lena.jpg" />
+                              <img class="mentor__img" src="img/mentors/lena.jpg" alt="Elena Morgun" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2517,7 +2502,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/misha.jpg" />
+                              <img class="mentor__img" src="img/mentors/misha.jpg" alt="Mikhail Bortnyk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2542,7 +2527,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/john.jpg" />
+                              <img class="mentor__img" src="img/mentors/john.jpg" alt="Oleksandr Lapshyn" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2567,7 +2552,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/rozumii.jpeg" />
+                              <img class="mentor__img" src="img/mentors/rozumii.jpeg" alt="Oleksandr Rozumii" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2592,7 +2577,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/julia.jpg" />
+                              <img class="mentor__img" src="img/mentors/julia.jpg" alt="Julia Budnik" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2617,7 +2602,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/lulya.jpg" />
+                              <img class="mentor__img" src="img/mentors/lulya.jpg" alt="Julia Savinkova" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2642,7 +2627,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/bel.jpeg" />
+                              <img class="mentor__img" src="img/mentors/bel.jpeg" alt="Alexander Beletsky" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2667,7 +2652,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/eldar.png" />
+                              <img class="mentor__img" src="img/mentors/eldar.png" alt="Eldar Djafarov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2692,7 +2677,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/listochkin.jpg" />
+                              <img class="mentor__img" src="img/mentors/listochkin.jpg" alt="Andrey Listochkin" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2717,7 +2702,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/artyom.jpeg" />
+                              <img class="mentor__img" src="img/mentors/artyom.jpeg" alt="Artem Trytiak" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2742,7 +2727,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/valen.jpeg" />
+                              <img class="mentor__img" src="img/mentors/valen.jpeg" alt="Valentyn Shybanov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2767,7 +2752,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/yarmak.png" />
+                              <img class="mentor__img" src="img/mentors/yarmak.png" alt="Dmytro Yarmak" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2792,7 +2777,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/placeholder.jpg" />
+                              <img class="mentor__img" src="img/mentors/placeholder.jpg" alt="Eugene Koshevoy" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2817,7 +2802,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/dmitry.jpg" />
+                              <img class="mentor__img" src="img/mentors/dmitry.jpg" alt="Dmitry Tselinko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2842,7 +2827,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/flip.png" />
+                              <img class="mentor__img" src="img/mentors/flip.png" alt="Dmitriy Filipenko" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2871,7 +2856,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/den.jpg" />
+                              <img class="mentor__img" src="img/mentors/den.jpg" alt="Denis Yagofarov" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2896,7 +2881,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/misha.jpg" />
+                              <img class="mentor__img" src="img/mentors/misha.jpg" alt="Mikhail Bortnyk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2925,7 +2910,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/misha.jpg" />
+                              <img class="mentor__img" src="img/mentors/misha.jpg" alt="Mikhail Bortnyk" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2950,7 +2935,7 @@
                         <div class="mentor__row">
                           <div class="mentor__avatar-container">
                             <div class="mentor__photo">
-                              <img class="mentor__img" src="img/mentors/alex.jpg" />
+                              <img class="mentor__img" src="img/mentors/alex.jpg" alt="Alexandr Shilo" />
                             </div>
                           </div>
                           <div class="mentor__details-container">
@@ -2976,25 +2961,23 @@
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
             </div>
           </div>
-        </section>
-        <section class="section section--review" id="reviews">
+        </div>
+        <div class="section section--review" id="reviews">
           <div class="container">
             <aside class="section__sidebar">
               <div class="sidebar--content">
                 <h2>
                   <a class="anchor" href="#reviews">
-                    <p>
-                      <span>Reviews</span>
-                      <span>from</span>
-                    </p>
-                    <p>graduates</p>
+                    <span>Reviews</span>
+                    <span>from</span>
+                    <span>graduates</span>
                   </a>
                 </h2>
                 <nav class="menu">
-                  <ul class="menu__list" aria-role="list">
+                  <ul class="menu__list">
                     <li class="menu__item" data-item-parent="hero">
                       <a href="#hero" class="menu__link">Hello, World!</a>
                     </li>
@@ -3103,8 +3086,8 @@
               </div>
             </div>
           </div>
-        </section>
-        <section class="section section--partners" id="partners">
+        </div>
+        <div class="section section--partners" id="partners">
           <div class="container">
             <aside class="section__sidebar">
               <h2>
@@ -3137,7 +3120,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
       <footer class="footer" id="footer">
         <div class="container">
