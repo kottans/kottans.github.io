@@ -9,14 +9,8 @@
       <div class="mentor__wrapper">
         <nav id="mentor__nav" class="mentor__nav">
           <div id="mentor___nav-contents" class="mentor__nav-contents">
-            {% for item in data.AllMentors %}
-              <p class="mentor__nav-link"
-
-              {% if item.selected %}
-                aria-selected="true"
-              {% endif %}
-              
-              data-tab="{{ item.year }}">
+            {% for item in data.allMentors %}
+              <p class="mentor__nav-link" aria-selected="{{ item.selected }}" data-tab="{{ item.year }}">
                 {{ item.duration }}
               </p>
             {% endfor %}
@@ -28,7 +22,7 @@
       <button id="mentor__btnLeft-pn" class="mentor__btn mentor__btn_Left" type="button"></button>
       <button id="mentor__btnRight-pn" class="mentor__btn mentor__btn_Right" type="button"></button>
 
-      {% for item in data.AllMentors %}
+      {% for item in data.allMentors %}
         <div id={{ item.year }} class="b-tab {{ item.active }}">
           <div class="mentor__container">
 
