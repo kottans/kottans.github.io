@@ -25,7 +25,7 @@ function initVerticalSlider() {
     setCurrentSlide();
   };
 
-  menuSlider.addEventListener('click', ( e ) => {
+  menuSlider.addEventListener('click', e => {
     e.preventDefault();
     const sliderItem = e.target.closest('.js-menuSlider__item');
     slide = Number(sliderItem.dataset.sliderId) - 1;

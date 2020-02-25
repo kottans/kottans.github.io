@@ -2,7 +2,7 @@ const handleReadMoreClick = () => {
   document.addEventListener('click', ({ target }) => {
     if (target.classList.contains('read-more')) {
       const textContainer = document.querySelector(
-        `[data-collapsed-text='${target.dataset.parent}']`
+        `[data-collapsed-text='${target.dataset.parent}']`,
       );
 
       if (textContainer) {
