@@ -162,6 +162,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "yavorsky",
+      "name": "Artem Yavorsky",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1521229?v=4",
+      "profile": "http://yavorsky.org",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
