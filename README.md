@@ -1,6 +1,6 @@
 ### Designs:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 1. https://www.figma.com/file/0SyY1BtTeON6Zp1QoyLecT/kottans_site_v1.2?node-id=0%3A2
 2. https://www.figma.com/file/JfoY8Yf8PwlcN0c2jzRfHH/kottans-mob-v0.1?node-id=0%3A2
@@ -96,6 +96,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/AMashoshyna"><img src="https://avatars0.githubusercontent.com/u/17703790?v=4" width="100px;" alt=""/><br /><sub><b>Anastasiya Mashoshyna</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=AMashoshyna" title="Code">💻</a></td>
+    <td align="center"><a href="https://g3d.dev/"><img src="https://avatars3.githubusercontent.com/u/859210?v=4" width="100px;" alt=""/><br /><sub><b>Bohdan V.</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=g3d" title="Code">💻</a></td>
   </tr>
 </table>
 
