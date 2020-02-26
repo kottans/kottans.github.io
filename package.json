@@ -5,15 +5,9 @@
     "ghpages": "git subtree push --prefix build origin gh-pages",
     "build": "gulp build --production",
     "start": "gulp",
-    "precommit": "lint-staged",
-    "lint": "eslint --ignore-pattern 'src/js/lib/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
+    "lint": "eslint --cache --format=pretty \"**/*.js\"",
     "lint-fix": "npm run lint -- --fix",
-    "prettier:fix": "prettier --write ./src/**/**/*.{js,html}"
-  },
-  "lint-staged": {
-    "src/templates/**/*.html": [
-      "htmlhint --config .htmlhintrc"
-    ]
+    "prettier:fix": "prettier --ignore-path .gitignore \"**/*.+(js|json)\" --write"
   },
   "authors": "Kottans",
   "devDependencies": {
