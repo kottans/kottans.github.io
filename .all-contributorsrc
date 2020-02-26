@@ -252,6 +252,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "alexk0ch",
+      "name": "alex kochetov",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5727408?v=4",
+      "profile": "https://github.com/alexk0ch",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7
