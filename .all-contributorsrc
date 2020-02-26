@@ -27,6 +27,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "suchov",
+      "name": "Artem Sychov",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1478985?v=4",
+      "profile": "http://artemsychov.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
