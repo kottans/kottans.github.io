@@ -9,8 +9,9 @@
     "lint-fix": "npm run lint -- --fix",
     "prettier:fix": "prettier --ignore-path .gitignore \"**/*.+(js|json)\" --write"
   },
-  "authors": "Kottans",
+  "author": "Kottans",
   "devDependencies": {
+    "all-contributors-cli": "^6.14.0",
     "autoprefixer": "^9.4.10",
     "babel-core": "^6.26.3",
     "babel-eslint": "^7.2.3",
