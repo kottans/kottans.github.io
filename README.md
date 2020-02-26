@@ -1,6 +1,6 @@
 ### Designs:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 1. https://www.figma.com/file/0SyY1BtTeON6Zp1QoyLecT/kottans_site_v1.2?node-id=0%3A2
 2. https://www.figma.com/file/JfoY8Yf8PwlcN0c2jzRfHH/kottans-mob-v0.1?node-id=0%3A2
@@ -84,6 +84,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://gitter.im"><img src="https://avatars2.githubusercontent.com/u/8518239?v=4" width="100px;" alt=""/><br /><sub><b>The Gitter Badger</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=gitter-badger" title="Code">💻</a></td>
     <td align="center"><a href="http://cv.vradchuk.info"><img src="https://avatars3.githubusercontent.com/u/1470686?v=4" width="100px;" alt=""/><br /><sub><b>Valentyn Radchuk</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=Zaknafeyn" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/brain-geek"><img src="https://avatars3.githubusercontent.com/u/307982?v=4" width="100px;" alt=""/><br /><sub><b>Oleksandr Rozumii</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=brain-geek" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/m1n0s"><img src="https://avatars0.githubusercontent.com/u/12004923?v=4" width="100px;" alt=""/><br /><sub><b>Leo Hrabovetskyi</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=m1n0s" title="Code">💻</a></td>
   </tr>
 </table>
 
