@@ -1,6 +1,6 @@
 ### Designs:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-30-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 1. https://www.figma.com/file/0SyY1BtTeON6Zp1QoyLecT/kottans_site_v1.2?node-id=0%3A2
 2. https://www.figma.com/file/JfoY8Yf8PwlcN0c2jzRfHH/kottans-mob-v0.1?node-id=0%3A2
@@ -114,6 +114,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/gorodiskiy"><img src="https://avatars0.githubusercontent.com/u/22916647?v=4" width="100px;" alt=""/><br /><sub><b>gorodiskiy</b></sub></a><br /><a href="https://github.com/kottans/kottans/issues?q=author%3Agorodiskiy" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/shvaikalesh"><img src="https://avatars1.githubusercontent.com/u/5098878?v=4" width="100px;" alt=""/><br /><sub><b>Alexey Shvayka</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=shvaikalesh" title="Code">💻</a></td>
   </tr>
 </table>
 
