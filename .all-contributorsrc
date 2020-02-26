@@ -216,6 +216,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "IgorKurkov",
+      "name": "Igor Kurkov",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/29090227?v=4",
+      "profile": "https://www.linkedin.com/in/igor-kurkov-634760132/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
