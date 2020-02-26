@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import browseeSync from 'browser-sync';
-import util from  'gulp-util';
-import config  from '../config';
+import util from 'gulp-util';
+import config from '../config';
 
 const server = browseeSync.create();
 
@@ -11,16 +11,18 @@ const server = browseeSync.create();
 gulp.task('server', done => {
   server.init({
     server: {
-      baseDir: !config.production ? [config.dest.root, config.src.root] : config.dest.root,
+      baseDir: !config.production
+        ? [config.dest.root, config.src.root]
+        : config.dest.root,
       directory: false,
       serveStaticOptions: {
-        extensions: ['html']
-      }
+        extensions: ['html'],
+      },
     },
     files: [
       config.dest.html + '/*.html',
       config.dest.css + '/*.css',
-      config.dest.img + '/**/*'
+      config.dest.img + '/**/*',
     ],
     port: util.env.port || 8080,
     logLevel: 'info', // 'debug', 'info', 'silent', 'warn'
@@ -30,7 +32,7 @@ gulp.task('server', done => {
     notify: false,
     ghostMode: false,
     online: Boolean(util.env.tunnel),
-    tunnel: util.env.tunnel || null
+    tunnel: util.env.tunnel || null,
   });
   done();
 });

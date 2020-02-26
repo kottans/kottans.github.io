@@ -1,8 +1,8 @@
 import gulp from 'gulp';
 import config from './gulp/config';
 
-const getTaskBuild = task => require(`./gulp/tasks/${  task}`).build(gulp);
-const getTaskWatch = task => require(`./gulp/tasks/${  task}`).watch(gulp);
+const getTaskBuild = task => require(`./gulp/tasks/${task}`).build(gulp);
+const getTaskWatch = task => require(`./gulp/tasks/${task}`).watch(gulp);
 
 gulp.task('clean', getTaskBuild('clean'));
 gulp.task('copy', getTaskBuild('copy'));
@@ -42,8 +42,8 @@ gulp.task(
     'sass',
     'nunjucks',
     'webpack',
-    'copy'
-  )
+    'copy',
+  ),
 );
 
 gulp.task(
@@ -56,8 +56,8 @@ gulp.task(
     'sass',
     'nunjucks',
     'webpack',
-    'copy'
-  )
+    'copy',
+  ),
 );
 
 gulp.task(
@@ -68,8 +68,8 @@ gulp.task(
     'sprite:svg:watch',
     'svgo:watch',
     'webpack:watch',
-    'sass:watch'
-  )
+    'sass:watch',
+  ),
 );
 
 gulp.task('default', gulp.series(['build:dev', 'server', 'watch']));
