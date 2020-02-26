@@ -1,6 +1,6 @@
 ### Designs:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 1. https://www.figma.com/file/0SyY1BtTeON6Zp1QoyLecT/kottans_site_v1.2?node-id=0%3A2
 2. https://www.figma.com/file/JfoY8Yf8PwlcN0c2jzRfHH/kottans-mob-v0.1?node-id=0%3A2
@@ -88,6 +88,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/m1n0s"><img src="https://avatars0.githubusercontent.com/u/12004923?v=4" width="100px;" alt=""/><br /><sub><b>Leo Hrabovetskyi</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=m1n0s" title="Code">💻</a></td>
     <td align="center"><a href="https://me.st"><img src="https://avatars1.githubusercontent.com/u/494013?v=4" width="100px;" alt=""/><br /><sub><b>Stanislav Termosa</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=termosa" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/firec0der"><img src="https://avatars1.githubusercontent.com/u/11492412?v=4" width="100px;" alt=""/><br /><sub><b>Ivan Stetsenko</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=firec0der" title="Code">💻</a></td>
   </tr>
 </table>
 
