@@ -1,0 +1,146 @@
+body {
+	font-family: Avenir, sans-serif;
+	font-weight: 400;
+	line-height: 1.4;
+	color: $dark;
+}
+
+html {
+	-ms-overflow-style: none;
+	scroll-behavior: smooth;
+}
+
+.out {
+	@include r(1100) {
+    overflow: hidden;
+
+		.menu:not(:first-child) {
+      display: none;
+
+			.sidebar--content {
+        height: auto !important;
+      }
+    }
+  }
+}
+
+.container {
+	max-width: 1600px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 40px;
+
+	@include r(767) {
+		padding: 0 20px;
+  }
+}
+
+.mainWrapper {
+  position: relative;
+
+  @include r(767) {
+    margin-top: 150px;
+  }
+}
+
+button {
+	position: relative;
+	background-color: $white;
+	border: 1px solid $dark;
+	height: 44px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $dark;
+	font-size: 12px;
+	transform: translate(0, 0);
+	transition: transform 0.3s ease-in-out;
+
+	&:hover {
+    @include rmin(768) {
+			transform: translate(-4px, 4px);
+    }
+  }
+
+	&:active {
+    @include rmin(768) {
+      color: $white;
+      background-color: $dark;
+    }
+
+    @include r(767) {
+      animation-duration: 0.3s;
+      animation-name: action;
+    }
+  }
+}
+
+// TODO: move to the corresponding file
+.anchor {
+	color: black;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+  }
+
+	> span {
+		display: block;
+  }
+}
+
+@keyframes action {
+  0%, 100% {
+    color: $dark;
+  }
+
+  to {
+    color: $white;
+    background-color: $dark;
+  }
+}
+
+.buttonWrapper {
+	position: relative;
+	border: 2px solid $dark;
+  background-color: transparent;
+}
+
+.collapsed__text {
+  position: relative;
+
+	&::after {
+    @include r(767) {
+      content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 120px;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, $white 100%);
+    }
+  }
+}
+
+.collapsed__text--show {
+  height: auto !important;
+	overflow: auto !important;
+	transition: height 0.5s ease-in-out !important;
+
+	&::after {
+		content: none !important //TODO: Remove !important || refctor this block/logic
+  }
+}
+
+.read-more {
+	display: none;
+	width: 100%;
+
+	@include r(767) {
+		display: block;
+  }
+
+	&::before {
+		content: none;
+  }
+}
