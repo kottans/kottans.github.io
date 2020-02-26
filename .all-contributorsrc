@@ -243,6 +243,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "pozda",
+      "name": "Ivan Pozderac",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/10940747?v=4",
+      "profile": "https://ivan-pozderac.from.hr",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
