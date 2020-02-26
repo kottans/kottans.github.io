@@ -1,6 +1,6 @@
 ### Designs:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-28-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 1. https://www.figma.com/file/0SyY1BtTeON6Zp1QoyLecT/kottans_site_v1.2?node-id=0%3A2
 2. https://www.figma.com/file/JfoY8Yf8PwlcN0c2jzRfHH/kottans-mob-v0.1?node-id=0%3A2
@@ -111,6 +111,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/samueldcs"><img src="https://avatars2.githubusercontent.com/u/8644078?v=4" width="100px;" alt=""/><br /><sub><b>samueldcs</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=samueldcs" title="Code">💻</a></td>
     <td align="center"><a href="https://ivan-pozderac.from.hr"><img src="https://avatars1.githubusercontent.com/u/10940747?v=4" width="100px;" alt=""/><br /><sub><b>Ivan Pozderac</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=pozda" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/alexk0ch"><img src="https://avatars1.githubusercontent.com/u/5727408?v=4" width="100px;" alt=""/><br /><sub><b>alex kochetov</b></sub></a><br /><a href="https://github.com/kottans/kottans/pulls?q=is%3Apr+reviewed-by%3Aalexk0ch" title="Reviewed Pull Requests">👀</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/gorodiskiy"><img src="https://avatars0.githubusercontent.com/u/22916647?v=4" width="100px;" alt=""/><br /><sub><b>gorodiskiy</b></sub></a><br /><a href="https://github.com/kottans/kottans/issues?q=author%3Agorodiskiy" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
