@@ -1,6 +1,6 @@
 ### Designs:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 1. https://www.figma.com/file/0SyY1BtTeON6Zp1QoyLecT/kottans_site_v1.2?node-id=0%3A2
 2. https://www.figma.com/file/JfoY8Yf8PwlcN0c2jzRfHH/kottans-mob-v0.1?node-id=0%3A2
@@ -92,6 +92,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/lavriv92"><img src="https://avatars2.githubusercontent.com/u/2587946?v=4" width="100px;" alt=""/><br /><sub><b>Ivan Lavriv</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=lavriv92" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/kwalx"><img src="https://avatars0.githubusercontent.com/u/19335102?v=4" width="100px;" alt=""/><br /><sub><b>Alexander</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=kwalx" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/MarinaZadoyanchuk"><img src="https://avatars0.githubusercontent.com/u/8450971?v=4" width="100px;" alt=""/><br /><sub><b>Marina</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=MarinaZadoyanchuk" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/cwayfinder"><img src="https://avatars0.githubusercontent.com/u/355902?v=4" width="100px;" alt=""/><br /><sub><b>Taras Hupalo</b></sub></a><br /><a href="https://github.com/kottans/kottans/commits?author=cwayfinder" title="Code">💻</a></td>
   </tr>
 </table>
 
