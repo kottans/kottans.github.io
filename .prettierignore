@@ -1,0 +1,2 @@
+# Prettier doesn't currently work with Nunjucks syntax. Possible solution here: https://github.com/justrhysism/prettier-plugin-nunjucks
+*.html
