@@ -1,7 +1,7 @@
 function tabs() {
   const currentItem = document.querySelector('.review__current');
   const elements = document.querySelectorAll('.review__item');
-  
+
   const options = {
     root: document.querySelector('.review__feed'),
     rootMargin: '0px',
@@ -15,7 +15,6 @@ function tabs() {
       }
     });
   }, options);
-
 
   elements.forEach(element => observer.observe(element));
 }

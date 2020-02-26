@@ -61,12 +61,12 @@ function scrollableTabs() {
 
   pnMentorNav.setAttribute(
     'data-overflowing',
-    determineOverflow(pnMentorNavContents, pnMentorNav)
+    determineOverflow(pnMentorNavContents, pnMentorNav),
   );
 
   moveIndicator(
     pnMentorNav.querySelector('[aria-selected="true"]'),
-    colours[0]
+    colours[0],
   );
 
   let lastKnownScrollPosition = 0;
@@ -75,7 +75,7 @@ function scrollableTabs() {
   function doSomething() {
     pnMentorNav.setAttribute(
       'data-overflowing',
-      determineOverflow(pnMentorNavContents, pnMentorNav)
+      determineOverflow(pnMentorNavContents, pnMentorNav),
     );
   }
 
@@ -105,14 +105,14 @@ function scrollableTabs() {
         pnMentorNavContents.style.transform = `translateX(${SETTINGS.navBarTravelDistance}px)`;
       }
       pnMentorNavContents.classList.remove(
-        'mentor__nav_Contents-no-transition'
+        'mentor__nav_Contents-no-transition',
       );
       SETTINGS.navBarTravelDirection = 'left';
       SETTINGS.navBarTravelling = true;
     }
     pnMentorNav.setAttribute(
       'data-overflowing',
-      determineOverflow(pnMentorNavContents, pnMentorNav)
+      determineOverflow(pnMentorNavContents, pnMentorNav),
     );
   });
 
@@ -127,7 +127,7 @@ function scrollableTabs() {
       const navBarRightEdge = pnMentorNavContents.getBoundingClientRect().right;
       const navBarScrollerRightEdge = pnMentorNav.getBoundingClientRect().right;
       const availableScrollRight = Math.floor(
-        navBarRightEdge - navBarScrollerRightEdge
+        navBarRightEdge - navBarScrollerRightEdge,
       );
       if (availableScrollRight < SETTINGS.navBarTravelDistance * 2) {
         pnMentorNavContents.style.transform = `translateX(-${availableScrollRight}px)`;
@@ -135,14 +135,14 @@ function scrollableTabs() {
         pnMentorNavContents.style.transform = `translateX(-${SETTINGS.navBarTravelDistance}px)`;
       }
       pnMentorNavContents.classList.remove(
-        'mentor__nav_Contents-no-transition'
+        'mentor__nav_Contents-no-transition',
       );
       SETTINGS.navBarTravelDirection = 'right';
       SETTINGS.navBarTravelling = true;
     }
     pnMentorNav.setAttribute(
       'data-overflowing',
-      determineOverflow(pnMentorNavContents, pnMentorNav)
+      determineOverflow(pnMentorNavContents, pnMentorNav),
     );
   });
 
@@ -151,7 +151,7 @@ function scrollableTabs() {
     () => {
       const styleOfTransform = window.getComputedStyle(
         pnMentorNavContents,
-        null
+        null,
       );
       const tr =
         styleOfTransform.getPropertyValue('-webkit-transform') ||
@@ -167,7 +167,7 @@ function scrollableTabs() {
       }
       SETTINGS.navBarTravelling = false;
     },
-    false
+    false,
   );
 
   pnMentorNavContents.addEventListener('click', e => {

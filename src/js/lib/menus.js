@@ -5,26 +5,26 @@ const CLASSNAMES = {
   ACTIVE_HAMBURGER_BUTTON: 'hamburger--isActive',
   MENU: 'menu',
   MENU_ITEM: 'menu__item',
-  ACTIVE_MENU_ITEM: 'menu__item--isActive'
+  ACTIVE_MENU_ITEM: 'menu__item--isActive',
 };
 
 const SECTIONS = {
-  HERO: 'hero'
+  HERO: 'hero',
 };
 
 const hamburgerButton = document.querySelector('#hamburger');
 
 const markAsActive = parentId => {
   const activeItems = document.querySelectorAll(
-    `.${CLASSNAMES.ACTIVE_MENU_ITEM}`
+    `.${CLASSNAMES.ACTIVE_MENU_ITEM}`,
   );
 
   activeItems.forEach(menuItem =>
-    menuItem.classList.remove(CLASSNAMES.ACTIVE_MENU_ITEM)
+    menuItem.classList.remove(CLASSNAMES.ACTIVE_MENU_ITEM),
   );
 
   const shouldBeActive = document.querySelectorAll(
-    `[data-item-parent='${parentId}']`
+    `[data-item-parent='${parentId}']`,
   );
 
   shouldBeActive.forEach(menuItem => {
@@ -66,7 +66,7 @@ const handleHamburgerClick = () => {
 
 const handleMobileMenuItemClick = () => {
   const mobileMenu = document.querySelector(
-    `.${CLASSNAMES.MOBILE_MENU_CONTAINER}`
+    `.${CLASSNAMES.MOBILE_MENU_CONTAINER}`,
   );
   const menu = mobileMenu.querySelector(`.${CLASSNAMES.MENU}`);
 

@@ -5,14 +5,9 @@
     "ghpages": "git subtree push --prefix build origin gh-pages",
     "build": "gulp build --production",
     "start": "gulp",
-    "precommit": "lint-staged",
-    "lint": "eslint --ignore-pattern 'src/js/lib/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
-    "lint-fix": "npm run lint -- --fix"
-  },
-  "lint-staged": {
-    "src/templates/**/*.html": [
-      "htmlhint --config .htmlhintrc"
-    ]
+    "lint": "eslint --cache --format=pretty \"**/*.js\"",
+    "lint-fix": "npm run lint -- --fix",
+    "prettier:fix": "prettier --ignore-path .gitignore \"**/*.+(js|json)\" --write"
   },
   "authors": "Kottans",
   "devDependencies": {
@@ -57,6 +52,7 @@
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
     "postcss-csso": "^3.0.0",
+    "prettier": "^1.19.1",
     "raw-loader": "^1.0.0",
     "require-dir": "^1.2.0",
     "require-yaml": "^0.0.1",

@@ -1,0 +1,12 @@
+{
+  "**/*.js": [
+    "eslint --format=pretty"
+  ],
+  "src/templates/**/*.html": [
+    "htmlhint --config .htmlhintrc"
+  ],
+  "**/*.+(js|json)": [
+    "prettier --write",
+    "git add"
+  ]
+}
