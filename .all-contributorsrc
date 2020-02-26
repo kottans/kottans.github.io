@@ -180,6 +180,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "zonzujiro",
+      "name": "Ivan Tytarenko",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2997359?v=4",
+      "profile": "https://www.linkedin.com/in/ititarenko/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
