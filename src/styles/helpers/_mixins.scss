@@ -1,32 +1,43 @@
 // width
 @mixin r($width) {
-  @media only screen and (max-width: $width+ "px") {
-    @content
+  @media only screen and (max-width: $width+ 'px') {
+    @content;
   }
 }
 
 @mixin rmin($width) {
-  @media only screen and (min-width: $width+ "px") {
-    @content
+  @media only screen and (min-width: $width+ 'px') {
+    @content;
   }
 }
 
 // height
 @mixin rh($height) {
-  @media only screen and (max-height: $height + "px") {
-    @content
+  @media only screen and (max-height: $height + 'px') {
+    @content;
   }
 }
 
 @mixin rhmin($height) {
-  @media only screen and (min-height: $height + "px") {
-    @content
+  @media only screen and (min-height: $height + 'px') {
+    @content;
   }
 }
 
-@mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: px) {
+@mixin css-lock(
+  $min-size: 1,
+  $max-size: 1.4,
+  $min-width: 20,
+  $max-width: 100,
+  $property: font-size,
+  $unit: px
+) {
   #{$property}: #{$max-size}#{$unit};
-  #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})));
+  #{$property}: calc(
+    #{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((
+            100vw - #{$min-width}#{$unit}
+          ) / (#{$max-width} - #{$min-width}))
+  );
   @media (max-width: #{$min-width}#{$unit}) {
     #{$property}: #{$min-size}#{$unit};
   }
@@ -48,14 +59,15 @@
 
 @mixin hover {
   .no-touch &:hover {
-    @content
+    @content;
   }
 }
 
 @mixin pseudo {
   position: relative;
 
-  &:before,&:after {
+  &:before,
+  &:after {
     content: ' ';
     position: absolute;
     top: 0;
@@ -64,7 +76,7 @@
 }
 
 @mixin pseudo {
-  @extend %pseudo
+  @extend %pseudo;
 }
 
 @mixin coverdiv {
@@ -87,8 +99,9 @@
 
 // retina, also available as +hdpi
 @mixin retina {
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-    @content
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+    @content;
   }
 }
 
@@ -97,7 +110,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 //simple gradient
@@ -113,7 +126,8 @@
 @mixin font($alias, $name) {
   @font-face {
     font-family: $alias;
-    src: url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".woff") format("woff");
+    src: url('../fonts/'+$name+'.woff2') format('woff2'),
+      url('../fonts/'+$name+'.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -126,7 +140,8 @@
 @mixin addFont($alias, $name, $weight) {
   @font-face {
     font-family: $alias;
-    src: url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".woff") format("woff");
+    src: url('../fonts/'+$name+'.woff2') format('woff2'),
+      url('../fonts/'+$name+'.woff') format('woff');
     font-weight: $weight;
     font-style: normal;
     font-display: swap;
@@ -153,7 +168,7 @@
 }
 
 @mixin hidetext {
-  @include hide-text
+  @include hide-text;
 }
 
 // IMPORTANT!!!! REQUIRES SPACES BETWEEN ELEMENTS, NO SUCH STUFF: </li><li>
@@ -165,7 +180,7 @@
   text-align-last: justify;
 
   &:after {
-    content: "";
+    content: '';
     display: inline-block;
     width: 100%;
     height: 0px;
@@ -179,7 +194,7 @@
   font-size: 0;
 
   &:before {
-    content: "";
+    content: '';
     display: inline-block;
     vertical-align: middle;
     width: 0;
@@ -189,26 +204,30 @@
 
 @mixin clr {
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
 }
 
 @mixin placeholder-color($color) {
-  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     color: $color;
   }
 
-  &::-moz-placeholder { /* Firefox 19+ */
+  &::-moz-placeholder {
+    /* Firefox 19+ */
     color: $color;
   }
 
-  &:-ms-input-placeholder { /* IE 10+ */
+  &:-ms-input-placeholder {
+    /* IE 10+ */
     color: $color;
   }
 
-  &:-moz-placeholder { /* Firefox 18- */
+  &:-moz-placeholder {
+    /* Firefox 18- */
     color: $color;
   }
 
@@ -218,24 +237,28 @@
 }
 
 @mixin placeholder {
-  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    @content
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    @content;
   }
 
-  &::-moz-placeholder { /* Firefox 19+ */
-    @content
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    @content;
   }
 
-  &:-ms-input-placeholder { /* IE 10+ */
-    @content
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    @content;
   }
 
-  &:-moz-placeholder { /* Firefox 18- */
-    @content
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    @content;
   }
 
   &::placeholder {
-    @content
+    @content;
   }
 }
 
@@ -247,7 +270,7 @@
   -webkit-filter: grayscale(100%);
   // Chrome 19+ & Safari 6+
   filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)';
 }
 
 @mixin gray-half {
@@ -269,7 +292,7 @@
 }
 
 @mixin nosel {
-  @include unselectable
+  @include unselectable;
 }
 
 @mixin prevent-text {
@@ -284,12 +307,12 @@
 
 @mixin selection {
   &::selection {
-    @content
+    @content;
   }
 }
 
 @mixin sel {
-  @include selection
+  @include selection;
 }
 
 @mixin gpu {
@@ -298,25 +321,25 @@
 
 @mixin scrollbar {
   &::-webkit-scrollbar {
-    @content
+    @content;
   }
 }
 
 @mixin scrollbar-track {
   &::-webkit-scrollbar-track {
-    @content
+    @content;
   }
 }
 
 @mixin scrollbar-thumb {
   &::-webkit-scrollbar-thumb {
-    @content
+    @content;
   }
 }
 
 @mixin scrollbar-track-piece {
   &::-webkit-scrollbar-track-piece {
-    @content
+    @content;
   }
 }
 
@@ -357,7 +380,7 @@
 // +arr(500,50, #000, bl)
 
 @mixin rotate($var) {
-  transform: rotate($var+deg);
+  transform: rotate($var + deg);
 }
 
 @mixin blur($var) {
@@ -384,8 +407,8 @@
 @mixin f($name, $font-size: null, $letter-spacing: null) {
   $font-family: null;
 
-  @if $name == "l" {
-    $font-family: "light";
+  @if $name == 'l' {
+    $font-family: 'light';
   }
 
   font-family: $font-family;
@@ -397,23 +420,30 @@
   }
 }
 
-@mixin font-face($font-family,$alias, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+@mixin font-face(
+  $font-family,
+  $alias,
+  $file-path,
+  $weight: normal,
+  $style: normal,
+  $asset-pipeline: false
+) {
   @font-face {
     font-family: $font-family;
     font-weight: $weight;
     font-style: $style;
-    src: url("#{$file-path}.eot");
-    src: local("#{$font-family} #{$alias}"), local('#{$font-family}-#{$alias}'),
-    url("#{$file-path}.eot?#iefix") format('embedded-opentype'),
-    url("#{$file-path}.woff") format('woff2'),
-    url("#{$file-path}.woff") format('woff'),
-    url("#{$file-path}.ttf") format('truetype'),
+    src: url('#{$file-path}.eot');
+    src: local('#{$font-family} #{$alias}'), local('#{$font-family}-#{$alias}'),
+      url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+      url('#{$file-path}.woff') format('woff2'),
+      url('#{$file-path}.woff') format('woff'),
+      url('#{$file-path}.ttf') format('truetype');
   }
 }
 
 @mixin center($axis) {
   @if $axis == both {
-    @include vcenter
+    @include vcenter;
   } @else if $axis == h {
     position: absolute;
     left: 50%;

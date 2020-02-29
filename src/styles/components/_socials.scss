@@ -1,50 +1,50 @@
 .iconColor {
-	fill: $dark;
+  fill: $dark;
 }
 
 .socials {
   list-style: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .socials__item {
   display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-left: 25px;
-	width: 22px;
-	height: 22px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  width: 22px;
+  height: 22px;
 
-	&:first-child {
-		margin-left: 0;
+  &:first-child {
+    margin-left: 0;
   }
 }
 
 .socials__link {
   display: flex;
-	justify-content: center;
-	align-items: center;
-	width: inherit;
-	height: inherit;
-	transform: scale(1);
-	transition: transform 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
 
-	&:hover {
+  &:hover {
     transform: translate3D(-5px, 5px, 0);
   }
 
-	&:focus {
+  &:focus {
     filter: invert(100%);
   }
 
-	&:active {
+  &:active {
     filter: invert(100%);
   }
 
-	svg {
+  svg {
     width: inherit;
   }
 }

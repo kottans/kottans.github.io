@@ -1,18 +1,18 @@
 .section {
   &.section--partners {
     min-height: 0;
-		background-color: $grey-100;
-		margin: 0;
-		padding: 75px 0;
+    background-color: $grey-100;
+    margin: 0;
+    padding: 75px 0;
 
-		@include r(767) {
-			margin-bottom: 50px;
+    @include r(767) {
+      margin-bottom: 50px;
     }
 
-		.section__sidebar {
+    .section__sidebar {
       span:last-child {
         @include r(767) {
-					display: block;
+          display: block;
         }
       }
     }
@@ -21,26 +21,26 @@
 
 .partners__list {
   display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .partners__item {
   flex: 1 1;
-	max-width: 280px;
-	margin: 15px 30px;
+  max-width: 280px;
+  margin: 15px 30px;
 
-	@include r(1400) {
+  @include r(1400) {
     flex-basis: 50%;
   }
 
-	@include r(1100) {
-		flex-basis: auto;
-		width: 100%;
+  @include r(1100) {
+    flex-basis: auto;
+    width: 100%;
   }
 }
 
 .partners__image {
-	width: 180px;
+  width: 180px;
 }

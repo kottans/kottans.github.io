@@ -3,7 +3,7 @@
 }
 
 @function img-url($image) {
-  @return url('../img/#{$image}')
+  @return url('../img/#{$image}');
 }
 
 @mixin image($image) {
@@ -24,23 +24,23 @@
 }
 
 @mixin gpu {
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 
 @mixin md {
   @include r(1023) {
-    @content
+    @content;
   }
 }
 
 @mixin sm {
   @include r(767) {
-    @content
+    @content;
   }
 }
 
 @mixin xs {
   @include r(599) {
-    @content
+    @content;
   }
 }

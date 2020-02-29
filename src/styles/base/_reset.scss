@@ -1,15 +1,88 @@
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5,
-h6, p, blockquote, pre,a, abbr, acronym, address, big,
-cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small,
-strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt,
-dd, ol, ul, li,fieldset, form, label, legend,table, caption,
-tbody, tfoot, thead, tr, th, td,article, aside, canvas, details,
-embed, figure, figcaption, footer, header, hgroup, menu, nav,
-output, ruby, section, summary,time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 
 html {
@@ -17,44 +90,60 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-img,fieldset, a img {
+img,
+fieldset,
+a img {
   border: none;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input[type='text'],
+input[type='email'],
+input[type='tel'],
 textarea {
   -webkit-appearance: none;
 }
 
-input[type="submit"],
+input[type='submit'],
 button {
-    cursor: pointer;
+  cursor: pointer;
 
-    &::-moz-focus-inner {
-      padding: 0;
-      border: 0;
-    }
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
 }
 
 textarea {
   overflow: auto;
 }
 
-input, button {
+input,
+button {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-div, input, textarea, select,button,
-h1,h2,h3,h4,h5,h6,a,span,a:focus {
+div,
+input,
+textarea,
+select,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+a:focus {
   outline: none;
 }
 
-ul,ol {
-  list-style-type: none
+ul,
+ol {
+  list-style-type: none;
 }
 
 table {
@@ -67,7 +156,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 

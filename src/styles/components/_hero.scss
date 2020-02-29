@@ -2,85 +2,85 @@
   .section__sidebar {
     position: absolute;
 
-		@include r(767) {
+    @include r(767) {
       position: fixed;
-			top: 100px;
-			z-index: -1;
-			left: 0;
+      top: 100px;
+      z-index: -1;
+      left: 0;
     }
 
-		.menu__list {
+    .menu__list {
       margin-top: 250px;
 
-			@include r(767) {
-				margin-top: 0;
+      @include r(767) {
+        margin-top: 0;
       }
     }
   }
 
-	.container {
+  .container {
     position: relative;
-		height: 100vh;
-		padding: 150px 20px;
-		background-image: url(../img/logo-bg.svg);
-		background-repeat: no-repeat;
-		background-position: 95% center;
-		background-size: 90vh;
+    height: 100vh;
+    padding: 150px 20px;
+    background-image: url(../img/logo-bg.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 90vh;
 
-		@include r(767) {
-			background-image: none;
+    @include r(767) {
+      background-image: none;
     }
   }
 
-	.section__sidebar--isActive {
+  .section__sidebar--isActive {
     @include r(767) {
-			z-index: 10;
+      z-index: 10;
     }
 
-		.menu__list {
-			transform: translateX(0);
+    .menu__list {
+      transform: translateX(0);
     }
   }
 }
 
 .hero__slogan {
   font-size: 20px;
-	line-height: 1.6;
-	font-weight: 500;
-	line-height: 1;
-	margin-left: 25%;
+  line-height: 1.6;
+  font-weight: 500;
+  line-height: 1;
+  margin-left: 25%;
 
-	@include r(767) {
-		margin-left: 0;
+  @include r(767) {
+    margin-left: 0;
   }
 
-	& > span {
+  & > span {
     display: inline;
-		font-weight: 700;
+    font-weight: 700;
 
-		@include r(767) {
+    @include r(767) {
       font-size: 18px;
-			display: inline-block;
+      display: inline-block;
     }
 
-		&:first-of-type {
+    &:first-of-type {
       display: block;
-			font-weight: 700;
-			font-size: 84px;
-			line-height: 1;
-			letter-spacing: -1.5px;
+      font-weight: 700;
+      font-size: 84px;
+      line-height: 1;
+      letter-spacing: -1.5px;
 
-			@include r(767) {
+      @include r(767) {
         font-size: 64px;
-				display: block;
+        display: block;
       }
     }
 
-		&:nth-child(2) {
+    &:nth-child(2) {
       font-weight: 500;
 
-			@include r(767) {
-				display: block;
+      @include r(767) {
+        display: block;
       }
     }
   }
@@ -88,50 +88,50 @@
 
 .hero__promoWrapper {
   position: absolute;
-	top: 55%;
-	left: 27%;
-	height: 30px;
-	width: 227px;
+  top: 55%;
+  left: 27%;
+  height: 30px;
+  width: 227px;
 
-	@include r(767) {
+  @include r(767) {
     position: static;
-		margin-top: 40px;
+    margin-top: 40px;
   }
 }
 
 .hero__promo {
   -webkit-transform: skew(-20deg);
-	-ms-transform: skew(-20deg);
-	transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+  transform: skew(-20deg);
 }
 
 .hero__promoText {
   span {
     padding: 5px 5px;
-		color: $white;
-		font-weight: 300;
-		background-color: $dark;
+    color: $white;
+    font-weight: 300;
+    background-color: $dark;
   }
 }
 
 .hero__promoTop {
-	margin-left: -10px;
+  margin-left: -10px;
 }
 
 .hero__promoBottom {
   position: absolute;
-	top: 40px;
+  top: 40px;
   left: 8px;
-  
-	.hero__promoText > span {
+
+  .hero__promoText > span {
     color: $dark;
-		background-color: $yellow-200;
-		font-weight: 500;
-		width: 220px;
-		margin-top: 8px;
+    background-color: $yellow-200;
+    font-weight: 500;
+    width: 220px;
+    margin-top: 8px;
   }
 }
 
 .hero__rebase {
-	display: block;
+  display: block;
 }

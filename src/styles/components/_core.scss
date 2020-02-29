@@ -1,173 +1,175 @@
 .section--core {
   display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
 
-	.header__contact {
+  .header__contact {
     margin-top: 20px;
 
-		&::before {
+    &::before {
       max-width: 175px;
-			width: 100%;
-			height: 44px;
+      width: 100%;
+      height: 44px;
     }
 
-		@include r(767) {
-			display: block;
+    @include r(767) {
+      display: block;
     }
 
-		a {
+    a {
       max-width: 175px;
-			width: 100%;
-			height: 44px;
-			line-height: 44px;
-			background-color: $wave;
-			border-color: $wave;
+      width: 100%;
+      height: 44px;
+      line-height: 44px;
+      background-color: $wave;
+      border-color: $wave;
 
-			@include r(767) {
-				max-width: 100%;
+      @include r(767) {
+        max-width: 100%;
       }
 
-			&:hover {
+      &:hover {
         color: $wave;
-				background-color: $black;
-				border-color: $black;
+        background-color: $black;
+        border-color: $black;
       }
 
-			&:focus {
+      &:focus {
         color: $wave;
-				background-color: $black;
-				border-color: $black;
+        background-color: $black;
+        border-color: $black;
       }
     }
   }
 
-	.section__sidebar {
+  .section__sidebar {
     display: flex;
     flex-direction: column;
 
     @include r(767) {
-			margin-bottom: 30px;
+      margin-bottom: 30px;
     }
   }
 }
 
 .core {
   display: flex;
-	justify-content: flex-start;
-	flex-flow: row wrap;
-	align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  align-items: flex-start;
 }
 
 .core__tabsWrapper {
   flex: 0 50%;
-	margin-bottom: 70px;
+  margin-bottom: 70px;
 
-	@include r(1355) {
+  @include r(1355) {
     flex-basis: 100%;
-		margin-bottom: 40px;
+    margin-bottom: 40px;
   }
 
-	@include r(1100) {
-		flex-basis: 50%;
+  @include r(1100) {
+    flex-basis: 50%;
   }
 
-	@include r(800) {
-		flex-basis: 100%;
+  @include r(800) {
+    flex-basis: 100%;
   }
 }
 
 // Tabs
-.core__tabs, .core__tabsContentWrapper {
+.core__tabs,
+.core__tabsContentWrapper {
   display: flex;
-	flex-flow: row nowrap;
+  flex-flow: row nowrap;
 
-	button, .core__tabsContent {
+  button,
+  .core__tabsContent {
     flex: 1 0 50%;
-		border: none;
-		font-size: 24px;
-		font-weight: 700;
-		text-transform: none;
-		text-align: left;
-		pointer-events: none;
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: none;
+    text-align: left;
+    pointer-events: none;
 
-		@include r(767) {
+    @include r(767) {
       pointer-events: auto;
-			flex-basis: 0;
+      flex-basis: 0;
     }
   }
 
-	.core__tabsButton {
+  .core__tabsButton {
     @include r(767) {
       font-size: 16px;
-			padding: 16px 20px;
-			background-color: transparent;
-			white-space: nowrap;
-			border: 1px solid transparent;
-			border-bottom-color: $dark-200;
+      padding: 16px 20px;
+      background-color: transparent;
+      white-space: nowrap;
+      border: 1px solid transparent;
+      border-bottom-color: $dark-200;
     }
 
-		&:hover {
+    &:hover {
       @include r(767) {
         transform: none;
       }
     }
 
-		&:focus,
-		&:active {
+    &:focus,
+    &:active {
       color: $dark;
-			background-color: transparent;
+      background-color: transparent;
     }
 
-		> span {
+    > span {
       @include r(767) {
-				opacity: 0.6;
+        opacity: 0.6;
       }
     }
   }
 
-	.core__tabsButton--isActive {
+  .core__tabsButton--isActive {
     opacity: 1;
-		border-color: $dark-200;
-		border-bottom-color: transparent;
-		background-color: $white;
+    border-color: $dark-200;
+    border-bottom-color: transparent;
+    background-color: $white;
 
-		> span {
-			opacity: 1;
+    > span {
+      opacity: 1;
     }
   }
 
-	.core__tabsContent {
+  .core__tabsContent {
     font-size: 14px;
-		font-weight: 400;
+    font-weight: 400;
 
-		p {
+    p {
       max-width: 180px;
-			margin-bottom: 20px;
+      margin-bottom: 20px;
 
-			@include r(1355) {
+      @include r(1355) {
         max-width: 300px;
-				padding-right: 16px;
+        padding-right: 16px;
       }
 
-			@include r(767) {
+      @include r(767) {
         max-width: 100%;
-				display: none;
-				padding-right: 0;
+        display: none;
+        padding-right: 0;
       }
     }
   }
 
-	.core__tabsContent--isActive {
+  .core__tabsContent--isActive {
     @include r(767) {
       flex: 1 0 100%;
-			width: 100%;
+      width: 100%;
     }
 
-		p {
+    p {
       @include r(767) {
-				display: block;
+        display: block;
       }
     }
   }
@@ -176,105 +178,106 @@
 .core__tabsContentWrapper {
   @include r(767) {
     padding: 26px 20px 30px;
-		border: 1px solid $dark-200;
-		border-top: none;
+    border: 1px solid $dark-200;
+    border-top: none;
   }
 }
 
 // Core member
-.core__member, .core__slogan {
+.core__member,
+.core__slogan {
   flex: 0 50%;
-	margin-bottom: 70px;
+  margin-bottom: 70px;
 
-	&:nth-of-type(4) {
+  &:nth-of-type(4) {
     @include r(800) {
-			margin-top: 40px;
+      margin-top: 40px;
     }
 
-		@include r(767) {
-			margin-top: 0;
+    @include r(767) {
+      margin-top: 0;
     }
   }
 
-	&:nth-of-type(5) {
+  &:nth-of-type(5) {
     @include r(80) {
-			margin-top: 40px;
+      margin-top: 40px;
     }
 
-		@include r(767) {
+    @include r(767) {
       order: 5;
-			margin-top: 0;
+      margin-top: 0;
     }
   }
 
-	&:nth-of-type(6) {
+  &:nth-of-type(6) {
     padding-top: 70px;
 
-		@include r(767) {
-			padding-top: 0;
+    @include r(767) {
+      padding-top: 0;
     }
   }
 
-	&:last-child {
+  &:last-child {
     @include r(767) {
-			order: 6;
+      order: 6;
     }
   }
 }
 
 .core__memberInner {
   position: relative;
-	padding-left: 40px;
-	max-width: 250px;
-	width: 100%;
-	margin: 0 auto;
+  padding-left: 40px;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .core__member {
   text-align: center;
 
-	@include r(767) {
-		padding: 0 30px 0 0;
+  @include r(767) {
+    padding: 0 30px 0 0;
   }
 }
 
 .core__avatar {
   border-radius: 50%;
-	margin-bottom: 20px;
-	display: block;
-	width: 100%;
-	height: auto;
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .core__name {
   text-align: center;
-	font-size: 24px;
-	line-height: 1.5;
+  font-size: 24px;
+  line-height: 1.5;
 }
 
 .core__position span {
   padding: 3px 20px;
-	background-color: $dark-300;
-	text-align: center;
-	font-size: 13px;
-	color: $yellow-200;
-	white-space: nowrap;
+  background-color: $dark-300;
+  text-align: center;
+  font-size: 13px;
+  color: $yellow-200;
+  white-space: nowrap;
 }
 
 .core__memberSocials {
   position: absolute;
-	padding-top: 45px;
-	left: 0;
+  padding-top: 45px;
+  left: 0;
 
-	a {
+  a {
     display: block;
-		width: 32px;
-		height: 32px;
-		padding: 6px;
-		text-decoration: none;
-		margin-bottom: 15px;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    text-decoration: none;
+    margin-bottom: 15px;
 
-		&:last-child {
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -282,13 +285,13 @@
 
 .core__slogan {
   margin-top: 50px;
-	font-size: 36px;
-	font-weight: 700;
-	text-align: left;
-	line-height: 1.1;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.1;
 
-	@include r(767) {
+  @include r(767) {
     flex-basis: 100%;
-		order: 4;
+    order: 4;
   }
 }

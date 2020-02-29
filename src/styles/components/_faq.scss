@@ -1,9 +1,9 @@
 .faq {
   width: 100%;
-	height: 100%;
-	margin-bottom: 200px;
+  height: 100%;
+  margin-bottom: 200px;
 
-	@include r(767) {
+  @include r(767) {
     margin-bottom: 75px;
   }
 }
