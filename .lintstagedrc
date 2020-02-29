@@ -5,7 +5,7 @@
   "src/templates/**/*.html": [
     "htmlhint --config .htmlhintrc"
   ],
-  "**/*.+(js|json)": [
+  "**/*.+(js|json|scss)": [
     "prettier --write",
     "git add"
   ]
