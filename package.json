@@ -7,7 +7,7 @@
     "start": "gulp",
     "lint": "eslint --cache --format=pretty \"**/*.js\"",
     "lint-fix": "npm run lint -- --fix",
-    "prettier:fix": "prettier --ignore-path .gitignore \"**/*.+(js|json)\" --write"
+    "prettier:fix": "prettier --ignore-path .gitignore \"**/*.+(js|json|scss)\" --write"
   },
   "authors": "Kottans",
   "devDependencies": {
