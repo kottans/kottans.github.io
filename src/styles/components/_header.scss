@@ -128,10 +128,10 @@
 
     &:focus {
       opacity: 0.3;
+    }
 
-      @include r(767) {
-        margin-left: 0;
-      }
+    @include r(767) {
+      margin-left: 0;
     }
   }
 
