@@ -1,0 +1,16 @@
+$grid-max-width: 1410px;
+$grid-gutter: 30px;
+
+.wrap {
+	display: block;
+	width: 100%;
+	max-width: $grid-max-width;
+	margin: 0 auto;
+	position: relative;
+	padding-left: ($grid-gutter / 2);
+	padding-right: ($grid-gutter / 2);
+	@media (max-width: 420px) {
+		padding-left: 12px;
+		padding-right: 12px;
+  }
+}

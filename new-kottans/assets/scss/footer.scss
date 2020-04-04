@@ -1,0 +1,44 @@
+.main-footer{
+    background: $black;
+    *,
+    .socials a:before{
+        color: #fff !important;
+        transition: all 0.25s;
+    }
+    .socials a:hover:before{
+        color: $black !important;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 55px 0;
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    &__logo{
+        width: 267px;
+    }
+    &__copyrights{
+        font-size: 14px;
+        line-height: 13px;
+        letter-spacing: 1px;
+        @media (max-width: 1024px) {
+            width: 100%;
+            margin: 30px 0;
+        }
+        @media (max-width: 600px) {
+            line-height: 1.2;
+        }
+        a{
+            border-bottom: 1px solid #fff;
+            transition: all 0.15s;
+            &:hover{
+                border-color: transparent
+            }
+        }
+    }
+}

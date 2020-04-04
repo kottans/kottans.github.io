@@ -1,0 +1,227 @@
+[class^="btn-"],
+[class*=" btn-"] {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+.btn-default{
+	position: relative;
+	background: #fff;
+	line-height: 1;
+	&:before{
+		content: '';
+		border: 2px solid #202020;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		transition: transform 0.25s;
+	}
+	&__inner{
+		padding: 6px 15px;
+		line-height: 1;
+		color: #202020;
+		font-weight: 600;
+		font-size: 12px;
+		text-transform: uppercase;
+		transition: background 0.25s, transform 0.25s;
+		position: relative;
+		@media (max-width: 360px) {
+			padding: 6px 10px;
+		}
+	}
+	@media (min-width: 600px) {
+		&:hover{
+			.btn-default__inner{
+				transform: translate(4px, 4px);
+				background: $yellow;
+			}
+		}
+	}
+	&--big{
+		.btn-default__inner{
+			padding: 18px 80px;
+			font-size: 14px;
+			@media (max-width: 600px) {
+				padding: 18px 50px;
+			}
+
+		}
+		@media (min-width: 600px) {
+			&:hover{
+				.btn-default__inner{
+					transform: translate(8px, 8px);
+				}
+			}
+		}
+	}
+}
+
+.read-more{
+	position: relative;
+	padding-left: 4px;
+	padding-right: 28px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 600;
+	z-index: 1;
+	margin-top: 15px;
+	&:before{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all 0.25s;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background: $yellow;
+		width: 0;
+		height: 10px;
+		z-index: -1;
+		transition: all 0.25s;
+	}
+	@media (min-width: 600px) {
+		&:hover{
+			&:before{
+				transform: translateY(calc(-50% + 4px));
+			}
+			&:after{
+				width: calc(100% - 23px);
+			}
+		}
+	}
+	&.active{
+		&:before{
+			transform: translateY(-50%) rotate(-180deg);
+		}
+		&:hover{
+			&:before{
+				transform: translateY(calc(-50% - 4px)) rotate(-180deg);
+			}
+		}
+	}
+}
+
+.btn-link{
+	font-size: 14px;
+	font-weight: 600;
+	color: $black;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	padding: 15px 0;
+	&__inner{
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			left: -5px;
+			bottom: 0;
+			background: $yellow;
+			width: 0;
+			height: 10px;
+			z-index: -1;
+			transition: all 0.25s;
+		}
+	}
+	&:before{
+		font-size: 12px;
+		margin-right: 16px;
+	}
+	@media (min-width: 600px) {
+		&:hover{
+			.btn-link__inner{
+				&:after{
+					width: calc(100% + 10px);
+				}
+			}
+		}
+	}
+	&.btn-link.icon-tg{
+		&:hover{
+			&:before{
+				animation: tg 1.6s linear 0s infinite normal;
+			}
+		}
+		@keyframes tg {
+			0%{
+				transform: translate(0px, 0px) scale(1);
+				opacity: 1;
+			}
+			18%{
+				opacity: 1;
+			}
+			50%{
+				transform: translate(28px, -30px) scale(0);
+				opacity: 0;
+			}
+			55%{
+				opacity: 0;
+			}
+			60%{
+				transform: translate(-28px, 30px) scale(2);
+				opacity: 0;
+			}
+			100%{
+				transform: translate(0px, 0px) scale(1);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.btn-youtube{
+	height: 44px;
+	background: #F83030;
+	padding: 16px 45px 14px 35px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: all 0.25s;
+
+	vertical-align: middle;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover{
+		background: #dc1515;
+	}
+	&:before{
+		font-size: 12px;
+		margin-right: 14px;
+	}
+}
+
+.link-icon{
+	font-size: 13px;
+	line-height: 14px;
+	font-weight: 600;
+	color: rgba($black, 0.6);
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	&:before{
+		margin-right: 14px;
+		transition: all 0.25s;
+	}
+	&:hover{
+		&:before{
+			color: #dc1515;
+		}
+	}
+}
