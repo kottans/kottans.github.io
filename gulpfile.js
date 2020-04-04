@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 var source = {
     js : [
         "assets/js/jquery.min.js",
-        // "assets/js/userDetect.js",
+        "assets/js/typed.js",
         "assets/js/slick.js",
         "assets/js/script.js"
     ]

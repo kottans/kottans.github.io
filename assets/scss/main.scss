@@ -84,8 +84,8 @@
         @media (min-width: 1600px) {
             font-size: 150px;
         }
-        @media (max-width: 900px) {
-            font-size: 70px;
+        @media (max-width: 1300px) {
+            font-size: 80px;
         }
         @media (max-width: 600px) {
             font-size: 50px;
@@ -108,8 +108,7 @@
 
 .first-screen-bg{
     position: absolute;
-    top: 50%;
-    transform: translateY(calc(-50% - 20px));
+    top: 40px;
     right: 44px;
     max-width: 2500px;
     width: calc(100% - 88px);

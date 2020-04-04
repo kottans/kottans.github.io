@@ -22,6 +22,7 @@
       bit.initScrollAnimation();
       bit.initScripts();
       bit.initSlider();
+      bit.initTyped();
     },
 
     initMenu: function() {
@@ -338,6 +339,19 @@
           $('.mentors_slider_js:nth-of-type('+index+')').addClass('active');
         });
         
+      },
+
+
+      initTyped: function() {
+        var options = {
+          strings: ['for students', 'for cats', 'for developers', 'for housewives', 'for switchers'],
+          loop: true,
+          typeSpeed:40,
+          backSpeed:40,
+          backDelay:1500
+        };
+        
+        var typed = new Typed('.typed_js', options);
       }
 
 
