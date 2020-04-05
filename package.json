@@ -1,9 +1,22 @@
 {
-  "name": "bitbybit",
+  "name": "kottans.github.io",
   "author": "bitbybit",
   "version": "1.0.0",
   "main": "gulpfile.js",
+  "scripts": {
+    "ghpages": "git subtree push --prefix build origin gh-pages",
+    "build": "gulp build --production",
+    "start": "gulp",
+    "lint": "eslint --cache --format=pretty \"**/*.js\"",
+    "lint-fix": "npm run lint -- --fix",
+    "prettier:fix": "prettier --ignore-path .gitignore \"**/*.+(js|json|scss)\" --write"
+  },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-formatter-pretty": "^3.0.1",
+    "eslint-loader": "^4.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-prettier-config": "^1.0.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
@@ -18,6 +31,7 @@
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
     "gulp-webserver": "latest",
+    "prettier": "^2.0.2",
     "ttf2woff2": "latest"
   }
 }
