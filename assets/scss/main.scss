@@ -414,7 +414,9 @@
     }
   }
   &__top-img {
+    max-width: 400px;
     @media (max-width: 600px) {
+      max-width: 100%;
       width: calc(100% - 80px);
     }
     @media (max-width: 460px) {

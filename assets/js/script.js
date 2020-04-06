@@ -1,3 +1,95 @@
+const initMenu = () => {
+  const mobileMenu = document.querySelector('.mobile_menu_js');
+
+  mobileMenu.addEventListener('click', () => {
+    document.body.classList.toggle('active-menu');
+  })
+
+  document.addEventListener('click', ev => {
+    const container = document.querySelector('.mob-menu, .mobile_menu_js');
+
+    if (container !== ev.target && !container.contains(ev.target)) {
+      document.body.classList.remove('active-menu')
+    }
+  })
+}
+
+const initScripts = () => {
+  let btns = document.querySelectorAll('.read_more__js');
+
+  for (const btn of btns) {
+    btn.addEventListener('click', el => {
+      let thisEl = el.target;
+      if (!thisEl.classList.contains('active')) {
+        thisEl.classList.add('active');
+        thisEl.innerHTML = thisEl.dataset.hide;
+        thisEl.previousElementSibling.style.display = "block"; // no animation
+      } else {
+        thisEl.classList.remove('active')
+        thisEl.innerHTML = thisEl.dataset.show;
+        thisEl.previousElementSibling.style.display = "none"; // no animation
+      }
+    });
+  }
+  
+  let questionBtns = document.querySelectorAll('.question_js');
+  for (const questionBtn of questionBtns) {
+    questionBtn.addEventListener('click', el => {
+      el.preventDefault();
+      let question = el.target.closest('.question');
+      if (!question.classList.contains('active')) {
+        question.classList.add('active');
+        question.querySelector('.question__inner').style.display = "block"; // no animation
+      } else {
+        question.classList.remove('active');
+        question.querySelector('.question__inner').style.display = "none"; // no animation
+      }
+    });
+  }
+
+  let onlineToggleBtn = document.querySelector('.online_toggle_js');
+  onlineToggleBtn.addEventListener('click', el => {
+    el.target.closest('.online-block').classList.toggle('active');
+  });
+
+  setTimeout(function () {
+    document.querySelector('.online-block').classList.add('visible');
+    document.querySelector('.online-block').classList.remove('hidden');
+  }, 2000);
+
+  let comments = document.querySelectorAll('.comment_js');
+  for (const comment of comments) {
+    comment.addEventListener('click', el => {
+      let thisEl = el.target.closest('.comment_js');
+      if (thisEl.classList.contains('active')) return false;
+
+      var activeEl = document.querySelector(".comment_js.active");
+      activeEl.classList.remove('active');
+      
+      thisEl.classList.add('active');
+
+      document.querySelector('.comment_text_js').style.display = "none"; // no animation
+
+      // var index = el.index + 1;
+      // $('.comment_text_js:nth-of-type(' + index + ')').slideDown();
+  
+      // var img = 'url(' + thisEl.data('full-img') + ')';
+      // var name = thisEl.data('name');
+      // var position = thisEl.data('position');
+  
+      // $('.review_img_js').css('background-image', img);
+      // $('.review_name_js').html(name);
+      // $('.review_position_js').html(position);
+    });
+  }
+  
+  
+}
+
+
+initScripts();
+initMenu();
+
 (function ($) {
   'use strict';
 
@@ -18,25 +110,9 @@
           bit.winHeight = $(window).height();
           bit.winScroll = $(window).scrollTop();
         });
-
-        bit.initMenu();
         bit.initScrollAnimation();
-        bit.initScripts();
         bit.initSlider();
         bit.initTyped();
-      },
-
-      initMenu: function () {
-        var btn = $('.mobile_menu_js');
-        btn.on('click', function () {
-          $('body').toggleClass('active-menu');
-        });
-        $(document).on('click tap', function (e) {
-          var container = $('.mob-menu, .mobile_menu_js');
-          if (!container.is(e.target) && container.has(e.target).length === 0) {
-            $('body').removeClass('active-menu');
-          }
-        });
       },
 
       counter: function (self) {
@@ -73,8 +149,6 @@
         var animateBlock = $('.ab');
 
         function animate() {
-          var winWidth = $(window).width();
-          var winHeight = $(window).height();
           var winScroll = $(window).scrollTop();
           var animOffset = $(window).height() / 1.3;
 
@@ -201,59 +275,6 @@
         setTimeout(function () {
           animate();
         }, 800);
-      },
-
-      initScripts: function () {
-        var btn = $('.read_more__js');
-
-        btn.on('click', function () {
-          if (!$(this).hasClass('active')) {
-            $(this).addClass('active').html($(this).data('hide'));
-            $(this).prev('.hidden_js').slideDown();
-          } else {
-            $(this).removeClass('active').html($(this).data('show'));
-            $(this).prev('.hidden_js').slideUp();
-          }
-        });
-
-        var questionBtn = $('.question__btn, .question__text');
-
-        questionBtn.on('click', function () {
-          var question = $(this).closest('.question');
-          if (!question.hasClass('active')) {
-            question.addClass('active');
-            question.find('.question__inner').slideDown();
-          } else {
-            question.removeClass('active');
-            question.find('.question__inner').slideUp();
-          }
-        });
-
-        var onlineToggleBtn = $('.online_toggle_js');
-        onlineToggleBtn.on('click', function () {
-          $(this).closest('.online-block').toggleClass('active');
-        });
-
-        setTimeout(function () {
-          $('.online-block').addClass('visible');
-          $('.online-block').removeClass('hidden');
-        }, 2000);
-
-        $('.comment_js').on('click', function () {
-          if ($(this).hasClass('active')) return false;
-          $(this).addClass('active').siblings().removeClass('active');
-          $('.comment_text_js').slideUp();
-          var index = $(this).index() + 1;
-          $('.comment_text_js:nth-of-type(' + index + ')').slideDown();
-
-          var img = 'url(' + $(this).data('full-img') + ')';
-          var name = $(this).data('name');
-          var position = $(this).data('position');
-
-          $('.review_img_js').css('background-image', img);
-          $('.review_name_js').html(name);
-          $('.review_position_js').html(position);
-        });
       },
 
       initSlider: function () {
@@ -384,18 +405,3 @@
   bit.init();
 })(jQuery);
 
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this,
-      args = arguments;
-    var later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
