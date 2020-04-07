@@ -68,18 +68,25 @@ const initScripts = () => {
       
       thisEl.classList.add('active');
 
-      document.querySelector('.comment_text_js').style.display = "none"; // no animation
+      document.querySelector('.comment_text_js.active').style.display = "none"; // no animation
 
-      // var index = el.index + 1;
-      // $('.comment_text_js:nth-of-type(' + index + ')').slideDown();
+      for(i=0; i < comments.length; i++) {
+        comments[i].index = i;
+      }
+
+      let elIndex = thisEl.index + 1;
+      
+      document.querySelector('.comment_text_js.active').classList.remove('active');
+      document.querySelector('.comment_text_js:nth-child('+elIndex+'n)').classList.add('active');
+      document.querySelector('.comment_text_js:nth-child('+elIndex+'n)').style.display = "block"; // no animation
+
+      let img = 'url(' + thisEl.dataset.fullImg + ')';
+      let name = thisEl.dataset.name;
+      let position = thisEl.dataset.position;
   
-      // var img = 'url(' + thisEl.data('full-img') + ')';
-      // var name = thisEl.data('name');
-      // var position = thisEl.data('position');
-  
-      // $('.review_img_js').css('background-image', img);
-      // $('.review_name_js').html(name);
-      // $('.review_position_js').html(position);
+      document.querySelector('.review_img_js').style.backgroundImage = img;
+      document.querySelector('.review_name_js').innerHTML = name;
+      document.querySelector('.review_position_js').innerHTML = position;
     });
   }
   
