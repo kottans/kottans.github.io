@@ -46,6 +46,19 @@ window.bit = {
           document.body.classList.remove('active-menu')
         }
       });
+
+      let navItems = document.querySelectorAll('.main_nav_js a');
+
+      navItems.forEach((item) => {
+        item.addEventListener('click', (e) =>{
+          e.preventDefault();
+          document.querySelector('body').classList.remove('active-menu');
+          document.querySelector('.main_nav_js a.active').classList.remove('active');
+          item.classList.add('active');
+          let target = document.querySelector('[id="'+item.dataset.target+'"]').offsetTop - 62;
+          item.dataset.target == 1 ? window.scrollTo({ 'top': 0 }) : window.scrollTo({ 'top': target });
+        });
+      });
     },
 
     initReadMoreToggle: () => {
@@ -363,22 +376,6 @@ bit.init();
           $(this).removeClass('hidden');
         });
 
-        $('.main_nav_js a').on('click', function (e) {
-          e.preventDefault();
-          $('body').removeClass('active-menu');
-          $('.main_nav_js a').removeClass('active');
-          $(this).addClass('active');
-          var target = $('#' + $(this).data('target')).offset().top - 62;
-          if ($(this).closest('li').index() == 0) {
-            target = 0;
-          }
-          $([document.documentElement, document.body]).animate(
-            {
-              scrollTop: target,
-            },
-            600,
-          );
-        });
 
         setTimeout(function () {
           animate();
