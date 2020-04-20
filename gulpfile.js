@@ -19,7 +19,7 @@ var source = {
   js: [
     'assets/js/jquery.min.js',
     'assets/js/typed.js',
-    'assets/js/slick.js',
+    'assets/js/glider.min.js',
     'assets/js/script.js',
   ],
 };

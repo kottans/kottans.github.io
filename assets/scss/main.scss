@@ -223,7 +223,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    overflow-x: hidden;
+    // overflow-x: hidden;
   }
 }
 
@@ -1854,21 +1854,27 @@ tspan {
   }
 }
 
-.our-team {
+.our-team-wrap{
   width: 100%;
   padding-bottom: 80px;
   border-bottom: 1px solid rgba($black, 0.15);
   margin-bottom: 90px;
+}
+
+.our-team {
+  width: 100%;
   .slick-slide {
     margin: 0 5px;
   }
   &__item {
     text-align: center;
     padding-bottom: 60px;
+    margin: 0 5px;
   }
   &__img {
     height: 200px;
     margin-bottom: 42px;
+    background-position: 50% 0%;
   }
   &__name {
     line-height: 18px;
@@ -1900,7 +1906,8 @@ tspan {
   }
 }
 
-.slick-dots {
+.dots-block,
+.glider-dots {
   display: flex;
   justify-content: center;
   button {
@@ -1913,6 +1920,8 @@ tspan {
     border: 2px solid transparent;
     transition: all 0.25s;
     border-radius: 50%;
+    background: transparent !important;
+    position: relative;
     &:before {
       content: '';
       width: 6px;
@@ -1926,13 +1935,14 @@ tspan {
         background: rgba($black, 1);
       }
     }
-  }
-  .slick-active {
-    button {
-      border-color: $yellow;
-      &:before {
-        background: rgba($black, 1);
-      }
+    &.active {
+        border-color: $yellow;
+        &:before {
+          background: rgba($black, 1);
+        }
+    }
+    &:only-child{
+      display: none !important;
     }
   }
 }
@@ -2028,17 +2038,15 @@ tspan {
     @media (max-width: 1200px) {
       width: 100%;
     }
-    .slick-slide {
-      margin: 0 10px;
-    }
-    .slick-dots {
-      margin-top: 50px;
+    .glider-dots {
+      margin-top: 42px;
     }
   }
   &__item {
     background: #fffbed;
     padding: 104px 20px 50px 20px;
     position: relative;
+    margin: 0 10px;
     margin-top: 40px;
     text-align: center;
     .socials {
