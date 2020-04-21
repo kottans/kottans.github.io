@@ -270,7 +270,11 @@ window.bit = {
     },
 
     initCounter: function (self) {
-      console.log(self);
+      for(let to = 0; to <= parseInt(self.dataset.count); to++){
+        setTimeout(()=> {
+          self.innerHTML = to;
+        }, to * 80, to);
+      }
     },
 
     initScrollAnimation: () => {
