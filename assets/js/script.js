@@ -12,6 +12,9 @@ window.bit = {
       bit.initTeamSlider();
       bit.initMentorsSlider();
       bit.initScrollTarget();
+      bit.initOnlineBlock();
+      bit.initScrollEvents();
+      bit.initScrollAnimation();
     },
 
     initTyped: () => {
@@ -125,17 +128,17 @@ window.bit = {
 
           document.querySelector('.comment_text_js.active').style.display = "none"; // no animation
 
-          for(i=0; i < comments.length; i++) {
-            comments[i].index = i;
-          }
+          comments.forEach((comment, i) => {
+            comment.index = i;
+          })
 
           let elIndex = thisEl.index + 1;
 
           document.querySelector('.comment_text_js.active').classList.remove('active');
-          document.querySelector('.comment_text_js:nth-child('+elIndex+'n)').classList.add('active');
-          document.querySelector('.comment_text_js:nth-child('+elIndex+'n)').style.display = "block"; // no animation
+          document.querySelector(`.comment_text_js:nth-child(${elIndex}n)`).classList.add('active');
+          document.querySelector(`.comment_text_js:nth-child(${elIndex}n)`).style.display = "block"; // no animation
 
-          let img = 'url(' + thisEl.dataset.fullImg + ')';
+          let img = `url(${thisEl.dataset.fullImg})`;
           let name = thisEl.dataset.name;
           let position = thisEl.dataset.position;
 
@@ -154,7 +157,7 @@ window.bit = {
           document.querySelector('.mentors-block__tab.active').classList.remove('active');
           item.classList.add('active');
           document.querySelector('.mentors-block__slider.active').classList.remove('active');
-          document.querySelector('.mentors-block__slider:nth-of-type(' + (i + 1) + ')').classList.add('active');
+          document.querySelector(`.mentors-block__slider:nth-of-type(${(i + 1)})`).classList.add('active');
         });
       });
     },
@@ -193,7 +196,7 @@ window.bit = {
       let mentorsSlider = document.querySelectorAll('.mentors_slider_js');
 
       mentorsSlider.forEach((slider, i) => {
-        slider.insertAdjacentHTML('afterend', '<div class="dots_block_'+(i+1)+'"></div>');
+        slider.insertAdjacentHTML('afterend', `<div class="dots_block_${i+1}"></div>`);
         new Glider(slider, {
           dots: '.dots_block_'+ (i+1),
           slidesToScroll: 1,
@@ -230,160 +233,99 @@ window.bit = {
             }
         });
       });
+    },
+
+    initOnlineBlock: () => {
+      let onlineBlock = document.querySelector('.online-block');
+      onlineBlock.addEventListener('mouseenter', () => {
+        onlineBlock.classList.remove('hidden');
+      });
+    },
+
+    initScrollEvents: () => {
+      let header = document.querySelector('.header_js');
+
+      document.addEventListener('scroll', () => {
+        window.scrollY > 23 ? header.classList.add('active') : header.classList.remove('active');
+        if (window.scrollY > 100) document.querySelector('.online-block').classList.remove('active');
+
+        let bottom = window.scrollY + window.innerHeight + document.querySelector('.main-footer').offsetHeight;
+
+        if (bottom + 20 > document.body.clientHeight) {
+          var offsetBottom = bottom - $(document).height();
+
+          document.querySelector('.online-block').style.transform = `translateY(${-offsetBottom}px)`;
+          document.querySelector('.main-nav').style.transform = `translateY(${-offsetBottom}px)`;
+        } else {
+          document.querySelector('.main-nav').style.transform = `translateY(0px)`;
+          document.querySelector('.online-block').style.transform = `translateY(0px)`;
+        }
+
+        if (window.scrollY > window.innerHeight || window.innerWidth < 600) {
+          document.querySelector('.online-block').classList.add('hidden');
+        } else {
+          document.querySelector('.online-block').classList.remove('hidden');
+        }
+      });
+    },
+
+    initCounter: function (self) {
+      console.log(self);
+    },
+
+    initScrollAnimation: () => {
+      let animateBlock = document.querySelectorAll('.ab');
+
+      function animate() {
+        let animOffset = window.innerHeight / 1.3;
+
+        animateBlock.forEach(item => {
+          if (item.classList.contains('ab--b')) {
+            if (item.getBoundingClientRect().y - animOffset < 0 || item.classList.contains('instant')) {
+              item.classList.remove('ab--b');
+              if (item.classList.contains('animate_count')) {
+                var self = item;
+                setTimeout(function () {
+                  bit.initCounter(self);
+                }, 400);
+              }
+            }
+          }
+        });
+
+
+        let bg = document.querySelectorAll('.bg__js');
+        bg.forEach(item => {
+          if (item.classList.contains('instant')) {
+            let dataImg = item.dataset.img;
+            item.style.backgroundImage = `url(${dataImg})`;
+          }
+          if (!item.classList.contains('bg_done')) {
+            if (item.getBoundingClientRect().y - window.innerHeight*2 < 0) {
+              if (!item.classList.contains('img')) {
+                let dataImg = item.dataset.img;
+                let imgBg = `url(${dataImg})`;
+                item.style.backgroundImage = imgBg;
+              } else {
+                let imgBg = item.dataset.img;
+                item.setAttribute('src', imgBg)
+              }
+
+              item.classList.add('bg_done');
+            }
+          }
+        });
+      }
+
+      document.addEventListener('scroll', () => {
+        animate();
+      });
+
+      setTimeout(function () {
+        animate();
+      }, 800);
     }
 
 }
 
 bit.init();
-
-
-
-
-(function ($) {
-  'use strict';
-
-  window.bit = $.extend(
-    {},
-    {
-      init: function () {
-        bit.initScrollAnimation();
-      },
-
-      counter: function (self) {
-        self.each(function () {
-          var $el = $(this),
-            countTo = $el.attr('data-count') * 1;
-          $({ someValue: 0 }).animate(
-            { someValue: countTo },
-            {
-              duration: 2000,
-              easing: 'swing',
-              step: function () {
-                $el.text(commaSeparateNumber(Math.round(this.someValue)));
-              },
-              complete: function () {
-                $el.text(this.countNum);
-                $el.addClass('done');
-                setTimeout(function () {
-                  $el.removeClass('done');
-                }, 400);
-              },
-            },
-          );
-          function commaSeparateNumber(val) {
-            while (/(\d+)(\d{3})/.test(val.toString())) {
-              val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1 ');
-            }
-            return val;
-          }
-        });
-      },
-
-      initScrollAnimation: function () {
-        var animateBlock = $('.ab');
-
-        function animate() {
-          var animOffset = $(window).height() / 1.3;
-
-          animateBlock.each(function () {
-            var offset = $(this).offset().top;
-            if ($(this).hasClass('ab--b')) {
-              if (
-                offset <= window.scrollY + animOffset ||
-                $(this).hasClass('instant')
-              ) {
-                $(this).removeClass('ab--b');
-                if ($(this).hasClass('animate_count')) {
-                  var self = $(this);
-                  setTimeout(function () {
-                    bit.counter(self);
-                  }, 400);
-                }
-              }
-            }
-          });
-
-          var bg = $('.bg__js');
-          bg.each(function () {
-            var offset = $(this).offset().top;
-
-            if ($(this).hasClass('instant')) {
-              $(this).css(
-                'background-image',
-                'url(' + $(this).data('img') + ')',
-              );
-            }
-
-            var newOffset = 1.001;
-            if (window.scrollY > 10) {
-              newOffset = 0.5;
-            }
-            if (!$(this).hasClass('bg_done')) {
-              if (offset <= window.scrollY + $(window).height() / newOffset) {
-                if (!$(this).hasClass('img')) {
-                  var imgBg = 'url(' + $(this).data('img') + ')';
-                  $(this).css('background-image', imgBg);
-                } else {
-                  var imgBg = $(this).data('img');
-                  $(this).attr('src', imgBg);
-                }
-
-                $(this).addClass('bg_done');
-              }
-            }
-          });
-        }
-
-
-
-        var header = $('.header_js');
-
-        $(window).scroll(function () {
-          animate();
-          if (window.scrollY > 23) {
-            header.addClass('active');
-          } else {
-            header.removeClass('active');
-          }
-          if (window.scrollY > 100) {
-            $('.online-block').removeClass('active');
-          }
-
-          var bottom =
-            window.scrollY + window.innerHeight + $('.main-footer').height();
-
-          if (bottom + 20 > $(document).height()) {
-            var offsetBottom = bottom - $(document).height();
-            $('.main_nav_js, .online-block').css(
-              'transform',
-              'translateY(' + -offsetBottom + 'px)',
-            );
-          } else {
-            $('.main_nav_js, .online-block').css(
-              'transform',
-              'translateY(0px)',
-            );
-          }
-
-          if (window.scrollY > window.innerHeight || window.innerWidth < 600) {
-            $('.online-block').addClass('hidden');
-          } else {
-            $('.online-block').removeClass('hidden');
-          }
-        });
-
-        $('.online-block').on('mouseenter touchstart', function () {
-          $(this).removeClass('hidden');
-        });
-
-
-        setTimeout(function () {
-          animate();
-        }, 800);
-      },
-
-    },
-  );
-
-  bit.init();
-})(jQuery);
