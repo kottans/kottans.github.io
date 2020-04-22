@@ -252,7 +252,7 @@ window.bit = {
         let bottom = window.scrollY + window.innerHeight + document.querySelector('.main-footer').offsetHeight;
 
         if (bottom + 20 > document.body.clientHeight) {
-          var offsetBottom = bottom - $(document).height();
+          var offsetBottom = bottom - document.body.clientHeight;
 
           document.querySelector('.online-block').style.transform = `translateY(${-offsetBottom}px)`;
           document.querySelector('.main-nav').style.transform = `translateY(${-offsetBottom}px)`;
