@@ -1,138 +1,86 @@
-/* jshint node:true */
-'use strict';
+const gulp = require('gulp'),
+    browserSync = require('browser-sync').create(),
+    sass = require('gulp-sass'),
+    concat = require('gulp-concat'),
+    fileinclude = require('gulp-file-include'),
+    iconfont = require('gulp-iconfont');
 
-var gulp = require('gulp'),
-  webserver = require('gulp-webserver'),
-  livereload = require('gulp-livereload'),
-  fileinclude = require('gulp-file-include'),
-  autoprefixer = require('gulp-autoprefixer'),
-  sass = require('gulp-sass'),
-  cssnano = require('gulp-cssnano'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-  rename = require('gulp-rename'),
-  iconfont = require('gulp-iconfont'),
-  watch = require('gulp-watch');
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', () => {
+    return gulp.src(['assets/scss/style.scss'])
+        .pipe(sass())
+        .pipe(gulp.dest("build/assets/css"))
+        .pipe(browserSync.stream());
+});
 
-// Definitions
-var source = {
-  js: [
-    'assets/js/typed.js',
-    'assets/js/glider.min.js',
-    'assets/js/script.js',
-  ],
-};
-
-// Tasks
-// Webserver
-gulp.task('webserver', function () {
-  gulp.src('./').pipe(
-    webserver({
-      open: '/build',
-      livereload: true,
-      directoryListing: true,
-      fallback: 'index.html',
-    }),
-  );
+// Move the javascript files into our /src/js folder
+gulp.task('js', () => {
+    return gulp.src(
+        [
+            'assets/js/typed.js',
+            'assets/js/glider.min.js',
+            'assets/js/script.js',
+        ]
+    )
+        .pipe(concat('scripts.min.js'))
+        .pipe(gulp.dest("build/assets/js"))
+        .pipe(browserSync.stream());
 });
 
 // File include
-gulp.task('fileinclude', function () {
-  gulp
-    .src(['html-dev/*.html'])
-    .pipe(
-      fileinclude({
-        prefix: '@@',
-        basepath: 'html-dev/',
-      }),
-    )
-    .pipe(gulp.dest('build'))
-    .pipe(livereload({ start: true }));
-});
-
-// Styles
-gulp.task('sass', function () {
-  gulp
-    .src('assets/scss/style.scss')
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ['last 10 versions'],
-        cascade: false,
-      }),
-    )
-    .pipe(gulp.dest('build/assets/css'))
-    .pipe(livereload({ start: true }));
-});
-
-// Scripts
-gulp.task('scripts', function () {
-  gulp
-    .src(source.js)
-    .pipe(concat('scripts.min.js'))
-    // .pipe(uglify())
-    .pipe(gulp.dest('build/assets/js'))
-    .pipe(livereload({ start: true }));
+gulp.task('fileinclude', () => {
+    return gulp.src(['html-dev/*.html'])
+        .pipe(
+            fileinclude({
+                prefix: '@@',
+                basepath: 'html-dev/',
+            }),
+        )
+        .pipe(gulp.dest('build'))
+        .pipe(browserSync.stream());
 });
 
 // Fonts
-gulp.task('fonts', function () {
-  return gulp.src('assets/fonts/*').pipe(gulp.dest('build/assets/fonts'));
+gulp.task('fonts', () => {
+    return gulp.src('assets/fonts/*').pipe(gulp.dest('build/assets/fonts'));
 });
 
 // Iconfont
-gulp.task('Iconfont', function () {
-  return gulp
-    .src(['assets/img/icons/*.svg'])
-    .pipe(
-      iconfont({
-        fontName: 'iconFont',
-        prependUnicode: true,
-        formats: ['ttf', 'eot', 'woff', 'svg'],
-        normalize: true,
-        fontWeight: '300',
-        fontHeight: 100,
-        fixedWidth: false,
-        centerHorizontally: false,
-      }),
-    )
-    .pipe(gulp.dest('build/assets/fonts/'));
+gulp.task('Iconfont', () => {
+    return gulp
+        .src(['assets/img/icons/*.svg'])
+        .pipe(
+            iconfont({
+                fontName: 'iconFont',
+                prependUnicode: true,
+                formats: ['ttf', 'eot', 'woff', 'svg'],
+                normalize: true,
+                fontWeight: '300',
+                fontHeight: 100,
+                fixedWidth: false,
+                centerHorizontally: false,
+            }),
+        )
+        .pipe(gulp.dest('build/assets/fonts/'));
 });
 
-// images
-gulp.task('images', function () {
-  return gulp.src('assets/img/**/*').pipe(gulp.dest('build/assets/img/'));
+gulp.task('images', () => {
+    return gulp.src('assets/img/**/*').pipe(gulp.dest('build/assets/img/'));
 });
 
-// Watch
-gulp.task('watch', function () {
-  gulp.watch(['assets/scss/*.scss'], ['sass']);
-  gulp.watch(['assets/js/*.js'], ['scripts']);
-  gulp.watch(['assets/img/icons/*.svg'], ['Iconfont']);
-  gulp.watch(['html-dev/**/*.html'], ['fileinclude']);
-  gulp.watch(['assets/fonts/*.*'], ['fonts']);
-  gulp.watch(['assets/img/**/*'], ['images']);
-});
+// Static Server + watching scss/html files
+gulp.task('serve', gulp.series(['sass', 'js', 'fileinclude', 'fonts', 'Iconfont', 'Iconfont', 'images'], () => {
 
-// Default task
-gulp.task('default', [
-  'sass',
-  'scripts',
-  'Iconfont',
-  'fonts',
-  'fileinclude',
-  'images',
-  'webserver',
-  'watch',
-]);
+    browserSync.init({
+        server: "./build"
+    });
 
-/*
-.gitignore
+    gulp.watch(['assets/scss/*.scss'], gulp.series('sass'));
+    gulp.watch(['assets/js/*.js'], gulp.series('js'));
+    gulp.watch(['html-dev/**/*.html'], gulp.series('fileinclude'));
+    gulp.watch(['assets/fonts/*.*'], gulp.series('fonts'));
+    gulp.watch(['assets/img/icons/*.svg'], gulp.series('Iconfont'));
+    gulp.watch(['assets/img/**/*'], gulp.series('images'));
+}));
 
-.idea
-node_modules/
-.DS_Store
-.ftpconfig
-build/
-.vscode/
-*/
+gulp.task('default', gulp.parallel('serve'));

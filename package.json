@@ -14,10 +14,10 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-formatter-pretty": "^3.0.1",
-    "eslint-loader": "^4.0.0",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-prettier-config": "^1.0.1",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
     "gulp-cssnano": "latest",
@@ -31,10 +31,11 @@
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
     "gulp-webserver": "latest",
-    "prettier": "^2.0.2",
+    "prettier": "^2.0.5",
     "ttf2woff2": "latest"
   },
   "dependencies": {
+    "browser-sync": "^2.26.7",
     "npm": "^6.14.4"
   }
 }
