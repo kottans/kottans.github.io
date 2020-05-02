@@ -290,6 +290,9 @@
     font-weight: 600;
     position: relative;
     letter-spacing: -1px;
+    &:before{
+      display: none;
+    }
   }
   .btn-border {
     margin-top: 40px;

@@ -1,8 +1,177 @@
+{% set 
+  section = {
+    title: 'Reviews from graduates',
+    reviews: [
+      {
+        name: 'Mary Fedirko',
+        position: 'Front-end developer',
+        img: '14.jpg',
+        fullImg: '13.jpg',
+        text: [
+          {
+            p: 'It so happened that at some point I was surrounded by people
+            related to the IT industry.'
+          },
+          {
+            p: 'In conversations I have again and again heard topics that were
+            unclear to me, and, judging by those conversations, web
+            development was quite a creative job (and I love to be
+            creative).'
+          },
+          {
+            p: 'I challenged myself: "Can you do it?" And I got enrolled to
+            the course after diligently making all test assignments. Not
+            only do the Kottans explain the basics and repeat it a number
+            of times to make material completely clear, but they also help
+            to train self-organization very well (personally, my level has
+            risen). And this is a big family - there is always support in
+            chat rooms (if you’re stuck), informal outdoor parties, etc.'
+          },
+          {
+            p: 'And yes! I quickly found a job. Not after the first interview
+            (you need to acquire some experience points in passing the
+            interviews), but a housewife (with a long experience) without
+            formal education started to work as a Junior front-end
+            developer in the Ministry of Finance (and coded not only HTML
+            & CSS but did proper JS tasks).'
+          },
+          {
+            p: 'There is still a lot to learn, to grasp, to understand, and I
+            manage it more or less quickly - the main thing is the start,
+            and then it works like clock-work :)'
+          }
+        ]
+      },
+      {
+        name: 'Name Text 2',
+        position: 'Position 2',
+        img: '15.jpg',
+        fullImg: '15.jpg',
+        text: [
+        {
+        p: 'In conversations I have again and again heard topics that were
+        unclear to me, and, judging by those conversations, web
+        development was quite a creative job (and I love to be
+        creative).'
+        },
+        {
+        p: 'I challenged myself: "Can you do it?" And I got enrolled to
+        the course after diligently making all test assignments. Not
+        only do the Kottans explain the basics and repeat it a number
+        of times to make material completely clear, but they also help
+        to train self-organization very well (personally, my level has
+        risen). And this is a big family - there is always support in
+        chat rooms (if you’re stuck), informal outdoor parties, etc.'
+        },
+        {
+        p: 'And yes! I quickly found a job. Not after the first interview
+        (you need to acquire some experience points in passing the
+        interviews), but a housewife (with a long experience) without
+        formal education started to work as a Junior front-end
+        developer in the Ministry of Finance (and coded not only HTML
+        & CSS but did proper JS tasks).'
+        },
+        {
+        p: 'There is still a lot to learn, to grasp, to understand, and I
+        manage it more or less quickly - the main thing is the start,
+        and then it works like clock-work :)'
+        }
+        ]
+      },
+      {
+        name: 'Name Text 3',
+        position: 'Position 3',
+        img: '16.jpg',
+        fullImg: '16.jpg',
+        text: [
+        {
+        p: 'I challenged myself: "Can you do it?" And I got enrolled to
+        the course after diligently making all test assignments. Not
+        only do the Kottans explain the basics and repeat it a number
+        of times to make material completely clear, but they also help
+        to train self-organization very well (personally, my level has
+        risen). And this is a big family - there is always support in
+        chat rooms (if you’re stuck), informal outdoor parties, etc.'
+        },
+        {
+        p: 'And yes! I quickly found a job. Not after the first interview
+        (you need to acquire some experience points in passing the
+        interviews), but a housewife (with a long experience) without
+        formal education started to work as a Junior front-end
+        developer in the Ministry of Finance (and coded not only HTML
+        & CSS but did proper JS tasks).'
+        },
+        {
+        p: 'There is still a lot to learn, to grasp, to understand, and I
+        manage it more or less quickly - the main thing is the start,
+        and then it works like clock-work :)'
+        }
+        ]
+      },
+      {
+        name: 'Name Text 4',
+        position: 'Position 4',
+        img: '17.jpg',
+        fullImg: '17.jpg',
+        text: [
+        {
+        p: 'And yes! I quickly found a job. Not after the first interview
+        (you need to acquire some experience points in passing the
+        interviews), but a housewife (with a long experience) without
+        formal education started to work as a Junior front-end
+        developer in the Ministry of Finance (and coded not only HTML
+        & CSS but did proper JS tasks).'
+        },
+        {
+        p: 'There is still a lot to learn, to grasp, to understand, and I
+        manage it more or less quickly - the main thing is the start,
+        and then it works like clock-work :)'
+        }
+        ]
+      },
+      {
+        name: 'Name Text 5',
+        position: 'Position 5',
+        img: '18.jpg',
+        fullImg: '18.jpg',
+        text: [
+        {
+        p: 'It so happened that at some point I was surrounded by people
+        related to the IT industry.'
+        },
+        {
+        p: 'I challenged myself: "Can you do it?" And I got enrolled to
+        the course after diligently making all test assignments. Not
+        only do the Kottans explain the basics and repeat it a number
+        of times to make material completely clear, but they also help
+        to train self-organization very well (personally, my level has
+        risen). And this is a big family - there is always support in
+        chat rooms (if you’re stuck), informal outdoor parties, etc.'
+        },
+        {
+        p: 'And yes! I quickly found a job. Not after the first interview
+        (you need to acquire some experience points in passing the
+        interviews), but a housewife (with a long experience) without
+        formal education started to work as a Junior front-end
+        developer in the Ministry of Finance (and coded not only HTML
+        & CSS but did proper JS tasks).'
+        },
+        {
+        p: 'There is still a lot to learn, to grasp, to understand, and I
+        manage it more or less quickly - the main thing is the start,
+        and then it works like clock-work :)'
+        }
+        ]
+      }
+    ]
+  }  
+%}
+
 <section id="7" class="def-section target our-team-slider">
   <div class="wrap">
     <div class="def-section__inner">
       <div class="def-section__title def-section__title-small no-top-padding ab ab--b ab--right">
-        <h3>Reviews from graduates</h3>
+        <h3>{{section.title}}</h3>
       </div>
       <div class="def-section__content">
         <div class="reviews">
@@ -25,191 +194,23 @@
         <div class="reviews-content-wrap">
           <div class="reviews-content">
             <div class="reviews-content__people">
-              <div class="reviews-content__comment-icon comment_js active" data-full-img="assets/img/images/13.jpg"
-                data-name="Mary Fedirko" data-position="Front-end developer">
-                <div class="reviews-content__comment-inner bg bg__js" data-img="assets/img/images/14.jpg"></div>
+              {% for item in section.reviews %}
+              <div class="reviews-content__comment-icon comment_js {% if loop.index == 1%}active{% endif %}"
+                data-full-img="assets/img/images/{{item.fullImg}}" data-name="{{item.name}}"
+                data-position="{{item.position}}">
+                <div class="reviews-content__comment-inner bg bg__js" data-img="assets/img/images/{{item.img}}"></div>
               </div>
-              <div class="reviews-content__comment-icon comment_js" data-full-img="assets/img/images/15.jpg"
-                data-name=" Name Text 2" data-position="Position 2">
-                <div class="reviews-content__comment-inner bg bg__js" data-img="assets/img/images/15.jpg"></div>
-              </div>
-              <div class="reviews-content__comment-icon comment_js" data-full-img="assets/img/images/16.jpg"
-                data-name=" Name Text 3" data-position="Position 3">
-                <div class="reviews-content__comment-inner bg bg__js" data-img="assets/img/images/16.jpg"></div>
-              </div>
-              <div class="reviews-content__comment-icon comment_js" data-full-img="assets/img/images/17.jpg"
-                data-name=" Name Text 4" data-position="Position 4">
-                <div class="reviews-content__comment-inner bg bg__js" data-img="assets/img/images/17.jpg"></div>
-              </div>
-              <div class="reviews-content__comment-icon comment_js" data-full-img="assets/img/images/18.jpg"
-                data-name=" Name Text 5" data-position="Position 5">
-                <div class="reviews-content__comment-inner bg bg__js" data-img="assets/img/images/18.jpg"></div>
-              </div>
+              {% endfor %}
             </div>
             <div class="reviews-content__content">
-              <div class="reviews-content__content-item comment_text_js active content-rules">
-                <p>
-                  It so happened that at some point I was surrounded by people
-                  related to the IT industry.
-                </p>
-                <p>
-                  In conversations I have again and again heard topics that were
-                  unclear to me, and, judging by those conversations, web
-                  development was quite a creative job (and I love to be
-                  creative).
-                </p>
-                <p>
-                  I challenged myself: "Can you do it?" And I got enrolled to
-                  the course after diligently making all test assignments. Not
-                  only do the Kottans explain the basics and repeat it a number
-                  of times to make material completely clear, but they also help
-                  to train self-organization very well (personally, my level has
-                  risen). And this is a big family - there is always support in
-                  chat rooms (if you’re stuck), informal outdoor parties, etc.
-                </p>
-                <p>
-                  And yes! I quickly found a job. Not after the first interview
-                  (you need to acquire some experience points in passing the
-                  interviews), but a housewife (with a long experience) without
-                  formal education started to work as a Junior front-end
-                  developer in the Ministry of Finance (and coded not only HTML
-                  & CSS but did proper JS tasks).
-                </p>
-                <p>
-                  There is still a lot to learn, to grasp, to understand, and I
-                  manage it more or less quickly - the main thing is the start,
-                  and then it works like clock-work :)
-                </p>
+              {% for item in section.reviews %}
+              <div
+                class="reviews-content__content-item comment_text_js content-rules {% if loop.index == 1%}active{% endif %}">
+                {% for i in item.text %}
+                <p>{{i.p | safe}}</p>
+                {% endfor %}
               </div>
-              <div class="reviews-content__content-item comment_text_js content-rules">
-                <p>
-                  In conversations I have again and again heard topics that were
-                  unclear to me, and, judging by those conversations, web
-                  development was quite a creative job (and I love to be
-                  creative).
-                </p>
-                <p>
-                  I challenged myself: "Can you do it?" And I got enrolled to
-                  the course after diligently making all test assignments. Not
-                  only do the Kottans explain the basics and repeat it a number
-                  of times to make material completely clear, but they also help
-                  to train self-organization very well (personally, my level has
-                  risen). And this is a big family - there is always support in
-                  chat rooms (if you’re stuck), informal outdoor parties, etc.
-                </p>
-                <p>
-                  And yes! I quickly found a job. Not after the first interview
-                  (you need to acquire some experience points in passing the
-                  interviews), but a housewife (with a long experience) without
-                  formal education started to work as a Junior front-end
-                  developer in the Ministry of Finance (and coded not only HTML
-                  & CSS but did proper JS tasks).
-                </p>
-                <p>
-                  There is still a lot to learn, to grasp, to understand, and I
-                  manage it more or less quickly - the main thing is the start,
-                  and then it works like clock-work :)
-                </p>
-              </div>
-              <div class="reviews-content__content-item comment_text_js content-rules">
-                <p>
-                  It so happened that at some point I was surrounded by people
-                  related to the IT industry.
-                </p>
-                <p>
-                  And yes! I quickly found a job. Not after the first interview
-                  (you need to acquire some experience points in passing the
-                  interviews), but a housewife (with a long experience) without
-                  formal education started to work as a Junior front-end
-                  developer in the Ministry of Finance (and coded not only HTML
-                  & CSS but did proper JS tasks).
-                </p>
-                <p>
-                  There is still a lot to learn, to grasp, to understand, and I
-                  manage it more or less quickly - the main thing is the start,
-                  and then it works like clock-work :)
-                </p>
-              </div>
-              <div class="reviews-content__content-item comment_text_js content-rules">
-                <p>
-                  I challenged myself: "Can you do it?" And I got enrolled to
-                  the course after diligently making all test assignments. Not
-                  only do the Kottans explain the basics and repeat it a number
-                  of times to make material completely clear, but they also help
-                  to train self-organization very well (personally, my level has
-                  risen). And this is a big family - there is always support in
-                  chat rooms (if you’re stuck), informal outdoor parties, etc.
-                </p>
-                <p>
-                  And yes! I quickly found a job. Not after the first interview
-                  (you need to acquire some experience points in passing the
-                  interviews), but a housewife (with a long experience) without
-                  formal education started to work as a Junior front-end
-                  developer in the Ministry of Finance (and coded not only HTML
-                  & CSS but did proper JS tasks).
-                </p>
-                <p>
-                  There is still a lot to learn, to grasp, to understand, and I
-                  manage it more or less quickly - the main thing is the start,
-                  and then it works like clock-work :)
-                </p>
-              </div>
-              <div class="reviews-content__content-item comment_text_js content-rules">
-                <p>
-                  It so happened that at some point I was surrounded by people
-                  related to the IT industry.
-                </p>
-                <p>
-                  In conversations I have again and again heard topics that were
-                  unclear to me, and, judging by those conversations, web
-                  development was quite a creative job (and I love to be
-                  creative).
-                </p>
-                <p>
-                  I challenged myself: "Can you do it?" And I got enrolled to
-                  the course after diligently making all test assignments. Not
-                  only do the Kottans explain the basics and repeat it a number
-                  of times to make material completely clear, but they also help
-                  to train self-organization very well (personally, my level has
-                  risen). And this is a big family - there is always support in
-                  chat rooms (if you’re stuck), informal outdoor parties, etc.
-                </p>
-                <p>
-                  And yes! I quickly found a job. Not after the first interview
-                  (you need to acquire some experience points in passing the
-                  interviews), but a housewife (with a long experience) without
-                  formal education started to work as a Junior front-end
-                  developer in the Ministry of Finance (and coded not only HTML
-                  & CSS but did proper JS tasks).
-                </p>
-                <p>
-                  There is still a lot to learn, to grasp, to understand, and I
-                  manage it more or less quickly - the main thing is the start,
-                  and then it works like clock-work :)
-                </p>
-                <p>
-                  I challenged myself: "Can you do it?" And I got enrolled to
-                  the course after diligently making all test assignments. Not
-                  only do the Kottans explain the basics and repeat it a number
-                  of times to make material completely clear, but they also help
-                  to train self-organization very well (personally, my level has
-                  risen). And this is a big family - there is always support in
-                  chat rooms (if you’re stuck), informal outdoor parties, etc.
-                </p>
-                <p>
-                  And yes! I quickly found a job. Not after the first interview
-                  (you need to acquire some experience points in passing the
-                  interviews), but a housewife (with a long experience) without
-                  formal education started to work as a Junior front-end
-                  developer in the Ministry of Finance (and coded not only HTML
-                  & CSS but did proper JS tasks).
-                </p>
-                <p>
-                  There is still a lot to learn, to grasp, to understand, and I
-                  manage it more or less quickly - the main thing is the start,
-                  and then it works like clock-work :)
-                </p>
-              </div>
+              {% endfor %}
             </div>
           </div>
         </div>

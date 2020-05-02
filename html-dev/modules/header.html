@@ -1,3 +1,68 @@
+{% set 
+  header = {
+    socials: [
+      {
+        link: 'https://t.me/radio_kottans',
+        icon: 'tg'
+      },
+      {
+        link: 'https://github.com/kottans',
+        icon: 'gh'
+      },
+      {
+        link: 'https://www.youtube.com/channel/UCAiEMvHpDa7UACh_2tXw5YA',
+        icon: 'yt'
+      },
+      {
+        link: 'https://twitter.com/kottans_org',
+        icon: 'tw'
+      },
+      {
+        link: 'https://www.instagram.com/kottans_org',
+        icon: 'ig'
+      },
+      {
+        link: 'mailto:kottans.org@gmail.com',
+        icon: 'ml'
+      }
+    ],
+    nav: [
+      {
+        name: 'Hello, World!',
+        href: '#hero'
+      },
+      {
+        name: 'About Kottans',
+        href: '#about'
+      },
+      {
+        name: 'Courses',
+        href: '#courses'
+      },
+      {
+        name: 'F.A.Q.',
+        href: '#faq'
+      },
+      {
+        name: 'Create your own event',
+        href: '#platform'
+      },
+      {
+        name: 'Kottans core',
+        href: '#core'
+      },
+      {
+        name: 'Reviews from graduates',
+        href: '#reviews'
+      },
+      {
+        name: 'Our friends & partners',
+        href: '#partners'
+      }
+    ]
+  }  
+%}
+
 <header class="main-header">
   <div class="main-header__logo">
     <span class="eye eye--left"></span>
@@ -75,12 +140,9 @@
       </span>
     </a>
     <div class="socials">
-      <a href="https://t.me/radio_kottans" class="icon-tg" target="_blanc"></a>
-      <a href="https://github.com/kottans" class="icon-gh" target="_blanc"></a>
-      <a href="https://www.youtube.com/channel/UCAiEMvHpDa7UACh_2tXw5YA" class="icon-yt" target="_blanc"></a>
-      <a href="https://twitter.com/kottans_org" class="icon-tw" target="_blanc"></a>
-      <a href="https://www.instagram.com/kottans_org" class="icon-ig" target="_blanc"></a>
-      <a href="mailto:kottans.org@gmail.com" class="icon-ml" target="_blanc"></a>
+      {% for item in header.socials %}
+      <a href="{{item.link}}" class="icon-{{item.icon}}" target="_blanc"></a>
+      {% endfor %}
     </div>
     <button class="btn-mobile-menu mobile_menu_js">
       <span></span>
@@ -90,36 +152,25 @@
 
 <nav class="main-nav main_nav_js">
   <ul>
-    <li><a href="#hero" class="icon-arrow active" data-target="1">Hello, World!</a></li>
-    <li><a href="#about" class="icon-arrow" data-target="2">About Kottans</a></li>
-    <li><a href="#courses" class="icon-arrow" data-target="3">Courses</a></li>
-    <li><a href="#faq" class="icon-arrow" data-target="4">F.A.Q.</a></li>
-    <li><a href="#platform" class="icon-arrow" data-target="5">Create your own event</a></li>
-    <li><a href="#core" class="icon-arrow" data-target="6">Kottans core</a></li>
-    <li><a href="#reviews" class="icon-arrow" data-target="7">Reviews from graduates</a></li>
-    <li><a href="#partners" class="icon-arrow" data-target="8">Our friends & partners</a></li>
+    {% for item in header.nav %}
+    <li><a href="{{item.href}}" class="icon-arrow {% if loop.index == 1 %}active{% endif %}"
+        data-target="{{ loop.index }}">{{item.name}}</a></li>
+    {% endfor %}
   </ul>
 </nav>
 
 <div class="mob-menu main_nav_js">
   <div class="mob-menu__inner">
     <ul>
-      <li><a href="#hero" data-target="1">Hello, World!</a></li>
-      <li><a href="#about" data-target="2">About Kottans</a></li>
-      <li><a href="#courses" data-target="3">Courses</a></li>
-      <li><a href="#faq" data-target="4">F.A.Q.</a></li>
-      <li><a href="#platform" data-target="5">Create your own event</a></li>
-      <li><a href="#core" data-target="6">Kottans core</a></li>
-      <li><a href="#reviews" data-target="7">Reviews from graduates</a></li>
-      <li><a href="#partners" data-target="8">Our friends & partners</a></li>
+      {% for item in header.nav %}
+      <li><a href="{{item.href}}" class="icon-arrow {% if loop.index == 1  %}active{% endif %}"
+          data-target="{{ loop.index }}">{{item.name}}</a></li>
+      {% endfor %}
     </ul>
     <div class="socials">
-      <a href="https://t.me/radio_kottans" class="icon-tg" target="_blanc"></a>
-      <a href="https://github.com/kottans" class="icon-gh" target="_blanc"></a>
-      <a href="https://www.youtube.com/channel/UCAiEMvHpDa7UACh_2tXw5YA" class="icon-yt" target="_blanc"></a>
-      <a href="https://twitter.com/kottans_org" class="icon-tw" target="_blanc"></a>
-      <a href="https://www.instagram.com/kottans_org" class="icon-ig" target="_blanc"></a>
-      <a href="mailto:kottans.org@gmail.com" class="icon-ml" target="_blanc"></a>
+      {% for item in header.socials %}
+      <a href="{{item.link}}" class="icon-{{item.icon}}" target="_blanc"></a>
+      {% endfor %}
     </div>
   </div>
 </div>
