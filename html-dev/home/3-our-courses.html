@@ -1,8 +1,112 @@
+{% set
+  section = {
+    title: 'Our courses',
+    frontTitle: 'Front-End for Juniors',
+    frontStatus: 'online',
+    frontInfo: 'First part of the course have started and you can became part of it',
+    frontDate: 'Apr 13, 2020',
+    frontHourse: 52,
+    frontMin: 40,
+    frontTests: '5 Tests',
+    frontTitle: 'About Front-End Course',
+    frontText: "The course contains basics of front-end development: HTML, CSS, JS, and front-end frameworks. We plan to decrease the amount of lectures in favor of collective discussions, team projects & collective work …",
+    frontHiddenText: "Nevertheless, doing that on one's own can be challenging when it comes to continuing without support from surrounding people, such situation really beats the motivation, especially when encountering either boring or impossible to do (at first glance) task or illogical aspect of programming language you can't just grasp.",
+    frontTechnology: [
+      {
+        item: 'JavaScript'
+      },
+      {
+        item: 'HTML/CSS'
+      },
+      {
+        item: 'ReactJS'
+      }
+    ],
+    frontSkills: [
+      {
+       item: 'Pre-intermediate English'
+      },
+      {
+       item: 'basic HTML, CSS'
+      },
+      {
+        item: 'JavaScript basics'
+      }
+    ],
+
+    nodeTitle: 'NodeJS for Juniors',
+    nodeStatus: 'offline',
+    nodeInfo: 'First part of the course have started and you can became part of it',
+    nodeDate: 'Jan 31, 2020',
+    nodeHourse: 19,
+    nodeMin: 30,
+    nodeTests: '3 Tests',
+    nodeTitle: 'About Back-End Course',
+    nodeText: "The course contains basics of backend development: fundamentals of NodeJS or Golang and backend frameworks as well as
+    necessary computer science basics, network and protocols, database fundamentals etc …",
+    nodeHiddenText: "Nevertheless, doing that on one's own can be challenging when it comes to continuing without support from surrounding
+    people, such situation really beats the motivation, especially when encountering either boring or impossible to do (at
+    first glance) task or illogical aspect of programming language you can't just grasp.",
+    nodeTechnology: [
+    {
+    item: 'JavaScript'
+    },
+    {
+    item: 'ReactJS'
+    },
+    {
+    item: 'HTML/CSS'
+    }    
+    ],
+    nodeSkills: [
+    {
+    item: 'Pre-intermediate English'
+    },
+    {
+    item: 'JavaScript basics'
+    }
+    ],
+
+    activities: [
+      {
+        name: '<Input type=”meetup” />',
+        link: '##',
+        type: 'meetup',
+        day: 23,
+        date: '.05 .2020',
+        text: "23 травня, у суботу, Kottans та друзі планують провести мітап. Будуть доповіді на різні теми пов’язані з JavaScript -
+        бекенд, фронтенд або ще щось …",
+        hiddenText: "Nevertheless, doing that on one's own can be challenging when it comes to continuing without support from surrounding
+        people, such situation really beats the motivation, especially when encountering either boring or impossible to do (at
+        first glance) task or illogical aspect of programming language you can't just grasp.",
+        hours: '',
+        min: '',
+        tests: ''
+      },
+      {
+        name: 'YDKJS Kottans',
+        link: '#',
+        type: 'Mini course',
+        day: '01',
+        date: '.02 .2021',
+        text: "У нас виникла ідея створитити новий формат навчання й запрошуємо охочих доєднатися до групи. Ми будемо проходити книжки
+        You Don’t Know JS першого видання …",
+        hiddenText: "Nevertheless, doing that on one's own can be challenging when it comes to continuing without support from surrounding
+        people, such situation really beats the motivation, especially when encountering either boring or impossible to do (at
+        first glance) task or illogical aspect of programming language you can't just grasp.",
+        hours: 32,
+        min: 40,
+        tests: '3 Tests'
+      }
+    ]
+  }
+%}
+
 <section id="3" class="def-section target">
   <div class="wrap">
     <div class="def-section__inner">
       <div class="def-section__title ab ab--b ab--right">
-        <h3>Our courses</h3>
+        <h3>{{section.title}}</h3>
       </div>
       <div class="def-section__content visible-overflow">
         <div class="course">
@@ -128,20 +232,19 @@
                 <span>course</span>
               </div>
               <div class="course__top-name-text">
-                Front-End for Juniors
+                {{section.frontTitle}}
               </div>
-              <div class="status-block online">
+              <div class="status-block {{section.frontStatus}}">
                 <div class="status-block__title">
                   Status
                 </div>
                 <a href="#" class="status-block__inner">
                   <div class="status-block__inner-text">
-                    Online
+                    {{section.frontStatus}}
                   </div>
                   <span class="status-block__icon icon-info"></span>
                   <div class="info-block">
-                    First part of the course have started and you can became
-                    part of it
+                    {{section.frontInfo}}
                   </div>
                 </a>
               </div>
@@ -156,38 +259,30 @@
               </li>
               <li>
                 <div class="block-icon icon-calendar">
-                  Apr 13, 2020
+                  {{section.frontDate}}
                 </div>
               </li>
               <li>
                 <div class="block-icon icon-clock">
-                  52 <span>h</span> 40 <span>min</span>
+                  {{section.frontHourse}} <span>h</span> {{section.frontMin}} <span>min</span>
                 </div>
               </li>
               <li>
                 <div class="block-icon icon-list">
-                  5 Tests
+                  {{section.frontTests}}
                 </div>
               </li>
             </ul>
           </div>
           <div class="course__line">
             <div class="content-rules">
-              <h4>About Front-End Course</h4>
+              <h4>{{section.frontTitle}}</h4>
               <p>
-                The course contains basics of front-end development: HTML, CSS,
-                JS, and front-end frameworks. We plan to decrease the amount of
-                lectures in favor of collective discussions, team projects &
-                collective work …
+                {{section.frontText}}
               </p>
               <div class="content-rules__hidden hidden_js">
                 <p>
-                  Nevertheless, doing that on one's own can be challenging when
-                  it comes to continuing without support from surrounding
-                  people, such situation really beats the motivation, especially
-                  when encountering either boring or impossible to do (at first
-                  glance) task or illogical aspect of programming language you
-                  can't just grasp.
+                  {{section.frontHiddenText}}
                 </p>
               </div>
               <button data-hide="hide" data-show="read more" class="read-more read_more__js icon-arrow-bottom">
@@ -202,9 +297,9 @@
                   Technology
                 </div>
                 <ul>
-                  <li>JavaScript</li>
-                  <li>HTML/CSS</li>
-                  <li>ReactJS</li>
+                  {% for i in section.frontTechnology %}
+                  <li>{{i.item}}</li>
+                  {% endfor %}
                 </ul>
               </div>
               <div class="list">
@@ -212,9 +307,9 @@
                   Skills
                 </div>
                 <ul>
-                  <li>Pre-intermediate English</li>
-                  <li>basic HTML, CSS</li>
-                  <li>JavaScript basics</li>
+                  {% for i in section.frontSkills %}
+                  <li>{{i.item}}</li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>
@@ -477,20 +572,19 @@
                 <span>course</span>
               </div>
               <div class="course__top-name-text">
-                NodeJS for Juniors
+                {{section.nodeTitle}}
               </div>
               <div class="status-block red">
                 <div class="status-block__title">
                   Status
                 </div>
-                <a href="#" class="status-block__inner">
+                <a href="#" class="status-block__inner {{section.nodeStatus}}">
                   <div class="status-block__inner-text">
-                    Offline
+                    {{section.nodeStatus}}
                   </div>
                   <span class="status-block__icon icon-info"></span>
                   <div class="info-block">
-                    First part of the course have started and you can became
-                    part of it
+                    {{section.nodeInfo}}
                   </div>
                 </a>
               </div>
@@ -505,38 +599,30 @@
               </li>
               <li>
                 <div class="block-icon icon-calendar">
-                  Jan 31, 2020
+                  {{section.nodeDate}}
                 </div>
               </li>
               <li>
                 <div class="block-icon icon-clock">
-                  19 <span>h</span> 30 <span>min</span>
+                  {{section.nodeHourse}} <span>h</span> {{section.nodeMin}} <span>min</span>
                 </div>
               </li>
               <li>
                 <div class="block-icon icon-list">
-                  3 Tests
+                  {{section.nodeTests}}
                 </div>
               </li>
             </ul>
           </div>
           <div class="course__line">
             <div class="content-rules">
-              <h4>About Back-End Course</h4>
+              <h4>{{section.nodeTitle}}</h4>
               <p>
-                The course contains basics of backend development: fundamentals
-                of NodeJS or Golang and backend frameworks as well as necessary
-                computer science basics, network and protocols, database
-                fundamentals etc …
+                {{section.nodeText}}
               </p>
               <div class="content-rules__hidden hidden_js">
                 <p>
-                  Nevertheless, doing that on one's own can be challenging when
-                  it comes to continuing without support from surrounding
-                  people, such situation really beats the motivation, especially
-                  when encountering either boring or impossible to do (at first
-                  glance) task or illogical aspect of programming language you
-                  can't just grasp.
+                  {{section.nodeHiddenText}}
                 </p>
               </div>
               <button data-hide="hide" data-show="read more" class="read-more read_more__js icon-arrow-bottom">
@@ -551,9 +637,9 @@
                   Technology
                 </div>
                 <ul>
-                  <li>JavaScript</li>
-                  <li>ReactJS</li>
-                  <li>HTML/CSS</li>
+                  {% for i in section.nodeTechnology %}
+                  <li>{{i.item}}</li>
+                  {% endfor %}
                 </ul>
               </div>
               <div class="list">
@@ -561,8 +647,9 @@
                   Skills
                 </div>
                 <ul>
-                  <li>Pre-intermediate English</li>
-                  <li>JavaScript basics</li>
+                  {% for i in section.nodeSkills %}
+                  <li>{{i.item}}</li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>
@@ -593,10 +680,12 @@
             <img class="bg__js img" data-img="assets/img/svg/other.svg" alt="" />
           </div>
           <div class="other-block__inner">
+
+            {% for item in section.activities %}
             <div class="item-other ab ab--b">
               <div class="item-other__header">
-                <div class="item-other__date"><span>23</span>.05 .2020</div>
-                <a href="#" class="item-other__link icon-arrow-bottom">
+                <div class="item-other__date"><span>{{item.day}}</span>{{item.date}}</div>
+                <a href="{{item.link}}" class="item-other__link icon-arrow-bottom">
                   <span class="item-other__link-text">Check details</span>
                   <span class="item-other__link-dots">
                     <span></span>
@@ -605,76 +694,34 @@
                   </span>
                 </a>
               </div>
-              <a href="#" class="item-other__title">
-                <div class="small-tag">meetup</div>
-                &lt;Input type=”meetup” /&gt;
-              </a>
-              <div class="item-other__content">
-                <div class="content-rules">
-                  <p>
-                    23 травня, у суботу, Kottans та друзі планують провести
-                    мітап. Будуть доповіді на різні теми пов’язані з JavaScript
-                    - бекенд, фронтенд або ще щось …
-                  </p>
-                  <div class="content-rules__hidden hidden_js">
-                    <p>
-                      Nevertheless, doing that on one's own can be challenging
-                      when it comes to continuing without support from
-                      surrounding people, such situation really beats the
-                      motivation, especially when encountering either boring or
-                      impossible to do (at first glance) task or illogical
-                      aspect of programming language you can't just grasp.
-                    </p>
-                  </div>
-                  <button data-hide="hide" data-show="read more" class="read-more read_more__js icon-arrow-bottom">
-                    read more
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="item-other ab ab--b">
-              <div class="item-other__header">
-                <div class="item-other__date"><span>01</span>.02 .2021</div>
-                <a href="#" class="item-other__link icon-arrow-bottom">
-                  <span class="item-other__link-text">Check details</span>
-                  <span class="item-other__link-dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </span>
-                </a>
-              </div>
-              <a href="#" class="item-other__title">
-                <div class="small-tag">Mini course</div>
-                YDKJS Kottans
+              <a href="{{item.link}}" class="item-other__title">
+                <div class="small-tag">{{item.type}}</div>
+                {{item.name}}
               </a>
               <ul class="main-info">
+                {% if item.hours %}
                 <li>
                   <div class="block-icon icon-clock">
                     32 <span>h</span> 40 <span>min</span>
                   </div>
                 </li>
+                {% endif %}
+                {% if item.tests %}
                 <li>
                   <div class="block-icon icon-list">
                     3 Tests
                   </div>
                 </li>
+                {% endif %}
               </ul>
               <div class="item-other__content">
                 <div class="content-rules">
                   <p>
-                    У нас виникла ідея створитити новий формат навчання й
-                    запрошуємо охочих доєднатися до групи. Ми будемо проходити
-                    книжки You Don’t Know JS першого видання …
+                    {{item.text}}
                   </p>
                   <div class="content-rules__hidden hidden_js">
                     <p>
-                      Nevertheless, doing that on one's own can be challenging
-                      when it comes to continuing without support from
-                      surrounding people, such situation really beats the
-                      motivation, especially when encountering either boring or
-                      impossible to do (at first glance) task or illogical
-                      aspect of programming language you can't just grasp.
+                      {{item.hiddenText}}
                     </p>
                   </div>
                   <button data-hide="hide" data-show="read more" class="read-more read_more__js icon-arrow-bottom">
@@ -683,6 +730,8 @@
                 </div>
               </div>
             </div>
+            {% endfor %}
+
           </div>
         </div>
       </div>

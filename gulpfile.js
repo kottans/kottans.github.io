@@ -3,7 +3,8 @@ const gulp = require('gulp'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
     fileinclude = require('gulp-file-include'),
-    iconfont = require('gulp-iconfont');
+    iconfont = require('gulp-iconfont'),
+    nunjucksRender = require('gulp-nunjucks-render');
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', () => {
@@ -36,6 +37,9 @@ gulp.task('fileinclude', () => {
                 basepath: 'html-dev/',
             }),
         )
+        .pipe(nunjucksRender({
+            path: ['build']
+        }))
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
 });
@@ -67,6 +71,14 @@ gulp.task('Iconfont', () => {
 gulp.task('images', () => {
     return gulp.src('assets/img/**/*').pipe(gulp.dest('build/assets/img/'));
 });
+
+// gulp.task('default', () => {
+//     return gulp.src('html-dev/*.html')
+//         .pipe(nunjucksRender({
+//             path: ['src/templates/'] // String or Array
+//         }))
+//         .pipe(gulp.dest('build'));
+// });
 
 // Static Server + watching scss/html files
 gulp.task('serve', gulp.series(['sass', 'js', 'fileinclude', 'fonts', 'Iconfont', 'Iconfont', 'images'], () => {

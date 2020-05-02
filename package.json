@@ -20,22 +20,15 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
-    "gulp-cssnano": "latest",
     "gulp-file-include": "latest",
     "gulp-iconfont": "latest",
-    "gulp-imagemin": "latest",
-    "gulp-livereload": "latest",
-    "gulp-rename": "latest",
     "gulp-sass": "latest",
-    "gulp-stylus": "latest",
-    "gulp-uglify": "latest",
-    "gulp-watch": "latest",
-    "gulp-webserver": "latest",
-    "prettier": "^2.0.5",
-    "ttf2woff2": "latest"
+    "gulp-watch": "latest"
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
-    "npm": "^6.14.4"
+    "gulp-nunjucks-render": "^2.2.3",
+    "npm": "^6.14.4",
+    "nunjucks": "^3.2.1"
   }
 }

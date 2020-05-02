@@ -1,89 +1,109 @@
+{% set
+  section = {
+    title: 'Create your own event',
+    subtitle: 'Community driven knowledge sharing platform',
+    nambers: [
+      {
+        title: 'Members',
+        number: 4
+      },
+      {
+        title: 'Courses',
+        number: 22
+      },
+      {
+        title: 'Years',
+        number: 7
+      },
+      {
+        title: 'Meetups',
+        number: 2
+      },
+      {
+        title: 'Conference',
+        number: 1
+      }
+    ],
+    description: [
+      {
+        p: "<b>Because we are not</b> affiliated to any company, we are
+        absolutely neutral platform for any events and we can help you
+        with organization of one."
+      },
+      {
+        p: "We have a lot of experience in conducting of courses, meetups and conferences as well."
+      },
+      {
+        p: "If you want to create your own community or your event, but don't know how to do it or don't want to do it alone - we
+        can help you!"
+      },
+      {
+        p: "Starting from consultation and ending with help in looking for the place, team, partners or sponsorship. Also, because
+        we have a large community, we can be media-partner for your event."
+      },
+      {
+        p: "But we have only one pre-request - your event must be free or at least non-profit."
+      }
+    ],
+
+    ownEventTitle: 'You want us to help you hold an event?',
+    ownEventLink: '#',
+    plates: [
+      {
+        img: '1.png',
+        link: '#',
+        text: 'Conference with a bunch of short reports from people working in IT for people who just want to try'
+      },
+      {
+        img: '2.png',
+        link: '#',
+        text: 'Conference with a bunch of short reports from people working in IT for people who just want to try'
+      },
+      {
+        img: '3.png',
+        link: '#',
+        text: 'Conference with a bunch of short reports from people working in IT for people who just want to try'
+      }
+    ]
+  }
+%}
+
 <section id="5" class="def-section target your-own-event">
   <div class="wrap">
     <div class="def-section__inner">
       <div class="def-section__title def-section__title-small no-top-padding ab ab--b ab--right">
-        <h3>Create your own event</h3>
+        <h3>{{section.title}}</h3>
       </div>
       <div class="def-section__content">
         <div class="your-event">
           <h4 class="your-event__top-title">
-            Community driven knowledge sharing platform
+            {{section.subtitle}}
           </h4>
           <div class="nambers-block">
+            {% for item in section.nambers %}
             <div class="nambers-block__item">
               <div class="nambers-block__namber">
-                <span class="count_js animate_count ab ab--b" data-count="4">0</span>k+
+                <span class="count_js animate_count ab ab--b" data-count="{{item.number}}">0</span>k+
               </div>
               <div class="nambers-block__title">
-                Members
+                {{item.title}}
               </div>
             </div>
-            <div class="nambers-block__item">
-              <div class="nambers-block__namber">
-                <span class="count_js animate_count ab ab--b" data-count="20">0</span>+
-              </div>
-              <div class="nambers-block__title">
-                Courses
-              </div>
-            </div>
-            <div class="nambers-block__item">
-              <div class="nambers-block__namber">
-                <span class="count_js animate_count ab ab--b" data-count="7">0</span>
-              </div>
-              <div class="nambers-block__title">
-                Years
-              </div>
-            </div>
-            <div class="nambers-block__item">
-              <div class="nambers-block__namber">
-                <span class="count_js animate_count ab ab--b" data-count="2">0</span>
-              </div>
-              <div class="nambers-block__title">
-                Meetups
-              </div>
-            </div>
-            <div class="nambers-block__item">
-              <div class="nambers-block__namber">
-                <span class="count_js animate_count ab ab--b" data-count="1">0</span>
-              </div>
-              <div class="nambers-block__title">
-                Conference
-              </div>
-            </div>
+            {% endfor %}
           </div>
           <div class="your-event__text">
             <div class="your-event__text-inner content-rules">
-              <p>
-                <b>Because we are not</b> affiliated to any company, we are
-                absolutely neutral platform for any events and we can help you
-                with organization of one.
-              </p>
-              <p>
-                We have a lot of experience in conducting of courses, meetups
-                and conferences as well.
-              </p>
-              <p>
-                If you want to create your own community or your event, but
-                don't know how to do it or don't want to do it alone - we can
-                help you!
-              </p>
-              <p>
-                Starting from consultation and ending with help in looking for
-                the place, team, partners or sponsorship. Also, because we have
-                a large community, we can be media-partner for your event.
-              </p>
-              <p>
-                But we have only one pre-request - your event must be free or at
-                least non-profit.
-              </p>
+              {% for item in section.description %}
+              <p>{{item.p | safe}}</p>
+              {% endfor %}
             </div>
           </div>
           <div class="your-event__conduct">
             <div class="your-event__conduct-title">
-              You want us to help you hold an event?
+              {{section.ownEventTitle}}
             </div>
             <div class="your-event__conduct-btn">
-              <a href="#" target="_blank" class="btn-default btn-default--big">
+              <a href="{{section.ownEventLink}}" target="_blank" class="btn-default btn-default--big">
                 <span class="btn-default__inner">
                   Conduct own event
                 </span>
@@ -91,16 +111,16 @@
             </div>
           </div>
           <div class="plates">
-            <a href="#" class="plate">
+            {% for item in section.plates %}
+            <a href="{{item.link}}" class="plate">
               <div class="plate__inner">
                 <div class="plate__img">
                   <div class="plate__img-inner">
-                    <img data-img="assets/img/images/1.png" class="bg__js img" alt="" />
+                    <img data-img="assets/img/images/{{item.img}}" class="bg__js img" alt="" />
                   </div>
                 </div>
                 <div class="plate__text">
-                  Conference with a bunch of short reports from people working
-                  in IT for people who just want to try
+                  {{item.text}}
                 </div>
                 <div class="plate__btn">
                   <div class="plate__btn-inner">
@@ -110,44 +130,7 @@
                 </div>
               </div>
             </a>
-            <a href="#" class="plate">
-              <div class="plate__inner">
-                <div class="plate__img">
-                  <div class="plate__img-inner">
-                    <img data-img="assets/img/images/2.png" class="bg__js img" alt="" />
-                  </div>
-                </div>
-                <div class="plate__text">
-                  Conference with a bunch of short reports from people working
-                  in IT for people who just want to try
-                </div>
-                <div class="plate__btn">
-                  <div class="plate__btn-inner">
-                    Open the site
-                  </div>
-                  <span class="plate__btn-icon icon-arrow-bottom"></span>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="plate">
-              <div class="plate__inner">
-                <div class="plate__img">
-                  <div class="plate__img-inner">
-                    <img data-img="assets/img/images/3.png" class="bg__js img" alt="" />
-                  </div>
-                </div>
-                <div class="plate__text">
-                  Conference with a bunch of short reports from people working
-                  in IT for people who just want to try
-                </div>
-                <div class="plate__btn">
-                  <div class="plate__btn-inner">
-                    Open the site
-                  </div>
-                  <span class="plate__btn-icon icon-arrow-bottom"></span>
-                </div>
-              </div>
-            </a>
+            {% endfor %}
           </div>
         </div>
       </div>

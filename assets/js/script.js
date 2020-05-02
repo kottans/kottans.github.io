@@ -32,7 +32,8 @@ window.bit = {
       backDelay: 1500,
     };
 
-    var typed = new Typed('.typed_js', options);
+    let typedBlock = document.querySelector('.typed_js');
+    if (typedBlock) var typed = new Typed('.typed_js', options);
   },
 
   initMenu: () => {
@@ -103,11 +104,12 @@ window.bit = {
 
   initOnlineToggle: () => {
     let onlineToggleBtn = document.querySelector('.online_toggle_js');
-    onlineToggleBtn.addEventListener('click', el => {
+    onlineToggleBtn && onlineToggleBtn.addEventListener('click', el => {
       el.target.closest('.online-block').classList.toggle('active');
     });
 
     setTimeout(function () {
+      if (!onlineToggleBtn) return false;
       document.querySelector('.online-block').classList.add('visible');
       document.querySelector('.online-block').classList.remove('hidden');
     }, 2000);
@@ -165,6 +167,8 @@ window.bit = {
   initTeamSlider: () => {
     let teamSlider = document.querySelector('.our_team_slider_js');
 
+    if (!teamSlider) return false;
+
     new Glider(teamSlider, {
       dots: '.dots-block',
       draggable: true,
@@ -194,6 +198,8 @@ window.bit = {
 
   initMentorsSlider: () => {
     let mentorsSlider = document.querySelectorAll('.mentors_slider_js');
+
+    if (!mentorsSlider) return false;
 
     mentorsSlider.forEach((slider, i) => {
       slider.insertAdjacentHTML('afterend', `<div class="dots_block_${i + 1}"></div>`);
@@ -225,6 +231,8 @@ window.bit = {
 
   initScrollTarget: () => {
     let targetItems = document.querySelectorAll('.target');
+    if (!targetItems) return false;
+
     document.addEventListener('scroll', () => {
       targetItems.forEach(item => {
         if (window.scrollY >= item.offsetTop - 62 && window.scrollY < item.offsetTop + item.offsetHeight) {
@@ -237,7 +245,7 @@ window.bit = {
 
   initOnlineBlock: () => {
     let onlineBlock = document.querySelector('.online-block');
-    onlineBlock.addEventListener('mouseenter', () => {
+    onlineBlock && onlineBlock.addEventListener('mouseenter', () => {
       onlineBlock.classList.remove('hidden');
     });
   },
