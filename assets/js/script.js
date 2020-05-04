@@ -252,6 +252,7 @@ window.bit = {
 
   initScrollEvents: () => {
     let header = document.querySelector('.header_js');
+    let mainHeader = document.querySelector('.main-nav');
 
     document.addEventListener('scroll', () => {
       window.scrollY > 23 ? header.classList.add('active') : header.classList.remove('active');
@@ -263,9 +264,9 @@ window.bit = {
         var offsetBottom = bottom - document.body.clientHeight;
 
         document.querySelector('.online-block').style.transform = `translateY(${-offsetBottom}px)`;
-        document.querySelector('.main-nav').style.transform = `translateY(${-offsetBottom}px)`;
+        if (mainHeader) mainHeader.style.transform = `translateY(${-offsetBottom}px)`;
       } else {
-        document.querySelector('.main-nav').style.transform = `translateY(0px)`;
+        if (mainHeader) mainHeader.style.transform = `translateY(0px)`;
         document.querySelector('.online-block').style.transform = `translateY(0px)`;
       }
 
