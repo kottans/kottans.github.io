@@ -15,6 +15,7 @@ window.bit = {
     bit.initOnlineBlock();
     bit.initScrollEvents();
     bit.initScrollAnimation();
+    bit.initSchedule();
   },
 
   initTyped: () => {
@@ -337,6 +338,19 @@ window.bit = {
     setTimeout(function () {
       animate();
     }, 800);
+  },
+
+  initSchedule: () => {
+    let dateItem = document.querySelectorAll('.schedule__tab');
+
+    dateItem.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        document.querySelector('.schedule__tab.active').classList.remove('active');
+        item.classList.add('active');
+        document.querySelector('.schedule__day.active').classList.remove('active');
+        document.querySelector(`.schedule__day:nth-child(${i + 1}n)`).classList.add('active');
+      });
+    });
   }
 
 }
