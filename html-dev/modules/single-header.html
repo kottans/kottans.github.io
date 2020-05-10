@@ -17,6 +17,9 @@
         name: 'Location'
       },
       {
+        name: 'Venue'
+      },
+      {
         name: 'Testimonials'
       },
       {
@@ -27,7 +30,7 @@
 %}
 
 <header class="main-header">
-  <div class="main-header__inner header-single header_js">
+  <div class="main-header__inner header-single header_js scroll_nav_js">
     <div class="main-header__logo">
       <span class="eye eye--left"></span>
       <span class="eye eye--right"></span>
@@ -100,7 +103,7 @@
         </g>
       </svg>
     </div>
-    <ul class="new-nav">
+    <ul class="new-nav main_nav_click_js">
       {% for item in header.nav %}
       <li><a href="" class="{% if loop.index == 1  %}active{% endif %}" data-target="{{ loop.index }}">{{item.name}}</a>
       </li>
@@ -117,7 +120,7 @@
   </div>
 </header>
 
-<div class="mob-menu main_nav_js">
+<div class="mob-menu main_nav_js main_nav_click_js">
   <div class="mob-menu__inner">
     <ul>
       {% for item in header.nav %}

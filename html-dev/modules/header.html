@@ -150,7 +150,7 @@
   </div>
 </header>
 
-<nav class="main-nav main_nav_js">
+<nav class="main-nav main_nav_js scroll_nav_js main_nav_click_js">
   <ul>
     {% for item in header.nav %}
     <li><a href="{{item.href}}" class="icon-arrow {% if loop.index == 1 %}active{% endif %}"
@@ -159,7 +159,7 @@
   </ul>
 </nav>
 
-<div class="mob-menu main_nav_js">
+<div class="mob-menu main_nav_js main_nav_click_js">
   <div class="mob-menu__inner">
     <ul>
       {% for item in header.nav %}
