@@ -4,12 +4,16 @@ const gulp = require('gulp'),
     concat = require('gulp-concat'),
     fileinclude = require('gulp-file-include'),
     iconfont = require('gulp-iconfont'),
-    nunjucksRender = require('gulp-nunjucks-render');
+    nunjucksRender = require('gulp-nunjucks-render'),
+    uglify = require("gulp-uglify-es").default,
+    postcss = require("gulp-postcss"),
+    cssnano = require("cssnano");
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', () => {
     return gulp.src(['assets/scss/style.scss'])
         .pipe(sass())
+        .pipe(postcss([cssnano()])) // for prod
         .pipe(gulp.dest("build/assets/css"))
         .pipe(browserSync.stream());
 });
@@ -24,6 +28,7 @@ gulp.task('js', () => {
         ]
     )
         .pipe(concat('scripts.min.js'))
+        .pipe(uglify()) // for prod
         .pipe(gulp.dest("build/assets/js"))
         .pipe(browserSync.stream());
 });
@@ -41,6 +46,22 @@ gulp.task('fileinclude', () => {
             path: ['build']
         }))
         .pipe(gulp.dest('build'))
+        .pipe(browserSync.stream());
+});
+
+// File include for events
+gulp.task('eventsfileinclude', () => {
+    return gulp.src(['html-dev/events/*.html'])
+        .pipe(
+            fileinclude({
+                prefix: '@@',
+                basepath: 'html-dev/events/',
+            }),
+        )
+        .pipe(nunjucksRender({
+            path: ['build']
+        }))
+        .pipe(gulp.dest('build/events'))
         .pipe(browserSync.stream());
 });
 
@@ -72,16 +93,8 @@ gulp.task('images', () => {
     return gulp.src('assets/img/**/*').pipe(gulp.dest('build/assets/img/'));
 });
 
-// gulp.task('default', () => {
-//     return gulp.src('html-dev/*.html')
-//         .pipe(nunjucksRender({
-//             path: ['src/templates/'] // String or Array
-//         }))
-//         .pipe(gulp.dest('build'));
-// });
-
 // Static Server + watching scss/html files
-gulp.task('serve', gulp.series(['sass', 'js', 'fileinclude', 'fonts', 'Iconfont', 'Iconfont', 'images'], () => {
+gulp.task('serve', gulp.series(['sass', 'js', 'fileinclude', 'eventsfileinclude', 'fonts', 'Iconfont', 'Iconfont', 'images'], () => {
 
     browserSync.init({
         server: "./build"
@@ -90,6 +103,7 @@ gulp.task('serve', gulp.series(['sass', 'js', 'fileinclude', 'fonts', 'Iconfont'
     gulp.watch(['assets/scss/*.scss'], gulp.series('sass'));
     gulp.watch(['assets/js/*.js'], gulp.series('js'));
     gulp.watch(['html-dev/**/*.html'], gulp.series('fileinclude'));
+    gulp.watch(['html-dev/events/*.html'], gulp.series('eventsfileinclude'));
     gulp.watch(['assets/fonts/*.*'], gulp.series('fonts'));
     gulp.watch(['assets/img/icons/*.svg'], gulp.series('Iconfont'));
     gulp.watch(['assets/img/**/*'], gulp.series('images'));
