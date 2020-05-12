@@ -226,6 +226,10 @@
 
 .header-single{
     padding: 0 15px;
+    transition: all 0.25s;
+    &:hover{
+        background: rgba(#fff, 0.8);
+    }
     .main-header__logo{
         left: 15px;
         transform: translate(-80px, -50%) scale(.75);

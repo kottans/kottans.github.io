@@ -26,7 +26,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "latest",
     "gulp-uglify": "^3.0.2",
-    "gulp-watch": "latest",
+    "gulp-watch": "latest"
   },
   "dependencies": {
     "browser-sync": "^2.26.7",

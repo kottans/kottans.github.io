@@ -13,7 +13,6 @@ const gulp = require('gulp'),
 gulp.task('sass', () => {
     return gulp.src(['assets/scss/style.scss'])
         .pipe(sass())
-        .pipe(postcss([cssnano()])) // for prod
         .pipe(gulp.dest("build/assets/css"))
         .pipe(browserSync.stream());
 });
@@ -28,7 +27,6 @@ gulp.task('js', () => {
         ]
     )
         .pipe(concat('scripts.min.js'))
-        .pipe(uglify()) // for prod
         .pipe(gulp.dest("build/assets/js"))
         .pipe(browserSync.stream());
 });
@@ -94,7 +92,7 @@ gulp.task('images', () => {
 });
 
 // Static Server + watching scss/html files
-gulp.task('serve', gulp.series(['sass', 'js', 'fileinclude', 'eventsfileinclude', 'fonts', 'Iconfont', 'Iconfont', 'images'], () => {
+gulp.task('serve', gulp.series(['sass', 'js', 'fileinclude', 'eventsfileinclude', 'fonts', 'Iconfont', 'images'], () => {
 
     browserSync.init({
         server: "./build"
@@ -110,3 +108,57 @@ gulp.task('serve', gulp.series(['sass', 'js', 'fileinclude', 'eventsfileinclude'
 }));
 
 gulp.task('default', gulp.parallel('serve'));
+
+// build for prod
+
+gulp.task('sassbuild', () => {
+    return gulp.src(['assets/scss/style.scss'])
+        .pipe(sass())
+        .pipe(postcss([cssnano()]))
+        .pipe(gulp.dest("build/assets/css"));
+});
+
+gulp.task('jsbuild', () => {
+    return gulp.src(
+        [
+            'assets/js/typed.js',
+            'assets/js/glider.min.js',
+            'assets/js/script.js',
+        ]
+    )
+        .pipe(concat('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest("build/assets/js"));
+});
+
+gulp.task('fileincludebuild', () => {
+    return gulp.src(['html-dev/*.html'])
+        .pipe(
+            fileinclude({
+                prefix: '@@',
+                basepath: 'html-dev/',
+            }),
+        )
+        .pipe(nunjucksRender({
+            path: ['build']
+        }))
+        .pipe(gulp.dest('build'));
+});
+
+gulp.task('eventsfileincludebuild', () => {
+    return gulp.src(['html-dev/events/*.html'])
+        .pipe(
+            fileinclude({
+                prefix: '@@',
+                basepath: 'html-dev/events/',
+            }),
+        )
+        .pipe(nunjucksRender({
+            path: ['build']
+        }))
+        .pipe(gulp.dest('build/events'));
+});
+
+gulp.task('servebuild', gulp.series(['sassbuild', 'jsbuild', 'fileincludebuild', 'eventsfileincludebuild', 'fonts', 'Iconfont', 'images']));
+
+gulp.task('build', gulp.parallel('servebuild'));
