@@ -358,14 +358,14 @@
             height: 240px;
         }
     }
-    .nambers-block{
+    .numbers-block{
         padding-top: 80px;
         margin-bottom: 0;
         @media (max-width: 1400px) {
             padding-top: 20px;
         }
     }
-    .nambers-block__item{
+    .numbers-block__item{
         text-align: left;
         margin-right: 100px;
         margin-bottom: 0;
@@ -373,7 +373,7 @@
             margin-right: 0px;
         }
     }
-    .nambers-block__namber{
+    .numbers-block__number{
         @media (max-width: 1400px) {
             font-size: 40px;
         }

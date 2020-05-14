@@ -10,7 +10,7 @@
                 p: 'We are passionate about programming and think that everybody can pick it up.'
             }
         ],
-        nambers: [
+        numbers: [
             {
                 title: 'React fans and guests',
                 number: 24,
@@ -44,14 +44,14 @@
                 {% for item in section.content %}
                 <p>{{item.p}}</p>
                 {% endfor %}
-                <div class="nambers-block">
-                    {% for item in section.nambers %}
-                    <div class="nambers-block__item">
-                        <div class="nambers-block__namber">
+                <div class="numbers-block">
+                    {% for item in section.numbers %}
+                    <div class="numbers-block__item">
+                        <div class="numbers-block__number">
                             <span class="count_js animate_count ab ab--b"
                                 data-count="{{item.number}}">0</span>{{item.end}}
                         </div>
-                        <div class="nambers-block__title">
+                        <div class="numbers-block__title">
                             {{item.title}}
                         </div>
                     </div>

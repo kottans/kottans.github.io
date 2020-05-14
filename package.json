@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "ghpages": "git subtree push --prefix build origin gh-pages",
-    "build": "gulp build --production",
+    "build": "gulp build",
     "start": "gulp",
     "lint": "eslint --cache --format=pretty \"**/*.js\"",
     "lint-fix": "npm run lint -- --fix",
