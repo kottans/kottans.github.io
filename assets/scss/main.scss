@@ -641,6 +641,40 @@
       background: #ff5648;
     }
   }
+  &.self-study {
+    .status-block__inner {
+      border-color: black;
+      color: black;
+      &:before {
+        content: '';
+        transition: all 0.25s;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%;
+        background: black;
+        height: 100%;
+      }
+      &:after {
+        background: black;
+        transform-origin: 50% 50%;
+        animation: pulse 1.2s linear 0s infinite normal;
+        top: 40%;
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+        color: #fff;
+        &:after {
+          background: #fff;
+        }
+      }
+    }
+    .status-block__icon {
+      background: black;
+    }
+  }
 }
 
 .info-block {

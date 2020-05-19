@@ -2,12 +2,11 @@
   section = {
     title: 'Our courses',
     frontTitle: 'Front-End for Juniors',
-    frontStatus: 'online',
-    frontInfo: 'First part of the course have started and you can became part of it',
-    frontDate: 'Apr 13, 2020',
-    frontHourse: 52,
-    frontMin: 40,
-    frontTests: '5 Tests',
+    frontStatus: 'self-study',
+    frontInfo: 'Program of course is available for self-study',
+    frontDate: 'TBA',
+    frontDuration: 4,
+    frontTests: '15 Tasks',
     frontTitle: 'About Front-End Course',
     frontText: "The course contains basics of front-end development: HTML, CSS, JS, and front-end frameworks. We plan to decrease the amount of lectures in favor of collective discussions, team projects & collective work …",
     frontHiddenText: "Nevertheless, doing that on one's own can be challenging when it comes to continuing without support from surrounding people, such situation really beats the motivation, especially when encountering either boring or impossible to do (at first glance) task or illogical aspect of programming language you can't just grasp.",
@@ -27,7 +26,7 @@
        item: 'Pre-intermediate English'
       },
       {
-       item: 'basic HTML, CSS'
+       item: 'Basic HTML, CSS'
       },
       {
         item: 'JavaScript basics'
@@ -35,12 +34,11 @@
     ],
 
     nodeTitle: 'NodeJS for Juniors',
-    nodeStatus: 'offline',
-    nodeInfo: 'First part of the course have started and you can became part of it',
+    nodeStatus: 'self-study',
+    nodeInfo: 'Program of course is available for self-study',
     nodeDate: 'Jan 31, 2020',
-    nodeHourse: 19,
-    nodeMin: 30,
-    nodeTests: '3 Tests',
+    nodeDuration: 3,
+    nodeTests: '13 Tasks',
     nodeTitle: 'About Back-End Course',
     nodeText: "The course contains basics of backend development: fundamentals of NodeJS or Golang and backend frameworks as well as
     necessary computer science basics, network and protocols, database fundamentals etc …",
@@ -48,55 +46,39 @@
     people, such situation really beats the motivation, especially when encountering either boring or impossible to do (at
     first glance) task or illogical aspect of programming language you can't just grasp.",
     nodeTechnology: [
-    {
-    item: 'JavaScript'
-    },
-    {
-    item: 'ReactJS'
-    },
-    {
-    item: 'HTML/CSS'
-    }    
+      {
+        item: 'NodeJS basics'
+      },
+      {
+        item: 'Database basics'
+      },
+      {
+        item: 'Simple design patterns'
+      }
     ],
     nodeSkills: [
-    {
-    item: 'Pre-intermediate English'
-    },
-    {
-    item: 'JavaScript basics'
-    }
+      {
+        item: 'Pre-intermediate English'
+      },
+      {
+        item: 'JavaScript or Go basics'
+      },
+      {
+        item: 'Unix basics'
+      }
     ],
 
     activities: [
       {
-        name: '<Input type=”meetup” />',
-        link: './events/single.html',
-        type: 'meetup',
-        day: 23,
-        date: '.05 .2020',
-        text: "23 травня, у суботу, Kottans та друзі планують провести мітап. Будуть доповіді на різні теми пов’язані з JavaScript -
-        бекенд, фронтенд або ще щось …",
-        hiddenText: "Nevertheless, doing that on one's own can be challenging when it comes to continuing without support from surrounding
-        people, such situation really beats the motivation, especially when encountering either boring or impossible to do (at
-        first glance) task or illogical aspect of programming language you can't just grasp.",
-        hours: '',
-        min: '',
-        tests: ''
-      },
-      {
-        name: 'YDKJS Kottans',
-        link: '#',
-        type: 'Mini course',
-        day: '01',
-        date: '.02 .2021',
-        text: "У нас виникла ідея створитити новий формат навчання й запрошуємо охочих доєднатися до групи. Ми будемо проходити книжки
-        You Don’t Know JS першого видання …",
-        hiddenText: "Nevertheless, doing that on one's own can be challenging when it comes to continuing without support from surrounding
-        people, such situation really beats the motivation, especially when encountering either boring or impossible to do (at
-        first glance) task or illogical aspect of programming language you can't just grasp.",
-        hours: 32,
-        min: 40,
-        tests: '3 Tests'
+        name: 'TypeScript Kottans',
+        link: 'https://github.com/kottans/typescript-basics',
+        type: 'Online mini-course',
+        day: 'TBA',
+        date: '',
+        text: "Online TypeScript course by Kottans will take several weeks. We will cover topics as close as possible to day-to-day tasks, bit we will put some effort into understanding the magic happening under the hood as well. The course is aimed at TS-beginners, as well as moderately experienced developers.",
+        hiddenText: "",
+        duration: '8 weeks',
+        tasks: '8 Tasks'
       }
     ]
   }
@@ -257,14 +239,14 @@
                   Front-End
                 </span>
               </li>
-              <li>
+              <!-- <li>
                 <div class="block-icon icon-calendar">
                   {{section.frontDate}}
                 </div>
-              </li>
+              </li> -->
               <li>
                 <div class="block-icon icon-clock">
-                  {{section.frontHourse}} <span>h</span> {{section.frontMin}} <span>min</span>
+                  {{section.frontDuration}} <span>month</span>
                 </div>
               </li>
               <li>
@@ -574,11 +556,11 @@
               <div class="course__top-name-text">
                 {{section.nodeTitle}}
               </div>
-              <div class="status-block red">
+              <div class="status-block {{section.nodeStatus}}">
                 <div class="status-block__title">
                   Status
                 </div>
-                <a href="#" class="status-block__inner {{section.nodeStatus}}">
+                <a href="#" class="status-block__inner">
                   <div class="status-block__inner-text">
                     {{section.nodeStatus}}
                   </div>
@@ -597,14 +579,14 @@
                   Back-End
                 </span>
               </li>
-              <li>
+              <!-- <li>
                 <div class="block-icon icon-calendar">
                   {{section.nodeDate}}
                 </div>
-              </li>
+              </li> -->
               <li>
                 <div class="block-icon icon-clock">
-                  {{section.nodeHourse}} <span>h</span> {{section.nodeMin}} <span>min</span>
+                  {{section.nodeDuration}} <span>month</span>
                 </div>
               </li>
               <li>
@@ -656,7 +638,7 @@
           </div>
           <div class="course__line">
             <div class="buttons-block">
-              <a href="" target="_blank" class="btn-default btn-default--big">
+              <a href="https://github.com/kottans/backend" target="_blank" class="btn-default btn-default--big">
                 <span class="btn-default__inner">
                   check details
                 </span>
@@ -699,17 +681,17 @@
                 {{item.name}}
               </a>
               <ul class="main-info">
-                {% if item.hours %}
+                {% if item.duration %}
                 <li>
                   <div class="block-icon icon-clock">
-                    32 <span>h</span> 40 <span>min</span>
+                    {{item.duration}}
                   </div>
                 </li>
                 {% endif %}
-                {% if item.tests %}
+                {% if item.tasks %}
                 <li>
                   <div class="block-icon icon-list">
-                    3 Tests
+                    {{ item.tasks }}
                   </div>
                 </li>
                 {% endif %}
@@ -719,6 +701,7 @@
                   <p>
                     {{item.text}}
                   </p>
+                  {% if item.hiddenText %}
                   <div class="content-rules__hidden hidden_js">
                     <p>
                       {{item.hiddenText}}
@@ -727,6 +710,7 @@
                   <button data-hide="hide" data-show="read more" class="read-more read_more__js icon-arrow-bottom">
                     read more
                   </button>
+                  {% endif %}
                 </div>
               </div>
             </div>
