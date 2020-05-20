@@ -1910,6 +1910,7 @@ tspan {
     height: 200px;
     margin-bottom: 42px;
     background-position: 50% 0%;
+    filter: sepia(0.5);
   }
   &__name {
     line-height: 18px;
@@ -2095,6 +2096,7 @@ tspan {
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
+    filter: sepia(0.7);
     &:before {
       content: '';
       position: absolute;
