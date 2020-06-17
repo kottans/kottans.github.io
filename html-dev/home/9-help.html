@@ -1,0 +1,56 @@
+{% set 
+  section = {
+    title: 'Want to help the community?',
+    subtitle: 'The course contains basics of backend development',
+    btnLink: '',
+    items: [
+      {
+        title: 'Events',
+        img: '1.svg'
+      },
+      {
+        title: 'Interview',
+        img: '2.svg'
+      },
+      {
+        title: 'Courses',
+        img: '3.svg'
+      },
+      {
+        title: 'Party, relax',
+        img: '4.svg'
+      }
+    ]
+  }
+%}
+
+<section id="8" class="def-section target our-team-slider">
+    <div class="wrap">
+        <div class="def-section__inner">
+            <div class="def-section__title def-section__title-small no-top-padding ab ab--b ab--right"></div>
+            <div class="def-section__content">
+                <div class="help">
+                    <h4 class="help__title">{{section.title}}</h4>
+                    <h5 class="help__subtitle">{{section.subtitle}}</h5>
+                    <div class="help__inner">
+                        {% for item in section.items %}
+                        <div class="help__item ab ab--b">
+                            <img src="assets/img/svg/{{item.img}}" alt="">
+                            <div class="help__item-title">
+                                {{item.title}}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="btn-block">
+                        <a href="{{section.btnLink}}" target="_blank" class="btn-default btn-default--big">
+                            <span class="btn-default__inner">
+                                Go to patreon
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
