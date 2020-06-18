@@ -2355,6 +2355,12 @@ body.bottom {
   width: 100%;
   position: relative;
   z-index: 1;
+  @media (max-width: 960px) {
+    margin-bottom: 90px;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 70px;
+  }
   &:before{
     content: '';
     background: #F5F5F5;
@@ -2401,16 +2407,24 @@ body.bottom {
     margin-bottom: 30px;
     svg{
       overflow: visible;
+      @media (max-width: 600px) {
+        height: 160px !important;
+      }
     }
     @media (max-width: 600px) {
       width: 45%;
       transition-delay: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 30px !important;
     }
     &:nth-of-type(1){
       margin-right: 30px;
       margin-top: 30px;
       @media (max-width: 1200px) {
         margin-right: 10px;
+      }
+      @media (max-width: 600px) {
+        margin-top: 0;
       }
     }
     &:nth-of-type(2){
@@ -2428,7 +2442,7 @@ body.bottom {
         margin-left: 10px;
       }
       @media (max-width: 600px) {
-        margin-top: -20px;
+        margin-top: 0px;
       }
     }
     svg{
@@ -2451,6 +2465,9 @@ body.bottom {
   .btn-block{
     display: flex;
     justify-content: center;
+    @media (max-width: 960px) {
+      margin-top: 30px;
+    }
   }
 }
 
