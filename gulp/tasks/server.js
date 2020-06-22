@@ -8,7 +8,7 @@ const server = browseeSync.create();
 // in CL 'gulp server --open' to open current project in browser
 // in CL 'gulp server --tunnel siteName' to make project available over http://siteName.localtunnel.me
 
-gulp.task('server', (done) => {
+gulp.task('server', done => {
   server.init({
     server: {
       baseDir: !config.production
@@ -37,7 +37,7 @@ gulp.task('server', (done) => {
   done();
 });
 
-const build = (gulp) => gulp.parallel('server');
+const build = gulp => gulp.parallel('server');
 
 module.exports.build = build;
 module.exports.server = server;

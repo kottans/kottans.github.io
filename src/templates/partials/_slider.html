@@ -1,0 +1,99 @@
+{% set
+    courses = [{
+        sliderClassName: 'slider__item--active',
+        shortcut: 'FE',
+        className: 'course--frontend',
+        header: 'Front-End for Juniors',
+        technologies: [
+            'JavaScript',
+            'ReactJS',
+            'HTML/CSS'
+        ],
+        skills: [
+            'Pre-intermediate English',
+            'JavaScript basics',
+            'basic HTML, CSS'
+        ],
+        link: 'https://github.com/kottans/frontend',
+        chats: [{
+            link: 'https://t.me/joinchat/DmX0JAl-mh5W0jrWli8Ycw',
+            title: 'FE Questionarium'
+        },
+        {
+            link:  'https://t.me/joinchat/DmX0JBHVkEhV1us2HdMmpA',
+            title: 'FE Students'
+        }]
+    }, 
+    {
+        shortcut: 'NodeJS',
+        className: 'course--nodejs',
+        header: 'NodeJS for Juniors',
+        technologies: [
+            'JavaScript',
+            'ReactJS',
+            'HTML/CSS'
+        ],
+        skills: [
+            'Pre-intermediate English',
+            'JavaScript basics'
+        ],
+        link: 'https://github.com/kottans/backend',
+        chats: [{
+            link: 'https://t.me/joinchat/DqrdixM_mjurcmQkkQ11Og',
+            title: 'BE Questionarium'
+        },
+        {
+            link:  'https://t.me/joinchat/Dqrdixe1c2K9bXUFBzNWtg',
+            title: 'BE Students'
+        }]
+    }]  
+%}
+
+<div class="section section--courses" id="courses">
+    <div class="container">
+        <aside class="section__sidebar">
+            <div class="sidebar--content">
+                <h2>
+                    <a class="anchor" href="#courses">
+                        <span>Our</span>
+                        <span>Courses</span>
+                    </a>
+                </h2>
+
+                {% include "partials/_menu.html" %}
+
+            </div>
+        </aside>
+        <div class="section__content">
+            <div class="slider" id="coursesSlider">
+                <div class="slider__inner">
+                    <ul class="slider__list">
+
+                        {% for slide in courses %}
+                            <li class="slider__item js-slider__item {{slide.sliderClassName}}">
+                                {% include "./_course.html" %}
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                    <nav class="menuSlider">
+                        <h4 class="menuSlider__title">Courses</h4>
+                        <ul class="menuSlider__list js-menuSlider__list">
+
+                            {% for slide in courses %}
+                                <li class="menuSlider__item js-menuSlider__item" data-slider-id="{{loop.index}}">
+                                    <a href="#" class="menuSlider__link">{{slide.header}}</a>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="slider__controls">
+                    <button class="slider__button slider__button--previous" id="slider__previous"></button>
+                    <button class="slider__button slider__button--next" id="slider__next"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,7 +7,7 @@ import prettify from 'gulp-prettify';
 import frontMatter from 'gulp-front-matter';
 import config from '../config';
 
-const renderHtml = (onlyChanged) => {
+const renderHtml = onlyChanged => {
   nunjucksRender.nunjucks.configure({
     watch: false,
     trimBlocks: true,
@@ -44,9 +44,9 @@ const renderHtml = (onlyChanged) => {
 gulp.task('nunjucks', () => renderHtml());
 gulp.task('nunjucks:changed', () => renderHtml(true));
 
-const build = (gulp) => gulp.parallel('nunjucks');
-const watch = (gulp) => {
-  return function () {
+const build = gulp => gulp.parallel('nunjucks');
+const watch = gulp => {
+  return function() {
     gulp.watch(
       [config.src.templates + '/**/[^_]*.html'],
       gulp.parallel('nunjucks:changed'),
