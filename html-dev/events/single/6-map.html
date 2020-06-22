@@ -1,0 +1,43 @@
+{% set
+    section = {
+        title: 'the conference will be held',
+        date: 'December 7 – 8, 2029',
+        address: 'Volodymyrska St, 101, Kyiv, Ukraine',
+        howToGet: 'How to get there?',
+        route: 'from metro station',
+        registerLink: '#',
+        map: 'map.jpg'
+    }
+%}
+
+<section id="5" class="map target">
+    <div class="map__img bg" style="background-image: url(/assets/img/images/{{section.map}});"></div>
+    <div class="wrap">
+        <div class="map__inner">
+            <div class="map__content ab ab--b ab--right">
+                <div class="map__title">
+                    {{section.title}}
+                </div>
+                <div class="map__text icon-calendar">
+                    {{section.date}}
+                </div>
+                <div class="map__text icon-marker">
+                    {{section.address}}
+                </div>
+                <a href="#" class="map__text-circle">
+                    <span class="icon-play"></span>
+                    {{section.howToGet}}
+                </a>
+                <a href="#" class="map__text-circle">
+                    <span class="icon-route"></span>
+                    {{section.route}}
+                </a>
+                <a href="#" target="_blank" class="btn-default btn-default--big">
+                    <span class="btn-default__inner">
+                        Register Now
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

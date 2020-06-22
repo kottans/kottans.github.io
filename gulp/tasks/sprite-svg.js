@@ -14,22 +14,15 @@ gulp.task('sprite:svg', () =>
     .src(config.src.iconsSvg + '/*.svg')
     .pipe(
       gulpcheerio({
-        run: function($, file) {
+        run: function ($, file) {
           $('[fill]:not([fill="currentColor"])').removeAttr('fill');
           $('[stroke]').removeAttr('stroke');
           let w, h, size;
           if ($('svg').attr('height')) {
-            w = $('svg')
-              .attr('width')
-              .replace(/\D/g, '');
-            h = $('svg')
-              .attr('height')
-              .replace(/\D/g, '');
+            w = $('svg').attr('width').replace(/\D/g, '');
+            h = $('svg').attr('height').replace(/\D/g, '');
           } else {
-            size = $('svg')
-              .attr('viewbox')
-              .split(' ')
-              .splice(2);
+            size = $('svg').attr('viewbox').split(' ').splice(2);
             w = size[0];
             h = size[1];
             $('svg').attr('width', parseInt(w));
@@ -69,15 +62,12 @@ gulp.task('sprite:svg', () =>
     .pipe(rename({ prefix: 'icon-' }))
     .pipe(svgStore({ inlineSvg: false }))
     .pipe(
-      through2.obj(function(file, encoding, cb) {
+      through2.obj(function (file, encoding, cb) {
         let $ = cheerio.load(file.contents.toString(), { xmlMode: true });
         let data = $('svg > symbol')
-          .map(function() {
+          .map(function () {
             let $this = $(this);
-            let size = $this
-              .attr('viewBox')
-              .split(' ')
-              .splice(2);
+            let size = $this.attr('viewBox').split(' ').splice(2);
             let name = $this.attr('id');
             let ratio = size[0] / size[1]; // symbol width / symbol height
             let fill = $this
@@ -110,8 +100,8 @@ gulp.task('sprite:svg', () =>
     .pipe(gulp.dest(config.dest.img)),
 );
 
-const build = gulp => gulp.series('sprite:svg');
-const watch = gulp => () =>
+const build = (gulp) => gulp.series('sprite:svg');
+const watch = (gulp) => () =>
   gulp.watch(config.src.iconsSvg + '/*.svg', gulp.parallel('sprite:svg'));
 
 module.exports.build = build;

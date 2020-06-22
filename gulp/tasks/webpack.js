@@ -34,11 +34,11 @@ const handler = (err, stats, cb) => {
 };
 
 const webpackPromise = () =>
-  new Promise(resolve =>
+  new Promise((resolve) =>
     webpack(webpackConfig, (err, stats) => handler(err, stats, resolve)),
   );
 const webpackPromiseWatch = () =>
-  new Promise(resolve =>
+  new Promise((resolve) =>
     webpack(webpackConfig).watch(
       {
         aggregateTimeout: 100,
@@ -48,8 +48,8 @@ const webpackPromiseWatch = () =>
     ),
   );
 
-const build = gulp => gulp.series(webpackPromise);
-const watch = gulp => gulp.series(webpackPromiseWatch);
+const build = (gulp) => gulp.series(webpackPromise);
+const watch = (gulp) => gulp.series(webpackPromiseWatch);
 // const watch = gulp => () => gulp.watch(config.src.js + '/**/*', gulp.parallel('webpack', webpackPromise));
 
 module.exports.build = build;
