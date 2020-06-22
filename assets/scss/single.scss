@@ -1,5 +1,9 @@
+.open-mic-color {
+  --color: #f83030;
+}
+
 .color-control{
-    --color: #FF00D4;
+    --color: $openMicColor;
 }
 
 .color-control{
@@ -76,6 +80,7 @@
     &__inner{
         display: flex;
         justify-content: center;
+        align-items: center;
         @media (max-width: 900px) {
             flex-wrap: wrap;
         }
@@ -118,7 +123,7 @@
     &__title{
         font-size: 110px;
         font-weight: 900;
-        line-height: 100px;
+        line-height: 120px;
         letter-spacing: -1px;
         margin-bottom: 22px;
         @media (max-width: 1400px) {
@@ -287,20 +292,23 @@
 
 .single-about{
     margin-bottom: 160px;
+
     @media (max-width: 900px) {
         margin-bottom: 80px;
     }
+
     &__inner{
         display: flex;
         align-items: center;
+        justify-content: center;;
         @media (max-width: 1023px) {
             flex-wrap: wrap;
         }
     }
+
     &__part{
         &:nth-of-type(1){
             width: calc(48% - 50px);
-            margin-right: 100px;
             @media (max-width: 1023px) {
                 width: 100%;
                 margin-bottom: 60px;
@@ -309,6 +317,7 @@
         }
         &:nth-of-type(2){
             width: calc(52% - 50px);
+            margin-left: 100px;
             @media (max-width: 1023px) {
                 width: 100%;
             }
@@ -367,7 +376,7 @@
     }
     .numbers-block__item{
         text-align: left;
-        margin-right: 100px;
+        // margin-right: 100px;
         margin-bottom: 0;
         @media (max-width: 1400px) {
             margin-right: 0px;
@@ -472,6 +481,27 @@
         @media (max-width: 600px) {
             padding-top: 80px;
             padding-bottom: 40px;
+        }
+    }
+    &__header{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 150px;
+      @media (max-width: 960px) {
+          margin-bottom: 60px;
+      }
+      @media (max-width: 600px) {
+          flex-wrap: wrap;
+      }
+    }
+    &__title{
+        color: white;
+        font-size: 72px;
+        line-height: 1;
+        font-weight: 900;
+        @media (max-width: 960px) {
+            font-size: 40px;
         }
     }
 }
@@ -796,6 +826,10 @@
             padding-bottom: 30px;
             margin-bottom: 0px;
             border-bottom: 1px solid rgba(#000, 0.1);
+        }
+
+        .single-event-time {
+          margin-top: 10px;
         }
     }
     &__date{

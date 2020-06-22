@@ -241,8 +241,13 @@ window.bit = {
     let targetItems = document.querySelectorAll('.target');
     if (!targetItems) return false;
 
+    console.log({targetItems})
+
     document.addEventListener('scroll', () => {
       targetItems.forEach(item => {
+        // console.log(window.scrollY, item.offsetTop, item.offsetTop - 62)
+        // console.log(window.scrollY >= item.offsetTop - 62)
+        // console.log(item.offsetTop)
         if (window.scrollY >= item.offsetTop - 62 && window.scrollY < item.offsetTop + item.offsetHeight) {
           document.querySelector('.scroll_nav_js a.active').classList.remove('active');
           document.querySelector('.scroll_nav_js a[data-target="' + item.id + '"]').classList.add('active');
@@ -264,24 +269,36 @@ window.bit = {
     let onlineBlock = document.querySelector('.online-block');
 
     document.addEventListener('scroll', () => {
-      if (!onlineBlock) return false;
-      window.scrollY > 23 ? header.classList.add('active') : header.classList.remove('active');
-      if (window.scrollY > 100) document.querySelector('.online-block').classList.remove('active');
+      if (window.scrollY > 23) {
+        header.classList.add('active')
+      } else {
+        header.classList.remove('active');
+      }
+
+      const onlineBlock = document.querySelector('.online-block');
+
+      if (!onlineBlock) {
+        return;
+      }
+
+      if (window.scrollY > 100) {
+        onlineBlock.classList.remove('active')
+      };
 
       let bottom = window.scrollY + window.innerHeight + document.querySelector('.main-footer').offsetHeight;
 
       if (bottom + 20 > document.body.clientHeight) {
         var offsetBottom = bottom - document.body.clientHeight;
 
-        document.querySelector('.online-block').style.transform = `translateY(${-offsetBottom}px)`;
+        onlineBlock.style.transform = `translateY(${-offsetBottom}px)`;
       } else {
-        document.querySelector('.online-block').style.transform = `translateY(0px)`;
+        onlineBlock.style.transform = `translateY(0px)`;
       }
 
       if (window.scrollY > window.innerHeight || window.innerWidth < 600) {
-        document.querySelector('.online-block').classList.add('hidden');
+        onlineBlock.classList.add('hidden');
       } else {
-        document.querySelector('.online-block').classList.remove('hidden');
+        onlineBlock.classList.remove('hidden');
       }
     });
 

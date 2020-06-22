@@ -1,0 +1,133 @@
+{% set
+    section = {
+        img: 'speaker.png',
+        scheduleLink: '#',
+        speakers: [
+            {
+                img: 'ovcharenko.jpg',
+                name: 'Vitaliy Ovcharenko',
+                positionText: 'Frontend developer',
+                positionCompany: '@ airSlate',
+                location: 'Kyiv',
+                quote: 'React Patterns'
+            },
+            {
+                img: 'rudenko.jpg',
+                name: 'Oleksiy Rudenko',
+                positionText: 'Delivery Manager',
+                location: 'Kyiv',
+                quote: 'Stalin sort - from loop to array methods'
+            }
+        ]
+    }
+%}
+
+<section id="2" class="single-speakers target">
+    <div class="single-speakers__inner">
+        <div class="wrap">
+            <div class="single-speakers__header">
+              <h4 class="single-speakers__title">
+                Our speakers
+              </h4>
+            </div>
+            <div class="speakers-b">
+                {% for item in section.speakers %}
+                <div class="speakers-b__item ab ab--b">
+                    <div class="speakers-b__img">
+                        <img src="/assets/img/images/open-mic/speakers/{{item.img}}" alt="">
+                    </div>
+                    <div class="speakers-b__content">
+                        <div class="speakers-b__name">
+                            {{item.name}}
+                        </div>
+                        <div class="speakers-b__position">
+                            {{item.positionText}} <span>{{item.positionCompany}}</span>
+                        </div>
+                        <div class="speakers-b__location">
+                            {{item.location}}
+                        </div>
+                        <div class="speakers-b__quote icon-quote">
+                            {{item.quote}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="speakers-b__item ab ab--b">
+                    <a href="{{scheduleLink}}" class="schedule">
+                        <svg width="249px" height="278px" viewBox="0 0 249 278" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                                <rect id="path-1" x="0" y="0" width="100" height="100" rx="50"></rect>
+                                <filter x="-10.0%" y="-8.0%" width="120.0%" height="120.0%"
+                                    filterUnits="objectBoundingBox" id="filter-2">
+                                    <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                                    <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1">
+                                    </feGaussianBlur>
+                                    <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0"
+                                        type="matrix" in="shadowBlurOuter1">
+                                    </feColorMatrix>
+                                </filter>
+                                <rect id="path-3" x="15" y="15" width="70" height="70" rx="35"></rect>
+                                <filter x="-14.3%" y="-11.4%" width="128.6%" height="128.6%"
+                                    filterUnits="objectBoundingBox" id="filter-4">
+                                    <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                                    <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1">
+                                    </feGaussianBlur>
+                                    <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix"
+                                        in="shadowBlurOuter1">
+                                    </feColorMatrix>
+                                </filter>
+                            </defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="single_event_v0.1a" transform="translate(-1734.000000, -3266.000000)">
+                                    <g id="block#3" transform="translate(0.000000, 1740.000000)">
+                                        <g id="strokes" transform="translate(540.000000, 820.000000)">
+                                            <g id="CTA" transform="translate(1194.000000, 707.000000)">
+                                                <g id="Group-8">
+                                                    <path class="rotate3"
+                                                        d="M231.560718,189.749253 C216.270812,221.313662 180.73535,219.471441 157.612702,216.87253 C148.582712,214.647358 141.522192,214.786441 134.690738,218.356005 C122.615214,224.665696 28.155768,249.949775 44.7699024,182.256146 C53.7845168,145.526459 14.9406816,133.401183 21.973384,109.985551 C29.1772575,86 58.8197495,103.514574 78.7998403,69.7556681 C96.9008936,28.2139943 153.786416,10.1819122 178.89705,30.727285 C187.681265,37.3771721 200.115734,51.697513 203.25175,63.4467155 C206.963463,77.352788 199.389733,90.1006232 203.647155,99.5502843 C207.236932,107.518056 212.326136,107.518056 219.505174,115.174321 C233.380046,129.971526 248.639201,154.492514 231.560718,189.749253 Z"
+                                                        id="Rectangle-Copy-3" fill="#FFFFFF" opacity="0.0305757068">
+                                                    </path>
+                                                    <path class="rotate2"
+                                                        d="M172.656617,226.600487 C142.792694,232.778695 117.617623,215.68516 104.554162,199.470721 C92.3586915,179.906915 75.0250573,181.986137 60.8798527,179.012494 C41.3018357,174.89675 24.989846,160.647615 30.1373754,140.299002 C35.2849049,119.95039 47.8044517,111.245024 51.6441485,96.0663834 C54.6269536,84.2751064 42.6957539,43.506832 81.8458826,43.5286838 C104.916025,43.3067574 113.445394,64.7979193 145.414613,56.8940092 C180.671385,43.063915 225.291767,67.8957853 229.298195,96.2916173 C233.032462,117.267934 215.067148,136.683975 210.366226,152.411268 C205.665304,168.138561 219.650085,213.758848 172.656617,226.600487 Z"
+                                                        id="Rectangle-Copy-2" stroke="var(--color)" stroke-width="2"></path>
+                                                    <path class="rotate_js"
+                                                        d="M207.333643,25.1487102 C226.794671,38.6066581 240.351423,79.3500788 231.993857,106.478563 C219.178249,135.44766 234.809253,152.026432 242.275691,169.399316 C252.609797,193.444681 248.966103,222.383496 221.978268,233.69865 C194.990434,245.013805 175.542411,238.96796 155.411375,247.408273 C139.772912,253.964991 102.7404,300.106275 72.7810951,258.776785 C54.8578224,234.617912 72.6641545,207.930986 39.226828,180.702823 C-3.44003733,154.882913 -10.4798432,123.949578 17.2804191,91.5403758 C38.1763618,70.3368144 80.1703937,73.4542052 97.6540842,33.558144 C115.137775,-6.33791714 152.855313,-11.7252191 207.333643,25.1487102 Z"
+                                                        id="Rectangle-Copy" stroke="#FFFFFF" opacity="0.2"></path>
+                                                </g>
+                                                <g id="Group-9" transform="translate(75.000000, 86.000000)">
+                                                    <g id="Rectangle-Copy-4">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-2)"
+                                                            xlink:href="#path-1">
+                                                        </use>
+                                                        <use fill="#1A171A" fill-rule="evenodd" xlink:href="#path-1">
+                                                        </use>
+                                                    </g>
+                                                    <g id="Rectangle" opacity="0.3">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-4)"
+                                                            xlink:href="#path-3">
+                                                        </use>
+                                                        <use class="circle" fill="#3A353A" fill-rule="evenodd"
+                                                            xlink:href="#path-3">
+                                                        </use>
+                                                    </g>
+                                                    <path
+                                                        d="M45,38 L45,41 L55,41 L55,38 L57,38 L57,41 L62,41 L62,62 L38,62 L38,41 L43,41 L43,38 L45,38 Z M60,50 L40,50 L40,60 L60,60 L60,50 Z M43,43 L40,43 L40,48 L60,48 L60,43 L57,43 L57,45 L55,45 L55,43 L45,43 L45,45 L43,45 L43,43 Z"
+                                                        id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                                </g>
+                                                <text id="Schedule" font-family="AvenirNext-DemiBold, Avenir Next"
+                                                    font-size="14" font-weight="500" line-spacing="14" fill="#FFFFFF">
+                                                    <tspan x="165" y="145">SCHEDULE</tspan>
+                                                </text>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

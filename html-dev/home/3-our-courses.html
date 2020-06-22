@@ -70,13 +70,13 @@
     activities: [
       {
         name: 'React Patterns',
-        link: 'https://github.com/Vitaminvp/react-patterns',
+        link: './events/open-mic.html',
         type: 'Webinar',
-        day: '24',
+        day: '25',
         date: '.06.2020',
-        text: "One of Kottans, Vitaliy Ovcharenko, will tell us about his repository - basic React Patterns. This webinar should extend your knowledge of React, decrease amount of code review comments and will help you better understand code.",
+        text: "One of Kottans, Vitaliy Ovcharenko, will tell us about his repository - <a href='https://github.com/Vitaminvp/react-patterns'>React Patterns</a>. This webinar should extend your knowledge of React, decrease amount of code review comments and will help you better understand code.",
         hiddenText: "",
-        duration: '1 hour',
+        duration: '19:00',
         tasks: ''
       },
       {
@@ -709,7 +709,7 @@
               <div class="item-other__content">
                 <div class="content-rules">
                   <p>
-                    {{item.text}}
+                    {{item.text | safe}}
                   </p>
                   {% if item.hiddenText %}
                   <div class="content-rules__hidden hidden_js">

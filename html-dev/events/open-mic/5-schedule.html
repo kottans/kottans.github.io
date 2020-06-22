@@ -1,0 +1,98 @@
+{% set 
+    section = {
+        title: 'Schedule',
+        days: [
+            {
+                date: '2020',
+                btnLink: '#',
+                day: [
+                    {
+                      date: '26/06/2020',
+                      time: '19:00',
+                      img: 'ovcharenko.jpg',
+                      title: 'Vitaliy Ovcharenko',
+                      positionText: 'Frontend Developer',
+                      company: 'airSlate',
+                      subject: 'React Patterns',
+                      language: 'ua'
+                  },
+                  {
+                      date: '23/05/2020',
+                      time: '13:00',
+                      img: 'rudenko.jpg',
+                      link: 'https://www.youtube.com/watch?v=p-frhGXvL2A',
+                      title: 'Oleksiy Rudenko',
+                      positionText: 'Delivery Manager',
+                      subject: 'Stalin sort - from loop to array methods',
+                      language: 'ru'
+                  }
+                ]
+            }
+        ]
+    }
+%}
+
+<section id="4" class="schedule target">
+    <div class="wrap">
+        <div class="schedule__header">
+            <h4 class="schedule__title">
+                {{section.title}}
+            </h4>
+            <!-- <div class="schedule__tabs">
+                {% for item in section.days %}
+                <button class="schedule__tab{% if loop.index == 1%} active{% endif %}">{{item.date}}</button>
+                {% endfor %}
+            </div> -->
+        </div>
+        <div class="schedule__inner">
+            {% for item in section.days %}
+            <div class="schedule__day{% if loop.index == 1%} active{% endif %}">
+                {% for i in item.day %}
+                <div class="schedule__item ab ab--b">
+                    <div class="schedule__date">
+                        {{ i.date }}
+
+                      <div class="single-event-time block-icon icon-clock">
+                        {{i.time}}
+                      </div>
+                    </div>
+                    <div class="schedule__content">
+                        <div class="schedule__item-img">
+                            <div class="schedule__img-inner">
+                                <img src="/assets/img/images/open-mic/speakers/{{i.img}}" alt="">
+                            </div>
+                        </div>
+                        <div class="schedule__content-inner">
+                            <div class="schedule__item-title">
+                                {{ i.title }}
+                            </div>
+                            {% if i.positionText %}
+                            <div class="schedule__item-position">
+                                {{ i.positionText }}
+                                {% if i.company %}
+                                <span>{{i.company}}</span>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                            {% if i.subject %}
+                            <div class="schedule__item-subject">
+                                {{ i.subject }}
+                                {% if i.language %}
+                                <span class="schedule__item-language">{{i.language}}</span>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <a href="{{item.btnLink}}" target="_blank" class="btn-default btn-default--big">
+                    <span class="btn-default__inner icon-arrow-bottom">
+                        Register Now
+                    </span>
+                </a> -->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
