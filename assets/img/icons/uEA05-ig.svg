@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon32/--insta" transform="translate(-6.000000, -6.000000)" fill="#202020" fill-rule="nonzero">
+            <g id="Rectangle">
+                <path d="M8,8 L8,24 L24,24 L24,8 L8,8 Z M8,6 L24,6 C25.1045695,6 26,6.8954305 26,8 L26,24 C26,25.1045695 25.1045695,26 24,26 L8,26 C6.8954305,26 6,25.1045695 6,24 L6,8 C6,6.8954305 6.8954305,6 8,6 Z M21.9170416,15 C21.9716012,15.3252085 22,15.6592878 22,16 C22,19.3137085 19.3137085,22 16,22 C12.6862915,22 10,19.3137085 10,16 C10,15.6592878 10.0283988,15.3252085 10.0829584,15 L7,15 L7,7 L25,7 L25,15 L21.9170416,15 Z M22,8 C20.8954305,8 20,8.8954305 20,10 C20,11.1045695 20.8954305,12 22,12 C23.1045695,12 24,11.1045695 24,10 C24,8.8954305 23.1045695,8 22,8 Z M16,20 C18.209139,20 20,18.209139 20,16 C20,13.790861 18.209139,12 16,12 C13.790861,12 12,13.790861 12,16 C12,18.209139 13.790861,20 16,20 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>
