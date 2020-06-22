@@ -1,0 +1,65 @@
+{% set 
+  section = {
+    title: 'Our<br /> friends & partners',
+    plates: [
+      {
+        link: 'https://star.global/',
+        img: '19.png'
+      },
+      {
+        link: 'https://railsreactor.com/',
+        img: '20.png'
+      },
+      {
+        link: 'https://www.levi9.com/',
+        img: '21.png'
+      },
+      {
+        link: 'https://wix.com/',
+        img: '22.png'
+      },
+      {
+        link: 'https://preply.com/',
+        img: '23.png'
+      }
+    ]
+  }
+%}
+
+<section id="8" class="def-section target our-team-slider">
+  <div class="wrap">
+    <div class="def-section__inner">
+      <div class="def-section__title def-section__title-small no-top-padding ab ab--b ab--right">
+        <h3>
+          {{section.title | safe}}
+        </h3>
+      </div>
+      <div class="def-section__content">
+        <div class="plates plates--small">
+          {% for item in section.plates %}
+          <a href="{{item.link}}" class="plate">
+            <div class="plate__inner">
+              <div class="plate__img">
+                <div class="plate__img-inner">
+                  <img data-img="assets/img/images/{{item.img}}" class="bg__js img" alt="" />
+                </div>
+              </div>
+              <div class="plate__btn">
+                <div class="plate__btn-inner">
+                  Open the site
+                </div>
+                <span class="plate__btn-icon icon-arrow-bottom"></span>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+          <a href="#" class="plate plate--join">
+            <div class="plate__inner">
+              <div class="plate__text-link">Join US <span>+</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
