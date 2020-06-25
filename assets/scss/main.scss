@@ -1387,9 +1387,9 @@
   &__img {
     width: 190px;
     height: 150px;
-    margin-right: 30px;
     transition: all 0.25s;
     transition-delay: 0.3s;
+    margin-left: 10px;
   }
   &__toggle {
     position: absolute;
@@ -1423,7 +1423,7 @@
   }
   &__inner {
     width: 300px;
-    margin-right: 30px;
+    margin: 0 30px;
     padding: 15px 0;
     transition: all 0.25s;
   }
@@ -1503,7 +1503,7 @@
     .online-block__inner {
       padding-top: 30px;
       padding-bottom: 22px;
-      margin-right: 0;
+      margin: 0;
       width: 230px;
     }
     .online-block__btn {
