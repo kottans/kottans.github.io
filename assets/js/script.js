@@ -241,13 +241,8 @@ window.bit = {
     let targetItems = document.querySelectorAll('.target');
     if (!targetItems) return false;
 
-    console.log({targetItems})
-
     document.addEventListener('scroll', () => {
       targetItems.forEach(item => {
-        // console.log(window.scrollY, item.offsetTop, item.offsetTop - 62)
-        // console.log(window.scrollY >= item.offsetTop - 62)
-        // console.log(item.offsetTop)
         if (window.scrollY >= item.offsetTop - 62 && window.scrollY < item.offsetTop + item.offsetHeight) {
           document.querySelector('.scroll_nav_js a.active').classList.remove('active');
           document.querySelector('.scroll_nav_js a[data-target="' + item.id + '"]').classList.add('active');
@@ -418,7 +413,15 @@ window.bit = {
       });
     });
   }
+}
 
+const handleOnlineBlockWidth = () => {
+  const onlineBlock = document.querySelector('.online-block');
+
+  if (onlineBlock && window.innerWidth > 1200) {
+    onlineBlock.classList.add('active');
+  }
 }
 
 bit.init();
+handleOnlineBlockWidth();
