@@ -1,5 +1,14 @@
 @import 'mixins';
 
+.blinking-dots {
+  animation: blinker 1s linear infinite;
+  margin: 0 1px;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
 .central-text {
   text-align: center;
 }
