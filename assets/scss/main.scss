@@ -708,8 +708,9 @@
   opacity: 0;
   font-weight: 400;
   @media (max-width: 1460px) {
-    padding: 25px 34px;
-    width: 240px;
+    padding: 25px 20px;
+    width: 100%;
+    max-width: 240px;
     font-size: 16px;
     line-height: 1.2;
   }
@@ -1681,8 +1682,8 @@ tspan {
 
 .plates {
   display: flex;
+  flex-wrap: wrap;
   @media (max-width: 960px) {
-    flex-wrap: wrap;
     margin-bottom: 60px;
   }
   &--small {
@@ -1949,6 +1950,7 @@ tspan {
 .our-team-slider {
   .def-section__content {
     width: calc(100% - 510px);
+    overflow-x: hidden;
     @media (max-width: 960px) {
       width: 100%;
     }
