@@ -69,6 +69,17 @@
     ],
     activities: [
       {
+        name: 'Intro to AWS',
+        link: './events/open-mic.html',
+        type: 'Webinar',
+        day: '30',
+        date: '.07.2020',
+        text: 'With <b>Andrey Andriyko</b> we will dive into the world of AWS services, get to know with the most popular of them and work with them. Understand how to raise the simplest infrastructure for your application. \n\n Bonus - we will play the game "guess the AWS service by icon". 😂',
+        hiddenText: 'It will be interesting for Backend developers and DevOps beginners, as well as anyone who wants to understand the capabilities of AWS. \n\n <b>What you need to know:</b> basic infrastructure abstractions such as server, subnet, queue, etc.',
+        duration: '19:30',
+        tasks: ''
+      },
+      {
         name: 'React Patterns',
         link: './events/open-mic.html',
         type: 'Webinar',
@@ -709,12 +720,12 @@
               <div class="item-other__content">
                 <div class="content-rules">
                   <p>
-                    {{item.text | safe}}
+                    {{item.text | safe | escape | nl2br }}
                   </p>
                   {% if item.hiddenText %}
                   <div class="content-rules__hidden hidden_js">
                     <p>
-                      {{item.hiddenText}}
+                      {{item.hiddenText | safe | escape | nl2br }}
                     </p>
                   </div>
                   <button data-hide="hide" data-show="read more" class="read-more read_more__js icon-arrow-bottom">
