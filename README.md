@@ -1,1 +1,1 @@
-# Every Kottans home
+# Every Kottan's home
