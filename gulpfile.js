@@ -113,6 +113,7 @@ gulp.task(
       'fonts',
       'Iconfont',
       'images',
+      'copyFavicon'
     ],
     () => {
       browserSync.init({
