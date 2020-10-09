@@ -3,6 +3,7 @@
     title: 'Our courses',
     frontTitle: 'Front-End for Juniors',
     frontStatus: 'online',
+    frontLink: 'https://github.com/kottans/frontend',
     frontDisplayedStatus: 'admission open',
     frontInfo: 'The course has started. Go check details ;)',
     frontDate: 'October 12, 2020',
@@ -40,6 +41,7 @@
     nodeTitle: 'NodeJS for Juniors',
     nodeStatus: 'self-study',
     nodeDisplayedStatus: 'self-pased',
+    nodeLink: 'https://github.com/kottans/backend',
     nodeInfo: 'Program of course is available for self-study',
     nodeDate: 'Jan 31, 2020',
     nodeDuration: 3,
@@ -246,7 +248,7 @@
                 <div class="status-block__title">
                   Status
                 </div>
-                <a href="#" class="status-block__inner">
+                <a href={{section.frontLink}} class="status-block__inner">
                   <div class="status-block__inner-text">
                     {{section.frontDisplayedStatus}}
                   </div>
@@ -586,7 +588,7 @@
                 <div class="status-block__title">
                   Status
                 </div>
-                <a href="#" class="status-block__inner">
+                <a href={{section.nodeLink}} class="status-block__inner">
                   <div class="status-block__inner-text">
                     {{section.nodeDisplayedStatus}}
                   </div>
