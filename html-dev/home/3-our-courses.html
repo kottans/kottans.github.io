@@ -3,6 +3,7 @@
     title: 'Our courses',
     frontTitle: 'Front-End for Juniors',
     frontStatus: 'online',
+    frontDisplayedStatus: 'admission open',
     frontInfo: 'The course has started. Go check details ;)',
     frontDate: 'October 12, 2020',
     frontDuration: 9,
@@ -38,6 +39,7 @@
 
     nodeTitle: 'NodeJS for Juniors',
     nodeStatus: 'self-study',
+    nodeDisplayedStatus: 'self-pased',
     nodeInfo: 'Program of course is available for self-study',
     nodeDate: 'Jan 31, 2020',
     nodeDuration: 3,
@@ -246,7 +248,7 @@
                 </div>
                 <a href="#" class="status-block__inner">
                   <div class="status-block__inner-text">
-                    {{section.frontStatus}}
+                    {{section.frontDisplayedStatus}}
                   </div>
                   <span class="status-block__icon icon-info"></span>
                   <div class="info-block">
@@ -586,7 +588,7 @@
                 </div>
                 <a href="#" class="status-block__inner">
                   <div class="status-block__inner-text">
-                    {{section.nodeStatus}}
+                    {{section.nodeDisplayedStatus}}
                   </div>
                   <span class="status-block__icon icon-info"></span>
                   <div class="info-block">
