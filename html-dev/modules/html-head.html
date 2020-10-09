@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-11997933-9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11997933-9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      gtag('config', 'UA-11997933-9');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>@@pageTitle</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
-    gtag('config', 'UA-11997933-9');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>@@pageTitle</title>
-  <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- end favicon -->
+  </head>
 
-  <!-- favicon -->
-  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="theme-color" content="#ffffff" />
-  <!-- end favicon -->
-</head>
-
-<body class="@@bodyClass"></body>
-
+  <body class="@@bodyClass"></body>
 </html>
