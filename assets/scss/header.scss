@@ -16,6 +16,15 @@
     @media (min-width: 1600px) {
       padding: 15px 100px;
     }
+    @media (max-width: 600px) {
+      .header-buttons {
+        max-width: 140px;
+      }
+
+      .btn-default {
+        margin-bottom: 5px;
+      }
+    }
     &.active {
       top: 0px;
       background: rgba(#fff, 0.4);
