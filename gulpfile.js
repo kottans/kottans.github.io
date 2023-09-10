@@ -1,13 +1,13 @@
 const gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
-  sass = require('gulp-sass'),
+  sass = require('gulp-sass')(require('sass'));
   concat = require('gulp-concat'),
   fileinclude = require('gulp-file-include'),
   iconfont = require('gulp-iconfont'),
   nunjucksRender = require('gulp-nunjucks-render'),
   uglify = require('gulp-uglify-es').default,
   postcss = require('gulp-postcss'),
-  cssnano = require('cssnano');
+  cssnano = require('cssnano'),
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', () => {
