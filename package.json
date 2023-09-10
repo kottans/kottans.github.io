@@ -29,7 +29,7 @@
     "gulp-watch": "latest"
   },
   "dependencies": {
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.29.3",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-uglify-es": "^2.0.0",
     "npm": "^10.1.0",
