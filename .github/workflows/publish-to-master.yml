@@ -20,6 +20,7 @@ jobs:
         
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
-      env:
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./build
+      with:
+        branch: master
+        folder: build
+        
