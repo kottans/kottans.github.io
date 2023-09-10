@@ -1,7 +1,5 @@
 name: Deploy to GitHub Pages
 
-permissions:
-  contents: write
 on:
   push:
     branches:
@@ -11,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Build
       run: |
         npm ci
@@ -19,8 +17,9 @@ jobs:
         cp ./CNAME ./build/CNAME
         
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        branch: master
-        folder: build
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: master
+        publish_dir: ./build
         
