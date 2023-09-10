@@ -33,6 +33,6 @@
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-uglify-es": "^2.0.0",
     "npm": "^6.14.8",
-    "nunjucks": "^3.2.1"
+    "nunjucks": "^3.2.4"
   }
 }
