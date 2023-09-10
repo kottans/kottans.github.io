@@ -32,7 +32,6 @@
   "dependencies": {
     "browser-sync": "^2.26.12",
     "gulp-nunjucks-render": "^2.2.3",
-    "gulp-uglify-es": "^2.0.0",
     "npm": "^10.1.0",
     "nunjucks": "^3.2.1"
   }
