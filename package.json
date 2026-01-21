@@ -31,7 +31,7 @@
     "sass": "^1.66.1"
   },
   "dependencies": {
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^3.0.4",
     "gulp-nunjucks-render": "^2.2.3",
     "npm": "^11.7.0",
     "nunjucks": "^3.2.4"
