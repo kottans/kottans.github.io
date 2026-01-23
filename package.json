@@ -2,7 +2,7 @@
   "name": "kottans.github.io",
   "author": "bitbybit",
   "version": "1.0.0",
-  "main": "gulpfile.js",
+  "main": "gulpfile.mjs",
   "scripts": {
     "ghpages": "git subtree push --prefix build origin gh-pages",
     "build": "gulp build",
