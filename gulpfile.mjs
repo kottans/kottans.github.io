@@ -80,19 +80,26 @@ gulp.task('fonts', () => {
 
 // Iconfont
 gulp.task('Iconfont', async () => {
+  // Dynamically import gulp-iconfont to avoid top-level await issues
   const iconfontModule = await import('gulp-iconfont');
-  // Handle both ESM default export and CommonJS module.exports
-  // CommonJS modules imported via dynamic import() have their exports as .default
-  let iconfont = iconfontModule.default;
-  if (!iconfont || typeof iconfont !== 'function') {
-    iconfont = iconfontModule;
-  }
-  if (typeof iconfont !== 'function') {
-    throw new Error(`gulp-iconfont export is not a function. Got: ${typeof iconfont}, keys: ${Object.keys(iconfontModule).join(', ')}`);
+  
+  // Extract the function - CommonJS modules use .default when imported via dynamic import()
+  // Try .default first, then fallback to the module itself
+  const iconfontFn = (typeof iconfontModule.default === 'function') 
+    ? iconfontModule.default 
+    : (typeof iconfontModule === 'function' ? iconfontModule : iconfontModule.default || iconfontModule);
+  
+  if (typeof iconfontFn !== 'function') {
+    throw new Error(
+      `gulp-iconfont is not a function. ` +
+      `Got: ${typeof iconfontFn}, ` +
+      `default: ${typeof iconfontModule.default}, ` +
+      `module: ${typeof iconfontModule}`
+    );
   }
   
-  // Create options object with required fontName
-  const options = Object.assign({}, {
+  // Create options object - use plain object literal to ensure compatibility
+  const iconfontOptions = {
     fontName: 'iconFont',
     prependUnicode: true,
     formats: ['ttf', 'eot', 'woff', 'svg'],
@@ -101,19 +108,17 @@ gulp.task('Iconfont', async () => {
     fontHeight: 100,
     fixedWidth: false,
     centerHorizontally: false,
-  });
+  };
   
-  // Double-check fontName is present before calling
-  if (!options.fontName) {
-    throw new Error('fontName option is required but missing');
+  // Double-check fontName exists and is a string
+  if (!iconfontOptions.fontName || typeof iconfontOptions.fontName !== 'string') {
+    throw new Error(`fontName is required but got: ${iconfontOptions.fontName} (${typeof iconfontOptions.fontName})`);
   }
   
-  // Call the function with options
-  const iconfontStream = iconfont(options);
-  
+  // Call the function directly with options
   return gulp
     .src(['assets/img/icons/*.svg'])
-    .pipe(iconfontStream)
+    .pipe(iconfontFn(iconfontOptions))
     .pipe(gulp.dest('build/assets/fonts/'));
 });
 
