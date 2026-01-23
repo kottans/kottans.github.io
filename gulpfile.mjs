@@ -84,27 +84,21 @@ gulp.task('Iconfont', async () => {
   const iconfontModule = await import('gulp-iconfont');
   
   // Extract the function - CommonJS modules use .default when imported via dynamic import()
-  let iconfontFn = iconfontModule.default;
-  if (typeof iconfontFn !== 'function') {
-    iconfontFn = iconfontModule;
-  }
+  const iconfontFn = iconfontModule.default ?? iconfontModule;
+  
   if (typeof iconfontFn !== 'function') {
     throw new Error(
       `gulp-iconfont is not a function. ` +
       `Got: ${typeof iconfontFn}, ` +
       `default: ${typeof iconfontModule.default}, ` +
-      `module: ${typeof iconfontModule}, ` +
-      `keys: ${Object.keys(iconfontModule).join(', ')}`
+      `module: ${typeof iconfontModule}`
     );
   }
   
-  // Create options object - ensure fontName is explicitly set and not lost
-  // gulp-iconfont passes options directly to svgicons2svgfont, so fontName must be present
-  // IMPORTANT: Create options as a plain object with fontName as an enumerable property
-  // The issue might be that when gulp-iconfont does "options = options || {}", if options
-  // is somehow falsy, it creates a new empty object, losing fontName
+  const runTimestamp = Math.round(Date.now() / 1000);
+  
   const iconfontOptions = {
-    fontName: 'iconFont',  // MUST be present - required by svgicons2svgfont
+    fontName: 'iconFont',      // required by svgicons2svgfont
     prependUnicode: true,
     formats: ['ttf', 'eot', 'woff', 'svg'],
     normalize: true,
@@ -112,45 +106,25 @@ gulp.task('Iconfont', async () => {
     fontHeight: 100,
     fixedWidth: false,
     centerHorizontally: false,
+    timestamp: runTimestamp,   // recommended for consistent builds
   };
   
-  // Ensure fontName is a non-empty string and is enumerable
-  if (!iconfontOptions.fontName || typeof iconfontOptions.fontName !== 'string' || iconfontOptions.fontName.length === 0) {
-    throw new Error(`fontName must be a non-empty string, got: ${JSON.stringify(iconfontOptions.fontName)}`);
-  }
+  // Check function arity to determine API version
+  // v11.0.1 and earlier: function(options) - transform plugin
+  // v11.0.2+: function(glob, options) - direct call
+  const functionArity = iconfontFn.length;
   
-  // Verify fontName is enumerable (can be seen by Object.keys)
-  const keys = Object.keys(iconfontOptions);
-  if (!keys.includes('fontName')) {
-    throw new Error('fontName is not enumerable in options object');
+  if (functionArity === 2) {
+    // New API: iconfont(glob, options) -> returns stream
+    return iconfontFn('assets/img/icons/*.svg', iconfontOptions)
+      .pipe(gulp.dest('build/assets/fonts/'));
+  } else {
+    // Old API: .pipe(iconfont(options)) - transform plugin
+    return gulp
+      .src(['assets/img/icons/*.svg'])
+      .pipe(iconfontFn(iconfontOptions))
+      .pipe(gulp.dest('build/assets/fonts/'));
   }
-  
-  // Debug logging for CI
-  if (process.env.CI) {
-    console.log('[DEBUG] Iconfont options keys:', keys);
-    console.log('[DEBUG] fontName value:', iconfontOptions.fontName);
-    console.log('[DEBUG] fontName type:', typeof iconfontOptions.fontName);
-    console.log('[DEBUG] fontName in options:', 'fontName' in iconfontOptions);
-    console.log('[DEBUG] Options object:', JSON.stringify(iconfontOptions));
-    console.log('[DEBUG] Function type:', typeof iconfontFn);
-    console.log('[DEBUG] Function name:', iconfontFn.name || 'anonymous');
-    
-    // Test if the function can see fontName
-    try {
-      const testOpts = { fontName: 'test' };
-      const testStream = iconfontFn(testOpts);
-      console.log('[DEBUG] Test call succeeded, stream type:', typeof testStream);
-    } catch (e) {
-      console.log('[DEBUG] Test call failed:', e.message);
-    }
-  }
-  
-  // Call the function - pass options directly
-  // gulp-iconfont will pass these options to svgicons2svgfont
-  return gulp
-    .src(['assets/img/icons/*.svg'])
-    .pipe(iconfontFn(iconfontOptions))
-    .pipe(gulp.dest('build/assets/fonts/'));
 });
 
 gulp.task('images', () => {
