@@ -4,7 +4,6 @@ import sass from 'gulp-sass';
 import * as dartSass from 'sass';
 import concat from 'gulp-concat';
 import fileinclude from 'gulp-file-include';
-import iconfont from 'gulp-iconfont';
 import nunjucksRender from 'gulp-nunjucks-render';
 import uglifyModule from 'gulp-uglify-es';
 import postcss from 'gulp-postcss';
@@ -80,7 +79,8 @@ gulp.task('fonts', () => {
 });
 
 // Iconfont
-gulp.task('Iconfont', () => {
+gulp.task('Iconfont', async () => {
+  const iconfont = (await import('gulp-iconfont')).default;
   return gulp
     .src(['assets/img/icons/*.svg'])
     .pipe(
