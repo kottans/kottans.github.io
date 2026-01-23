@@ -98,9 +98,10 @@ gulp.task('Iconfont', async () => {
     );
   }
   
-  // Create options object with fontName as the first property to ensure it's present
-  const iconfontOptions = {
-    fontName: 'iconFont',  // Required by svgicons2svgfont
+  // Create a fresh, plain options object to ensure it's mutable and not frozen
+  // This is important because some environments might freeze objects
+  const iconfontOptions = Object.assign({}, {
+    fontName: 'iconFont',  // Required by svgicons2svgfont - must be first
     prependUnicode: true,
     formats: ['ttf', 'eot', 'woff', 'svg'],
     normalize: true,
@@ -108,15 +109,34 @@ gulp.task('Iconfont', async () => {
     fontHeight: 100,
     fixedWidth: false,
     centerHorizontally: false,
-  };
+  });
   
   // Ensure fontName is a non-empty string
   if (!iconfontOptions.fontName || typeof iconfontOptions.fontName !== 'string' || iconfontOptions.fontName.length === 0) {
     throw new Error(`fontName must be a non-empty string, got: ${JSON.stringify(iconfontOptions.fontName)}`);
   }
   
-  // Call the function directly with options
-  // The function signature is: function gulpFontIcon(options)
+  // Verify the options object is mutable (not frozen/sealed)
+  try {
+    iconfontOptions._test = true;
+    delete iconfontOptions._test;
+  } catch (e) {
+    // If object is frozen, create a new one
+    const newOpts = {};
+    for (const key in iconfontOptions) {
+      newOpts[key] = iconfontOptions[key];
+    }
+    Object.assign(iconfontOptions, newOpts);
+  }
+  
+  // Debug logging for CI
+  if (process.env.CI) {
+    console.log('[DEBUG] Iconfont options keys:', Object.keys(iconfontOptions));
+    console.log('[DEBUG] fontName value:', iconfontOptions.fontName);
+    console.log('[DEBUG] fontName type:', typeof iconfontOptions.fontName);
+  }
+  
+  // Call the function directly - ensure options are passed as a plain object
   return gulp
     .src(['assets/img/icons/*.svg'])
     .pipe(iconfontFn(iconfontOptions))
