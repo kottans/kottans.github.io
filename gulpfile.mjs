@@ -80,21 +80,40 @@ gulp.task('fonts', () => {
 
 // Iconfont
 gulp.task('Iconfont', async () => {
-  const iconfont = (await import('gulp-iconfont')).default;
+  const iconfontModule = await import('gulp-iconfont');
+  // Handle both ESM default export and CommonJS module.exports
+  // CommonJS modules imported via dynamic import() have their exports as .default
+  let iconfont = iconfontModule.default;
+  if (!iconfont || typeof iconfont !== 'function') {
+    iconfont = iconfontModule;
+  }
+  if (typeof iconfont !== 'function') {
+    throw new Error(`gulp-iconfont export is not a function. Got: ${typeof iconfont}, keys: ${Object.keys(iconfontModule).join(', ')}`);
+  }
+  
+  // Create options object with required fontName
+  const options = Object.assign({}, {
+    fontName: 'iconFont',
+    prependUnicode: true,
+    formats: ['ttf', 'eot', 'woff', 'svg'],
+    normalize: true,
+    fontWeight: '300',
+    fontHeight: 100,
+    fixedWidth: false,
+    centerHorizontally: false,
+  });
+  
+  // Double-check fontName is present before calling
+  if (!options.fontName) {
+    throw new Error('fontName option is required but missing');
+  }
+  
+  // Call the function with options
+  const iconfontStream = iconfont(options);
+  
   return gulp
     .src(['assets/img/icons/*.svg'])
-    .pipe(
-      iconfont({
-        fontName: 'iconFont',
-        prependUnicode: true,
-        formats: ['ttf', 'eot', 'woff', 'svg'],
-        normalize: true,
-        fontWeight: '300',
-        fontHeight: 100,
-        fixedWidth: false,
-        centerHorizontally: false,
-      }),
-    )
+    .pipe(iconfontStream)
     .pipe(gulp.dest('build/assets/fonts/'));
 });
 
