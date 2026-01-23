@@ -84,23 +84,23 @@ gulp.task('Iconfont', async () => {
   const iconfontModule = await import('gulp-iconfont');
   
   // Extract the function - CommonJS modules use .default when imported via dynamic import()
-  // Try .default first, then fallback to the module itself
-  const iconfontFn = (typeof iconfontModule.default === 'function') 
-    ? iconfontModule.default 
-    : (typeof iconfontModule === 'function' ? iconfontModule : iconfontModule.default || iconfontModule);
-  
+  let iconfontFn = iconfontModule.default;
+  if (typeof iconfontFn !== 'function') {
+    iconfontFn = iconfontModule;
+  }
   if (typeof iconfontFn !== 'function') {
     throw new Error(
       `gulp-iconfont is not a function. ` +
       `Got: ${typeof iconfontFn}, ` +
       `default: ${typeof iconfontModule.default}, ` +
-      `module: ${typeof iconfontModule}`
+      `module: ${typeof iconfontModule}, ` +
+      `keys: ${Object.keys(iconfontModule).join(', ')}`
     );
   }
   
-  // Create options object - use plain object literal to ensure compatibility
+  // Create options object with fontName as the first property to ensure it's present
   const iconfontOptions = {
-    fontName: 'iconFont',
+    fontName: 'iconFont',  // Required by svgicons2svgfont
     prependUnicode: true,
     formats: ['ttf', 'eot', 'woff', 'svg'],
     normalize: true,
@@ -110,12 +110,13 @@ gulp.task('Iconfont', async () => {
     centerHorizontally: false,
   };
   
-  // Double-check fontName exists and is a string
-  if (!iconfontOptions.fontName || typeof iconfontOptions.fontName !== 'string') {
-    throw new Error(`fontName is required but got: ${iconfontOptions.fontName} (${typeof iconfontOptions.fontName})`);
+  // Ensure fontName is a non-empty string
+  if (!iconfontOptions.fontName || typeof iconfontOptions.fontName !== 'string' || iconfontOptions.fontName.length === 0) {
+    throw new Error(`fontName must be a non-empty string, got: ${JSON.stringify(iconfontOptions.fontName)}`);
   }
   
   // Call the function directly with options
+  // The function signature is: function gulpFontIcon(options)
   return gulp
     .src(['assets/img/icons/*.svg'])
     .pipe(iconfontFn(iconfontOptions))
