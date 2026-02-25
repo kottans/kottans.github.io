@@ -33,7 +33,7 @@
   "dependencies": {
     "browser-sync": "^3.0.4",
     "gulp-nunjucks-render": "^2.2.3",
-    "npm": "^11.7.0",
+    "npm": "^11.10.1",
     "nunjucks": "^3.2.4"
   }
 }
